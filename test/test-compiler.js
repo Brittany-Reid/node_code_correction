@@ -8,7 +8,6 @@ describe("Compiler", function () {
     describe("functions", function () {
         it("Should compile code", function () {
             var snippet = "console.log(a)";
-            var compiler = new Compiler();
             var result = compiler.compile(snippet);
             assert.strictEqual(result.length, 1)
         }).timeout(20000);

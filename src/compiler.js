@@ -105,6 +105,7 @@ class Compiler{
                 line: line,
                 character: character,
                 filename: filename,
+                code: diagnostic.code,
             })
         }
         return errors;
