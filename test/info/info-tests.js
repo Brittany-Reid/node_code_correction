@@ -102,7 +102,7 @@ describe("Dataset Info (takes time to load)", function () {
         var keys = errorCounter.getKeys()
         for(var k of errorCounter.getKeys()){
             var e = errorCounter.get(k);
-            logger.info(e.rule + ", " + e.code + ", " + e.occurances + ", " + e.affectedSnippets.size);
+            logger.info(e.rule + ", " + e.code + ", " + e.occurances + ", " + e.affectedSnippets.size + ", " + (e.affectedSnippets.size/snippets.length));
         }
         logger.info("");
         //logger.info("Snippets without lines: " + noLines + "/" + snippets.length + "(" + (noLines/snippets.length) +")")
