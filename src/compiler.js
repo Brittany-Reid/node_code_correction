@@ -50,9 +50,9 @@ class Compiler{
                 shouldCreateNewSourceFile
             );
             sourceFiles.set(fileName, sourceFile);
-                return sourceFile;
-            };
-            return host;
+            return sourceFile;
+        };
+        return host;
       }
 
 
@@ -110,9 +110,5 @@ class Compiler{
         return errors;
     }
 }
-
-// var compiler = new Compiler();
-// console.log(compiler.compile("const a = require('mocha');\nconsole.log(mocha);"))
-// console.log(compiler.compile("console.log(mocha);"))
 
 module.exports = Compiler;
