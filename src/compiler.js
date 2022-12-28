@@ -1,9 +1,13 @@
 const ts = require("typescript");
 
 const FILENAME = "inmemory.ts";
+var start;
 
 /**
- * Object to compile snippets using the Typescript compiler.
+ * Object to compile snippets using the Typescript compiler programmatically.
+ * - In memory source code.
+ * - Caches read-in files to speed up program creation step on subsequent compiles.
+ * - Only emits diagnostics for the sourcefile, speeding up this step.
  */
 class Compiler{
     constructor(){
@@ -18,7 +22,6 @@ class Compiler{
             checkJs:true,
             types: ["node"]
         }
-
         this.compilerHost = this.createCompilerHost(this.compilerOptions)
         // Create default host
         // this.defaultCompilerHost = ts.createCompilerHost(this.compilerOptions, true);
@@ -35,7 +38,7 @@ class Compiler{
         const sourceFiles = new Map();
         const originalGetSourceFile = host.getSourceFile;
         // monkey patch host to cache source files
-        host.getSourceFile = (fileName,languageVersion, onError, shouldCreateNewSourceFile) => {
+        host.getSourceFile = (fileName, languageVersion, onError, shouldCreateNewSourceFile) => {
             //if filename matches inmemory designator
             if(fileName === FILENAME){
                 return this.sourceFile;
@@ -65,15 +68,15 @@ class Compiler{
     compile(code){
         //create the source file
         this.sourceFile = ts.createSourceFile(FILENAME, code, {});
-
         //create the program
         var program = ts.createProgram(
             [FILENAME], this.compilerOptions, this.compilerHost, this.oldProgram
         );
 
         this.oldProgram = program;
-
-        const diagnostics = ts.getPreEmitDiagnostics(program);
+        //documentation is sparse but i can see this function optionally takes a sourcefile
+        //with this specified getPreEmitDiagnostics is considerably faster
+        const diagnostics = ts.getPreEmitDiagnostics(program, this.sourceFile);
         var errors = this.getErrors(diagnostics);
         return errors;
     }

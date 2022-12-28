@@ -74,7 +74,7 @@ describe("Dataset Info (takes time to load)", function () {
     before(async function(){
         logger.info("DATASET INFORMATION:")
         this.timeout(0);
-        await loadData(10);
+        await loadData(100);
     });
 
     it("Should tell us how many packages", function (){
@@ -90,6 +90,8 @@ describe("Dataset Info (takes time to load)", function () {
         var compiler = new Compiler();
         var errorCounter = new ErrorCounter();
         var noErrors = 0;
+        var i = 0;
+        console.log(snippets.length)
         for(var s of snippets){
             var code = s.code;
             var errors = compiler.compile(code);
@@ -97,6 +99,8 @@ describe("Dataset Info (takes time to load)", function () {
             for(var e of errors){
                 errorCounter.add(e, s.id);
             }
+            if (i % Math.round(snippets.length/10) == 0) console.log(i)
+            i++;
         }
         logger.info("ERROR, CODE, NUM OCCURANCES, NUM AFFECTED SNIPPETS, PERCENT")
         var keys = errorCounter.getKeys()
