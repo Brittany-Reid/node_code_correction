@@ -5,9 +5,10 @@
 
 require("mocha");
 const path = require("path");
+const { exit } = require("process");
 const winston = require("winston");
 const { getBaseDirectory, readCSVStream } = require("../../src/common");
-const Compiler = require("../../src/compiler");
+const Compiler = require("../../src/compiler/compiler");
 const ErrorCounter = require("../../src/error-counter");
 const Snippet = require("../../src/snippet");
 
@@ -74,7 +75,7 @@ describe("Dataset Info (takes time to load)", function () {
     before(async function(){
         logger.info("DATASET INFORMATION:")
         this.timeout(0);
-        await loadData(100);
+        await loadData(1000);
     });
 
     it("Should tell us how many packages", function (){
@@ -84,32 +85,55 @@ describe("Dataset Info (takes time to load)", function () {
         logger.info("TOTAL SNIPPETS: " + snippets.length);
     })
 
-    it("Should tell us parsing error statistics", function(){
+    it("Should tell us parsing error statistics", async function(){
         logger.info("--------");
         logger.info("ERROR ANALYSIS\n");
         var compiler = new Compiler();
         var errorCounter = new ErrorCounter();
         var noErrors = 0;
+        var timedOuts = [];
         var i = 0;
+        var max = 0;
+        var maxid;
+        var length = snippets.length;
         console.log(snippets.length)
         for(var s of snippets){
+            // if(i < 1500000 || i > 1491711 + snippets.length/100){
+            //     i++
+            //     continue;
+            // }
+            console.log(i)
             var code = s.code;
-            var errors = compiler.compile(code);
+            var errors = [];
+            try{
+                errors = await compiler.compile(code);
+            }
+            catch(e){
+                console.log(e);
+                timedOuts.push(i);
+                continue;
+            }
             if(errors.length < 1) noErrors++;
             for(var e of errors){
                 errorCounter.add(e, s.id);
             }
-            if (i % Math.round(snippets.length/10) == 0) console.log(i)
             i++;
         }
         logger.info("ERROR, CODE, NUM OCCURANCES, NUM AFFECTED SNIPPETS, PERCENT")
         var keys = errorCounter.getKeys()
         for(var k of errorCounter.getKeys()){
             var e = errorCounter.get(k);
-            logger.info(e.rule + ", " + e.code + ", " + e.occurances + ", " + e.affectedSnippets.size + ", " + (e.affectedSnippets.size/snippets.length));
+            var rule = e.rule;
+            if(typeof rule !== 'string'){
+                rule = rule.messageText;
+            }
+            logger.info(rule + ", " + e.code + ", " + e.occurances + ", " + e.affectedSnippets.size + ", " + (e.affectedSnippets.size/length));
         }
         logger.info("");
-        //logger.info("Snippets without lines: " + noLines + "/" + snippets.length + "(" + (noLines/snippets.length) +")")
-        logger.info("Snippets without errors: " + noErrors + "/" + snippets.length + "(" + (noErrors/snippets.length) +")")
+        //logger.info("Snippets without lines: " + noLines + "/" + length + "(" + (noLines/length) +")")
+        logger.info("Snippets without errors: " + noErrors + "/" + length + "(" + (noErrors/length) +")")
+        logger.info("Snippets timed out: " + timedOuts.length + "/" + length + "(" + (timedOuts.length/length) +")")
+        console.log(timedOuts)
+        compiler.close()
     }).timeout(0);
 });

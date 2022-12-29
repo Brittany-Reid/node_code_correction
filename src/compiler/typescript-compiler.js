@@ -8,16 +8,17 @@ var start;
  * - In memory source code.
  * - Caches read-in files to speed up program creation step on subsequent compiles.
  * - Only emits diagnostics for the sourcefile, speeding up this step.
+ * - NOT timeout safe - one code snippet causes crashes, use compiler class
  */
-class Compiler{
+class TypeScriptCompiler{
     constructor(){
         this.oldProgram = undefined;
         this.sourceFile = undefined;
 
         // Define compiler options
         this.compilerOptions = {
-            module: ts.ModuleKind.CommonJS,
-            target: ["es5"],
+            module: ts.ModuleKind.ES2022,
+            target: ["es2022"],
             allowJs: true,
             checkJs:true,
             types: ["node"]
@@ -115,4 +116,4 @@ class Compiler{
     }
 }
 
-module.exports = Compiler;
+module.exports = TypeScriptCompiler;
