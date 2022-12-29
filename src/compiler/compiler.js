@@ -2,7 +2,7 @@ const { fork } = require('child_process');
 const path = require('path');
 const { getBaseDirectory } = require('../common');
 
-const TIMEOUT = 10000;
+const TIMEOUT = 60000;
 const SERVER = path.join(getBaseDirectory(), "src/compiler/compiler-server.js");
 
 
@@ -34,6 +34,8 @@ class Compiler{
                 //remove otherwise we add again each time
                 forked.removeListener("message", errorHandler)
                 clearTimeout(timer);
+                //if string undefined
+                if(typeof msg === "string") reject(msg)
                 resolve(msg);
             }
 

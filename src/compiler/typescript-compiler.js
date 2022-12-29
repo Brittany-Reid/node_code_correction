@@ -1,6 +1,6 @@
 const ts = require("typescript");
 
-const FILENAME = "inmemory.ts";
+const FILENAME = "inmemory.js";
 var start;
 
 /**
@@ -17,11 +17,21 @@ class TypeScriptCompiler{
 
         // Define compiler options
         this.compilerOptions = {
-            module: ts.ModuleKind.ES2022,
-            target: ["es2022"],
+            module: "esnext",
+            target: "esnext",
             allowJs: true,
             checkJs:true,
-            types: ["node"]
+            types: ["node"],
+            jsx: false,
+            // skipDefaultLibCheck: true,
+            // skipLibCheck: true,
+            // strict: false,
+            // emitDecoratorMetadata: true,
+            // experimentalDecorators: true,
+            // noEmitOnError: true,
+            // noImplicitAny: false,
+            removeComments: false,
+            // sourceMap: true,
         }
         this.compilerHost = this.createCompilerHost(this.compilerOptions)
         // Create default host
@@ -77,7 +87,12 @@ class TypeScriptCompiler{
         this.oldProgram = program;
         //documentation is sparse but i can see this function optionally takes a sourcefile
         //with this specified getPreEmitDiagnostics is considerably faster
-        const diagnostics = ts.getPreEmitDiagnostics(program, this.sourceFile);
+        var diagnostics;
+        try{
+            diagnostics = ts.getPreEmitDiagnostics(program, this.sourceFile);
+        } catch(e){
+            return e.message;
+        }
         var errors = this.getErrors(diagnostics);
         return errors;
     }
@@ -101,6 +116,10 @@ class TypeScriptCompiler{
             const character = lineAndChar.character + 1;
 
             // if(filename != FILENAME) continue;
+            var ignores = []
+            // if(ignores.includes(diagnostic.code)){
+            //     continue;
+            // }
 
             errors.push({
                 message: message,
@@ -110,6 +129,7 @@ class TypeScriptCompiler{
                 character: character,
                 filename: filename,
                 code: diagnostic.code,
+                category: diagnostic.category,
             })
         }
         return errors;

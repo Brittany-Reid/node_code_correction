@@ -4,8 +4,8 @@
 
 
 require("mocha");
+const fs = require("fs")
 const path = require("path");
-const { exit } = require("process");
 const winston = require("winston");
 const { getBaseDirectory, readCSVStream } = require("../../src/common");
 const Compiler = require("../../src/compiler/compiler");
@@ -20,12 +20,14 @@ const DATA_PATH = path.join(BASE, "data/dataset.csv");
 
 // create logger
 const logger = winston.createLogger();
+var filename = path.join(
+    INFO_LOG_DIR,
+    "info" + Date.now() + ".log",
+);
+// fs.writeFileSync(filename, "", {flag:"w"})
 logger.add(
     new winston.transports.File({
-        filename: path.join(
-            INFO_LOG_DIR,
-            "info" + new Date().toISOString() + ".log"
-        ),
+        filename: filename,
         level: "info",
         format: winston.format.printf(({level, message})=>{
             return `${message}`
@@ -92,6 +94,7 @@ describe("Dataset Info (takes time to load)", function () {
         var errorCounter = new ErrorCounter();
         var noErrors = 0;
         var timedOuts = [];
+        var debugErrored = [];
         var i = 0;
         var max = 0;
         var maxid;
@@ -99,6 +102,7 @@ describe("Dataset Info (takes time to load)", function () {
         console.log(snippets.length)
         for(var s of snippets){
             // if(i < 1500000 || i > 1491711 + snippets.length/100){
+            // if(i < 1144){
             //     i++
             //     continue;
             // }
@@ -110,7 +114,11 @@ describe("Dataset Info (takes time to load)", function () {
             }
             catch(e){
                 console.log(e);
-                timedOuts.push(i);
+                if(e === "Timeout") timedOuts.push(i);
+                else{
+                    debugErrored.push(i);
+                    console.log(code)
+                }
                 continue;
             }
             if(errors.length < 1) noErrors++;
@@ -119,7 +127,7 @@ describe("Dataset Info (takes time to load)", function () {
             }
             i++;
         }
-        logger.info("ERROR, CODE, NUM OCCURANCES, NUM AFFECTED SNIPPETS, PERCENT")
+        logger.info("ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT")
         var keys = errorCounter.getKeys()
         for(var k of errorCounter.getKeys()){
             var e = errorCounter.get(k);
@@ -127,13 +135,16 @@ describe("Dataset Info (takes time to load)", function () {
             if(typeof rule !== 'string'){
                 rule = rule.messageText;
             }
-            logger.info(rule + ", " + e.code + ", " + e.occurances + ", " + e.affectedSnippets.size + ", " + (e.affectedSnippets.size/length));
+            logger.info(rule + ", " + e.code + ", " + e.category +  ", " + e.occurances + ", " + e.affectedSnippets.size + ", "  + i +  ", " + e.first + (e.affectedSnippets.size/length));
         }
         logger.info("");
+        length = length - (timedOuts.length + debugErrored.length);
         //logger.info("Snippets without lines: " + noLines + "/" + length + "(" + (noLines/length) +")")
         logger.info("Snippets without errors: " + noErrors + "/" + length + "(" + (noErrors/length) +")")
-        logger.info("Snippets timed out: " + timedOuts.length + "/" + length + "(" + (timedOuts.length/length) +")")
+        logger.info("Snippets timed out: " + timedOuts.length + "/" + snippets.length + "(" + (timedOuts.length/snippets.length) +")")
+        logger.info("Snippets failed: " + debugErrored.length + "/" + snippets.length + "(" + (debugErrored.length/snippets.length) +")")
         console.log(timedOuts)
+        console.log(debugErrored)
         compiler.close()
     }).timeout(0);
 });

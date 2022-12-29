@@ -15,6 +15,8 @@ class ErrorCounter{
             affectedSnippets: new Set(),
             code: errorCode,
             rule: rule,
+            first: id,
+            category: error.category,
         }
         data.affectedSnippets.add(id);
         data.occurances++;
