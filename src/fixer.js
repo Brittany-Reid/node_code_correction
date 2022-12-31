@@ -15,53 +15,69 @@ class Fixer{
         //step 1, get errors
         snippet = await this.evaluate(snippet);
 
+        console.log(snippet)
+
         //step 2a, if not fixable, return
         //no errors or didnt compile: it wont have error lines
-        if(snippet.errors > 0 || snippet.compileFail) return snippet; 
+        if(snippet.errors >= 0 || snippet.compileFail) return snippet; 
 
 
         //step 2b, if it has errors try to fix
-        var prevSnippet = Snippet.clone(snippet)
+        var prevSnippet;
         var stop = false;
 
         //start at the first error
         var i = 0;
+        var loops = 0;
+
+        console.log("START")
+
         while(!stop){
+            console.log("LOOP:" + loops)
+            loops++;
+
+            prevSnippet = Snippet.clone(snippet);
             //get error
             var error = prevSnippet.errors[i];
+
+            //if already commented out, skip
+            if(this.isCommented(snippet.code, error.line)){
+                i++;
+                if(i >= snippet.errors.length) stop = true;
+                //no more errors to try, end
+                continue;
+            }
+
             //try delete
             snippet = this.deleteForError(snippet,error)
+            console.log("deleting line "+ error.line)
             snippet = await this.evaluate(snippet);
-
-            console.log(snippet)
 
             //if the change made things worse
             if(snippet.compileFail || snippet.errors > prevSnippet.errors){
+                console.log("discard")
                 //reset snippet
                 snippet = prevSnippet;
                 //try next error
                 i++;
+                //no more errors to try, end
+                if(i >= snippet.errors.length) stop = true;
+                continue;
             } 
-            
-            console.log(snippet.errors)
-            stop = true;
+
+            //keeping a change, start from top of errors again
+            i = 0;
+            snippet.fixed = true;
+            snippet = this.hasCode(snippet)
+            console.log("keep")
+
+            //if the change fixed all errors
+            if(snippet.errors.length == 0) stop = true;
         } 
-        console.log(snippet)
 
-        // var stop = false;
-        // var fixed = false;
+        console.log("---\nFINAL:")
 
-        // //multiple passes until no more fixes can be applied
-        // while(!stop){
-        //     var fix = this.tryFix(snippet);
-        //     stop = true;
-        //     // snippet = fix.snippet;
-        //     // fixed = fix.fixed;
-        //     // if(fixed === false){
-        //     //     stop = true;
-        //     // }
-        //     // if(first) first = false;
-        // }
+        console.log(snippet + "\n")
 
         return snippet;
     }
@@ -70,7 +86,7 @@ class Fixer{
         try{
             snippet.errors = await this.compiler.compile(snippet.code);
         }catch(e){
-            snippet.errors = ["Compile Failure"]
+            //snippet.errors = ["Compile Failure"]
             snippet.compileFail = true;
         }
         return snippet;
@@ -111,10 +127,44 @@ class Fixer{
         return lines.join("\n");
     }
 
+    isCommented(code, lineNo){
+        var line = this.getLine(code, lineNo)
+        if(line.trim().startsWith("//")) return true;
+        return false;
+    }
+
     getLine(code, lineNo){
         var index = lineNo - 1;
         var lines = code.split("\n");
         return lines[index];
+    }
+
+    /**
+     * Check if has code and update snippet state.
+     */
+    hasCode(snippet){
+        //keep in case i readd eslint
+        // if(parse) this.parse(snippet)
+        // var code = this.linter.linter.getSourceCode();
+        // if(!code) return snippet;
+        // var ast = code.ast;
+        // if(!ast.tokens || ast.tokens.length === 0){
+        //     snippet.hasCode = false;
+        // }
+        // return snippet;
+        snippet.hasCode = false;
+        var lines = snippet.code.split("\n")
+        for(var line of lines){
+            //on first non commented line, it is true
+            line = line.trim();
+            if(line){
+                if(!line.startsWith("//")){
+                    snippet.hasCode = true;
+                    break;
+                }
+            }
+        }
+        return snippet;
     }
 }
 
@@ -122,12 +172,54 @@ async function main(){
     var compiler = new Compiler();
     var fixer = new Fixer(compiler);
 
-    var s = await fixer.fix(new Snippet("<html>"))
+    var s = await fixer.fix(new Snippet(
+        'function MyChart() {\n' +
+    '  const data = React.useMemo(\n' +
+    '    () => [\n' +
+    '      [\n' +
+    '        [1, 10],\n' +
+    '        [2, 10],\n' +
+    '        [3, 10],\n' +
+    '      ],\n' +
+    '      [\n' +
+    '        [1, 10],\n' +
+    '        [2, 10],\n' +
+    '        [3, 10],\n' +
+    '      ],\n' +
+    '      [\n' +
+    '        [1, 10],\n' +
+    '        [2, 10],\n' +
+    '        [3, 10],\n' +
+    '      ],\n' +
+    '    ],\n' +
+    '    []\n' +
+    '  )\n' +
+    '\n' +
+    '  const axes = React.useMemo(\n' +
+    '    () => [\n' +
+    "      { primary: true, type: 'linear', position: 'bottom' },\n" +
+    "      { type: 'linear', position: 'left' },\n" +
+    '    ],\n' +
+    '    []\n' +
+    '  )\n' +
+    '\n' +
+    '  return (\n' +
+    '    <div\n' +
+    '      style={{\n' +
+    "        width: '400px',\n" +
+    "        height: '300px',\n" +
+    '      }}\n' +
+    '    >\n' +
+    '      <Chart data={data} axes={axes} />\n' +
+    '    </div>\n' +
+    '  )\n' +
+    '}'
+    ))
     // console.log(s)
 
     compiler.close();
 }
 
-main()
+// main()
 
 module.exports = Fixer

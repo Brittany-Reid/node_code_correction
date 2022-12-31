@@ -4,6 +4,7 @@
 
 
 require("mocha");
+const _ = require("lodash");
 const fs = require("fs")
 const path = require("path");
 const winston = require("winston");
@@ -77,7 +78,7 @@ describe("Dataset Info (takes time to load)", function () {
     before(async function(){
         logger.info("DATASET INFORMATION:")
         this.timeout(0);
-        await loadData(100);
+        await loadData();
     });
 
     it("Should tell us how many packages", function (){
@@ -100,6 +101,7 @@ describe("Dataset Info (takes time to load)", function () {
         var maxid;
         var length = snippets.length;
         console.log(snippets.length)
+        // snippets = _.sampleSize(snippets, 384)//do a sample
         for(var s of snippets){
             // if(i < 1500000 || i > 1491711 + snippets.length/100){
             // if(i < 1696697){
@@ -137,11 +139,10 @@ describe("Dataset Info (takes time to load)", function () {
                 rule = rule.messageText;
             }
             logger.info(rule + ", " + e.code + ", " + e.category +  ", " + e.occurances + ", " + e.affectedSnippets.size + ", "  + e.first +  ", " + (e.affectedSnippets.size/length));
-            var exampleID = e.affectedSnippets.values().next().value;
-            var example = idToSnippet.get(exampleID)['code'];
-            logger.info("\n" + example)
-            
-            //console.log(idToSnippet.get(e.affectedSnippets.values().next().value)['code'])
+            // output examples for each error
+            // var exampleID = e.affectedSnippets.values().next().value;
+            // var example = idToSnippet.get(exampleID)['code'];
+            // logger.info("\n" + example)
         }
         logger.info("");
         length = length - (timedOuts.length + debugErrored.length);
