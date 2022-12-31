@@ -62,7 +62,7 @@ async function loadData(recordLimit){
         for(var s of pSnippets){
         var snippetObject = new Snippet(s, sid, i, data);
             snippets.push(snippetObject);
-            idToSnippet.set(id, snippetObject);
+            idToSnippet.set(sid, snippetObject);
             sid++;
             i++;
         }
@@ -77,7 +77,7 @@ describe("Dataset Info (takes time to load)", function () {
     before(async function(){
         logger.info("DATASET INFORMATION:")
         this.timeout(0);
-        await loadData(1000);
+        await loadData(100);
     });
 
     it("Should tell us how many packages", function (){
@@ -102,11 +102,12 @@ describe("Dataset Info (takes time to load)", function () {
         console.log(snippets.length)
         for(var s of snippets){
             // if(i < 1500000 || i > 1491711 + snippets.length/100){
-            // if(i < 1144){
+            // if(i < 1696697){
             //     i++
             //     continue;
             // }
             console.log(i)
+            // console.log(s.code)
             var code = s.code;
             var errors = [];
             try{
@@ -135,7 +136,12 @@ describe("Dataset Info (takes time to load)", function () {
             if(typeof rule !== 'string'){
                 rule = rule.messageText;
             }
-            logger.info(rule + ", " + e.code + ", " + e.category +  ", " + e.occurances + ", " + e.affectedSnippets.size + ", "  + i +  ", " + e.first + (e.affectedSnippets.size/length));
+            logger.info(rule + ", " + e.code + ", " + e.category +  ", " + e.occurances + ", " + e.affectedSnippets.size + ", "  + e.first +  ", " + (e.affectedSnippets.size/length));
+            var exampleID = e.affectedSnippets.values().next().value;
+            var example = idToSnippet.get(exampleID)['code'];
+            logger.info("\n" + example)
+            
+            //console.log(idToSnippet.get(e.affectedSnippets.values().next().value)['code'])
         }
         logger.info("");
         length = length - (timedOuts.length + debugErrored.length);

@@ -2,18 +2,19 @@ const { fork } = require('child_process');
 const path = require('path');
 const { getBaseDirectory } = require('../common');
 
-const TIMEOUT = 60000;
 const SERVER = path.join(getBaseDirectory(), "src/compiler/compiler-server.js");
 
 
 /**
- * The compiler class has timeout functionality.
- * It uses compiler-server.js.
+ * Gets errors using the TypeScript compiler.
+ * It handles timeouts using a child process, unlike the TypeScriptCompiler class.
+ * It runs compiler-server.js.
  */
 class Compiler{
     constructor(){
         //start the server
         this.forked = fork(SERVER);
+        this.timeout = 60000;
     }
 
     async compile(code){
@@ -26,7 +27,7 @@ class Compiler{
             const timer = setTimeout(() => {
                 this.forked.kill('SIGKILL')
                 reject("Timeout");
-            }, TIMEOUT);
+            }, this.timeout);
 
             //errorhandler doesn't know what 'this' is
             var forked = this.forked;
@@ -41,11 +42,6 @@ class Compiler{
 
             this.forked.addListener("message", errorHandler)
             this.forked.send(code);
-
-
-            // setTimeout(()=>{
-            //     reject();
-            // }, 100)
         });
     }
 

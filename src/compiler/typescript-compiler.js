@@ -1,7 +1,16 @@
+const path = require("path");
 const ts = require("typescript");
+const { getBaseDirectory } = require("../common");
 
 const FILENAME = "inmemory.js";
+const NODE_TYPES_DIR = path.join(getBaseDirectory(), "node_modules/@types/node")
+const LIB_DIR = path.join(getBaseDirectory(), "node_modules/typescript/lib")
 var start;
+
+const FILTER = [
+    2307, //cannot find module - this is because we do not install every package.
+    2403, //subsequent must be of same type - this should just be a warning.
+]
 
 /**
  * Object to compile snippets using the Typescript compiler programmatically.
@@ -50,10 +59,16 @@ class TypeScriptCompiler{
         const originalGetSourceFile = host.getSourceFile;
         // monkey patch host to cache source files
         host.getSourceFile = (fileName, languageVersion, onError, shouldCreateNewSourceFile) => {
+
             //if filename matches inmemory designator
             if(fileName === FILENAME){
                 return this.sourceFile;
             }
+
+            if(!(path.resolve(fileName).startsWith(NODE_TYPES_DIR) || path.resolve(fileName).startsWith(LIB_DIR))){
+                return undefined
+            }
+
             if (sourceFiles.has(fileName)) {
                 return sourceFiles.get(fileName);
             }
@@ -73,8 +88,11 @@ class TypeScriptCompiler{
 
     /**
      * Compiles a string of code.
+     * It's actually not compiling anything...
+     * On some snippets TS will throw an error, the compiler server handles this.
+     * I moved it up as it can error when making a sourcefile eek.
      * @param {string} code String code to lint.
-     * @return Array of error messages.
+     * @return Array of error messages. Can throw an error from the ts functions.
      */
     compile(code){
         //create the source file
@@ -87,12 +105,7 @@ class TypeScriptCompiler{
         this.oldProgram = program;
         //documentation is sparse but i can see this function optionally takes a sourcefile
         //with this specified getPreEmitDiagnostics is considerably faster
-        var diagnostics;
-        try{
-            diagnostics = ts.getPreEmitDiagnostics(program, this.sourceFile);
-        } catch(e){
-            return e.message;
-        }
+        var diagnostics = ts.getPreEmitDiagnostics(program, this.sourceFile);
         var errors = this.getErrors(diagnostics);
         return errors;
     }
@@ -120,6 +133,8 @@ class TypeScriptCompiler{
             // if(ignores.includes(diagnostic.code)){
             //     continue;
             // }
+
+            if(FILTER.includes(diagnostic.code)) continue;
 
             errors.push({
                 message: message,

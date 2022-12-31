@@ -7,9 +7,19 @@ const TypeScriptCompiler = require("./typescript-compiler");
 const compiler = new TypeScriptCompiler();
 
 class CompilerServer{
+
+    /**
+     * Calls the TS compiler. If it throws an error, it converts it to a sendable string.
+     * @param {sting} code 
+     * @returns 
+     */
     static compile(code){
-        var errors = compiler.compile(code);
-        return errors;
+        try{
+            var errors = compiler.compile(code);
+            return errors;
+        }catch(e){
+            return e.message;
+        }
     }
 }
 

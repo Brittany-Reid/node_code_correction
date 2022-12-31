@@ -18,6 +18,24 @@ class Snippet {
         this.errors = undefined;
         this.hasCode = true;
         this.fixed = false;
+
+        // in the rare case of a fail compile via typescript error or timeout
+        // in this case the code was always something odd and we just consider these 'unfixable'.
+        this.compileFail = false;
+    }
+
+    /**
+     * 
+     * @param {Snippet} snippet 
+     */
+    static clone(snippet){
+        var newSnippet = new Snippet(snippet.code, snippet.id, snippet.order, snippet.packageObject);
+        newSnippet.rankValue = snippet.rankValue;
+        newSnippet.errors = snippet.errors;
+        newSnippet.hasCode = snippet.hasCode;
+        newSnippet.fixed = snippet.fixed;
+        newSnippet.compileFail = snippet.compileFail;
+        return newSnippet;
     }
 
     /**
@@ -28,6 +46,7 @@ class Snippet {
             this.rankValue = undefined;
             if(typeof this.errors === "undefined") return undefined; //not evaluated
             if(this.hasCode === false) return undefined; //undefined is always at end of set, so return undefined here
+            if(this.compileFail === true) return undefined; //undefined is always at end of set, so return undefined here
             this.rankValue = this.errors.length;
         }
         return this.rankValue;

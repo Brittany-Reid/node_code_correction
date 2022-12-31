@@ -5,6 +5,7 @@ const Compiler = require("../src/compiler/compiler");
 var start = Date.now();
 
 var compiler = new Compiler();
+compiler.timeout = 10000;
 var pid = compiler.forked.pid;
 
 describe("Compiler", function () {
@@ -43,6 +44,32 @@ describe("Compiler", function () {
             assert.strictEqual(result[0]["message"], "Cannot find name 'a'.");
             assert.notDeepEqual(compiler.forked.pid, pid) //pid is different
         }).timeout(20000); //initial run is slower
+        it("should handle this case that TS throws an error for at making sourcefile", async function () {
+            var snippet = `import AsyncStorage from '@react-native-community/async-storage';\n\n`+
+            `...\n\n` +
+            `<ReduxWrapper\n` +
+            `  persistorStorageOverride={ AsyncStorage }\n` +
+            `<\n` +
+            `...\n` +
+            `</ReduxWrapper>\n\n` +
+            `...\n`
+            try{
+                var result = await compiler.compile(snippet)
+            }
+            catch(e){
+                assert.strictEqual(e, "Debug Failure. Expected -1 >= 0");
+            }
+        });
+        it("should not look at local files", async function () {
+            var snippet = `// Importar el modulo
+            const m = require('.');
+            
+            // Sumas
+            console.log(m.suma(1,2));`
+            var result = await compiler.compile(snippet)
+            assert.strictEqual(result.length, 0)
+        });
+        
     });
 
     this.afterAll(()=>{
