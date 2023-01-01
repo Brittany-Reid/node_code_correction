@@ -102,12 +102,12 @@ describe("Dataset Info (takes time to load)", function () {
         var max = 0;
         var fixed = 0;
         var maxid;
-        snippets = _.sampleSize(snippets, 384)//do a sample
+        // snippets = _.sampleSize(snippets, 384)//do a sample
         var length = snippets.length;
         console.log(snippets.length)
         for(var s of snippets){
             // if(i < 1500000 || i > 1491711 + snippets.length/100){
-            // if(i < 1696697){
+            // if(i < 0){
             //     i++
             //     continue;
             // }
@@ -115,11 +115,13 @@ describe("Dataset Info (takes time to load)", function () {
             var fixed = await fixer.fix(s);
             var errors = fixed.errors;
             if(fixed.compileFail) compilerErrored.push(fixed.id);
-            if(errors.length < 1) noErrors++;
-            if(!fixed.hasCode) noLines++;
-            if(fixed.fixed) fixed++; //means was corrected in some way
-            for(var e of errors){
-                errorCounter.add(e, s.id);
+            else{
+                if(errors && errors.length < 1) noErrors++;
+                if(!fixed.hasCode) noLines++;
+                if(fixed.fixed) fixed++; //means was corrected in some way
+                for(var e of errors){
+                    errorCounter.add(e, s.id);
+                }
             }
             i++
         }

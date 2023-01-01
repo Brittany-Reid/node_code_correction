@@ -15,11 +15,11 @@ class Fixer{
         //step 1, get errors
         snippet = await this.evaluate(snippet);
 
-        console.log(snippet)
+        // console.log(snippet)
 
         //step 2a, if not fixable, return
         //no errors or didnt compile: it wont have error lines
-        if(snippet.errors >= 0 || snippet.compileFail) return snippet; 
+        if(snippet.compileFail || snippet.errors.length >= 0 ) return snippet; 
 
 
         //step 2b, if it has errors try to fix
@@ -30,10 +30,10 @@ class Fixer{
         var i = 0;
         var loops = 0;
 
-        console.log("START")
+    //    console.log("START")
 
         while(!stop){
-            console.log("LOOP:" + loops)
+      //      console.log("LOOP:" + loops)
             loops++;
 
             prevSnippet = Snippet.clone(snippet);
@@ -50,12 +50,12 @@ class Fixer{
 
             //try delete
             snippet = this.deleteForError(snippet,error)
-            console.log("deleting line "+ error.line)
+            //console.log("deleting line "+ error.line)
             snippet = await this.evaluate(snippet);
 
             //if the change made things worse
             if(snippet.compileFail || snippet.errors > prevSnippet.errors){
-                console.log("discard")
+                //console.log("discard")
                 //reset snippet
                 snippet = prevSnippet;
                 //try next error
@@ -69,15 +69,15 @@ class Fixer{
             i = 0;
             snippet.fixed = true;
             snippet = this.hasCode(snippet)
-            console.log("keep")
+            // console.log("keep")
 
             //if the change fixed all errors
             if(snippet.errors.length == 0) stop = true;
         } 
 
-        console.log("---\nFINAL:")
+  //      console.log("---\nFINAL:")
 
-        console.log(snippet + "\n")
+//        console.log(snippet + "\n")
 
         return snippet;
     }
@@ -168,57 +168,57 @@ class Fixer{
     }
 }
 
-async function main(){
-    var compiler = new Compiler();
-    var fixer = new Fixer(compiler);
+// async function main(){
+//     var compiler = new Compiler();
+//     var fixer = new Fixer(compiler);
 
-    var s = await fixer.fix(new Snippet(
-        'function MyChart() {\n' +
-    '  const data = React.useMemo(\n' +
-    '    () => [\n' +
-    '      [\n' +
-    '        [1, 10],\n' +
-    '        [2, 10],\n' +
-    '        [3, 10],\n' +
-    '      ],\n' +
-    '      [\n' +
-    '        [1, 10],\n' +
-    '        [2, 10],\n' +
-    '        [3, 10],\n' +
-    '      ],\n' +
-    '      [\n' +
-    '        [1, 10],\n' +
-    '        [2, 10],\n' +
-    '        [3, 10],\n' +
-    '      ],\n' +
-    '    ],\n' +
-    '    []\n' +
-    '  )\n' +
-    '\n' +
-    '  const axes = React.useMemo(\n' +
-    '    () => [\n' +
-    "      { primary: true, type: 'linear', position: 'bottom' },\n" +
-    "      { type: 'linear', position: 'left' },\n" +
-    '    ],\n' +
-    '    []\n' +
-    '  )\n' +
-    '\n' +
-    '  return (\n' +
-    '    <div\n' +
-    '      style={{\n' +
-    "        width: '400px',\n" +
-    "        height: '300px',\n" +
-    '      }}\n' +
-    '    >\n' +
-    '      <Chart data={data} axes={axes} />\n' +
-    '    </div>\n' +
-    '  )\n' +
-    '}'
-    ))
-    // console.log(s)
+//     var s = await fixer.fix(new Snippet(
+//         'function MyChart() {\n' +
+//     '  const data = React.useMemo(\n' +
+//     '    () => [\n' +
+//     '      [\n' +
+//     '        [1, 10],\n' +
+//     '        [2, 10],\n' +
+//     '        [3, 10],\n' +
+//     '      ],\n' +
+//     '      [\n' +
+//     '        [1, 10],\n' +
+//     '        [2, 10],\n' +
+//     '        [3, 10],\n' +
+//     '      ],\n' +
+//     '      [\n' +
+//     '        [1, 10],\n' +
+//     '        [2, 10],\n' +
+//     '        [3, 10],\n' +
+//     '      ],\n' +
+//     '    ],\n' +
+//     '    []\n' +
+//     '  )\n' +
+//     '\n' +
+//     '  const axes = React.useMemo(\n' +
+//     '    () => [\n' +
+//     "      { primary: true, type: 'linear', position: 'bottom' },\n" +
+//     "      { type: 'linear', position: 'left' },\n" +
+//     '    ],\n' +
+//     '    []\n' +
+//     '  )\n' +
+//     '\n' +
+//     '  return (\n' +
+//     '    <div\n' +
+//     '      style={{\n' +
+//     "        width: '400px',\n" +
+//     "        height: '300px',\n" +
+//     '      }}\n' +
+//     '    >\n' +
+//     '      <Chart data={data} axes={axes} />\n' +
+//     '    </div>\n' +
+//     '  )\n' +
+//     '}'
+//     ))
+//     // console.log(s)
 
-    compiler.close();
-}
+//     compiler.close();
+// }
 
 // main()
 

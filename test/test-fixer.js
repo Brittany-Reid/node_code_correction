@@ -77,6 +77,10 @@ describe("Compiler", function () {
         assert.strictEqual(fixed.code.split("\n")[32-1], "//       <Chart />");
     });
 
+    //# 2P-Kt version LAST_VERSION_HERE
+
+//?- <write your dot-terminated Prolog query here>.
+
 
     this.afterAll(()=>{
         compiler.close();
