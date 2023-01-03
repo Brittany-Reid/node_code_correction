@@ -101,19 +101,27 @@ describe("Dataset Info (takes time to load)", function () {
         var i = 0;
         var max = 0;
         var fixed = 0;
+        var lineFail = [];
         var maxid;
         // snippets = _.sampleSize(snippets, 384)//do a sample
         var length = snippets.length;
         console.log(snippets.length)
         for(var s of snippets){
             // if(i < 1500000 || i > 1491711 + snippets.length/100){
-            // if(i < 0){
+            // if(i < 1783){
             //     i++
             //     continue;
             // }
             console.log(i)
             var fixed = await fixer.fix(s);
             var errors = fixed.errors;
+            if(fixed.lineFail){
+                console.log("line fail")
+                console.log(fixed.code)
+                lineFail.push(fixed.id)
+            }
+
+            //compiled failure
             if(fixed.compileFail) compilerErrored.push(fixed.id);
             else{
                 if(errors && errors.length < 1) noErrors++;
@@ -127,7 +135,7 @@ describe("Dataset Info (takes time to load)", function () {
         }
         logger.info("ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT")
         var keys = errorCounter.getKeys()
-        length = length - (compilerErrored);
+        length = length - (compilerErrored.length);
         for(var k of errorCounter.getKeys()){
             var e = errorCounter.get(k);
             var rule = e.rule;
@@ -145,6 +153,7 @@ describe("Dataset Info (takes time to load)", function () {
         logger.info("Snippets no lines: " + noLines + "/" + length + "(" + (noLines/length) +")")
         logger.info("Snippets without errors: " + noErrors + "/" + length + "(" + (noErrors/length) +")")
         logger.info("Snippets failed: " + compilerErrored.length + "/" + snippets.length + "(" + (compilerErrored.length/snippets.length) +")")
+        logger.info("Snippets lineFailed: " + lineFail.length + "/" + snippets.length + "(" + (lineFail.length/snippets.length) +")")
         compiler.close()
     }).timeout(0);
 });

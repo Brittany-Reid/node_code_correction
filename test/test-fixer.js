@@ -7,7 +7,7 @@ const Snippet = require("../src/snippet");
 var compiler;
 var fixer;
 
-describe("Compiler", function () {
+describe("Fixer", function () {
 
     this.beforeAll(()=>{
         compiler = new Compiler();

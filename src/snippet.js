@@ -22,6 +22,9 @@ class Snippet {
         // in the rare case of a fail compile via typescript error or timeout
         // in this case the code was always something odd and we just consider these 'unfixable'.
         this.compileFail = false;
+
+        //typescript messed up the line numbers! this seemed to happen with package 42matters which had highlighting in a string with newlines.
+        this.lineFail = false;
     }
 
     /**

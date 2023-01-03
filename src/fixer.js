@@ -15,11 +15,14 @@ class Fixer{
         //step 1, get errors
         snippet = await this.evaluate(snippet);
 
+        //store for error case
+        var originalSnippet = Snippet.clone(snippet);
+
         // console.log(snippet)
 
         //step 2a, if not fixable, return
         //no errors or didnt compile: it wont have error lines
-        if(snippet.compileFail || snippet.errors.length >= 0 ) return snippet; 
+        if(snippet.compileFail || snippet.errors.length <= 0 ) return snippet; 
 
 
         //step 2b, if it has errors try to fix
@@ -41,6 +44,12 @@ class Fixer{
             var error = prevSnippet.errors[i];
 
             //if already commented out, skip
+            if(error.line-1 >= snippet.code.split("\n").length){
+                //return original snippet
+                originalSnippet.lineFail = true;
+                originalSnippet.fixed = false;
+                return originalSnippet
+            }
             if(this.isCommented(snippet.code, error.line)){
                 i++;
                 if(i >= snippet.errors.length) stop = true;
