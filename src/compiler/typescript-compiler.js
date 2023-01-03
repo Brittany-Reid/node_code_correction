@@ -28,6 +28,7 @@ class TypeScriptCompiler{
         this.compilerOptions = {
             module: "esnext",
             target: "esnext",
+            lib:["esnext"], //ignore dom etc
             allowJs: true,
             checkJs:true,
             types: ["node"],
