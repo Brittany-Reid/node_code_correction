@@ -17,6 +17,7 @@ class Snippet {
         this.rankValue = undefined;
         this.errors = undefined;
         this.hasCode = true;
+        this.nondeletedLines = undefined;
         this.fixed = false;
 
         // in the rare case of a fail compile via typescript error or timeout

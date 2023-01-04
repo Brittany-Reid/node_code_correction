@@ -2,7 +2,6 @@
  * @fileoverview Run experiments over a random sample of 384 snippets.
  */
 
-
 require("mocha");
 const _ = require("lodash");
 const fs = require("fs")
@@ -13,6 +12,7 @@ const Compiler = require("../../src/compiler/compiler");
 const ErrorCounter = require("../../src/error-counter");
 const Snippet = require("../../src/snippet");
 const Fixer = require("../../src/fixer");
+const { getErrorsFor } = require("../../src/error-counter");
 
 // directories
 const BASE = getBaseDirectory();
@@ -93,121 +93,15 @@ describe("Dataset Info (takes time to load)", function () {
         logger.info("--------");
         logger.info("ERROR ANALYSIS\n");
         var compiler = new Compiler();
-        var errorCounter = new ErrorCounter();
-        var noErrors = 0;
-        var timedOuts = [];
-        var debugErrored = [];
-        var i = 0;
-        var max = 0;
-        var maxid;
-        var length = snippets.length;
-        console.log(snippets.length)
-        // snippets = _.sampleSize(snippets, 384)//do a sample
-        for(var s of snippets){
-            // if(i < 1500000 || i > 1491711 + snippets.length/100){
-            // if(i < 1696697){
-            //     i++
-            //     continue;
-            // }
-            console.log(i)
-            // console.log(s.code)
-            var code = s.code;
-            var errors = [];
-            try{
-                errors = await compiler.compile(code);
-            }
-            catch(e){
-                console.log(e);
-                if(e === "Timeout") timedOuts.push(i);
-                else{
-                    debugErrored.push(i);
-                    console.log(code)
-                }
-                continue;
-            }
-            if(errors.length < 1) noErrors++;
-            for(var e of errors){
-                errorCounter.add(e, s.id);
-            }
-            i++;
-        }
-        logger.info("ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT")
-        var keys = errorCounter.getKeys()
-        for(var k of errorCounter.getKeys()){
-            var e = errorCounter.get(k);
-            var rule = e.rule;
-            if(typeof rule !== 'string'){
-                rule = rule.messageText;
-            }
-            logger.info(rule + ", " + e.code + ", " + e.category +  ", " + e.occurances + ", " + e.affectedSnippets.size + ", "  + e.first +  ", " + (e.affectedSnippets.size/length));
-            // output examples for each error
-            // var exampleID = e.affectedSnippets.values().next().value;
-            // var example = idToSnippet.get(exampleID)['code'];
-            // logger.info("\n" + example)
-        }
-        logger.info("");
-        length = length - (timedOuts.length + debugErrored.length);
-        //logger.info("Snippets without lines: " + noLines + "/" + length + "(" + (noLines/length) +")")
-        logger.info("Snippets without errors: " + noErrors + "/" + length + "(" + (noErrors/length) +")")
-        logger.info("Snippets timed out: " + timedOuts.length + "/" + snippets.length + "(" + (timedOuts.length/snippets.length) +")")
-        logger.info("Snippets failed: " + debugErrored.length + "/" + snippets.length + "(" + (debugErrored.length/snippets.length) +")")
-        console.log(timedOuts)
-        console.log(debugErrored)
-        compiler.close()
+        await getErrorsFor(snippets, compiler.compile.bind(compiler), logger, (s) => {return s.code}, BASE + "/errorExamplesSample.json")
+        compiler.close();
     }).timeout(0);
     it("Should tell us line deletion stats", async function(){
         logger.info("--------");
-        logger.info("LINE DELETION ERRORS\n");
+        logger.info("ERROR ANALYSIS\n");
         var compiler = new Compiler();
         var fixer = new Fixer(compiler);
-        var errorCounter = new ErrorCounter();
-        var noErrors = 0;
-        var compilerErrored = [];
-        var noLines = 0;
-        var i = 0;
-        var max = 0;
-        var fixed = 0;
-        var maxid;
-        var length = snippets.length;
-        console.log(snippets.length)
-        for(var s of snippets){
-            // if(i < 1500000 || i > 1491711 + snippets.length/100){
-            // if(i < 1696697){
-            //     i++
-            //     continue;
-            // }
-            console.log(i)
-            var fixed = await fixer.fix(s);
-            var errors = fixed.errors;
-            if(fixed.compileFail) compilerErrored.push(fixed.id);
-            if(errors.length < 1) noErrors++;
-            if(!fixed.hasCode) noLines++;
-            if(fixed.fixed) fixed++; //means was corrected in some way
-            for(var e of errors){
-                errorCounter.add(e, s.id);
-            }
-            i++
-        }
-        logger.info("ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT")
-        var keys = errorCounter.getKeys()
-        length = length - (compilerErrored);
-        for(var k of errorCounter.getKeys()){
-            var e = errorCounter.get(k);
-            var rule = e.rule;
-            if(typeof rule !== 'string'){
-                rule = rule.messageText;
-            }
-            logger.info(rule + ", " + e.code + ", " + e.category +  ", " + e.occurances + ", " + e.affectedSnippets.size + ", "  + e.first +  ", " + (e.affectedSnippets.size/length));
-            // output examples for each error
-            // var exampleID = e.affectedSnippets.values().next().value;
-            // var example = idToSnippet.get(exampleID)['code'];
-            // logger.info("\n" + example)
-        }
-        logger.info("");
-        //logger.info("Snippets without lines: " + noLines + "/" + length + "(" + (noLines/length) +")")
-        logger.info("Snippets no lines: " + noLines + "/" + length + "(" + (noLines/length) +")")
-        logger.info("Snippets without errors: " + noErrors + "/" + length + "(" + (noErrors/length) +")")
-        logger.info("Snippets failed: " + compilerErrored.length + "/" + snippets.length + "(" + (compilerErrored.length/snippets.length) +")")
+        await getErrorsFor(snippets, fixer.fix.bind(fixer), logger, s => s, BASE + "/postDeleteSample.json")
         compiler.close()
     }).timeout(0);
 });

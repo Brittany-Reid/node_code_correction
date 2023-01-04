@@ -12,20 +12,19 @@ const { getBaseDirectory, readCSVStream } = require("../../src/common");
 const Compiler = require("../../src/compiler/compiler");
 const ErrorCounter = require("../../src/error-counter");
 const Snippet = require("../../src/snippet");
-const Fixer = require("../../src/fixer");
 const { getErrorsFor } = require("../../src/error-counter");
 
 // directories
 const BASE = getBaseDirectory();
 const LOG_DIR = path.join(BASE, "logs");
-const INFO_LOG_DIR = path.join(LOG_DIR, "delete");
+const INFO_LOG_DIR = path.join(LOG_DIR, "info");
 const DATA_PATH = path.join(BASE, "data/dataset.csv");
 
 // create logger
 const logger = winston.createLogger();
 var filename = path.join(
     INFO_LOG_DIR,
-    "delete" + Date.now() + ".log",
+    "error" + Date.now() + ".log",
 );
 // fs.writeFileSync(filename, "", {flag:"w"})
 logger.add(
@@ -76,6 +75,7 @@ async function loadData(recordLimit){
 
 }
 
+
 describe("Dataset Info (takes time to load)", function () {
     before(async function(){
         logger.info("DATASET INFORMATION:")
@@ -90,12 +90,11 @@ describe("Dataset Info (takes time to load)", function () {
         logger.info("TOTAL SNIPPETS: " + snippets.length);
     })
 
-    it("Should tell us line deletion stats", async function(){
+    it("Should tell us parsing error statistics", async function(){
         logger.info("--------");
         logger.info("ERROR ANALYSIS\n");
         var compiler = new Compiler();
-        var fixer = new Fixer(compiler);
-        await getErrorsFor(snippets, fixer.fix.bind(fixer), logger, s => s, BASE + "/postDelete.json")
-        compiler.close()
+        await getErrorsFor(snippets, compiler.compile.bind(compiler), logger, (s) => {return s.code}, BASE + "/errorExamples.json")
+        compiler.close();
     }).timeout(0);
 });

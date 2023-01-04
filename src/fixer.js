@@ -77,7 +77,7 @@ class Fixer{
             //keeping a change, start from top of errors again
             i = 0;
             snippet.fixed = true;
-            snippet = this.hasCode(snippet)
+            snippet = Fixer.hasCode(snippet)
             // console.log("keep")
 
             //if the change fixed all errors
@@ -151,7 +151,7 @@ class Fixer{
     /**
      * Check if has code and update snippet state.
      */
-    hasCode(snippet){
+    static hasCode(snippet){
         //keep in case i readd eslint
         // if(parse) this.parse(snippet)
         // var code = this.linter.linter.getSourceCode();
@@ -163,16 +163,18 @@ class Fixer{
         // return snippet;
         snippet.hasCode = false;
         var lines = snippet.code.split("\n")
+        var count = 0;
         for(var line of lines){
             //on first non commented line, it is true
             line = line.trim();
             if(line){
                 if(!line.startsWith("//")){
                     snippet.hasCode = true;
-                    break;
+                    count++; //this is good enough for comparing our removals
                 }
             }
         }
+        snippet.nondeletedLines = count;
         return snippet;
     }
 }
