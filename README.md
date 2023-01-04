@@ -44,7 +44,15 @@ To generate results:
 
 Run `npm run setup` to download the database of code snippets. This should create a `data` folder.
 
-Run `npm run info` to run the compiler over the dataset, which will generate a log file in `logs`. This runs over 2 million code snippets and will take a long time.
+The test cases are in the `test/info` directory, and can be run with `mocha`.
+
+For the old NCQ ESLint configuration, run:
+
+```sh
+mocha test/info/eslint/info-all
+```
+
+
 
 
  
