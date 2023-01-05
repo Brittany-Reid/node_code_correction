@@ -60,7 +60,6 @@ class TypeScriptCompiler{
         const originalGetSourceFile = host.getSourceFile;
         // monkey patch host to cache source files
         host.getSourceFile = (fileName, languageVersion, onError, shouldCreateNewSourceFile) => {
-
             //if filename matches inmemory designator
             if(fileName === FILENAME){
                 return this.sourceFile;

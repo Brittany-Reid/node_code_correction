@@ -1,0 +1,108 @@
+DATASET INFORMATION:
+TOTAL PACKAGES: 620221
+TOTAL SNIPPETS: 384
+--------
+PARSING ERROR ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT, FATAL
+Parsing error: Unexpected token,, 2, 92, 92,, 0.23958333333333334, true
+Parsing error: Unexpected character,, 2, 15, 15,, 0.0390625, true
+Parsing error: Cannot use keyword 'await' outside an async function,, 2, 14, 14,, 0.036458333333333336, true
+Parsing error: Identifier has already been declared,, 2, 3, 3,, 0.0078125, true
+Parsing error: Unexpected keyword 'var',, 2, 1, 1,, 0.0026041666666666665, true
+Parsing error: Unterminated comment,, 2, 1, 1,, 0.0026041666666666665, true
+Parsing error: Unexpected keyword 'const',, 2, 1, 1,, 0.0026041666666666665, true
+Parsing error: Unterminated string constant,, 2, 1, 1,, 0.0026041666666666665, true
+Parsing error: 'with' in strict mode,, 2, 1, 1,, 0.0026041666666666665, true
+Parsing error: Reserved keyword,, 2, 1, 1,, 0.0026041666666666665, true
+Parsing error: Export 'WlNumber' is not defined,, 2, 1, 1,, 0.0026041666666666665, true
+
+Total errors: 131
+Snippets without errors: 253/384(0.6588541666666666)
+Fixed: 0/384(0)
+Snippets no lines: 4/384(0.010416666666666666)
+Code lines: 2907
+--------
+RULE ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT, FATAL
+indent,, 1, 441, 65,, 0.16927083333333334, undefined
+semi,, 1, 246, 85,, 0.22135416666666666, undefined
+Parsing error: Unexpected token,, 2, 92, 92,, 0.23958333333333334, true
+no-multi-spaces,, 1, 38, 11,, 0.028645833333333332, undefined
+Parsing error: Unexpected character,, 2, 15, 15,, 0.0390625, true
+Parsing error: Cannot use keyword 'await' outside an async function,, 2, 14, 14,, 0.036458333333333336, true
+eqeqeq,, 1, 3, 3,, 0.0078125, undefined
+curly,, 1, 3, 2,, 0.005208333333333333, undefined
+Parsing error: Identifier has already been declared,, 2, 3, 3,, 0.0078125, true
+Parsing error: Unexpected keyword 'var',, 2, 1, 1,, 0.0026041666666666665, true
+Parsing error: Unterminated comment,, 2, 1, 1,, 0.0026041666666666665, true
+Parsing error: Unexpected keyword 'const',, 2, 1, 1,, 0.0026041666666666665, true
+Parsing error: Unterminated string constant,, 2, 1, 1,, 0.0026041666666666665, true
+Parsing error: 'with' in strict mode,, 2, 1, 1,, 0.0026041666666666665, true
+Parsing error: Reserved keyword,, 2, 1, 1,, 0.0026041666666666665, true
+Parsing error: Export 'WlNumber' is not defined,, 2, 1, 1,, 0.0026041666666666665, true
+
+Total errors: 131
+Total warnings or errors: 862
+Snippets without errors: 253/384(0.6588541666666666)
+Snippets without errors or warnings: 116/384(0.3020833333333333)
+Fixed: 0/384(0)
+Snippets no lines: 4/384(0.010416666666666666)
+Code lines: 2907
+--------
+ESLINT FIX ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT, FATAL
+Parsing error: Unexpected token,, 2, 92, 92,, 0.23958333333333334, true
+Parsing error: Unexpected character,, 2, 15, 15,, 0.0390625, true
+Parsing error: Cannot use keyword 'await' outside an async function,, 2, 14, 14,, 0.036458333333333336, true
+eqeqeq,, 1, 3, 3,, 0.0078125, undefined
+Parsing error: Identifier has already been declared,, 2, 3, 3,, 0.0078125, true
+Parsing error: Unexpected keyword 'var',, 2, 1, 1,, 0.0026041666666666665, true
+Parsing error: Unterminated comment,, 2, 1, 1,, 0.0026041666666666665, true
+Parsing error: Unexpected keyword 'const',, 2, 1, 1,, 0.0026041666666666665, true
+Parsing error: Unterminated string constant,, 2, 1, 1,, 0.0026041666666666665, true
+Parsing error: 'with' in strict mode,, 2, 1, 1,, 0.0026041666666666665, true
+Parsing error: Reserved keyword,, 2, 1, 1,, 0.0026041666666666665, true
+Parsing error: Export 'WlNumber' is not defined,, 2, 1, 1,, 0.0026041666666666665, true
+
+Total errors: 131
+Total warnings or errors: 134
+Snippets without errors: 253/384(0.6588541666666666)
+Snippets without errors or warnings: 250/384(0.6510416666666666)
+Fixed: 0/384(0)
+Snippets no lines: 4/384(0.010416666666666666)
+Code lines: 2907
+--------
+DELETION ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT, FATAL
+indent,, 1, 376, 27,, 0.0703125, undefined
+semi,, 1, 47, 26,, 0.06770833333333333, undefined
+Parsing error: Unexpected token,, 2, 20, 20,, 0.052083333333333336, true
+no-multi-spaces,, 1, 7, 1,, 0.0026041666666666665, undefined
+eqeqeq,, 1, 3, 3,, 0.0078125, undefined
+dot-location,, 1, 1, 1,, 0.0026041666666666665, undefined
+
+Total errors: 20
+Total warnings or errors: 454
+Snippets without errors: 364/384(0.9479166666666666)
+Snippets without errors or warnings: 321/384(0.8359375)
+Fixed: 131/384(0.3411458333333333)
+Snippets no lines: 57/384(0.1484375)
+Code lines: 2361
+--------
+ALL FIXES ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT, FATAL
+Parsing error: Unexpected token,, 2, 20, 20,, 0.052083333333333336, true
+eqeqeq,, 1, 3, 3,, 0.0078125, undefined
+
+Total errors: 20
+Total warnings or errors: 23
+Snippets without errors: 364/384(0.9479166666666666)
+Snippets without errors or warnings: 361/384(0.9401041666666666)
+Fixed: 131/384(0.3411458333333333)
+Snippets no lines: 57/384(0.1484375)
+Code lines: 2361
