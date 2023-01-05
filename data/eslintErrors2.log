@@ -1,0 +1,686 @@
+DATASET INFORMATION:
+TOTAL PACKAGES: 620221
+TOTAL SNIPPETS: 2161911
+--------
+PARSING ERROR ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT, FATAL
+Parsing error: Unexpected token,, 2, 575440, 575440,, 0.26617191919556354, true
+Parsing error: Cannot use keyword 'await' outside an async function,, 2, 59221, 59221,, 0.027392894527110506, true
+Parsing error: Unexpected character,, 2, 58460, 58460,, 0.027040891137516763, true
+Parsing error: Identifier has already been declared,, 2, 21823, 21823,, 0.010094310080294702, true
+Parsing error: Reserved keyword,, 2, 10188, 10188,, 0.004712497415481026, true
+Parsing error: 'return' outside of function,, 2, 5760, 5760,, 0.0026643094928514633, true
+Parsing error: Invalid regular expression,, 2, 4523, 4523,, 0.0020921305271123557, true
+Parsing error: Assigning to rvalue,, 2, 4167, 4167,, 0.0019274613987347305, true
+Parsing error: Unterminated regular expression,, 2, 2948, 2948,, 0.0013636084001607837, true
+Parsing error: Unterminated string constant,, 2, 2643, 2643,, 0.0012225295120844475, true
+Parsing error: Identifier directly after number,, 2, 2131, 2131,, 0.000985702001608762, true
+Parsing error: Expecting Unicode escape sequence \uXXXX,, 2, 1554, 1554,, 0.0007188084985922177, true
+Parsing error: Invalid number,, 2, 1465, 1465,, 0.0006776412164978114, true
+Parsing error: Shorthand property assignments are valid only in destructuring patterns,, 2, 741, 741,, 0.0003427523149657872, true
+Parsing error: Unterminated template,, 2, 671, 671,, 0.00031037355376793956, true
+Parsing error: Label is already declared,, 2, 548, 548,, 0.00025347944480600727, true
+Parsing error: Unterminated comment,, 2, 505, 505,, 0.00023358963435590087, true
+Parsing error: Duplicate export 'default',, 2, 301, 301,, 0.00013922867315074486, true
+Parsing error: Duplicate regular expression flag,, 2, 223, 223,, 0.00010314948210171464, true
+Parsing error: Unexpected keyword 'var',, 2, 189, 189,, 0.00008742265523418865, true
+Parsing error: Unterminated template literal,, 2, 147, 147,, 0.00006799539851548006, true
+Parsing error: 'with' in strict mode,, 2, 142, 142,, 0.00006568262985849094, true
+Parsing error: Unexpected keyword 'this',, 2, 140, 140,, 0.0000647575223956953, true
+Parsing error: Unexpected keyword 'const',, 2, 131, 131,, 0.000060594538813114876, true
+Parsing error: Binding arguments in strict mode,, 2, 125, 125,, 0.000057819216424727935, true
+Parsing error: 'import' and 'export' may only appear at the top level,, 2, 119, 119,, 0.00005504389403634099, true
+Parsing error: Argument name clash,, 2, 108, 108,, 0.00004995580299096494, true
+Parsing error: super() call outside constructor of a subclass,, 2, 104, 104,, 0.00004810558806537365, true
+Parsing error: Deleting local variable in strict mode,, 2, 83, 83,, 0.00003839195970601935, true
+Parsing error: Unexpected keyword 'function',, 2, 69, 69,, 0.00003191620746644982, true
+Parsing error: Unexpected keyword 'new',, 2, 69, 69,, 0.00003191620746644982, true
+Parsing error: Unexpected keyword 'return',, 2, 63, 63,, 0.00002914088507806288, true
+Parsing error: Unexpected keyword 'default',, 2, 63, 63,, 0.00002914088507806288, true
+Parsing error: Unexpected keyword 'true',, 2, 62, 62,, 0.000028678331346665057, true
+Parsing error: Expected number in radix 16,, 2, 55, 55,, 0.000025440455226880294, true
+Parsing error: 'super' keyword outside a method,, 2, 54, 54,, 0.00002497790149548247, true
+Parsing error: Octal literal in strict mode,, 2, 51, 51,, 0.000023590240301289, true
+Parsing error: Unexpected keyword 'delete',, 2, 43, 43,, 0.00001988981045010641, true
+Parsing error: Unexpected keyword 'class',, 2, 38, 38,, 0.000017577041793117294, true
+Parsing error: Unexpected keyword 'false',, 2, 36, 36,, 0.000016651934330321645, true
+Parsing error: Comma is not permitted after the rest element,, 2, 32, 32,, 0.000014801719404730351, true
+Parsing error: Bad character escape sequence,, 2, 31, 31,, 0.000014339165673332528, true
+Parsing error: Binding eval in strict mode,, 2, 30, 30,, 0.000013876611941934705, true
+Parsing error: Unexpected keyword 'in',, 2, 30, 30,, 0.000013876611941934705, true
+Parsing error: Missing catch or finally clause,, 2, 27, 27,, 0.000012488950747741235, true
+Parsing error: Unexpected keyword 'import',, 2, 24, 24,, 0.000011101289553547764, true
+Parsing error: Unexpected keyword 'do',, 2, 24, 24,, 0.000011101289553547764, true
+Parsing error: Assigning to arguments in strict mode,, 2, 19, 19,, 0.000008788520896558647, true
+Parsing error: Unexpected keyword 'export',, 2, 18, 18,, 0.000008325967165160823, true
+Parsing error: Unexpected keyword 'case',, 2, 17, 17,, 0.000007863413433763, true
+Parsing error: getter should have no params,, 2, 13, 13,, 0.000006013198508171706, true
+Parsing error: Parenthesized pattern,, 2, 11, 11,, 0.000005088091045376058, true
+Parsing error: Unsyntactic continue,, 2, 11, 11,, 0.000005088091045376058, true
+Parsing error: Unexpected keyword 'continue',, 2, 10, 10,, 0.000004625537313978235, true
+Parsing error: Unexpected keyword 'if',, 2, 10, 10,, 0.000004625537313978235, true
+Parsing error: Unexpected keyword 'switch',, 2, 9, 9,, 0.000004162983582580411, true
+Parsing error: The only valid meta property for import is 'import.meta',, 2, 9, 9,, 0.000004162983582580411, true
+Parsing error: Export 'presets' is not defined,, 2, 9, 9,, 0.000004162983582580411, true
+Parsing error: Unexpected keyword 'super',, 2, 9, 9,, 0.000004162983582580411, true
+Parsing error: The only valid meta property for new is 'new.target',, 2, 9, 9,, 0.000004162983582580411, true
+Parsing error: Complex binding patterns require an initialization value,, 2, 7, 7,, 0.0000032378761197847644, true
+Parsing error: Export 'valInDeep' is not defined,, 2, 6, 6,, 0.000002775322388386941, true
+Parsing error: Export 'throttle' is not defined,, 2, 6, 6,, 0.000002775322388386941, true
+Parsing error: Cannot use 'yield' as identifier inside a generator,, 2, 6, 6,, 0.000002775322388386941, true
+Parsing error: Unsyntactic break,, 2, 6, 6,, 0.000002775322388386941, true
+Parsing error: Export 'Player' is not defined,, 2, 6, 6,, 0.000002775322388386941, true
+Parsing error: Invalid Unicode escape,, 2, 6, 6,, 0.000002775322388386941, true
+Parsing error: Bad escape sequence in untagged template literal,, 2, 6, 6,, 0.000002775322388386941, true
+Parsing error: Unexpected keyword 'null',, 2, 5, 5,, 0.0000023127686569891176, true
+Parsing error: Export 'Storage' is not defined,, 2, 5, 5,, 0.0000023127686569891176, true
+Parsing error: Export 'Time' is not defined,, 2, 5, 5,, 0.0000023127686569891176, true
+Parsing error: Export 'DataType' is not defined,, 2, 5, 5,, 0.0000023127686569891176, true
+Parsing error: Export 'vaPhone' is not defined,, 2, 5, 5,, 0.0000023127686569891176, true
+Parsing error: Export 'Foo' is not defined,, 2, 4, 4,, 0.000001850214925591294, true
+Parsing error: Unexpected keyword 'typeof',, 2, 4, 4,, 0.000001850214925591294, true
+Parsing error: Export 'WlNumber' is not defined,, 2, 4, 4,, 0.000001850214925591294, true
+Parsing error: Duplicate export 'b',, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Unexpected keyword 'for',, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Unexpected keyword 'try',, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Unexpected keyword 'extends',, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Duplicate export 'foo',, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Unexpected keyword 'with',, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Export 'AuthContext' is not defined,, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Export 'e' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'spine' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Unexpected keyword 'debugger',, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'read' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'stripD' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'keepD' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'stripC' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'keepC' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'Provide' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'ActionSheet' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Unexpected keyword 'break',, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'CombJudge' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Unexpected keyword 'void',, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Cannot use 'await' as identifier inside an async function,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'html' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'myFunction' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'loaderButton' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Duplicate export 'Checkbox',, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'defineInternal' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'UIBuilderState' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Duplicate export 'LogoutEvent',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'stop' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'IManifestConfig' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'ICustomDispatcher' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'IProcessingConfig' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'getYAxisformatter' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'getGuid32' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'hidePhoneNum' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Assigning to eval in strict mode,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export '_LIB$doFoo' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'checkFixDic' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'Formsy' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Optional chaining cannot appear in left-hand side,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'useTestStore' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'effects' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'Run' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Unexpected keyword 'else',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'config' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export '__ACTIVE_CONFIG__' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'top' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Unexpected keyword 'catch',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Illegal 'use strict' directive in function with non-simple parameter list,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'actions' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'commentBoxPartition' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'CrudListReducerGenerator' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Expected number in radix 2,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'otherStuff' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'UID' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'baApi' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: setter should have exactly one param,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'createHero' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'Bar' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Unexpected keyword 'while',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'callCompiler' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'foo' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Duplicate export 'bar',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Duplicate constructor in the same class,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'I18nConfigInstance' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'I18nMethods' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'x' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Duplicate export 'a',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'getLine' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'lazy' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'createEditorStore' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'SymbolTable' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Unexpected keyword 'finally',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'PkNumber' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'render' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'useState' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'doubleSquare' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'appHello' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'actionCreators' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'resizeBase64ForMaxWidth' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'namedExport1' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'localName1' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'IdxFindBatches' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'ServiceWorkerNoSupportError' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'Scheme' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'exportedStores' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'Animate' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'YourComponent' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Maximum call stack size exceeded,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'AdminLayout' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'router' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'Login' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'generateQrCode' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Duplicate export 'reportWebVitals',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'addAction' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'XXX' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'findSeconds' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'addMicroseconds' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'asMicroseconds' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+
+Total errors: 755772
+Snippets without errors: 1406139/2161911(0.6504148413140042)
+Fixed: 0/2161911(0)
+Snippets no lines: 9964/2161911(0.004608885379647913)
+Code lines: 17092494
+--------
+RULE ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT, FATAL
+indent,, 1, 2505872, 354255,, 0.16386197211633596, undefined
+semi,, 1, 1396804, 508542,, 0.23522799967251196, undefined
+Parsing error: Unexpected token,, 2, 575440, 575440,, 0.26617191919556354, true
+no-multi-spaces,, 1, 139097, 51946,, 0.02402781613119134, undefined
+Parsing error: Cannot use keyword 'await' outside an async function,, 2, 59221, 59221,, 0.027392894527110506, true
+Parsing error: Unexpected character,, 2, 58460, 58460,, 0.027040891137516763, true
+Parsing error: Identifier has already been declared,, 2, 21823, 21823,, 0.010094310080294702, true
+eqeqeq,, 1, 14396, 9253,, 0.004280009676624061, undefined
+Parsing error: Reserved keyword,, 2, 10188, 10188,, 0.004712497415481026, true
+curly,, 1, 8329, 5286,, 0.002445059024168895, undefined
+Parsing error: 'return' outside of function,, 2, 5760, 5760,, 0.0026643094928514633, true
+Parsing error: Invalid regular expression,, 2, 4523, 4523,, 0.0020921305271123557, true
+Parsing error: Assigning to rvalue,, 2, 4167, 4167,, 0.0019274613987347305, true
+Parsing error: Unterminated regular expression,, 2, 2948, 2948,, 0.0013636084001607837, true
+Parsing error: Unterminated string constant,, 2, 2643, 2643,, 0.0012225295120844475, true
+Parsing error: Identifier directly after number,, 2, 2131, 2131,, 0.000985702001608762, true
+dot-location,, 1, 2106, 948,, 0.00043850093736513666, undefined
+no-floating-decimal,, 1, 1862, 923,, 0.0004269370940801911, undefined
+Parsing error: Expecting Unicode escape sequence \uXXXX,, 2, 1554, 1554,, 0.0007188084985922177, true
+Parsing error: Invalid number,, 2, 1465, 1465,, 0.0006776412164978114, true
+yoda,, 1, 1422, 826,, 0.0003820693821346022, undefined
+no-dupe-keys,, 2, 1200, 797,, 0.0003686553239240653, undefined
+Parsing error: Shorthand property assignments are valid only in destructuring patterns,, 2, 741, 741,, 0.0003427523149657872, true
+Parsing error: Unterminated template,, 2, 671, 671,, 0.00031037355376793956, true
+Parsing error: Label is already declared,, 2, 548, 548,, 0.00025347944480600727, true
+Parsing error: Unterminated comment,, 2, 505, 505,, 0.00023358963435590087, true
+no-const-assign,, 2, 454, 309,, 0.00014292910300192746, undefined
+Parsing error: Duplicate export 'default',, 2, 301, 301,, 0.00013922867315074486, true
+no-this-before-super,, 2, 283, 147,, 0.00006799539851548006, undefined
+Parsing error: Duplicate regular expression flag,, 2, 223, 223,, 0.00010314948210171464, true
+no-useless-computed-key,, 1, 191, 126,, 0.00005828177015612576, undefined
+Parsing error: Unexpected keyword 'var',, 2, 189, 189,, 0.00008742265523418865, true
+constructor-super,, 2, 188, 181,, 0.00008372222538300605, undefined
+no-extra-boolean-cast,, 1, 166, 152,, 0.00007030816717246918, undefined
+Parsing error: Unterminated template literal,, 2, 147, 147,, 0.00006799539851548006, true
+Parsing error: 'with' in strict mode,, 2, 142, 142,, 0.00006568262985849094, true
+Parsing error: Unexpected keyword 'this',, 2, 140, 140,, 0.0000647575223956953, true
+Parsing error: Unexpected keyword 'const',, 2, 131, 131,, 0.000060594538813114876, true
+Parsing error: Binding arguments in strict mode,, 2, 125, 125,, 0.000057819216424727935, true
+Parsing error: 'import' and 'export' may only appear at the top level,, 2, 119, 119,, 0.00005504389403634099, true
+Parsing error: Argument name clash,, 2, 108, 108,, 0.00004995580299096494, true
+no-extra-bind,, 1, 108, 83,, 0.00003839195970601935, undefined
+Parsing error: super() call outside constructor of a subclass,, 2, 104, 104,, 0.00004810558806537365, true
+Parsing error: Deleting local variable in strict mode,, 2, 83, 83,, 0.00003839195970601935, true
+Parsing error: Unexpected keyword 'function',, 2, 69, 69,, 0.00003191620746644982, true
+Parsing error: Unexpected keyword 'new',, 2, 69, 69,, 0.00003191620746644982, true
+Parsing error: Unexpected keyword 'return',, 2, 63, 63,, 0.00002914088507806288, true
+Parsing error: Unexpected keyword 'default',, 2, 63, 63,, 0.00002914088507806288, true
+Parsing error: Unexpected keyword 'true',, 2, 62, 62,, 0.000028678331346665057, true
+Parsing error: Expected number in radix 16,, 2, 55, 55,, 0.000025440455226880294, true
+Parsing error: 'super' keyword outside a method,, 2, 54, 54,, 0.00002497790149548247, true
+Parsing error: Octal literal in strict mode,, 2, 51, 51,, 0.000023590240301289, true
+no-shadow-restricted-names,, 2, 51, 51,, 0.000023590240301289, undefined
+Parsing error: Unexpected keyword 'delete',, 2, 43, 43,, 0.00001988981045010641, true
+Parsing error: Unexpected keyword 'class',, 2, 38, 38,, 0.000017577041793117294, true
+Parsing error: Unexpected keyword 'false',, 2, 36, 36,, 0.000016651934330321645, true
+Parsing error: Comma is not permitted after the rest element,, 2, 32, 32,, 0.000014801719404730351, true
+Parsing error: Bad character escape sequence,, 2, 31, 31,, 0.000014339165673332528, true
+Parsing error: Binding eval in strict mode,, 2, 30, 30,, 0.000013876611941934705, true
+Parsing error: Unexpected keyword 'in',, 2, 30, 30,, 0.000013876611941934705, true
+Parsing error: Missing catch or finally clause,, 2, 27, 27,, 0.000012488950747741235, true
+Parsing error: Unexpected keyword 'import',, 2, 24, 24,, 0.000011101289553547764, true
+Parsing error: Unexpected keyword 'do',, 2, 24, 24,, 0.000011101289553547764, true
+Parsing error: Assigning to arguments in strict mode,, 2, 19, 19,, 0.000008788520896558647, true
+Parsing error: Unexpected keyword 'export',, 2, 18, 18,, 0.000008325967165160823, true
+Parsing error: Unexpected keyword 'case',, 2, 17, 17,, 0.000007863413433763, true
+Parsing error: getter should have no params,, 2, 13, 13,, 0.000006013198508171706, true
+no-dupe-class-members,, 2, 12, 10,, 0.000004625537313978235, undefined
+Parsing error: Parenthesized pattern,, 2, 11, 11,, 0.000005088091045376058, true
+Parsing error: Unsyntactic continue,, 2, 11, 11,, 0.000005088091045376058, true
+no-new-symbol,, 2, 11, 10,, 0.000004625537313978235, undefined
+Parsing error: Unexpected keyword 'continue',, 2, 10, 10,, 0.000004625537313978235, true
+Parsing error: Unexpected keyword 'if',, 2, 10, 10,, 0.000004625537313978235, true
+Parsing error: Unexpected keyword 'switch',, 2, 9, 9,, 0.000004162983582580411, true
+Parsing error: The only valid meta property for import is 'import.meta',, 2, 9, 9,, 0.000004162983582580411, true
+Parsing error: Export 'presets' is not defined,, 2, 9, 9,, 0.000004162983582580411, true
+Parsing error: Unexpected keyword 'super',, 2, 9, 9,, 0.000004162983582580411, true
+Parsing error: The only valid meta property for new is 'new.target',, 2, 9, 9,, 0.000004162983582580411, true
+Parsing error: Complex binding patterns require an initialization value,, 2, 7, 7,, 0.0000032378761197847644, true
+no-obj-calls,, 2, 7, 7,, 0.0000032378761197847644, undefined
+Parsing error: Export 'valInDeep' is not defined,, 2, 6, 6,, 0.000002775322388386941, true
+Parsing error: Export 'throttle' is not defined,, 2, 6, 6,, 0.000002775322388386941, true
+no-regex-spaces,, 1, 6, 6,, 0.000002775322388386941, undefined
+Parsing error: Cannot use 'yield' as identifier inside a generator,, 2, 6, 6,, 0.000002775322388386941, true
+Parsing error: Unsyntactic break,, 2, 6, 6,, 0.000002775322388386941, true
+Parsing error: Export 'Player' is not defined,, 2, 6, 6,, 0.000002775322388386941, true
+Parsing error: Invalid Unicode escape,, 2, 6, 6,, 0.000002775322388386941, true
+Parsing error: Bad escape sequence in untagged template literal,, 2, 6, 6,, 0.000002775322388386941, true
+Parsing error: Unexpected keyword 'null',, 2, 5, 5,, 0.0000023127686569891176, true
+no-invalid-regexp,, 2, 5, 5,, 0.0000023127686569891176, undefined
+Parsing error: Export 'Storage' is not defined,, 2, 5, 5,, 0.0000023127686569891176, true
+Parsing error: Export 'Time' is not defined,, 2, 5, 5,, 0.0000023127686569891176, true
+Parsing error: Export 'DataType' is not defined,, 2, 5, 5,, 0.0000023127686569891176, true
+Parsing error: Export 'vaPhone' is not defined,, 2, 5, 5,, 0.0000023127686569891176, true
+Parsing error: Export 'Foo' is not defined,, 2, 4, 4,, 0.000001850214925591294, true
+Parsing error: Unexpected keyword 'typeof',, 2, 4, 4,, 0.000001850214925591294, true
+Parsing error: Export 'WlNumber' is not defined,, 2, 4, 4,, 0.000001850214925591294, true
+Parsing error: Duplicate export 'b',, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Unexpected keyword 'for',, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Unexpected keyword 'try',, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Unexpected keyword 'extends',, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Duplicate export 'foo',, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Unexpected keyword 'with',, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Export 'AuthContext' is not defined,, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Export 'e' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'spine' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Unexpected keyword 'debugger',, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'read' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'stripD' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'keepD' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'stripC' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'keepC' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'Provide' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'ActionSheet' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Unexpected keyword 'break',, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'CombJudge' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Unexpected keyword 'void',, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Cannot use 'await' as identifier inside an async function,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'html' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'myFunction' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'loaderButton' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Duplicate export 'Checkbox',, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'defineInternal' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'UIBuilderState' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Duplicate export 'LogoutEvent',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'stop' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'IManifestConfig' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'ICustomDispatcher' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'IProcessingConfig' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'getYAxisformatter' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'getGuid32' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'hidePhoneNum' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Assigning to eval in strict mode,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export '_LIB$doFoo' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'checkFixDic' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'Formsy' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Optional chaining cannot appear in left-hand side,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'useTestStore' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'effects' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'Run' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Unexpected keyword 'else',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'config' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export '__ACTIVE_CONFIG__' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'top' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Unexpected keyword 'catch',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Illegal 'use strict' directive in function with non-simple parameter list,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'actions' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'commentBoxPartition' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'CrudListReducerGenerator' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Expected number in radix 2,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'otherStuff' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'UID' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'baApi' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: setter should have exactly one param,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'createHero' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'Bar' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Unexpected keyword 'while',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'callCompiler' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'foo' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Duplicate export 'bar',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Duplicate constructor in the same class,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'I18nConfigInstance' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'I18nMethods' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'x' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Duplicate export 'a',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'getLine' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'lazy' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'createEditorStore' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'SymbolTable' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Unexpected keyword 'finally',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'PkNumber' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'render' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'useState' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'doubleSquare' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'appHello' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'actionCreators' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'resizeBase64ForMaxWidth' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'namedExport1' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'localName1' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'IdxFindBatches' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'ServiceWorkerNoSupportError' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'Scheme' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'exportedStores' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'Animate' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'YourComponent' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Maximum call stack size exceeded,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'AdminLayout' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'router' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'Login' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'generateQrCode' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Duplicate export 'reportWebVitals',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'addAction' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'XXX' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'findSeconds' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'addMicroseconds' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'asMicroseconds' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+
+Total errors: 757983
+Total warnings or errors: 4828342
+Snippets without errors: 1404765/2161911(0.6497792924870636)
+Snippets without errors or warnings: 638788/2161911(0.2954737729721529)
+Fixed: 0/2161911(0)
+Snippets no lines: 9964/2161911(0.004608885379647913)
+Code lines: 17092494
+--------
+ESLINT FIX ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT, FATAL
+Parsing error: Unexpected token,, 2, 575441, 575441,, 0.266172381749295, true
+Parsing error: Cannot use keyword 'await' outside an async function,, 2, 59221, 59221,, 0.027392894527110506, true
+Parsing error: Unexpected character,, 2, 58460, 58460,, 0.027040891137516763, true
+Parsing error: Identifier has already been declared,, 2, 21823, 21823,, 0.010094310080294702, true
+eqeqeq,, 1, 13510, 8824,, 0.004081574125854395, undefined
+Parsing error: Reserved keyword,, 2, 10188, 10188,, 0.004712497415481026, true
+Parsing error: 'return' outside of function,, 2, 5760, 5760,, 0.0026643094928514633, true
+Parsing error: Invalid regular expression,, 2, 4523, 4523,, 0.0020921305271123557, true
+Parsing error: Assigning to rvalue,, 2, 4167, 4167,, 0.0019274613987347305, true
+Parsing error: Unterminated regular expression,, 2, 2948, 2948,, 0.0013636084001607837, true
+Parsing error: Unterminated string constant,, 2, 2643, 2643,, 0.0012225295120844475, true
+Parsing error: Identifier directly after number,, 2, 2131, 2131,, 0.000985702001608762, true
+Parsing error: Expecting Unicode escape sequence \uXXXX,, 2, 1554, 1554,, 0.0007188084985922177, true
+Parsing error: Invalid number,, 2, 1465, 1465,, 0.0006776412164978114, true
+no-dupe-keys,, 2, 1200, 797,, 0.0003686553239240653, undefined
+Parsing error: Shorthand property assignments are valid only in destructuring patterns,, 2, 741, 741,, 0.0003427523149657872, true
+Parsing error: Unterminated template,, 2, 671, 671,, 0.00031037355376793956, true
+Parsing error: Label is already declared,, 2, 548, 548,, 0.00025347944480600727, true
+Parsing error: Unterminated comment,, 2, 505, 505,, 0.00023358963435590087, true
+no-const-assign,, 2, 454, 309,, 0.00014292910300192746, undefined
+Parsing error: Duplicate export 'default',, 2, 301, 301,, 0.00013922867315074486, true
+no-this-before-super,, 2, 283, 147,, 0.00006799539851548006, undefined
+Parsing error: Duplicate regular expression flag,, 2, 223, 223,, 0.00010314948210171464, true
+Parsing error: Unexpected keyword 'var',, 2, 189, 189,, 0.00008742265523418865, true
+constructor-super,, 2, 188, 181,, 0.00008372222538300605, undefined
+Parsing error: Unterminated template literal,, 2, 147, 147,, 0.00006799539851548006, true
+Parsing error: 'with' in strict mode,, 2, 142, 142,, 0.00006568262985849094, true
+Parsing error: Unexpected keyword 'this',, 2, 140, 140,, 0.0000647575223956953, true
+Parsing error: Unexpected keyword 'const',, 2, 131, 131,, 0.000060594538813114876, true
+Parsing error: Binding arguments in strict mode,, 2, 125, 125,, 0.000057819216424727935, true
+Parsing error: 'import' and 'export' may only appear at the top level,, 2, 119, 119,, 0.00005504389403634099, true
+Parsing error: Argument name clash,, 2, 108, 108,, 0.00004995580299096494, true
+Parsing error: super() call outside constructor of a subclass,, 2, 104, 104,, 0.00004810558806537365, true
+Parsing error: Deleting local variable in strict mode,, 2, 83, 83,, 0.00003839195970601935, true
+Parsing error: Unexpected keyword 'function',, 2, 69, 69,, 0.00003191620746644982, true
+Parsing error: Unexpected keyword 'new',, 2, 69, 69,, 0.00003191620746644982, true
+Parsing error: Unexpected keyword 'return',, 2, 63, 63,, 0.00002914088507806288, true
+Parsing error: Unexpected keyword 'default',, 2, 63, 63,, 0.00002914088507806288, true
+Parsing error: Unexpected keyword 'true',, 2, 62, 62,, 0.000028678331346665057, true
+Parsing error: Expected number in radix 16,, 2, 55, 55,, 0.000025440455226880294, true
+Parsing error: 'super' keyword outside a method,, 2, 54, 54,, 0.00002497790149548247, true
+Parsing error: Octal literal in strict mode,, 2, 51, 51,, 0.000023590240301289, true
+no-shadow-restricted-names,, 2, 51, 51,, 0.000023590240301289, undefined
+Parsing error: Unexpected keyword 'delete',, 2, 43, 43,, 0.00001988981045010641, true
+Parsing error: Unexpected keyword 'class',, 2, 38, 38,, 0.000017577041793117294, true
+Parsing error: Unexpected keyword 'false',, 2, 36, 36,, 0.000016651934330321645, true
+Parsing error: Comma is not permitted after the rest element,, 2, 32, 32,, 0.000014801719404730351, true
+Parsing error: Bad character escape sequence,, 2, 31, 31,, 0.000014339165673332528, true
+Parsing error: Binding eval in strict mode,, 2, 30, 30,, 0.000013876611941934705, true
+Parsing error: Unexpected keyword 'in',, 2, 30, 30,, 0.000013876611941934705, true
+Parsing error: Missing catch or finally clause,, 2, 27, 27,, 0.000012488950747741235, true
+Parsing error: Unexpected keyword 'import',, 2, 24, 24,, 0.000011101289553547764, true
+Parsing error: Unexpected keyword 'do',, 2, 24, 24,, 0.000011101289553547764, true
+Parsing error: Assigning to arguments in strict mode,, 2, 19, 19,, 0.000008788520896558647, true
+Parsing error: Unexpected keyword 'export',, 2, 18, 18,, 0.000008325967165160823, true
+Parsing error: Unexpected keyword 'case',, 2, 17, 17,, 0.000007863413433763, true
+Parsing error: getter should have no params,, 2, 13, 13,, 0.000006013198508171706, true
+no-dupe-class-members,, 2, 12, 10,, 0.000004625537313978235, undefined
+Parsing error: Parenthesized pattern,, 2, 11, 11,, 0.000005088091045376058, true
+Parsing error: Unsyntactic continue,, 2, 11, 11,, 0.000005088091045376058, true
+no-new-symbol,, 2, 11, 10,, 0.000004625537313978235, undefined
+Parsing error: Unexpected keyword 'continue',, 2, 10, 10,, 0.000004625537313978235, true
+Parsing error: Unexpected keyword 'if',, 2, 10, 10,, 0.000004625537313978235, true
+Parsing error: Unexpected keyword 'switch',, 2, 9, 9,, 0.000004162983582580411, true
+Parsing error: The only valid meta property for import is 'import.meta',, 2, 9, 9,, 0.000004162983582580411, true
+Parsing error: Export 'presets' is not defined,, 2, 9, 9,, 0.000004162983582580411, true
+Parsing error: Unexpected keyword 'super',, 2, 9, 9,, 0.000004162983582580411, true
+Parsing error: The only valid meta property for new is 'new.target',, 2, 9, 9,, 0.000004162983582580411, true
+indent,, 1, 9, 1,, 4.625537313978235e-7, undefined
+curly,, 1, 8, 1,, 4.625537313978235e-7, undefined
+Parsing error: Complex binding patterns require an initialization value,, 2, 7, 7,, 0.0000032378761197847644, true
+no-obj-calls,, 2, 7, 7,, 0.0000032378761197847644, undefined
+Parsing error: Export 'valInDeep' is not defined,, 2, 6, 6,, 0.000002775322388386941, true
+Parsing error: Export 'throttle' is not defined,, 2, 6, 6,, 0.000002775322388386941, true
+Parsing error: Cannot use 'yield' as identifier inside a generator,, 2, 6, 6,, 0.000002775322388386941, true
+Parsing error: Unsyntactic break,, 2, 6, 6,, 0.000002775322388386941, true
+Parsing error: Export 'Player' is not defined,, 2, 6, 6,, 0.000002775322388386941, true
+Parsing error: Invalid Unicode escape,, 2, 6, 6,, 0.000002775322388386941, true
+Parsing error: Bad escape sequence in untagged template literal,, 2, 6, 6,, 0.000002775322388386941, true
+Parsing error: Unexpected keyword 'null',, 2, 5, 5,, 0.0000023127686569891176, true
+no-invalid-regexp,, 2, 5, 5,, 0.0000023127686569891176, undefined
+Parsing error: Export 'Storage' is not defined,, 2, 5, 5,, 0.0000023127686569891176, true
+Parsing error: Export 'Time' is not defined,, 2, 5, 5,, 0.0000023127686569891176, true
+Parsing error: Export 'DataType' is not defined,, 2, 5, 5,, 0.0000023127686569891176, true
+Parsing error: Export 'vaPhone' is not defined,, 2, 5, 5,, 0.0000023127686569891176, true
+Parsing error: Export 'Foo' is not defined,, 2, 4, 4,, 0.000001850214925591294, true
+Parsing error: Unexpected keyword 'typeof',, 2, 4, 4,, 0.000001850214925591294, true
+Parsing error: Export 'WlNumber' is not defined,, 2, 4, 4,, 0.000001850214925591294, true
+Parsing error: Duplicate export 'b',, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Unexpected keyword 'for',, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Unexpected keyword 'try',, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Unexpected keyword 'extends',, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Duplicate export 'foo',, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Unexpected keyword 'with',, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Export 'AuthContext' is not defined,, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Export 'e' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'spine' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Unexpected keyword 'debugger',, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'read' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'stripD' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'keepD' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'stripC' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'keepC' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'Provide' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'ActionSheet' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Unexpected keyword 'break',, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'CombJudge' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Unexpected keyword 'void',, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Cannot use 'await' as identifier inside an async function,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'html' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'myFunction' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+no-extra-bind,, 1, 2, 2,, 9.25107462795647e-7, undefined
+Parsing error: Export 'loaderButton' is not defined,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Duplicate export 'Checkbox',, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Export 'defineInternal' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'UIBuilderState' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Duplicate export 'LogoutEvent',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'stop' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'IManifestConfig' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'ICustomDispatcher' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'IProcessingConfig' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'getYAxisformatter' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'getGuid32' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'hidePhoneNum' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Assigning to eval in strict mode,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export '_LIB$doFoo' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'checkFixDic' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'Formsy' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Optional chaining cannot appear in left-hand side,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'useTestStore' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'effects' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'Run' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Unexpected keyword 'else',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'config' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export '__ACTIVE_CONFIG__' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'top' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Unexpected keyword 'catch',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Illegal 'use strict' directive in function with non-simple parameter list,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'actions' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'commentBoxPartition' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'CrudListReducerGenerator' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Expected number in radix 2,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'otherStuff' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'UID' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'baApi' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: setter should have exactly one param,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'createHero' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'Bar' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Unexpected keyword 'while',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'callCompiler' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'foo' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Duplicate export 'bar',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Duplicate constructor in the same class,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'I18nConfigInstance' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'I18nMethods' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'x' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Duplicate export 'a',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'getLine' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'lazy' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'createEditorStore' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'SymbolTable' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Unexpected keyword 'finally',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'PkNumber' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'render' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'useState' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'doubleSquare' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'appHello' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'actionCreators' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'resizeBase64ForMaxWidth' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'namedExport1' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'localName1' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'IdxFindBatches' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'ServiceWorkerNoSupportError' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'Scheme' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'exportedStores' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'Animate' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'YourComponent' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Maximum call stack size exceeded,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'AdminLayout' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'router' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'Login' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'generateQrCode' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Duplicate export 'reportWebVitals',, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'addAction' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'XXX' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'findSeconds' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'addMicroseconds' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Export 'asMicroseconds' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
+
+Total errors: 757984
+Total warnings or errors: 771513
+Snippets without errors: 1404764/2161911(0.6497788299333321)
+Snippets without errors or warnings: 1395954/2161911(0.6457037315597173)
+Fixed: 432/2161911(0.00019982321196385975)
+Snippets no lines: 9964/2161911(0.004608885379647913)
+Code lines: 17092491
+--------
+DELETION ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT, FATAL
+indent,, 1, 1132524, 171359,, 0.07926274485859963, undefined
+semi,, 1, 479480, 177900,, 0.0822883088156728, undefined
+Parsing error: Unexpected token,, 2, 123694, 123694,, 0.05721512125152238, true
+no-multi-spaces,, 1, 48394, 12554,, 0.005806899543968277, undefined
+eqeqeq,, 1, 16896, 10797,, 0.0049941926379023, undefined
+no-const-assign,, 2, 4081, 3065,, 0.001417727186734329, undefined
+yoda,, 1, 4019, 2645,, 0.001223454619547243, undefined
+no-dupe-keys,, 2, 1625, 1047,, 0.0004842937567735212, undefined
+curly,, 1, 1195, 840,, 0.00038854513437417174, undefined
+dot-location,, 1, 679, 450,, 0.00020814917912902057, undefined
+no-this-before-super,, 2, 557, 274,, 0.00012673972240300364, undefined
+no-floating-decimal,, 1, 494, 260,, 0.00012026397016343411, undefined
+constructor-super,, 2, 338, 328,, 0.0001517176238984861, undefined
+Parsing error: Unterminated template,, 2, 67, 67,, 0.00003099110000365418, true
+no-shadow-restricted-names,, 2, 58, 58,, 0.00002682811642107376, undefined
+no-dupe-class-members,, 2, 53, 40,, 0.00001850214925591294, undefined
+no-useless-computed-key,, 1, 51, 25,, 0.000011563843284945587, undefined
+no-regex-spaces,, 1, 42, 35,, 0.000016189380598923824, undefined
+no-extra-boolean-cast,, 1, 40, 40,, 0.00001850214925591294, undefined
+Parsing error: Expecting Unicode escape sequence \uXXXX,, 2, 16, 16,, 0.000007400859702365176, true
+Parsing error: Unexpected character,, 2, 16, 16,, 0.000007400859702365176, true
+no-extra-bind,, 1, 16, 13,, 0.000006013198508171706, undefined
+no-new-symbol,, 2, 11, 10,, 0.000004625537313978235, undefined
+Parsing error: Identifier directly after number,, 2, 8, 8,, 0.000003700429851182588, true
+no-obj-calls,, 2, 7, 7,, 0.0000032378761197847644, undefined
+Parsing error: Unterminated string constant,, 2, 6, 6,, 0.000002775322388386941, true
+Parsing error: Invalid number,, 2, 5, 5,, 0.0000023127686569891176, true
+Parsing error: Unterminated template literal,, 2, 5, 5,, 0.0000023127686569891176, true
+no-invalid-regexp,, 2, 5, 5,, 0.0000023127686569891176, undefined
+Parsing error: Deleting local variable in strict mode,, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Cannot use keyword 'await' outside an async function,, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Invalid regular expression,, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Identifier has already been declared,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Reserved keyword,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Unterminated comment,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: 'with' in strict mode,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Maximum call stack size exceeded,, 2, 1, 1,, 4.625537313978235e-7, true
+
+Total errors: 130568
+Total warnings or errors: 1814398
+Snippets without errors: 2033507/2161911(0.9406062506735938)
+Snippets without errors or warnings: 1767836/2161911(0.8177191382994027)
+Fixed: 755729/2161911(0.34956526887554573)
+Snippets no lines: 309756/2161911(0.14327879362286422)
+Code lines: 13631499
+--------
+ALL FIXES ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT, FATAL
+Parsing error: Unexpected token,, 2, 123695, 123695,, 0.05721558380525378, true
+eqeqeq,, 1, 16804, 10744,, 0.004969677290138216, undefined
+no-const-assign,, 2, 4081, 3065,, 0.001417727186734329, undefined
+no-dupe-keys,, 2, 1625, 1047,, 0.0004842937567735212, undefined
+no-this-before-super,, 2, 557, 274,, 0.00012673972240300364, undefined
+constructor-super,, 2, 338, 328,, 0.0001517176238984861, undefined
+Parsing error: Unterminated template,, 2, 67, 67,, 0.00003099110000365418, true
+no-shadow-restricted-names,, 2, 58, 58,, 0.00002682811642107376, undefined
+no-dupe-class-members,, 2, 53, 40,, 0.00001850214925591294, undefined
+Parsing error: Expecting Unicode escape sequence \uXXXX,, 2, 16, 16,, 0.000007400859702365176, true
+Parsing error: Unexpected character,, 2, 16, 16,, 0.000007400859702365176, true
+no-new-symbol,, 2, 11, 10,, 0.000004625537313978235, undefined
+Parsing error: Identifier directly after number,, 2, 8, 8,, 0.000003700429851182588, true
+no-obj-calls,, 2, 7, 7,, 0.0000032378761197847644, undefined
+indent,, 1, 7, 2,, 9.25107462795647e-7, undefined
+Parsing error: Unterminated string constant,, 2, 6, 6,, 0.000002775322388386941, true
+Parsing error: Invalid number,, 2, 5, 5,, 0.0000023127686569891176, true
+Parsing error: Unterminated template literal,, 2, 5, 5,, 0.0000023127686569891176, true
+no-invalid-regexp,, 2, 5, 5,, 0.0000023127686569891176, undefined
+curly,, 1, 4, 2,, 9.25107462795647e-7, undefined
+Parsing error: Deleting local variable in strict mode,, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Cannot use keyword 'await' outside an async function,, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Invalid regular expression,, 2, 3, 3,, 0.0000013876611941934705, true
+Parsing error: Identifier has already been declared,, 2, 2, 2,, 9.25107462795647e-7, true
+Parsing error: Reserved keyword,, 2, 2, 2,, 9.25107462795647e-7, true
+no-extra-bind,, 1, 2, 2,, 9.25107462795647e-7, undefined
+Parsing error: Unterminated comment,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: 'with' in strict mode,, 2, 1, 1,, 4.625537313978235e-7, true
+Parsing error: Maximum call stack size exceeded,, 2, 1, 1,, 4.625537313978235e-7, true
+
+Total errors: 130569
+Total warnings or errors: 147386
+Snippets without errors: 2033506/2161911(0.9406057881198625)
+Snippets without errors or warnings: 2022788/2161911(0.9356481372267406)
+Fixed: 755729/2161911(0.34956526887554573)
+Snippets no lines: 309756/2161911(0.14327879362286422)
+Code lines: 13631447

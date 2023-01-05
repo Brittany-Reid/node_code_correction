@@ -130,6 +130,7 @@ function getErrorsFor(snippets, fn, sn, en){
     var i = 0;
     var length = snippets.length;
     for(var s of snippets){
+        console.log(s.id)
         var errors = []
         var noWarnings = [];
         if(sn){
