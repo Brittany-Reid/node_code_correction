@@ -2,7 +2,7 @@
 // const Fixer = require("./fixer");
 // const LinterHandler = require("./linter-handler");
 const Snippet = require("./snippet");
-const Compiler = require("./compiler/compiler");
+const Compiler = require("./ts/compiler/compiler");
 const Fixer = require("./fixer");
 
 /**

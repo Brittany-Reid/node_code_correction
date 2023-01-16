@@ -1,6 +1,6 @@
 require("mocha");
 var assert = require("assert");
-const Compiler = require("../src/compiler/compiler");
+const Compiler = require("../src/ts/compiler/compiler");
 
 var start = Date.now();
 

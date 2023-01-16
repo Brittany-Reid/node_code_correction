@@ -1,16 +1,12 @@
 const path = require("path");
 const ts = require("typescript");
-const { getBaseDirectory } = require("../common");
+const { getBaseDirectory } = require("../../common");
+const Config = require("../config");
 
 const FILENAME = "inmemory.js";
 const NODE_TYPES_DIR = path.join(getBaseDirectory(), "node_modules/@types/node")
 const LIB_DIR = path.join(getBaseDirectory(), "node_modules/typescript/lib")
 var start;
-
-const FILTER = [
-    2307, //cannot find module - this is because we do not install every package.
-    2403, //subsequent must be of same type - this should just be a warning.
-]
 
 /**
  * Object to compile snippets using the Typescript compiler programmatically.
@@ -25,24 +21,11 @@ class TypeScriptCompiler{
         this.sourceFile = undefined;
 
         // Define compiler options
-        this.compilerOptions = {
-            module: "esnext",
-            target: "esnext",
-            lib:["esnext"], //ignore dom etc
-            allowJs: true,
-            checkJs:true,
-            types: ["node"],
-            jsx: false,
-            // skipDefaultLibCheck: true,
-            // skipLibCheck: true,
-            // strict: false,
-            // emitDecoratorMetadata: true,
-            // experimentalDecorators: true,
-            // noEmitOnError: true,
-            // noImplicitAny: false,
-            removeComments: false,
-            // sourceMap: true,
-        }
+        this.compilerOptions = Config.compilerOptions;
+
+        //Filtered errors
+        this.filered = Config.filteredErrors;
+
         this.compilerHost = this.createCompilerHost(this.compilerOptions)
         // Create default host
         // this.defaultCompilerHost = ts.createCompilerHost(this.compilerOptions, true);
@@ -134,7 +117,7 @@ class TypeScriptCompiler{
             //     continue;
             // }
 
-            if(FILTER.includes(diagnostic.code)) continue;
+            if(this.filered.includes(diagnostic.code)) continue;
 
             errors.push({
                 message: message,

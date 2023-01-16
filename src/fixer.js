@@ -1,5 +1,6 @@
-const Compiler = require("./compiler/compiler");
+const Compiler = require("./ts/compiler/compiler");
 const Snippet = require("./snippet");
+const TSFixer = require("./ts/ts-fixer")
 
 
 class Fixer{
@@ -9,6 +10,11 @@ class Fixer{
      */
     constructor(compiler){
         this.compiler = compiler;
+        this.TSFixer = new TSFixer();
+
+        //options
+        this.tsFixes = true;
+        this.deletions = true;
     }
 
     async fix(snippet){
@@ -19,6 +25,25 @@ class Fixer{
         var originalSnippet = Snippet.clone(snippet);
 
         // console.log(snippet)
+
+        //step 2a, if not fixable, return
+        //no errors or didnt compile: it wont have error lines
+        if(snippet.compileFail || snippet.errors.length <= 0 ) return snippet; 
+
+        console.log(snippet.code + "\n---\n");
+
+        //if ts-fixes
+        if(this.tsFixes){
+            snippet = await this.doTSFixes(snippet);
+        }
+
+        console.log(snippet.code + "\n---\n");
+
+        //stop here if we don't do deletions
+        if(!this.deletions) return snippet;
+
+        console.log("DELETIONS")
+
 
         //step 2a, if not fixable, return
         //no errors or didnt compile: it wont have error lines
@@ -87,6 +112,8 @@ class Fixer{
   //      console.log("---\nFINAL:")
 
 //        console.log(snippet + "\n")
+
+        console.log(snippet.code + "\n---\n");
 
         return snippet;
     }
@@ -177,60 +204,20 @@ class Fixer{
         snippet.nondeletedLines = count;
         return snippet;
     }
+
+    async doTSFixes(snippet){
+        if(snippet.compileFail || snippet.lineFail) return snippet;
+        var fixed = this.TSFixer.fix(snippet.code);
+        if(fixed !== snippet.code && fixed !== undefined){
+            // console.log(snippet.code)
+            // console.log("---")
+            // console.log(fixed)
+            snippet.code = fixed;
+            snippet.tsFixed = true;
+            snippet = await this.evaluate(snippet);
+        }
+        return snippet;
+    }
 }
-
-// async function main(){
-//     var compiler = new Compiler();
-//     var fixer = new Fixer(compiler);
-
-//     var s = await fixer.fix(new Snippet(
-//         'function MyChart() {\n' +
-//     '  const data = React.useMemo(\n' +
-//     '    () => [\n' +
-//     '      [\n' +
-//     '        [1, 10],\n' +
-//     '        [2, 10],\n' +
-//     '        [3, 10],\n' +
-//     '      ],\n' +
-//     '      [\n' +
-//     '        [1, 10],\n' +
-//     '        [2, 10],\n' +
-//     '        [3, 10],\n' +
-//     '      ],\n' +
-//     '      [\n' +
-//     '        [1, 10],\n' +
-//     '        [2, 10],\n' +
-//     '        [3, 10],\n' +
-//     '      ],\n' +
-//     '    ],\n' +
-//     '    []\n' +
-//     '  )\n' +
-//     '\n' +
-//     '  const axes = React.useMemo(\n' +
-//     '    () => [\n' +
-//     "      { primary: true, type: 'linear', position: 'bottom' },\n" +
-//     "      { type: 'linear', position: 'left' },\n" +
-//     '    ],\n' +
-//     '    []\n' +
-//     '  )\n' +
-//     '\n' +
-//     '  return (\n' +
-//     '    <div\n' +
-//     '      style={{\n' +
-//     "        width: '400px',\n" +
-//     "        height: '300px',\n" +
-//     '      }}\n' +
-//     '    >\n' +
-//     '      <Chart data={data} axes={axes} />\n' +
-//     '    </div>\n' +
-//     '  )\n' +
-//     '}'
-//     ))
-//     // console.log(s)
-
-//     compiler.close();
-// }
-
-// main()
 
 module.exports = Fixer

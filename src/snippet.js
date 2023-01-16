@@ -19,6 +19,7 @@ class Snippet {
         this.hasCode = true;
         this.nondeletedLines = undefined;
         this.fixed = false;
+        this.tsFixed = false;
 
         // in the rare case of a fail compile via typescript error or timeout
         // in this case the code was always something odd and we just consider these 'unfixable'.

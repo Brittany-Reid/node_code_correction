@@ -1,8 +1,8 @@
 const { fork } = require('child_process');
 const path = require('path');
-const { getBaseDirectory } = require('../common');
+const { getBaseDirectory } = require('../../common');
 
-const SERVER = path.join(getBaseDirectory(), "src/compiler/compiler-server.js");
+const SERVER = path.join(getBaseDirectory(), "src/ts/compiler/compiler-server.js");
 
 
 /**

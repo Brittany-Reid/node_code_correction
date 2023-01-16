@@ -1,4 +1,4 @@
-const Compiler = require("./compiler/compiler");
+const Compiler = require("./ts/compiler/compiler");
 const Fixer = require("./fixer");
 const Snippet = require("./snippet");
 const fs = require("fs");
@@ -83,6 +83,8 @@ class ErrorCounter{
         var nondeletedLines = 0;
         console.log("For: " + snippets.length)
         for(var s of snippets){
+            //clone to not carry changes between techniques
+            s = Snippet.clone(s);
             // if(i < 1149){
             // if(i < 458865){
             //     i++

@@ -5,10 +5,6 @@
 Clone and run `npm install` to install dependencies.
 
 To install as a dependency (from GitHub) run:
-<!--
-```sh
-npm install --save "https://github.com/Brittany-Reid/node_code_correction.git"
-```-->
 
 [REMOVED LINK]
 
