@@ -12,7 +12,7 @@ describe("TSFixer", function () {
             assert.strictEqual(fixed, "console.log('a')")
         });
         it("Should handle no errors", async function () {
-            var code = "console.log('a')";
+            var code = "console.log('b')";
             var fixed = fixer.fix(code);
             assert.strictEqual(fixed, code);
         });
@@ -30,6 +30,17 @@ describe("TSFixer", function () {
             var fixed = fixer.fix(code);
             //just confirm the same as above however in case anything changes
             assert.strictEqual(fixer.lastDiagnostics.length, 0);
+        });
+        it("example of ts-fix procedure applying multiple fixes", async function () {
+            //this matches ts-fix 
+            var code = "assert(false)";
+            var fixed = fixer.fix(code);
+            assert.strictEqual(fixed, "const assert = require(\"assert\");\n\n" +
+            "assert(false)\n\n" + 
+            "function assert(arg0) {\n" +
+            "    throw new Error(\"Function not implemented.\");\n"+
+            "}\n"
+            )
         });
         //the preceeding compile is used to mark these error snippets
         //ATM we are using the two APIs (compiler and LS) but LS could replace it

@@ -15,6 +15,7 @@ var codeString = undefined;
  * Runs TSFixes in-memory.
  * Based on:
  * https://github.com/microsoft/ts-fix
+ * Share DR between runs to speed up.
  */
 class TSFixer{
     constructor(){
@@ -29,8 +30,11 @@ class TSFixer{
 
         this.languageServiceHost = this.createLanguageServiceHost();
 
+        this.documentRegistry = undefined;
+
         this.lastDiagnostics;
         this.lastFixes;
+        this.oldProgram = undefined;
     }
 
     /**
@@ -41,9 +45,10 @@ class TSFixer{
         var fileNames = [FILENAME];
         const files = {};
         const snapshots = {};
+        const cache = {};
 
         fileNames.forEach(fileName => {
-            files[fileName] = { version: 0 };
+            files[fileName] = { version : 0 };
         });
 
         return {
@@ -74,7 +79,18 @@ class TSFixer{
             getCompilationSettings: () => this.compilerOptions,
             getDefaultLibFileName: options => ts.getDefaultLibFilePath(options),
             fileExists: ts.sys.fileExists,
-            readFile: ts.sys.readFile,
+            readFile: (path, encoding) => {
+                //ignore our package.json, results appear to be the same?
+                if(path !== "package.json"){
+                    var file = cache[path];
+                    if(!file){
+                        file = ts.sys.readFile(path, encoding)
+                        cache[path] = file;
+                        return file;
+                    }
+                }
+                return undefined;
+            },
             readDirectory: ts.sys.readDirectory,
             directoryExists: ts.sys.directoryExists,
             getDirectories: ts.sys.getDirectories,
@@ -83,7 +99,19 @@ class TSFixer{
 
     fix(code){
         codeString = code;
-        this.ls = ts.createLanguageService(this.languageServiceHost, ts.createDocumentRegistry());
+        if(!this.documentRegistry) this.documentRegistry = ts.createDocumentRegistry();
+        else{
+            this.documentRegistry.updateDocument(
+                path.join(process.cwd(), FILENAME), //we need the full path for some reason
+                this.languageServiceHost,
+                this.languageServiceHost.getScriptSnapshot(FILENAME), //we need to pass the snapshot here,
+                0, //version
+                1, //checked getSourceFile for inmemory.js that scriptKind is 1, idk what it means :) yay!
+                "esnext" //lang version
+            )
+           // this.documentRegistry.acquireDocument(path.join(process.cwd(), FILENAME), this.languageServiceHost, this.languageServiceHost.getScriptSnapshot(FILENAME), undefined, 1, "esnext"))
+        }
+        this.ls = ts.createLanguageService(this.languageServiceHost, this.documentRegistry);
         this.program = this.ls.getProgram();
         var diagnostics = this.getDiagnostics();
         this.lastDiagnostics = diagnostics;
