@@ -9,7 +9,7 @@ const fs = require("fs")
 const path = require("path");
 const winston = require("winston");
 const { getBaseDirectory, readCSVStream } = require("../../src/common");
-const Compiler = require("../../src/compiler/compiler");
+const Compiler = require("../../src/ts/compiler/compiler");
 const ErrorCounter = require("../../src/error-counter");
 const Snippet = require("../../src/snippet");
 const Fixer = require("../../src/fixer");
@@ -95,6 +95,8 @@ describe("Dataset Info (takes time to load)", function () {
         logger.info("ERROR ANALYSIS\n");
         var compiler = new Compiler();
         var fixer = new Fixer(compiler);
+        fixer.deletions = true;
+        fixer.tsFixes = false;
         await getErrorsFor(snippets, fixer.fix.bind(fixer), logger, s => s, BASE + "/postDelete.json")
         compiler.close()
     }).timeout(0);

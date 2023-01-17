@@ -12,20 +12,20 @@ const Config = {
     ],
     compilerOptions : {
         module: "esnext",
-            target: "esnext",
-            lib:["esnext"], //ignore dom etc
-            allowJs: true,
-            checkJs:true,
-            types: ["node"],
-            jsx: false,
-            // skipDefaultLibCheck: true,
-            // skipLibCheck: true,
-            // strict: false,
-            // emitDecoratorMetadata: true,
-            // experimentalDecorators: true,
-            // noEmitOnError: true,
-            // noImplicitAny: false,
-            removeComments: false,
+        target: "esnext",
+        lib:["esnext"], //ignore dom etc
+        allowJs: true,
+        checkJs:true,
+        types: ["node"],
+        jsx: false,
+        // skipDefaultLibCheck: true,
+        // skipLibCheck: true,
+        // strict: false,
+        // emitDecoratorMetadata: true,
+        // experimentalDecorators: true,
+        // noEmitOnError: true,
+        // noImplicitAny: false,
+        removeComments: false,
     }
 }
 

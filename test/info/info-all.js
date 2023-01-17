@@ -1,6 +1,7 @@
 /** 
- * @fileoverview Run experiments over a random sample of 384 snippets.
+ * @fileoverview Run experiments
  */
+
 
 require("mocha");
 const _ = require("lodash");
@@ -17,14 +18,14 @@ const { getErrorsFor } = require("../../src/error-counter");
 // directories
 const BASE = getBaseDirectory();
 const LOG_DIR = path.join(BASE, "logs");
-const INFO_LOG_DIR = path.join(LOG_DIR, "sample");
+const INFO_LOG_DIR = path.join(LOG_DIR, "delete");
 const DATA_PATH = path.join(BASE, "data/dataset.csv");
 
 // create logger
 const logger = winston.createLogger();
 var filename = path.join(
     INFO_LOG_DIR,
-    "sample" + Date.now() + ".log",
+    "delete" + Date.now() + ".log",
 );
 // fs.writeFileSync(filename, "", {flag:"w"})
 logger.add(
@@ -80,7 +81,6 @@ describe("Dataset Info (takes time to load)", function () {
         logger.info("DATASET INFORMATION:")
         this.timeout(0);
         await loadData();
-        snippets = _.sampleSize(snippets, 384)//do a sample
     });
 
     it("Should tell us how many packages", function (){
@@ -89,41 +89,15 @@ describe("Dataset Info (takes time to load)", function () {
     it("Should tell us how many snippets", function (){
         logger.info("TOTAL SNIPPETS: " + snippets.length);
     })
-    it("Should tell us error statistics", async function(){
+
+    it("Should tell us line deletion stats", async function(){
         logger.info("--------");
         logger.info("ERROR ANALYSIS\n");
         var compiler = new Compiler();
-        await getErrorsFor(snippets, compiler.compile.bind(compiler), logger, (s) => {return s.code}, BASE + "/errorExamplesSample.json")
-        compiler.close();
-    }).timeout(0);
-    it("Should tell us line deletion stats", async function(){
-        logger.info("--------");
-        logger.info("DELETION ANALYSIS\n");
-        var compiler = new Compiler();
         var fixer = new Fixer(compiler);
-        fixer.tsFixes = false;
         fixer.deletions = true;
-        await getErrorsFor(snippets, fixer.fix.bind(fixer), logger, s => s, BASE + "/postDeleteSample.json")
-        compiler.close()
-    }).timeout(0);
-    it("Should tell us TS fix stats", async function(){
-        logger.info("--------");
-        logger.info("TS FIX ANALYSIS\n");
-        var compiler = new Compiler();
-        var fixer = new Fixer(compiler);
         fixer.tsFixes = true;
-        fixer.deletions = false;
-        await getErrorsFor(snippets, fixer.fix.bind(fixer), logger, s => s, BASE + "/postTSFixSample.json")
-        compiler.close()
-    }).timeout(0);
-    it("Should tell us all fix stats", async function(){
-        logger.info("--------");
-        logger.info("ALL FIXES ANALYSIS\n");
-        var compiler = new Compiler();
-        var fixer = new Fixer(compiler);
-        fixer.tsFixes = true;
-        fixer.deletions = true;
-        await getErrorsFor(snippets, fixer.fix.bind(fixer), logger, s => s, BASE + "/postAllSample.json")
+        await getErrorsFor(snippets, fixer.fix.bind(fixer), logger, s => s, BASE + "/postAll.json")
         compiler.close()
     }).timeout(0);
 });

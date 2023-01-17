@@ -136,7 +136,7 @@ class ErrorCounter{
             if(s.nondeletedLines !== undefined)
                 nondeletedLines += s.nondeletedLines;
             //record if fixed
-            if(s.fixed){
+            if(s.fixed || s.tsFixed){
                 fixed++
             }
             //handle errors if have

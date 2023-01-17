@@ -30,19 +30,19 @@ class Fixer{
         //no errors or didnt compile: it wont have error lines
         if(snippet.compileFail || snippet.errors.length <= 0 ) return snippet; 
 
-        console.log(snippet.code + "\n---\n");
+        // console.log(snippet.code + "\n---\n");
 
         //if ts-fixes
         if(this.tsFixes){
             snippet = await this.doTSFixes(snippet);
         }
 
-        console.log(snippet.code + "\n---\n");
+        // console.log(snippet.code + "\n---\n");
 
         //stop here if we don't do deletions
         if(!this.deletions) return snippet;
 
-        console.log("DELETIONS")
+        // console.log("DELETIONS")
 
 
         //step 2a, if not fixable, return
@@ -113,7 +113,7 @@ class Fixer{
 
 //        console.log(snippet + "\n")
 
-        console.log(snippet.code + "\n---\n");
+        //console.log(snippet.code + "\n---\n");
 
         return snippet;
     }
