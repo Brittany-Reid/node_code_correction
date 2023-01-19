@@ -18,14 +18,14 @@ const { getErrorsFor } = require("../../src/error-counter");
 // directories
 const BASE = getBaseDirectory();
 const LOG_DIR = path.join(BASE, "logs");
-const INFO_LOG_DIR = path.join(LOG_DIR, "delete");
+const INFO_LOG_DIR = path.join(LOG_DIR, "ts");
 const DATA_PATH = path.join(BASE, "data/dataset.csv");
 
 // create logger
 const logger = winston.createLogger();
 var filename = path.join(
     INFO_LOG_DIR,
-    "delete" + Date.now() + ".log",
+    "ts" + Date.now() + ".log",
 );
 // fs.writeFileSync(filename, "", {flag:"w"})
 logger.add(
@@ -90,7 +90,7 @@ describe("Dataset Info (takes time to load)", function () {
         logger.info("TOTAL SNIPPETS: " + snippets.length);
     })
 
-    it("Should tell us line deletion stats", async function(){
+    it("Should tell us ts fix stats", async function(){
         logger.info("--------");
         logger.info("ERROR ANALYSIS\n");
         var compiler = new Compiler();
