@@ -44,11 +44,33 @@ Run `npm run setup` to download the database of code snippets. This should creat
 
 The test cases are in the `test/info` directory, and can be run with `mocha`.
 
-For the old NCQ ESLint configuration, run:
+To see information on TypeScript that was reported in the paper:
+
+```sh
+mocha test/info/stats
+```
+
+To run each stage of NCC, run the `info-all`, `info-ts` and `info-errors` files. 
+These will produce the required log files, as well as JSON files containing the modified snippets, and their error information (these files are too large to upload to GitHub). The `info-sample` file runs a random 384 sample at each stage that was used for testing. I recommend running the sample first to confirm the configuration is correct.
+
+Runtime of the entire NPM dataset was 1-2 days on a 3.5Ghz processor.
+
+Because of the long run time the code still outputs each index and dubug info for errors, I recommend piping as such:
+
+```sh
+mocha test/info/info-all > run.txt
+```
+
+
+For the old NCQ ESLint configuration at each stage, run:
 
 ```sh
 mocha test/info/eslint/info-all
 ```
+
+This was considerably faster so all stages are reported in one Log.
+
+Log files will be saved in the `/logs` directory.
 
 
 

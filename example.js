@@ -34,16 +34,20 @@ var snippets = [
   `import sum from './sum';
 
   expect(sum(1, 2)).toEqual(3)
-  `
+  `,
+  `consle.log()`,
+  `var words = s.split(",")`,
+  `var s
+   var words = s.split(",")`
 ];
 
 async function main(){
-    var i = 5;
+    var i = 8;
     var compiled = await NCC.getErrors(snippets);
     console.log(compiled[i].errors)
     
 
-    NCC.evaluator.fixer.deletions = false;
+    // NCC.evaluator.fixer.deletions = false;
     var fixed = await NCC.fix(snippets);
     console.log(fixed[i])
     console.log(fixed[i].errors)
@@ -54,6 +58,5 @@ async function main(){
     // var r = e.fix(snippets.map(s => {return new Snippet(s)}))
     // console.log(r[1].code)
 }
-
 
 main();

@@ -4,6 +4,7 @@ TOTAL SNIPPETS: 2161911
 --------
 ERROR ANALYSIS
 
+//manually fixed line 283's newlines as i didn't escape the error messages 
 ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
 Cannot find name, 2304, 1, 446972, 341002, 71, 0.1577317475141206
 Cannot use JSX unless the '--jsx' flag is provided., 17004, 1, 134712, 58321, 27, 0.026976596168852465
@@ -279,10 +280,7 @@ The left-hand side of a 'for...in' statement cannot be a destructuring pattern.,
 A binding pattern parameter cannot be optional in an implementation signature., 2463, 1, 1, 1, 141910, 4.625537313978235e-7
 Class declaration cannot implement overload list for 'ValidationError'., 2813, 1, 1, 1, 257148, 4.625537313978235e-7
 Function with bodies can only merge with classes that are ambient., 2814, 1, 1, 1, 257148, 4.625537313978235e-7
-Parameter '{
-        results,
-        errors
-    }' cannot reference identifier 'results' declared after it., 2373, 1, 1, 1, 369351, 4.625537313978235e-7
+Parameter '{ results, errors }' cannot reference identifier 'results' declared after it., 2373, 1, 1, 1, 369351, 4.625537313978235e-7
 'let' is not allowed to be used as a name in 'let' or 'const' declarations., 2480, 1, 1, 1, 388317, 4.625537313978235e-7
 An enum member name must be followed by a ',', '=', or '}'., 1357, 1, 1, 1, 443024, 4.625537313978235e-7
 Ambient modules cannot be nested in other modules or namespaces., 2435, 1, 1, 1, 450927, 4.625537313978235e-7
