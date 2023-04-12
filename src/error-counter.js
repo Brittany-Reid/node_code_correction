@@ -3,6 +3,9 @@ const Fixer = require("./fixer");
 const Snippet = require("./snippet");
 const fs = require("fs");
 
+/**
+ * Class for testing.
+ */
 class ErrorCounter{
     constructor(){
         this.map = new Map();

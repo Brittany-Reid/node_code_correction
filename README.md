@@ -28,6 +28,8 @@ var compiled = await NCC.getErrors(snippets); // returns Snippet objects
 console.log(compiled[0].errors) // -> []
 ```
 
+Fix a set of strings:
+
 ```js
 const NCC = require("node_code_correction");
 

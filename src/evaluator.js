@@ -4,13 +4,16 @@
 const Snippet = require("./snippet");
 const Compiler = require("./ts/compiler/compiler");
 const Fixer = require("./fixer");
+const { EventEmitter } = require("stream");
 
 /**
  * Snippet Evaluator that counts and fixes errors.
  * This class uses snippet objects.
  */
-class Evaluator{
+class Evaluator extends EventEmitter{
     constructor(){
+        super()
+
         this.compiler = undefined;
         this.fixer = undefined;
         this.timeout = 60000;
@@ -39,6 +42,8 @@ class Evaluator{
                 snippets[i].compileFail = true; //but obviously 'couldn't even compile' is worse than all other errors so mark this for sorting
             }
             snippets[i].errors = errors;
+            //emit an event for timing
+            this.emit("compile")
         }
 
         this.compiler.close()
