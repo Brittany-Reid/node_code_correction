@@ -7,6 +7,8 @@
  *  - Snippets versions representing the fixed state.
  *  - Check the compiler errors
  *  - Get only snippets where compiler errors improved.
+ * 
+ * For some reason running this from absolute path gives different results - it might have something to do with TS finding it's definition files?
  */
 
 const fs = require("fs");
@@ -207,17 +209,3 @@ async function main(){
 }
 
 main()
-
-// var snippets = JSON.parse(fs.readFileSync(targetPath, {encoding:"utf-8"}));
-
-
-
-// for(var s of snippets.slice(0, 5)){
-//     var versions = s["Versions"];
-//     // console.log("ORIGINAL:")
-//     // console.log(versions[0]["Content"])
-//     // console.log("--")
-//     // console.log("MOST RECENT:")
-//     console.log(versions[1]["Content"])
-//     console.log("--------------------------------")
-// }
