@@ -16,6 +16,9 @@ const NCC = require("../index.js");
 var dataPath = "data";
 var sourcePath = path.join(dataPath, "soCodeBlockVersions.json")
 var targetPath = path.join(dataPath, "soFixes.json")
+var targetPath2 = path.join(dataPath, "soFixesImprove.json")
+var targetPath3 = path.join(dataPath, "soFixesFixed.json")
+
 
 var source = fs.readFileSync(sourcePath, {encoding: "utf-8"});
 
@@ -158,6 +161,30 @@ function filterByErrors(){
     })
 }
 
+function improvedOnly(){
+    snippets = snippets.filter((s)=>{
+        var versions = s["Versions"];
+        var first = versions[0]
+        var second = versions[1]
+        if(first["Errors"] < second["Errors"]){
+            return false;
+        }
+        return true;
+    })
+}
+
+function fixedOnly(){
+    snippets = snippets.filter((s)=>{
+        var versions = s["Versions"];
+        var first = versions[0]
+        var second = versions[1]
+        if(second["Errors"] == 0){
+            return true;
+        }
+        return false;
+    })
+}
+
 async function main(){
     getFirstLastEntries()
     collateSnippets()
@@ -167,6 +194,16 @@ async function main(){
     console.log("Snippets: " + snippets.length)
     //write
     fs.writeFileSync(targetPath, JSON.stringify(snippets,null, 2), {encoding:"utf-8"})
+    //filter by improved only
+    improvedOnly();
+    console.log("Snippets: " + snippets.length)
+    //write
+    fs.writeFileSync(targetPath2, JSON.stringify(snippets,null, 2), {encoding:"utf-8"})
+    //filter by to no errors only
+    fixedOnly();
+    console.log("Snippets: " + snippets.length)
+    //write
+    fs.writeFileSync(targetPath3, JSON.stringify(snippets,null, 2), {encoding:"utf-8"})
 }
 
 main()
