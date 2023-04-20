@@ -25,32 +25,15 @@ var targetPath3 = path.join(dataPath, "soFixesFixed.json")
 var source = fs.readFileSync(sourcePath, {encoding: "utf-8"});
 
 var entries = [];
-var snippets = []
+var snippets = [];
 
-//filter for edits:
-function getFirstLastEntries(){
-    // is a newline delim JSON (each entry on a newline)
+function getSnippets(){
+    //map snippets by postid_RootPostBlockVersionId to versions
+    var snippetMap = {}
     for(var l of source.split("\n")){
         if (!l) continue;
-        var entry = JSON.parse(l)
-        // ignore snippets with no edits
-        if(entry["PredCount"] == 0 && entry["SuccCount"] == 0){
-            continue;
-        }
-        // ignore entries that are not first or last
-        if(!(entry["PredCount"] == 0 || entry["SuccCount"] == 0)){
-            continue;
-        }
-        entries.push(entry);
-    }
-
-}
-
-function collateSnippets(){
-    //map snippets by postid+localid to versions
-    var snippetMap = {}
-    for(var e of entries){
-        var id = e["PostId"] + "_" + e["LocalId"];
+        var e = JSON.parse(l)
+        var id = e["PostId"] + "_" + e["RootPostBlockVersionId"];
         if(snippetMap[id] == undefined){
             snippetMap[id] = [e]
         }
@@ -58,46 +41,67 @@ function collateSnippets(){
             snippetMap[id].push(e)
         }
     }
-    
-    for(var s of Object.values(snippetMap)){
-        //filter these cases
-        //i assume localid shifts or maybe THIS block doesn't change
-        //some have a predLocalId but some don't
-        //https://stackoverflow.com/posts/4754806/revisions is a good example
-        //this case has more than 2 pred=0 snippets because blocks were added
-        if(s.length !== 2){
-            continue;
+
+    //format and filter
+    var i = -1;
+    for(var k of Object.keys(snippetMap)){
+
+        var e = snippetMap[k]
+        //it needs to have an original and an edit
+        if(e.length < 2) continue;
+
+
+        //join into a single entry
+        var entry = e[0]
+        var snippet = {
+            PostId : entry["PostId"], //to get /a/<id>, or /posts/<id>/revisions
+            RootLocalId : entry["RootLocalId"], //original location of the snippet
+            RootPostBlockVersionId : entry["RootPostBlockVersionId"], //id for parent used to group by
+            Versions : []
         }
-    
-        //sort by predcount so first version is first
-        s = s.sort((a, b) => {
-            a = a["PredCount"]
-            b = b["PredCount"]
+
+        var hasMostRecent = false;
+        //go through edits
+        for(var sn of e){
+            if(sn["MostRecentVersion"] == 1) hasMostRecent = true;
+
+            if(sn["Id"] == sn["RootPostBlockVersionId"] //is the original version
+            || sn["MostRecentVersion"] == 1){ //or is the most recent edit
+                snippet["Versions"].push({
+                    PredCount: sn["PredCount"],
+                    PredEqual: sn["PredEqual"],
+                    PredSimilarity: sn["PredSimilarity"],
+                    Content: sn["Content"],
+                    MostRecentVersion: sn["MostRecentVersion"]
+                })
+            }
+        }
+
+        if(!hasMostRecent) continue; //some cases the snippet has no most recent, see map solution which was removed from this answer https://stackoverflow.com/posts/65132128/revisions
+        //lets exclude these cases, they may be removed for a reason.
+
+        //make sure they're sorted
+        snippet["Versions"] = snippet["Versions"].sort((a, b) => {
+            a = a["MostRecentVersion"]
+            b = b["MostRecentVersion"]
             if(a < b) return -1;
             if(a > b) return 1;
             return 0;
         })
-    
-        //create unified entry
-        var entry = s[0]
-        var snippet = {
-            PostId : entry["PostId"],
-            LocalId : entry["LocalId"],
-            Versions : []
-        }
-    
-        for(var sn of s){
-            snippet["Versions"].push({
-                PredCount: sn["PredCount"],
-                PredEqual: sn["PredEqual"],
-                PredSimilarity: sn["PredSimilarity"],
-                Content: sn["Content"],
-                MostRecentVersion: sn["MostRecentVersion"]
-            })
-        }
-    
-        snippets.push(snippet)
+
+        snippets.push(snippet);
     }
+
+    //confirm all have two entries
+    for(var s of snippets){
+        var v = s["Versions"]
+        if(v.length != 2){
+            console.log("Error!")
+            console.log(s)
+        }
+    }
+
+
 }
 
 
@@ -188,15 +192,16 @@ function fixedOnly(){
 }
 
 async function main(){
-    getFirstLastEntries()
-    collateSnippets()
+    getSnippets();
+    console.log("Snippet Pairs: " + snippets.length)
     filterClones()
+    console.log("Snippets With Change: " + snippets.length)
     await getErrors(); //this step takes some time
     filterByErrors();
     console.log("Snippets: " + snippets.length)
     //write
     fs.writeFileSync(targetPath, JSON.stringify(snippets,null, 2), {encoding:"utf-8"})
-    //filter by improved only
+    // filter by improved only
     improvedOnly();
     console.log("Snippets: " + snippets.length)
     //write
