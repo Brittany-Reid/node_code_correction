@@ -10,7 +10,7 @@ class CompilerServer{
 
     /**
      * Calls the TS compiler. If it throws an error, it converts it to a sendable string.
-     * @param {sting} code 
+     * @param {string} code 
      * @returns 
      */
     static compile(code){

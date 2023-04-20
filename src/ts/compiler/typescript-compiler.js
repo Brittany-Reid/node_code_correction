@@ -14,6 +14,7 @@ var start;
  * - Caches read-in files to speed up program creation step on subsequent compiles.
  * - Only emits diagnostics for the sourcefile, speeding up this step.
  * - NOT timeout safe - one code snippet causes crashes, use compiler class
+ * - We run this class using the server instead.
  */
 class TypeScriptCompiler{
     constructor(){
