@@ -1,54 +1,54 @@
 DATASET INFORMATION:
-TOTAL SNIPPETS: 1181
+TOTAL SNIPPETS: 1101
 --------
 ERROR ANALYSIS
 
 ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
 
 Total errors: 0
-Snippets without errors: 1178/1178(1)
-Fixed: 0/1178(0)
-Snippets no lines: 6/1178(0.0050933786078098476)
-Code lines: 15987
-Snippets timed out: 0/1181(0)
-Snippets failed: 3/1181(0.002540220152413209)
-Snippets lineFailed: 0/1181(0)
+Snippets without errors: 1099/1099(1)
+Fixed: 0/1099(0)
+Snippets no lines: 2/1099(0.0018198362147406734)
+Code lines: 15507
+Snippets timed out: 0/1101(0)
+Snippets failed: 2/1101(0.0018165304268846503)
+Snippets lineFailed: 0/1101(0)
 --------
 DELETION ANALYSIS
 
 ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
 
 Total errors: 0
-Snippets without errors: 1178/1181(0.9974597798475868)
-Fixed: 0/1181(0)
-Snippets no lines: 6/1181(0.005080440304826418)
-Code lines: 15987
-Snippets timed out: 0/1181(0)
-Snippets failed: 0/1181(0)
-Snippets lineFailed: 0/1181(0)
+Snippets without errors: 1099/1101(0.9981834695731153)
+Fixed: 0/1101(0)
+Snippets no lines: 2/1101(0.0018165304268846503)
+Code lines: 15507
+Snippets timed out: 0/1101(0)
+Snippets failed: 0/1101(0)
+Snippets lineFailed: 0/1101(0)
 --------
 TS FIX ANALYSIS
 
 ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
 
 Total errors: 0
-Snippets without errors: 1178/1181(0.9974597798475868)
-Fixed: 0/1181(0)
-Snippets no lines: 6/1181(0.005080440304826418)
-Code lines: 15987
-Snippets timed out: 0/1181(0)
-Snippets failed: 0/1181(0)
-Snippets lineFailed: 0/1181(0)
+Snippets without errors: 1099/1101(0.9981834695731153)
+Fixed: 0/1101(0)
+Snippets no lines: 2/1101(0.0018165304268846503)
+Code lines: 15507
+Snippets timed out: 0/1101(0)
+Snippets failed: 0/1101(0)
+Snippets lineFailed: 0/1101(0)
 --------
 ALL FIXES ANALYSIS
 
 ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
 
 Total errors: 0
-Snippets without errors: 1178/1181(0.9974597798475868)
-Fixed: 0/1181(0)
-Snippets no lines: 6/1181(0.005080440304826418)
-Code lines: 15987
-Snippets timed out: 0/1181(0)
-Snippets failed: 0/1181(0)
-Snippets lineFailed: 0/1181(0)
+Snippets without errors: 1099/1101(0.9981834695731153)
+Fixed: 0/1101(0)
+Snippets no lines: 2/1101(0.0018165304268846503)
+Code lines: 15507
+Snippets timed out: 0/1101(0)
+Snippets failed: 0/1101(0)
+Snippets lineFailed: 0/1101(0)

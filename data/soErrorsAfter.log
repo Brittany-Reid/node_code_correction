@@ -1,766 +1,778 @@
 DATASET INFORMATION:
-TOTAL SNIPPETS: 20578
+TOTAL SNIPPETS: 21433
 --------
 ERROR ANALYSIS
 
 ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
-Cannot find name, 2304, 1, 180723, 17093, 5, 0.8306443774905239
-Unexpected keyword or identifier., 1434, 1, 60345, 4045, 13, 0.1965691515210419
-Character expected, 1005, 1, 51174, 6761, 13, 0.3285547672271358
-Expression expected., 1109, 1, 12274, 3514, 11, 0.17076489454757507
-Left side of comma operator is unused and has no side effects., 2695, 1, 7429, 2257, 19, 0.1096802410341141
-Invalid character., 1127, 1, 5803, 773, 99, 0.03756438915346486
-Declaration or statement expected., 1128, 1, 5426, 2598, 11, 0.12625133637865682
-Cannot use JSX unless the '--jsx' flag is provided., 17004, 1, 5385, 828, 43, 0.04023714646710079
-Identifier expected., 1003, 1, 4007, 2076, 53, 0.10088443969287589
-Cannot find name 'json'. Did you mean 'JSON'?, 2552, 1, 3966, 2783, 9, 0.13524152006997764
-Unknown keyword or identifier, 1435, 1, 2730, 1424, 99, 0.06920011662941004
-Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig., 2593, 1, 2384, 1304, 307, 0.06336864612693167
-Module declaration names may only use ' or " quoted strings., 1443, 1, 2103, 974, 53, 0.047332102245116144
-Property 'createClient' does not exist on type 'typeof import("http")'., 2339, 1, 1818, 898, 21, 0.0436388375935465
-Unterminated string literal., 1002, 1, 1435, 969, 733, 0.04708912430751288
-Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig., 2592, 1, 1338, 606, 23, 0.029448926037515793
-A type predicate is only allowed in return type position for functions and methods., 1228, 1, 1308, 827, 107, 0.040188550879580134
-Type annotations can only be used in TypeScript files., 8010, 1, 986, 432, 229, 0.02099329380892215
-No value exists in scope for the shorthand property 'proxy_set_header'. Either declare one or provide an initializer., 18004, 1, 841, 317, 129, 0.01540480124404704
-Duplicate identifier 'exports'., 2300, 1, 815, 242, 427, 0.011760132179998056
-Type assertion expressions can only be used in TypeScript files., 8016, 1, 756, 548, 119, 0.026630381961317912
-Unexpected token. Did you mean `{'}'}` or `&rbrace;`?, 1381, 1, 756, 235, 335, 0.011419963067353484
-Cannot redeclare block-scoped variable 'Arguments'., 2451, 1, 755, 246, 7133, 0.011954514530080668
-The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2362, 1, 746, 496, 129, 0.024103411410243948
-'string' only refers to a type, but is being used as a value here., 2693, 1, 695, 429, 243, 0.02084750704636019
-Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'., 2584, 1, 689, 414, 521, 0.020118573233550395
-An identifier or keyword cannot immediately follow a numeric literal., 1351, 1, 601, 184, 157, 0.008941588103800175
-JSX element 'form' has no corresponding closing tag., 17008, 1, 576, 286, 43, 0.013898338030906794
-Unexpected token. Did you mean `{'>'}` or `&gt;`?, 1382, 1, 527, 190, 295, 0.009233161628924094
-Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1378, 1, 493, 345, 6831, 0.016765477694625327
-This expression is not callable., 2349, 1, 492, 333, 63, 0.01618233064437749
-'await' expressions are only allowed at the top level of a file when that file is a module, but this file has no imports or exports. Consider adding an empty 'export {}' to make this file a module., 1375, 1, 469, 328, 6831, 0.015939352706774226
-Declaration expected., 1146, 1, 442, 249, 107, 0.012100301292642628
-The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2363, 1, 442, 286, 129, 0.013898338030906794
-Block-scoped variable 'char' used before its declaration., 2448, 1, 403, 157, 11069, 0.00762950724074254
-Argument expression expected., 1135, 1, 392, 244, 785, 0.011857323355039362
-Type '(Anonymous function)' is not assignable to type 'typeof game_state'., 2322, 1, 332, 262, 25, 0.012732043930411118
-Operator cannot be applied to types 1 and 2, 2365, 1, 316, 224, 449, 0.0108854116046263
-Non-null assertions can only be used in TypeScript files., 8013, 1, 283, 160, 619, 0.0077752940033045
-Unterminated regular expression literal., 1161, 1, 231, 169, 107, 0.008212654290990377
-A 'return' statement can only be used within a function body., 1108, 1, 208, 178, 165, 0.008650014578676255
-JSX expressions must have one parent element., 2657, 1, 207, 173, 1533, 0.008407036641072991
-Expected 0 arguments, but got 1., 2554, 1, 188, 158, 489, 0.007678102828263193
-The 'public' modifier can only be used in TypeScript files., 8009, 1, 184, 60, 715, 0.0029157352512391875
-Argument of type 'Buffer' is not assignable to parameter of type 'number'., 2345, 1, 165, 143, 175, 0.006949169015453397
-'module' declarations can only be used in TypeScript files., 8006, 1, 162, 136, 99, 0.006608999902808825
-Property assignment expected., 1136, 1, 161, 110, 1887, 0.005345514627271844
-Object is possibly 'undefined'., 2532, 1, 142, 54, 821, 0.002624161726115269
-Expected corresponding JSX closing tag for 'input'., 17002, 1, 134, 74, 43, 0.003596073476528331
-Cannot find namespace 'def'., 2503, 1, 129, 113, 785, 0.005491301389833803
-Experimental support for decorators is a feature that is subject to change in a future release. Set the 'experimentalDecorators' option in your 'tsconfig' or 'jsconfig' to remove this warning., 1219, 1, 128, 64, 12061, 0.0031101176013218
-Type expected., 1110, 1, 118, 113, 1061, 0.005491301389833803
-'import ... =' can only be used in TypeScript files., 8002, 1, 115, 81, 785, 0.003936242589172903
-The operand of an increment or decrement operator must be a variable or a property access., 2357, 1, 98, 57, 1923, 0.002769948488677228
-Type aliases can only be used in TypeScript files., 8008, 1, 98, 56, 11057, 0.002721352901156575
-Property 'writeHeader' does not exist on type 'ServerResponse<IncomingMessage> & { req: IncomingMessage; }'. Did you mean 'writeHead'?, 2551, 1, 93, 69, 97, 0.0033530955389250655
-Cannot find module './somefile.json'. Consider using '--resolveJsonModule' to import module with '.json' extension., 2732, 1, 91, 78, 441, 0.0037904558266109436
-Parameter modifiers can only be used in TypeScript files., 8012, 1, 89, 62, 229, 0.0030129264262804935
-No overload matches this call., 2769, 1, 85, 73, 11, 0.003547477889007678
-The left-hand side of an assignment expression must be a variable or a property access., 2364, 1, 76, 44, 557, 0.0021382058509087374
-Value of type 'typeof Socket' is not callable. Did you mean to include 'new'?, 2348, 1, 74, 64, 415, 0.0031101176013218
-'with' statements are not allowed in strict mode., 1101, 1, 72, 50, 19969, 0.0024297793760326564
-An element access expression should take an argument., 1011, 1, 71, 46, 659, 0.002235397025950044
-Identifier expected. 'with' is a reserved word that cannot be used here., 1359, 1, 71, 57, 2301, 0.002769948488677228
-Variable declaration expected., 1134, 1, 68, 48, 129, 0.00233258820099135
-Cannot use namespace 'NodeJS' as a value., 2708, 1, 61, 38, 1923, 0.0018466323257848188
-Cannot find name 'creatPeerConnection'. Did you mean the instance member 'this.creatPeerConnection'?, 2663, 1, 60, 7, 12061, 0.00034016911264457187
-Unterminated template literal., 1160, 1, 56, 56, 5113, 0.002721352901156575
-Type 'Set<string>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher., 2802, 1, 56, 48, 12559, 0.00233258820099135
-Type 'undefined' cannot be used as an index type., 2538, 1, 49, 38, 691, 0.0018466323257848188
-'#!' can only be used at the start of a file., 18026, 1, 48, 48, 619, 0.00233258820099135
-This comparison appears to be unintentional because the types 'boolean' and 'number' have no overlap., 2367, 1, 46, 32, 279, 0.0015550588006609
-An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type., 2356, 1, 46, 40, 2657, 0.001943823500826125
-'i' is possibly 'undefined'., 18048, 1, 42, 22, 691, 0.0010691029254543687
-'(Missing)' is an unused renaming of '"title"'. Did you intend to use it as a type annotation?, 2842, 1, 41, 7, 17363, 0.00034016911264457187
-Digit expected., 1124, 1, 40, 16, 3337, 0.00077752940033045
-'implements' clauses can only be used in TypeScript files., 8005, 1, 39, 31, 11385, 0.0015064632131402468
-Cannot assign to 'test' because it is a constant., 2588, 1, 37, 30, 17343, 0.0014578676256195937
-The operand of a 'delete' operator must be a property reference., 2703, 1, 35, 33, 1809, 0.001603654388181553
-Class 'DcObserver' used before its declaration., 2449, 1, 33, 22, 12061, 0.0010691029254543687
-Unexpected token. A constructor, method, accessor, or property was expected., 1068, 1, 32, 22, 10973, 0.0010691029254543687
-Type 'null' is not an array type., 2461, 1, 31, 24, 2033, 0.001166294100495675
-Parameter declaration expected., 1138, 1, 31, 20, 2787, 0.0009719117504130625
-Augmentations for the global scope should have 'declare' modifier unless they appear in already ambient context., 2670, 1, 30, 29, 99, 0.0014092720380989407
-A spread argument must either have a tuple type or be passed to a rest parameter., 2556, 1, 30, 25, 1705, 0.0012148896880163282
-A module cannot have multiple default exports., 2528, 1, 29, 13, 10309, 0.0006317426377684906
-A parameter initializer is only allowed in a function or constructor implementation., 2371, 1, 28, 16, 5315, 0.00077752940033045
-Augmentations for the global scope can only be directly nested in external modules or ambient module declarations., 2669, 1, 27, 26, 99, 0.0012634852755369812
-Only a void function can be called with the 'new' keyword., 2350, 1, 27, 26, 891, 0.0012634852755369812
-Module '"fs"' has no default export., 1192, 1, 27, 18, 20137, 0.0008747205753717563
-Expression or comma expected., 1137, 1, 26, 20, 1103, 0.0009719117504130625
-Individual declarations in merged declaration 'doSomething' must be all exported or all local., 2395, 1, 25, 11, 17027, 0.0005345514627271843
-The body of an 'if' statement cannot be the empty statement., 1313, 1, 23, 18, 5149, 0.0008747205753717563
-The value 'undefined' cannot be used here., 18050, 1, 22, 17, 1925, 0.0008261249878511031
-'{' or ';' expected., 1144, 1, 22, 22, 3953, 0.0010691029254543687
-'await' expressions are only allowed within async functions and at the top levels of modules., 1308, 1, 21, 15, 18363, 0.0007289338128097969
-'FileList' refers to a value, but is being used as a type here. Did you mean 'typeof FileList'?, 2749, 1, 20, 19, 13419, 0.0009233161628924094
-'super' can only be referenced in members of derived classes or object literal expressions., 2660, 1, 19, 8, 691, 0.000388764700165225
-The '&' operator is not allowed for boolean types. Consider using '&&' instead., 2447, 1, 18, 8, 2359, 0.000388764700165225
-String literal expected., 1141, 1, 17, 15, 3491, 0.0007289338128097969
-An object literal cannot have multiple properties with the same name., 1117, 1, 17, 15, 3757, 0.0007289338128097969
-An unary expression with the '-' operator is not allowed in the left-hand side of an exponentiation expression. Consider enclosing the expression in parentheses., 17006, 1, 17, 14, 12629, 0.0006803382252891437
-Cannot redeclare exported variable '0'., 2323, 1, 17, 7, 33385, 0.00034016911264457187
-'*/' expected., 1010, 1, 16, 16, 1627, 0.00077752940033045
-Type parameter declarations can only be used in TypeScript files., 8004, 1, 16, 14, 2695, 0.0006803382252891437
-This expression is not constructable., 2351, 1, 16, 14, 6571, 0.0006803382252891437
-Variable declaration not allowed at this location., 1440, 1, 16, 12, 25553, 0.0005831470502478375
-'super' must be followed by an argument list or member access., 1034, 1, 15, 4, 691, 0.0001943823500826125
-'catch' or 'finally' expected., 1472, 1, 15, 15, 12999, 0.0007289338128097969
-Circular definition of import alias 'User'., 2303, 1, 14, 10, 1629, 0.00048595587520653126
-A 'this' parameter must be the first parameter., 2680, 1, 14, 12, 15491, 0.0005831470502478375
-Module '"path"' can only be default-imported using the 'esModuleInterop' flag, 1259, 1, 14, 12, 20137, 0.0005831470502478375
-Cannot assign to 'io' because it is an import., 2632, 1, 12, 12, 579, 0.0005831470502478375
-Cannot find name 'await'. Did you mean to write this in an async function?, 2311, 1, 12, 11, 16227, 0.0005345514627271843
-The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type '"/bin/ls *.jpg"'., 2407, 1, 11, 9, 1387, 0.00043736028768587813
-Property 'Prefix' is missing in type '{ Bucket: any; }' but required in type '{ Bucket: any; Prefix: string; }'., 2741, 1, 11, 10, 8151, 0.00048595587520653126
-'super' must be called before accessing 'this' in the constructor of a derived class., 17009, 1, 11, 5, 12647, 0.00024297793760326563
-An arrow function cannot have a 'this' parameter., 2730, 1, 11, 9, 15491, 0.00043736028768587813
-'super' is not allowed as a parameter name., 1390, 1, 10, 10, 691, 0.00048595587520653126
-Type '{ $set: { nome: any; cognome: any; indirizzo: any; }; }' is missing the following properties from type '{ nome: any; cognome: any; indirizzo: any; }': nome, cognome, indirizzo, 2739, 1, 10, 10, 5281, 0.00048595587520653126
-Super calls are not permitted outside constructors or in nested functions inside constructors., 2337, 1, 10, 10, 19139, 0.00048595587520653126
-Duplicate function implementation., 2393, 1, 10, 5, 24493, 0.00024297793760326563
-The left-hand side of a 'for...in' statement must be a variable or a property access., 2406, 1, 9, 8, 789, 0.000388764700165225
-JSDoc '@param' tag has name 'token', but there is no parameter with that name., 8024, 1, 9, 6, 5073, 0.00029157352512391874
-Did you mean to use a ':'? An '=' can only follow a property name when the containing object literal is part of a destructuring pattern., 1312, 1, 9, 3, 11849, 0.00014578676256195937
-The 'import.meta' meta-property is only allowed when the '--module' option is 'es2020', 'es2022', 'esnext', 'system', 'node16', or 'nodenext'., 1343, 1, 9, 5, 25085, 0.00024297793760326563
-Hexadecimal digit expected., 1125, 1, 8, 3, 13833, 0.00014578676256195937
-'{' or JSX element expected., 1145, 1, 8, 5, 18211, 0.00024297793760326563
-Tuple type '[any, any, any]' of length '3' has no element at index '3'., 2493, 1, 8, 8, 21395, 0.000388764700165225
-Property or signature expected., 1131, 1, 8, 1, 24975, 0.000048595587520653125
-Index signature in type 'String' only permits reading., 2542, 1, 8, 6, 27443, 0.00029157352512391874
-Type 'string' is not comparable to type 'Buffer'., 2678, 1, 7, 2, 1065, 0.00009719117504130625
-'function' is not allowed as a variable declaration name., 1389, 1, 7, 5, 1787, 0.00024297793760326563
-Array element destructuring pattern expected., 1181, 1, 7, 5, 17363, 0.00024297793760326563
-An import path cannot end with a '.ts' extension. Consider importing 'https://deno.land/std@v0.36.0/http/server' instead., 2691, 1, 7, 5, 36821, 0.00024297793760326563
-'export =' can only be used in TypeScript files., 8003, 1, 6, 6, 3205, 0.00029157352512391874
-Trailing comma not allowed., 1009, 1, 6, 6, 3965, 0.00029157352512391874
-This condition will always return 'true' since JavaScript compares objects by reference, not value., 2839, 1, 6, 3, 5659, 0.00014578676256195937
-Cannot invoke an object which is possibly 'undefined'., 2722, 1, 6, 5, 8353, 0.00024297793760326563
-Constructors for derived classes must contain a 'super' call., 2377, 1, 6, 6, 12647, 0.00029157352512391874
-Type '{}' is missing the following properties from type 'NodeModule': isPreloading, exports, require, id, and 6 more., 2740, 1, 6, 6, 13045, 0.00029157352512391874
-Invalid module name in augmentation, module 'restify' cannot be found., 2664, 1, 6, 5, 21771, 0.00024297793760326563
-Merged declaration 'FileMiddleware' cannot include a default export declaration. Consider adding a separate 'export default FileMiddleware' declaration instead., 2652, 1, 6, 2, 38369, 0.00009719117504130625
-The left-hand side of a 'for...of' statement must be a variable or a property access., 2487, 1, 5, 5, 451, 0.00024297793760326563
-Type '(req: any, res: any) => void' has no properties in common with type 'ServerOptions<typeof IncomingMessage, typeof ServerResponse>'., 2559, 1, 5, 5, 1639, 0.00024297793760326563
-Type alias name cannot be '%tempFile%'., 2457, 1, 5, 5, 6163, 0.00024297793760326563
-Namespace name cannot be 'for'., 2819, 1, 5, 5, 6489, 0.00024297793760326563
-File '../.ts-definitions/express.d.ts' not found., 6053, 1, 5, 4, 7301, 0.0001943823500826125
-'ps.stdout' is possibly 'null'., 18047, 1, 5, 3, 14215, 0.00014578676256195937
-'const' declarations must be initialized., 1155, 1, 5, 4, 17343, 0.0001943823500826125
-Spread types may only be created from object types., 2698, 1, 5, 4, 22329, 0.0001943823500826125
-Numeric separators are not allowed here., 6188, 1, 5, 5, 25977, 0.00024297793760326563
-A function whose declared type is neither 'void' nor 'any' must return a value., 2355, 1, 4, 4, 5073, 0.0001943823500826125
-Duplicate identifier 'require'. Compiler reserves name 'require' in top level scope of a module., 2441, 1, 4, 4, 7623, 0.0001943823500826125
-A computed property name must be of type 'string', 'number', 'symbol', or 'any'., 2464, 1, 4, 4, 8521, 0.0001943823500826125
-JSX element type 'this' does not have any construct or call signatures., 2604, 1, 4, 3, 10569, 0.00014578676256195937
-Type arguments can only be used in TypeScript files., 8011, 1, 4, 4, 18019, 0.0001943823500826125
-The left-hand side of a 'for...in' statement must be of type 'string' or 'any'., 2405, 1, 4, 4, 19969, 0.0001943823500826125
-Statement expected., 1129, 1, 4, 4, 25077, 0.0001943823500826125
-Object is possibly 'null'., 2531, 1, 4, 1, 26067, 0.000048595587520653125
-Private identifiers are not allowed outside class bodies., 18016, 1, 3, 2, 77, 0.00009719117504130625
-Cannot assign to 'doIt' because it is a function., 2630, 1, 3, 3, 189, 0.00014578676256195937
-Function implementation is missing or not immediately following the declaration., 2391, 1, 3, 3, 1661, 0.00014578676256195937
-Declaration or statement expected. This '=' follows a block of statements, so if you intended to write a destructuring assignment, you might need to wrap the the whole assignment in parentheses., 2809, 1, 3, 2, 4823, 0.00009719117504130625
-Variable 'myarr' is used before being assigned., 2454, 1, 3, 3, 6859, 0.00014578676256195937
-Jump target cannot cross function boundary., 1107, 1, 3, 2, 8175, 0.00009719117504130625
-JSX spread child must be an array type., 2609, 1, 3, 3, 8899, 0.00014578676256195937
-Module '"module"' has no exported member 'old_name'., 2305, 1, 3, 1, 24079, 0.000048595587520653125
-'case' or 'default' expected., 1130, 1, 3, 2, 24643, 0.00009719117504130625
-A 'this' type is available only in a non-static member of a class or interface., 2526, 1, 3, 3, 30021, 0.00014578676256195937
-Cannot invoke an object which is possibly 'null'., 2721, 1, 3, 2, 32253, 0.00009719117504130625
-This condition will always return 'false'., 2845, 1, 3, 1, 37011, 0.000048595587520653125
-Cannot assign to 'completer' because it is a read-only property., 2540, 1, 2, 2, 429, 0.00009719117504130625
-Meta-property 'new.target' is only allowed in the body of a function declaration, function expression, or constructor., 17013, 1, 2, 2, 539, 0.00009719117504130625
-The '+' operator cannot be applied to type 'symbol'., 2469, 1, 2, 1, 1389, 0.000048595587520653125
-The 'with' statement is not supported. All symbols in a 'with' block will have type 'any'., 2410, 1, 2, 2, 6117, 0.00009719117504130625
-Namespace 'req' has no exported member 'user'., 2694, 1, 2, 2, 7985, 0.00009719117504130625
-Import declaration conflicts with local declaration of 'foo'., 2440, 1, 2, 2, 9979, 0.00009719117504130625
-Could not resolve the path '<pathToKnexDefinetelyTypedFile>' with the extensions: '.ts', '.tsx', '.d.ts', '.js', '.jsx', '.cts', '.d.cts', '.cjs', '.mts', '.d.mts', '.mjs'., 6231, 1, 2, 1, 14927, 0.000048595587520653125
-Expected at least 1 arguments, but got 0., 2555, 1, 2, 2, 15085, 0.00009719117504130625
-Function type, which lacks return-type annotation, implicitly has an 'any' return type., 7014, 1, 2, 1, 18183, 0.000048595587520653125
-Cannot use namespace 'b' as a type., 2709, 1, 2, 2, 21021, 0.00009719117504130625
-Static property 'name' conflicts with built-in property 'Function.name' of constructor function 'Task'., 2699, 1, 2, 1, 25835, 0.000048595587520653125
-Type '() => void' is not a constructor function type., 2507, 1, 2, 2, 28957, 0.00009719117504130625
-Merge conflict marker encountered., 1185, 1, 2, 2, 29631, 0.00009719117504130625
-Interface name cannot be 'for'., 2427, 1, 2, 2, 31051, 0.00009719117504130625
-Type parameter declaration expected., 1139, 1, 2, 2, 32167, 0.00009719117504130625
-Conversion of type 'typeof globalThis' to type '"Vehicle.updateItem(Vehicle.model, itemToUpdate, options, callback)"' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first., 2352, 1, 2, 2, 32407, 0.00009719117504130625
-All declarations of 'database' must have identical modifiers., 2687, 1, 2, 1, 33925, 0.000048595587520653125
-Binary digit expected., 1177, 1, 2, 1, 40797, 0.000048595587520653125
-Type 'boolean' is not an array type or a string type., 2495, 1, 1, 1, 451, 0.000048595587520653125
-Expected '=' for property initializer., 1442, 1, 1, 1, 1661, 0.000048595587520653125
-Cannot assign to 'undefined' because it is not a variable., 2539, 1, 1, 1, 6925, 0.000048595587520653125
-An expression of type 'void' cannot be tested for truthiness., 1345, 1, 1, 1, 9249, 0.000048595587520653125
-A 'yield' expression is only allowed in a generator body., 1163, 1, 1, 1, 12791, 0.000048595587520653125
-Property 'on' in type 'myEvent' is not assignable to the same property in base type 'EventEmitter'., 2416, 1, 1, 1, 15617, 0.000048595587520653125
-The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter., 2358, 1, 1, 1, 17545, 0.000048595587520653125
-'get' is not a valid meta-property for keyword 'new'. Did you mean 'target'?, 17012, 1, 1, 1, 18523, 0.000048595587520653125
-Type alias 'A' circularly references itself., 2456, 1, 1, 1, 19867, 0.000048595587520653125
-Non-abstract class 'CardCtrl' does not implement inherited abstract member 'model' from class 'BaseCtrl'., 2515, 1, 1, 1, 20509, 0.000048595587520653125
-Type '"UTF8"' is not assignable to type 'BufferEncoding'. Did you mean '"utf8"'?, 2820, 1, 1, 1, 21013, 0.000048595587520653125
-'let' declarations can only be declared inside a block., 1157, 1, 1, 1, 21493, 0.000048595587520653125
-Implicit conversion of a 'symbol' to a 'string' will fail at runtime. Consider wrapping this expression in 'String(...)'., 2731, 1, 1, 1, 21765, 0.000048595587520653125
-Cannot extend an interface 'Generator'. Did you mean 'implements'?, 2689, 1, 1, 1, 23105, 0.000048595587520653125
-'"util"' has no exported member named 'promisisfy'. Did you mean 'promisify'?, 2724, 1, 1, 1, 24055, 0.000048595587520653125
-'EventEmitter' is a type and cannot be imported in JavaScript files. Use 'import("...").EventEmitter' in a JSDoc type annotation., 18042, 1, 1, 1, 25285, 0.000048595587520653125
-Variable declaration list cannot be empty., 1123, 1, 1, 1, 25813, 0.000048595587520653125
-Type 'org.example.trading.Trader[]' is not a valid async function return type in ES5/ES3 because it does not refer to a Promise-compatible constructor value., 1055, 1, 1, 1, 26773, 0.000048595587520653125
-'for await' loops are only allowed at the top level of a file when that file is a module, but this file has no imports or exports. Consider adding an empty 'export {}' to make this file a module., 1431, 1, 1, 1, 27803, 0.000048595587520653125
-Top-level 'for await' loops are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1432, 1, 1, 1, 27803, 0.000048595587520653125
-Property 'getDummy' does not exist on type 'MyCustomClass'. Did you mean to access the static member 'MyCustomClass.getDummy' instead?, 2576, 1, 1, 1, 30903, 0.000048595587520653125
-Cannot find namespace 'logs'. Did you mean 'log'?, 2833, 1, 1, 1, 31445, 0.000048595587520653125
-Types cannot appear in export declarations in JavaScript files., 18043, 1, 1, 1, 32669, 0.000048595587520653125
-Constructor implementation is missing., 2390, 1, 1, 1, 34737, 0.000048595587520653125
-Ambient modules cannot be nested in other modules or namespaces., 2435, 1, 1, 1, 38097, 0.000048595587520653125
-Type argument list cannot be empty., 1099, 1, 1, 1, 38155, 0.000048595587520653125
-The variable declaration of a 'for...in' statement cannot have an initializer., 1189, 1, 1, 1, 38205, 0.000048595587520653125
-Type satisfaction expressions can only be used in TypeScript files., 8037, 1, 1, 1, 38815, 0.000048595587520653125
-Export declaration conflicts with exported declaration of 'name1'., 2484, 1, 1, 1, 40099, 0.000048595587520653125
-Object literal may only specify known properties, and 'c' does not exist in type '{ a: any; b: any; }'., 2353, 1, 1, 1, 40569, 0.000048595587520653125
-Type 'unknown' does not satisfy the constraint '(...args: any[]) => any'., 2344, 1, 1, 1, 40627, 0.000048595587520653125
-An interface can only extend an object type or intersection of object types with statically known members., 2312, 1, 1, 1, 40627, 0.000048595587520653125
-Ambient module declaration cannot specify relative module name., 2436, 1, 1, 1, 41027, 0.000048595587520653125
+Cannot find name, 2304, 1, 188249, 17902, 5, 0.8352540474968506
+Unexpected keyword or identifier., 1434, 1, 62122, 4059, 11, 0.18938086128866702
+Character expected, 1005, 1, 53408, 6973, 11, 0.3253394298511641
+Expression expected., 1109, 1, 13277, 3642, 13, 0.16992488219101387
+Left side of comma operator is unused and has no side effects., 2695, 1, 7879, 2317, 19, 0.10810432510614473
+Cannot use JSX unless the '--jsx' flag is provided., 17004, 1, 5996, 873, 117, 0.04073158213969113
+Declaration or statement expected., 1128, 1, 5863, 2768, 13, 0.12914664302710774
+Invalid character., 1127, 1, 5693, 783, 101, 0.03653244996034153
+Cannot find name 'json'. Did you mean 'JSON'?, 2552, 1, 4229, 2960, 9, 0.13810479167638687
+Identifier expected., 1003, 1, 4187, 2167, 51, 0.10110577147389539
+Unknown keyword or identifier, 1435, 1, 2809, 1448, 101, 0.06755937106331358
+Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig., 2593, 1, 2472, 1348, 329, 0.06289366864181402
+Module declaration names may only use ' or " quoted strings., 1443, 1, 2186, 1011, 51, 0.04717025148136052
+Property 'createClient' does not exist on type 'typeof import("http")'., 2339, 1, 1995, 971, 21, 0.045303970512760694
+Unterminated string literal., 1002, 1, 1492, 1003, 747, 0.04679699528764055
+Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig., 2592, 1, 1418, 621, 23, 0.028974012037512247
+A type predicate is only allowed in return type position for functions and methods., 1228, 1, 1340, 848, 113, 0.03956515653431624
+Type annotations can only be used in TypeScript files., 8010, 1, 1050, 461, 243, 0.021508888163112957
+No value exists in scope for the shorthand property 'proxy_set_header'. Either declare one or provide an initializer., 18004, 1, 868, 332, 131, 0.015490132039378528
+Duplicate identifier 'process'., 2300, 1, 845, 252, 83, 0.011757570102178884
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?, 1381, 1, 822, 258, 969, 0.012037512247468856
+The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2362, 1, 808, 525, 117, 0.024494937712872672
+Type assertion expressions can only be used in TypeScript files., 8016, 1, 793, 559, 121, 0.026081276536182522
+'string' only refers to a type, but is being used as a value here., 2693, 1, 770, 456, 207, 0.021275603042037978
+Cannot redeclare block-scoped variable 'process'., 2451, 1, 763, 252, 4087, 0.011757570102178884
+Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'., 2584, 1, 748, 455, 521, 0.021228946017822985
+An identifier or keyword cannot immediately follow a numeric literal., 1351, 1, 593, 188, 161, 0.008771520552419167
+JSX element 'br' has no corresponding closing tag., 17008, 1, 591, 289, 117, 0.013483879998133719
+Unexpected token. Did you mean `{'>'}` or `&gt;`?, 1382, 1, 562, 201, 315, 0.00937806186721411
+The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2363, 1, 517, 303, 131, 0.014137078337143658
+Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1378, 1, 514, 361, 7703, 0.0168431857416134
+This expression is not callable., 2349, 1, 512, 348, 63, 0.016236644426818457
+'await' expressions are only allowed at the top level of a file when that file is a module, but this file has no imports or exports. Consider adding an empty 'export {}' to make this file a module., 1375, 1, 486, 340, 7703, 0.015863388233098494
+Declaration expected., 1146, 1, 454, 260, 113, 0.012130826295898848
+Block-scoped variable 'the' used before its declaration., 2448, 1, 439, 166, 4087, 0.007745066019689264
+Argument expression expected., 1135, 1, 365, 251, 799, 0.011710913077963887
+Type '(Anonymous function)' is not assignable to type 'typeof game_state'., 2322, 1, 343, 273, 25, 0.01273736761069379
+Operator cannot be applied to types 1 and 2, 2365, 1, 331, 238, 457, 0.011104371763168945
+Non-null assertions can only be used in TypeScript files., 8013, 1, 287, 160, 627, 0.0074651238743992905
+Unterminated regular expression literal., 1161, 1, 239, 168, 113, 0.007838380068119256
+JSX expressions must have one parent element., 2657, 1, 224, 188, 1547, 0.008771520552419167
+A 'return' statement can only be used within a function body., 1108, 1, 214, 184, 401, 0.008584892455559184
+Expected 0 arguments, but got 1., 2554, 1, 203, 173, 503, 0.008071665189194234
+The 'public' modifier can only be used in TypeScript files., 8009, 1, 201, 63, 725, 0.002939392525544721
+Property assignment expected., 1136, 1, 184, 124, 1897, 0.00578547100265945
+Argument of type 'Buffer' is not assignable to parameter of type 'number'., 2345, 1, 180, 154, 179, 0.007185181729109318
+'module' declarations can only be used in TypeScript files., 8006, 1, 172, 146, 101, 0.006811925535389353
+Expected corresponding JSX closing tag for 'input'., 17002, 1, 151, 82, 3597, 0.0038258759856296363
+Object is possibly 'undefined'., 2532, 1, 144, 56, 837, 0.002612793356039752
+Cannot find namespace 'def'., 2503, 1, 131, 114, 799, 0.0053189007605094945
+Experimental support for decorators is a feature that is subject to change in a future release. Set the 'experimentalDecorators' option in your 'tsconfig' or 'jsconfig' to remove this warning., 1219, 1, 131, 69, 12225, 0.003219334670834694
+Type expected., 1110, 1, 130, 123, 1061, 0.0057388139784444545
+'import ... =' can only be used in TypeScript files., 8002, 1, 121, 82, 799, 0.0038258759856296363
+The operand of an increment or decrement operator must be a variable or a property access., 2357, 1, 101, 60, 3203, 0.002799421452899734
+Type aliases can only be used in TypeScript files., 8008, 1, 101, 60, 11265, 0.002799421452899734
+Property 'writeHeader' does not exist on type 'ServerResponse<IncomingMessage> & { req: IncomingMessage; }'. Did you mean 'writeHead'?, 2551, 1, 99, 73, 99, 0.0034059627676946763
+Cannot find module './somefile.json'. Consider using '--resolveJsonModule' to import module with '.json' extension., 2732, 1, 96, 82, 449, 0.0038258759856296363
+Parameter modifiers can only be used in TypeScript files., 8012, 1, 89, 63, 243, 0.002939392525544721
+No overload matches this call., 2769, 1, 88, 76, 13, 0.003545933840339663
+The left-hand side of an assignment expression must be a variable or a property access., 2364, 1, 86, 46, 567, 0.002146223113889796
+An element access expression should take an argument., 1011, 1, 85, 50, 669, 0.0023328512107497782
+Value of type 'typeof Socket' is not callable. Did you mean to include 'new'?, 2348, 1, 80, 73, 421, 0.0034059627676946763
+Cannot find name 'creatPeerConnection'. Did you mean the instance member 'this.creatPeerConnection'?, 2663, 1, 78, 8, 12323, 0.00037325619371996453
+Identifier expected. 'in' is a reserved word that cannot be used here., 1359, 1, 76, 62, 1933, 0.002892735501329725
+'with' statements are not allowed in strict mode., 1101, 1, 71, 49, 20737, 0.002286194186534783
+Cannot use namespace 'v8' as a value., 2708, 1, 70, 39, 1677, 0.001819623944384827
+Variable declaration expected., 1134, 1, 67, 47, 131, 0.002192880138104792
+'i' is possibly 'undefined'., 18048, 1, 60, 26, 701, 0.0012130826295898847
+Unterminated template literal., 1160, 1, 60, 60, 5129, 0.002799421452899734
+Type 'Generator<any, void, unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher., 2802, 1, 56, 51, 9775, 0.002379508234964774
+An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type., 2356, 1, 55, 46, 2677, 0.002146223113889796
+'#!' can only be used at the start of a file., 18026, 1, 53, 53, 627, 0.002472822283394765
+This comparison appears to be unintentional because the types 'boolean' and 'number' have no overlap., 2367, 1, 52, 37, 299, 0.001726309895954836
+Type 'undefined' cannot be used as an index type., 2538, 1, 46, 36, 701, 0.0016796528717398405
+Cannot assign to 'port' because it is a constant., 2588, 1, 41, 31, 1549, 0.0014463677506648626
+'(Missing)' is an unused renaming of '"title"'. Did you intend to use it as a type annotation?, 2842, 1, 41, 7, 17961, 0.000326599169504969
+Digit expected., 1124, 1, 40, 16, 3393, 0.0007465123874399291
+The operand of a 'delete' operator must be a property reference., 2703, 1, 39, 33, 1813, 0.0015396817990948536
+'implements' clauses can only be used in TypeScript files., 8005, 1, 38, 30, 11617, 0.001399710726449867
+Unexpected token. A constructor, method, accessor, or property was expected., 1068, 1, 37, 25, 11173, 0.0011664256053748891
+The value 'undefined' cannot be used here., 18050, 1, 36, 24, 1161, 0.0011197685811598936
+Parameter declaration expected., 1138, 1, 36, 23, 2815, 0.001073111556944898
+Class 'Active' used before its declaration., 2449, 1, 34, 23, 1689, 0.001073111556944898
+A spread argument must either have a tuple type or be passed to a rest parameter., 2556, 1, 32, 26, 1721, 0.0012130826295898847
+Augmentations for the global scope should have 'declare' modifier unless they appear in already ambient context., 2670, 1, 31, 30, 101, 0.001399710726449867
+Only a void function can be called with the 'new' keyword., 2350, 1, 31, 29, 903, 0.0013530537022348715
+Type 'null' is not an array type., 2461, 1, 31, 25, 2049, 0.0011664256053748891
+Module '"fs"' has no default export., 1192, 1, 31, 19, 20909, 0.0008864834600849158
+'super' can only be referenced in members of derived classes or object literal expressions., 2660, 1, 29, 11, 701, 0.0005132272663649513
+A module cannot have multiple default exports., 2528, 1, 29, 13, 10475, 0.0006065413147949423
+Augmentations for the global scope can only be directly nested in external modules or ambient module declarations., 2669, 1, 28, 27, 101, 0.0012597396538048804
+A parameter initializer is only allowed in a function or constructor implementation., 2371, 1, 28, 16, 5339, 0.0007465123874399291
+Individual declarations in merged declaration 'doSomething' must be all exported or all local., 2395, 1, 27, 12, 17609, 0.0005598842905799468
+Expression or comma expected., 1137, 1, 26, 21, 1101, 0.000979797508514907
+'super' must be followed by an argument list or member access., 1034, 1, 24, 6, 701, 0.0002799421452899734
+'FileList' refers to a value, but is being used as a type here. Did you mean 'typeof FileList'?, 2749, 1, 24, 23, 13755, 0.001073111556944898
+'{' or ';' expected., 1144, 1, 23, 23, 4007, 0.001073111556944898
+This expression is not constructable., 2351, 1, 21, 19, 2081, 0.0008864834600849158
+The body of an 'if' statement cannot be the empty statement., 1313, 1, 21, 16, 5167, 0.0007465123874399291
+'catch' or 'finally' expected., 1472, 1, 20, 20, 13319, 0.0009331404842999113
+'await' expressions are only allowed within async functions and at the top levels of modules., 1308, 1, 20, 15, 23699, 0.0006998553632249335
+The '&' operator is not allowed for boolean types. Consider using '&&' instead., 2447, 1, 19, 9, 2365, 0.0004199132179349601
+Type parameter declarations can only be used in TypeScript files., 8004, 1, 19, 17, 2717, 0.0007931694116549247
+Cannot redeclare exported variable 'plugins'., 2323, 1, 19, 8, 24301, 0.00037325619371996453
+String literal expected., 1141, 1, 18, 16, 3555, 0.0007465123874399291
+An object literal cannot have multiple properties with the same name., 1117, 1, 18, 16, 3805, 0.0007465123874399291
+An unary expression with the '-' operator is not allowed in the left-hand side of an exponentiation expression. Consider enclosing the expression in parentheses., 17006, 1, 17, 14, 12923, 0.000653198339009938
+Variable declaration not allowed at this location., 1440, 1, 16, 12, 26623, 0.0005598842905799468
+'*/' expected., 1010, 1, 15, 15, 9335, 0.0006998553632249335
+A 'this' parameter must be the first parameter., 2680, 1, 15, 13, 15995, 0.0006065413147949423
+Module '"path"' can only be default-imported using the 'esModuleInterop' flag, 1259, 1, 15, 13, 20909, 0.0006065413147949423
+Circular definition of import alias 'User'., 2303, 1, 13, 10, 1643, 0.00046657024214995566
+Type '(id: any) => any' is missing the following properties from type 'Require': resolve, cache, extensions, main, 2739, 1, 13, 13, 4607, 0.0006065413147949423
+Cannot assign to 'io' because it is an import., 2632, 1, 12, 12, 591, 0.0005598842905799468
+JSDoc '@param' tag has name 'token', but there is no parameter with that name., 8024, 1, 12, 7, 5101, 0.000326599169504969
+An arrow function cannot have a 'this' parameter., 2730, 1, 12, 10, 15995, 0.00046657024214995566
+Cannot find name 'await'. Did you mean to write this in an async function?, 2311, 1, 12, 11, 16767, 0.0005132272663649513
+Super calls are not permitted outside constructors or in nested functions inside constructors., 2337, 1, 12, 12, 19855, 0.0005598842905799468
+'super' is not allowed as a parameter name., 1390, 1, 11, 11, 701, 0.0005132272663649513
+The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type '"/bin/ls *.jpg"'., 2407, 1, 11, 9, 1395, 0.0004199132179349601
+'super' must be called before accessing 'this' in the constructor of a derived class., 17009, 1, 10, 5, 12941, 0.00023328512107497783
+Duplicate function implementation., 2393, 1, 10, 5, 25515, 0.00023328512107497783
+Did you mean to use a ':'? An '=' can only follow a property name when the containing object literal is part of a destructuring pattern., 1312, 1, 9, 3, 12113, 0.0001399710726449867
+Tuple type '[CommonJS]' of length '1' has no element at index '3'., 2493, 1, 9, 9, 14997, 0.0004199132179349601
+The 'import.meta' meta-property is only allowed when the '--module' option is 'es2020', 'es2022', 'esnext', 'system', 'node16', or 'nodenext'., 1343, 1, 9, 5, 26117, 0.00023328512107497783
+The left-hand side of a 'for...in' statement must be a variable or a property access., 2406, 1, 8, 7, 3401, 0.000326599169504969
+Property 'Prefix' is missing in type '{ Bucket: any; }' but required in type '{ Bucket: any; Prefix: string; }'., 2741, 1, 8, 8, 8241, 0.00037325619371996453
+Hexadecimal digit expected., 1125, 1, 8, 3, 14195, 0.0001399710726449867
+'{' or JSX element expected., 1145, 1, 8, 5, 18875, 0.00023328512107497783
+Property or signature expected., 1131, 1, 8, 1, 26019, 0.000046657024214995566
+Index signature in type 'String' only permits reading., 2542, 1, 8, 6, 28637, 0.0002799421452899734
+Type 'string' is not comparable to type 'Buffer'., 2678, 1, 7, 2, 1069, 0.00009331404842999113
+Trailing comma not allowed., 1009, 1, 7, 7, 4681, 0.000326599169504969
+This condition will always return 'true' since JavaScript compares objects by reference, not value., 2839, 1, 7, 3, 5663, 0.0001399710726449867
+Array element destructuring pattern expected., 1181, 1, 7, 5, 17961, 0.00023328512107497783
+An import path cannot end with a '.ts' extension. Consider importing 'https://deno.land/std@v0.36.0/http/server' instead., 2691, 1, 7, 5, 38393, 0.00023328512107497783
+The left-hand side of a 'for...of' statement must be a variable or a property access., 2487, 1, 6, 6, 459, 0.0002799421452899734
+'export =' can only be used in TypeScript files., 8003, 1, 6, 6, 3255, 0.0002799421452899734
+File 'node.d.ts' not found., 6053, 1, 6, 5, 3629, 0.00023328512107497783
+Namespace name cannot be 'for'., 2819, 1, 6, 6, 6511, 0.0002799421452899734
+'function' is not allowed as a variable declaration name., 1389, 1, 6, 4, 7309, 0.00018662809685998226
+Cannot invoke an object which is possibly 'undefined'., 2722, 1, 6, 5, 8439, 0.00023328512107497783
+Constructors for derived classes must contain a 'super' call., 2377, 1, 6, 6, 12941, 0.0002799421452899734
+Type '{}' is missing the following properties from type 'NodeModule': isPreloading, exports, require, id, and 6 more., 2740, 1, 6, 6, 13365, 0.0002799421452899734
+Invalid module name in augmentation, module 'restify' cannot be found., 2664, 1, 6, 5, 22631, 0.00023328512107497783
+Spread types may only be created from object types., 2698, 1, 6, 5, 23207, 0.00023328512107497783
+Merged declaration 'FileMiddleware' cannot include a default export declaration. Consider adding a separate 'export default FileMiddleware' declaration instead., 2652, 1, 6, 2, 40009, 0.00009331404842999113
+Type '(req: any, res: any) => void' has no properties in common with type 'ServerOptions<typeof IncomingMessage, typeof ServerResponse>'., 2559, 1, 5, 5, 1653, 0.00023328512107497783
+A function whose declared type is neither 'void' nor 'any' must return a value., 2355, 1, 5, 5, 5101, 0.00023328512107497783
+Type alias name cannot be '%tempFile%'., 2457, 1, 5, 5, 6171, 0.00023328512107497783
+Duplicate identifier 'require'. Compiler reserves name 'require' in top level scope of a module., 2441, 1, 5, 5, 7697, 0.00023328512107497783
+A computed property name must be of type 'string', 'number', 'symbol', or 'any'., 2464, 1, 5, 5, 8615, 0.00023328512107497783
+'ps.stdout' is possibly 'null'., 18047, 1, 5, 3, 14617, 0.0001399710726449867
+Numeric separators are not allowed here., 6188, 1, 5, 5, 27109, 0.00023328512107497783
+Cannot invoke an object which is possibly 'null'., 2721, 1, 4, 3, 6901, 0.0001399710726449867
+Type arguments can only be used in TypeScript files., 8011, 1, 4, 4, 18669, 0.00018662809685998226
+The left-hand side of a 'for...in' statement must be of type 'string' or 'any'., 2405, 1, 4, 4, 20737, 0.00018662809685998226
+'case' or 'default' expected., 1130, 1, 4, 3, 25675, 0.0001399710726449867
+Statement expected., 1129, 1, 4, 4, 26107, 0.00018662809685998226
+Object is possibly 'null'., 2531, 1, 4, 1, 27207, 0.000046657024214995566
+'const' declarations must be initialized., 1155, 1, 4, 3, 27249, 0.0001399710726449867
+Private identifiers are not allowed outside class bodies., 18016, 1, 3, 2, 75, 0.00009331404842999113
+Type 'boolean' is not an array type or a string type., 2495, 1, 3, 3, 459, 0.0001399710726449867
+Function implementation is missing or not immediately following the declaration., 2391, 1, 3, 3, 1679, 0.0001399710726449867
+The 'with' statement is not supported. All symbols in a 'with' block will have type 'any'., 2410, 1, 3, 3, 3157, 0.0001399710726449867
+Declaration or statement expected. This '=' follows a block of statements, so if you intended to write a destructuring assignment, you might need to wrap the the whole assignment in parentheses., 2809, 1, 3, 2, 4853, 0.00009331404842999113
+Variable 'myarr' is used before being assigned., 2454, 1, 3, 3, 6881, 0.0001399710726449867
+Namespace 'req' has no exported member 'user'., 2694, 1, 3, 3, 8067, 0.0001399710726449867
+Jump target cannot cross function boundary., 1107, 1, 3, 2, 8265, 0.00009331404842999113
+JSX spread child must be an array type., 2609, 1, 3, 3, 8981, 0.0001399710726449867
+Module '"module"' has no exported member 'old_name'., 2305, 1, 3, 1, 25101, 0.000046657024214995566
+A 'this' type is available only in a non-static member of a class or interface., 2526, 1, 3, 3, 31409, 0.0001399710726449867
+JSX element type 'groups.length' does not have any construct or call signatures., 2604, 1, 3, 2, 31925, 0.00009331404842999113
+This condition will always return 'false'., 2845, 1, 3, 1, 38583, 0.000046657024214995566
+Cannot assign to 'doIt' because it is a function., 2630, 1, 2, 2, 193, 0.00009331404842999113
+The '+' operator cannot be applied to type 'symbol'., 2469, 1, 2, 1, 1397, 0.000046657024214995566
+Import declaration conflicts with local declaration of 'foo'., 2440, 1, 2, 2, 10131, 0.00009331404842999113
+A 'yield' expression is only allowed in a generator body., 1163, 1, 2, 2, 13091, 0.00009331404842999113
+Could not resolve the path '<pathToKnexDefinetelyTypedFile>' with the extensions: '.ts', '.tsx', '.d.ts', '.js', '.jsx', '.cts', '.d.cts', '.cjs', '.mts', '.d.mts', '.mjs'., 6231, 1, 2, 1, 15393, 0.000046657024214995566
+Expected at least 1 arguments, but got 0., 2555, 1, 2, 2, 15551, 0.00009331404842999113
+Function type, which lacks return-type annotation, implicitly has an 'any' return type., 7014, 1, 2, 1, 18847, 0.000046657024214995566
+Cannot use namespace 'b' as a type., 2709, 1, 2, 2, 21851, 0.00009331404842999113
+Static property 'name' conflicts with built-in property 'Function.name' of constructor function 'Task'., 2699, 1, 2, 1, 26957, 0.000046657024214995566
+Type '() => void' is not a constructor function type., 2507, 1, 2, 2, 30259, 0.00009331404842999113
+Merge conflict marker encountered., 1185, 1, 2, 2, 30979, 0.00009331404842999113
+Interface name cannot be 'for'., 2427, 1, 2, 2, 32475, 0.00009331404842999113
+Type parameter declaration expected., 1139, 1, 2, 2, 33635, 0.00009331404842999113
+Conversion of type 'typeof globalThis' to type '"Vehicle.updateItem(Vehicle.model, itemToUpdate, options, callback)"' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first., 2352, 1, 2, 2, 33885, 0.00009331404842999113
+All declarations of 'database' must have identical modifiers., 2687, 1, 2, 1, 35465, 0.000046657024214995566
+Binary digit expected., 1177, 1, 2, 1, 42501, 0.000046657024214995566
+Cannot assign to 'completer' because it is a read-only property., 2540, 1, 1, 1, 437, 0.000046657024214995566
+Expected '=' for property initializer., 1442, 1, 1, 1, 1679, 0.000046657024214995566
+An expression of type 'void' cannot be tested for truthiness., 1345, 1, 1, 1, 9337, 0.000046657024214995566
+Property 'on' in type 'myEvent' is not assignable to the same property in base type 'EventEmitter'., 2416, 1, 1, 1, 16113, 0.000046657024214995566
+The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter., 2358, 1, 1, 1, 18161, 0.000046657024214995566
+Meta-property 'new.target' is only allowed in the body of a function declaration, function expression, or constructor., 17013, 1, 1, 1, 19195, 0.000046657024214995566
+'get' is not a valid meta-property for keyword 'new'. Did you mean 'target'?, 17012, 1, 1, 1, 19195, 0.000046657024214995566
+Type alias 'A' circularly references itself., 2456, 1, 1, 1, 20625, 0.000046657024214995566
+Non-abstract class 'CardCtrl' does not implement inherited abstract member 'model' from class 'BaseCtrl'., 2515, 1, 1, 1, 21343, 0.000046657024214995566
+Type '"UTF8"' is not assignable to type 'BufferEncoding'. Did you mean '"utf8"'?, 2820, 1, 1, 1, 21843, 0.000046657024214995566
+'let' declarations can only be declared inside a block., 1157, 1, 1, 1, 22341, 0.000046657024214995566
+Implicit conversion of a 'symbol' to a 'string' will fail at runtime. Consider wrapping this expression in 'String(...)'., 2731, 1, 1, 1, 22623, 0.000046657024214995566
+'super' can only be referenced in a derived class., 2335, 1, 1, 1, 22713, 0.000046657024214995566
+Cannot extend an interface 'Generator'. Did you mean 'implements'?, 2689, 1, 1, 1, 24029, 0.000046657024214995566
+'"util"' has no exported member named 'promisisfy'. Did you mean 'promisify'?, 2724, 1, 1, 1, 25077, 0.000046657024214995566
+'EventEmitter' is a type and cannot be imported in JavaScript files. Use 'import("...").EventEmitter' in a JSDoc type annotation., 18042, 1, 1, 1, 26331, 0.000046657024214995566
+Variable declaration list cannot be empty., 1123, 1, 1, 1, 26935, 0.000046657024214995566
+Cannot assign to 'AES' because it is a class., 2629, 1, 1, 1, 27045, 0.000046657024214995566
+Type 'org.example.trading.Trader[]' is not a valid async function return type in ES5/ES3 because it does not refer to a Promise-compatible constructor value., 1055, 1, 1, 1, 27919, 0.000046657024214995566
+'for await' loops are only allowed at the top level of a file when that file is a module, but this file has no imports or exports. Consider adding an empty 'export {}' to make this file a module., 1431, 1, 1, 1, 29049, 0.000046657024214995566
+Top-level 'for await' loops are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1432, 1, 1, 1, 29049, 0.000046657024214995566
+Property 'getDummy' does not exist on type 'MyCustomClass'. Did you mean to access the static member 'MyCustomClass.getDummy' instead?, 2576, 1, 1, 1, 32327, 0.000046657024214995566
+Cannot find namespace 'logs'. Did you mean 'log'?, 2833, 1, 1, 1, 32883, 0.000046657024214995566
+Types cannot appear in export declarations in JavaScript files., 18043, 1, 1, 1, 34155, 0.000046657024214995566
+Property destructuring pattern expected., 1180, 1, 1, 1, 36025, 0.000046657024214995566
+Constructor implementation is missing., 2390, 1, 1, 1, 36275, 0.000046657024214995566
+Ambient modules cannot be nested in other modules or namespaces., 2435, 1, 1, 1, 39725, 0.000046657024214995566
+Type argument list cannot be empty., 1099, 1, 1, 1, 39787, 0.000046657024214995566
+The variable declaration of a 'for...in' statement cannot have an initializer., 1189, 1, 1, 1, 39839, 0.000046657024214995566
+Type satisfaction expressions can only be used in TypeScript files., 8037, 1, 1, 1, 40463, 0.000046657024214995566
+Export declaration conflicts with exported declaration of 'name1'., 2484, 1, 1, 1, 41759, 0.000046657024214995566
+Object literal may only specify known properties, and 'c' does not exist in type '{ a: any; b: any; }'., 2353, 1, 1, 1, 42253, 0.000046657024214995566
+Type 'unknown' does not satisfy the constraint '(...args: any[]) => any'., 2344, 1, 1, 1, 42313, 0.000046657024214995566
+An interface can only extend an object type or intersection of object types with statically known members., 2312, 1, 1, 1, 42313, 0.000046657024214995566
+Ambient module declaration cannot specify relative module name., 2436, 1, 1, 1, 42733, 0.000046657024214995566
 
-Total errors: 367536
-Snippets without errors: 1178/20575(0.05725394896719319)
-Fixed: 0/20575(0)
-Snippets no lines: 8/20575(0.0003888213851761847)
-Code lines: 283144
-Snippets timed out: 0/20578(0)
-Snippets failed: 3/20578(0.00014578676256195937)
-Snippets lineFailed: 0/20578(0)
+Total errors: 383532
+Snippets without errors: 1099/21431(0.05128085483645187)
+Fixed: 0/21431(0)
+Snippets no lines: 5/21431(0.0002333068918855863)
+Code lines: 306494
+Snippets timed out: 0/21433(0)
+Snippets failed: 2/21433(0.00009331404842999113)
+Snippets lineFailed: 0/21433(0)
 --------
 DELETION ANALYSIS
 
 ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
-Cannot find name, 2304, 1, 13900, 8288, 5, 0.4027602293711731
-Character expected, 1005, 1, 1463, 1224, 11, 0.059480999125279425
-Cannot find name 'url'. Did you mean 'URL'?, 2552, 1, 909, 786, 135, 0.03819613179123336
-Cannot use JSX unless the '--jsx' flag is provided., 17004, 1, 890, 226, 501, 0.010982602779667606
-Declaration or statement expected., 1128, 1, 506, 461, 145, 0.02240256584702109
-Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig., 2593, 1, 471, 239, 801, 0.011614345417436096
-A 'return' statement can only be used within a function body., 1108, 1, 359, 355, 257, 0.01725143356983186
-Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig., 2592, 1, 338, 221, 287, 0.01073962484206434
-Property 'createClient' does not exist on type 'typeof import("http")'., 2339, 1, 328, 247, 189, 0.012003110117601322
-Expression expected., 1109, 1, 322, 281, 787, 0.013655360093303528
-Type annotations can only be used in TypeScript files., 8010, 1, 230, 114, 2119, 0.005539896977354456
-Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'., 2584, 1, 164, 109, 521, 0.005296919039751191
-Identifier expected., 1003, 1, 157, 136, 59, 0.006608999902808825
-JSX element 'img' has no corresponding closing tag., 17008, 1, 138, 72, 3497, 0.003498882301487025
-Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1378, 1, 121, 117, 15593, 0.005685683739916416
-'await' expressions are only allowed at the top level of a file when that file is a module, but this file has no imports or exports. Consider adding an empty 'export {}' to make this file a module., 1375, 1, 106, 103, 15593, 0.005005345514627272
-Left side of comma operator is unused and has no side effects., 2695, 1, 102, 73, 1175, 0.003547477889007678
-Unexpected token. Did you mean `{'>'}` or `&gt;`?, 1382, 1, 97, 42, 503, 0.0020410146758674313
-Unexpected token. Did you mean `{'}'}` or `&rbrace;`?, 1381, 1, 94, 44, 6063, 0.0021382058509087374
-'interface' declarations can only be used in TypeScript files., 8006, 1, 59, 45, 2119, 0.002186801438429391
-Cannot redeclare block-scoped variable 'col'., 2451, 1, 53, 23, 17285, 0.001117698512975022
-Block-scoped variable 'through' used before its declaration., 2448, 1, 51, 40, 8147, 0.001943823500826125
-The 'declare' modifier can only be used in TypeScript files., 8009, 1, 50, 24, 2119, 0.001166294100495675
-This expression is not callable., 2349, 1, 45, 36, 9883, 0.0017494411507435125
-'catch' or 'finally' expected., 1472, 1, 36, 36, 1651, 0.0017494411507435125
-Unexpected keyword or identifier., 1434, 1, 36, 22, 5517, 0.0010691029254543687
-Module declaration names may only use ' or " quoted strings., 1443, 1, 36, 12, 31677, 0.0005831470502478375
-Unterminated template literal., 1160, 1, 35, 35, 7111, 0.0017008455632228593
-Value of type 'typeof Socket' is not callable. Did you mean to include 'new'?, 2348, 1, 34, 34, 415, 0.0016522499757022063
-Argument of type 'number' is not assignable to parameter of type 'string'., 2345, 1, 29, 29, 1895, 0.0014092720380989407
-Cannot find module './storedFilesList.json'. Consider using '--resolveJsonModule' to import module with '.json' extension., 2732, 1, 24, 23, 7959, 0.001117698512975022
-'implements' clauses can only be used in TypeScript files., 8005, 1, 24, 22, 11385, 0.0010691029254543687
-Experimental support for decorators is a feature that is subject to change in a future release. Set the 'experimentalDecorators' option in your 'tsconfig' or 'jsconfig' to remove this warning., 1219, 1, 24, 22, 12645, 0.0010691029254543687
-Type 'IterableIterator<any>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher., 2802, 1, 22, 19, 16847, 0.0009233161628924094
-No value exists in scope for the shorthand property 'params'. Either declare one or provide an initializer., 18004, 1, 21, 16, 2595, 0.00077752940033045
-Expected 1 arguments, but got 2., 2554, 1, 20, 20, 517, 0.0009719117504130625
-No overload matches this call., 2769, 1, 20, 19, 2505, 0.0009233161628924094
-Duplicate identifier 'process'., 2300, 1, 20, 12, 7685, 0.0005831470502478375
-Argument expression expected., 1135, 1, 19, 17, 1855, 0.0008261249878511031
-Property 'votes' does not exist on type 'typeof post'. Did you mean 'vote'?, 2551, 1, 19, 16, 3363, 0.00077752940033045
-Type '(Anonymous function)' is not assignable to type 'typeof game_state'., 2322, 1, 17, 16, 25, 0.00077752940033045
-Invalid character., 1127, 1, 16, 8, 13283, 0.000388764700165225
-Expected corresponding JSX closing tag for 'base_url'., 17002, 1, 15, 10, 19603, 0.00048595587520653126
-'worker' is possibly 'undefined'., 18048, 1, 14, 11, 653, 0.0005345514627271843
-Parameter modifiers can only be used in TypeScript files., 8012, 1, 14, 12, 13419, 0.0005831470502478375
-Object is possibly 'undefined'., 2532, 1, 14, 9, 26797, 0.00043736028768587813
-The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2363, 1, 12, 11, 7111, 0.0005345514627271843
-Tuple type '[]' of length '0' has no element at index '0'., 2493, 1, 12, 6, 23765, 0.00029157352512391874
-Operator cannot be applied to types 1 and 2, 2365, 1, 11, 11, 4405, 0.0005345514627271843
-Type '{ firstName: string; lastName: string; }' cannot be used as an index type., 2538, 1, 11, 11, 13469, 0.0005345514627271843
-The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2362, 1, 10, 10, 1177, 0.00048595587520653126
-'Console' only refers to a type, but is being used as a value here., 2693, 1, 10, 8, 2517, 0.000388764700165225
-A module cannot have multiple default exports., 2528, 1, 10, 5, 10309, 0.00024297793760326563
-Cannot find namespace 'mongoose'., 2503, 1, 10, 7, 12479, 0.00034016911264457187
-Property assignment expected., 1136, 1, 10, 8, 12937, 0.000388764700165225
-Declaration expected., 1146, 1, 9, 9, 2619, 0.00043736028768587813
-JSX expressions must have one parent element., 2657, 1, 9, 9, 5901, 0.00043736028768587813
-'*/' expected., 1010, 1, 9, 9, 6189, 0.00043736028768587813
-'import ... =' can only be used in TypeScript files., 8002, 1, 9, 9, 7301, 0.00043736028768587813
-Type aliases can only be used in TypeScript files., 8008, 1, 9, 6, 14959, 0.00029157352512391874
-Unexpected token. A constructor, method, accessor, or property was expected., 1068, 1, 9, 9, 15177, 0.00043736028768587813
-Unknown keyword or identifier, 1435, 1, 8, 8, 3337, 0.000388764700165225
-Type '{ test: RegExp; loaders: string[]; }' is not an array type., 2461, 1, 6, 5, 14747, 0.00024297793760326563
-Duplicate function implementation., 2393, 1, 6, 3, 24493, 0.00014578676256195937
-Trailing comma not allowed., 1009, 1, 5, 5, 3965, 0.00024297793760326563
-File '../.ts-definitions/express.d.ts' not found., 6053, 1, 5, 4, 7301, 0.0001943823500826125
-Type assertion expressions can only be used in TypeScript files., 8016, 1, 5, 4, 21377, 0.0001943823500826125
-Only a void function can be called with the 'new' keyword., 2350, 1, 4, 4, 1827, 0.0001943823500826125
-Variable declaration expected., 1134, 1, 4, 4, 6189, 0.0001943823500826125
-Unterminated string literal., 1002, 1, 4, 4, 10097, 0.0001943823500826125
-Constructors for derived classes must contain a 'super' call., 2377, 1, 4, 4, 12647, 0.0001943823500826125
-Module '"fs"' has no default export., 1192, 1, 4, 3, 21957, 0.00014578676256195937
-Property 'status' is missing in type '{ headers: { 'Content-Type': string; }; body: any; }' but required in type '{ status: number; body: string; }'., 2741, 1, 4, 3, 23819, 0.00014578676256195937
-Type parameter declarations can only be used in TypeScript files., 8004, 1, 4, 4, 25403, 0.0001943823500826125
-Digit expected., 1124, 1, 4, 2, 38387, 0.00009719117504130625
-An identifier or keyword cannot immediately follow a numeric literal., 1351, 1, 4, 1, 40797, 0.000048595587520653125
-This expression is not constructable., 2351, 1, 3, 3, 6783, 0.00014578676256195937
-This comparison appears to be unintentional because the types 'Buffer' and 'string' have no overlap., 2367, 1, 3, 3, 10459, 0.00014578676256195937
-'ps.stdout' is possibly 'null'., 18047, 1, 3, 2, 14215, 0.00009719117504130625
-'Mode' refers to a value, but is being used as a type here. Did you mean 'typeof Mode'?, 2749, 1, 3, 3, 20567, 0.00014578676256195937
-'await' expressions are only allowed within async functions and at the top levels of modules., 1308, 1, 3, 3, 24031, 0.00014578676256195937
-Invalid module name in augmentation, module 'node-json2html' cannot be found., 2664, 1, 3, 3, 32701, 0.00014578676256195937
-Module '"stream"' can only be default-imported using the 'esModuleInterop' flag, 1259, 1, 3, 3, 33655, 0.00014578676256195937
-Non-null assertions can only be used in TypeScript files., 8013, 1, 3, 2, 37983, 0.00009719117504130625
-Type 'string' is not comparable to type 'Buffer'., 2678, 1, 2, 2, 1065, 0.00009719117504130625
-An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type., 2356, 1, 2, 2, 7111, 0.00009719117504130625
-An object literal cannot have multiple properties with the same name., 1117, 1, 2, 2, 7187, 0.00009719117504130625
-Duplicate identifier 'require'. Compiler reserves name 'require' in top level scope of a module., 2441, 1, 2, 2, 7623, 0.00009719117504130625
-Parameter declaration expected., 1138, 1, 2, 1, 7887, 0.000048595587520653125
-The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type 'string'., 2407, 1, 2, 2, 11181, 0.00009719117504130625
-Expression or comma expected., 1137, 1, 2, 2, 14079, 0.00009719117504130625
-Could not resolve the path '<pathToKnexDefinetelyTypedFile>' with the extensions: '.ts', '.tsx', '.d.ts', '.js', '.jsx', '.cts', '.d.cts', '.cjs', '.mts', '.d.mts', '.mjs'., 6231, 1, 2, 1, 14927, 0.000048595587520653125
-A spread argument must either have a tuple type or be passed to a rest parameter., 2556, 1, 2, 2, 18843, 0.00009719117504130625
-Type expected., 1110, 1, 2, 2, 22865, 0.00009719117504130625
-'super' must be called before accessing 'this' in the constructor of a derived class., 17009, 1, 2, 1, 25405, 0.000048595587520653125
-Static property 'name' conflicts with built-in property 'Function.name' of constructor function 'Task'., 2699, 1, 2, 1, 25835, 0.000048595587520653125
-Cannot assign to 'i' because it is a constant., 2588, 1, 2, 2, 26513, 0.00009719117504130625
-Type '() => void' is not a constructor function type., 2507, 1, 2, 2, 28957, 0.00009719117504130625
-Merge conflict marker encountered., 1185, 1, 2, 2, 29631, 0.00009719117504130625
-A function whose declared type is neither 'void' nor 'any' must return a value., 2355, 1, 2, 2, 30961, 0.00009719117504130625
-Type 'Promise<void>' is missing the following properties from type 'string[]': length, pop, push, concat, and 29 more., 2740, 1, 2, 2, 31237, 0.00009719117504130625
-JSX spread child must be an array type., 2609, 1, 2, 2, 35109, 0.00009719117504130625
-Cannot redeclare exported variable 'renderViewProducer'., 2323, 1, 2, 1, 38233, 0.000048595587520653125
-Cannot assign to 'completer' because it is a read-only property., 2540, 1, 1, 1, 429, 0.000048595587520653125
-Line terminator not permitted before arrow., 1200, 1, 1, 1, 5565, 0.000048595587520653125
-The 'with' statement is not supported. All symbols in a 'with' block will have type 'any'., 2410, 1, 1, 1, 6117, 0.000048595587520653125
-Cannot assign to 'request' because it is an import., 2632, 1, 1, 1, 7197, 0.000048595587520653125
-'function' is not allowed as a variable declaration name., 1389, 1, 1, 1, 7257, 0.000048595587520653125
-The '&' operator is not allowed for boolean types. Consider using '&&' instead., 2447, 1, 1, 1, 10459, 0.000048595587520653125
-Property 'on' in type 'myEvent' is not assignable to the same property in base type 'EventEmitter'., 2416, 1, 1, 1, 15617, 0.000048595587520653125
-The operand of a 'delete' operator must be a property reference., 2703, 1, 1, 1, 15987, 0.000048595587520653125
-A 'yield' expression is only allowed in a generator body., 1163, 1, 1, 1, 16243, 0.000048595587520653125
-Function implementation is missing or not immediately following the declaration., 2391, 1, 1, 1, 22113, 0.000048595587520653125
-A parameter initializer is only allowed in a function or constructor implementation., 2371, 1, 1, 1, 22113, 0.000048595587520653125
-Cannot find name 'paused'. Did you mean the instance member 'this.paused'?, 2663, 1, 1, 1, 25405, 0.000048595587520653125
-A 'get' accessor must return a value., 2378, 1, 1, 1, 25485, 0.000048595587520653125
-'for await' loops are only allowed at the top level of a file when that file is a module, but this file has no imports or exports. Consider adding an empty 'export {}' to make this file a module., 1431, 1, 1, 1, 27803, 0.000048595587520653125
-Top-level 'for await' loops are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1432, 1, 1, 1, 27803, 0.000048595587520653125
-The left-hand side of an assignment expression must be a variable or a property access., 2364, 1, 1, 1, 30365, 0.000048595587520653125
-Type arguments can only be used in TypeScript files., 8011, 1, 1, 1, 31203, 0.000048595587520653125
-Decorators are not valid here., 1206, 1, 1, 1, 32017, 0.000048595587520653125
-Cannot find name 'await'. Did you mean to write this in an async function?, 2311, 1, 1, 1, 32539, 0.000048595587520653125
-A type predicate is only allowed in return type position for functions and methods., 1228, 1, 1, 1, 33851, 0.000048595587520653125
-'{' or ';' expected., 1144, 1, 1, 1, 33999, 0.000048595587520653125
-'const' declarations must be initialized., 1155, 1, 1, 1, 34063, 0.000048595587520653125
-Unterminated regular expression literal., 1161, 1, 1, 1, 34321, 0.000048595587520653125
-The operand of an increment or decrement operator must be a variable or a property access., 2357, 1, 1, 1, 35307, 0.000048595587520653125
-Hexadecimal digit expected., 1125, 1, 1, 1, 35601, 0.000048595587520653125
-Class 'Controller' used before its declaration., 2449, 1, 1, 1, 36165, 0.000048595587520653125
-Type '(...args: any[]) => any' is missing the following properties from type 'Require': resolve, cache, extensions, main, 2739, 1, 1, 1, 36483, 0.000048595587520653125
-'super' can only be referenced in members of derived classes or object literal expressions., 2660, 1, 1, 1, 37621, 0.000048595587520653125
+Cannot find name, 2304, 1, 15023, 8922, 5, 0.41627397004619043
+Character expected, 1005, 1, 1587, 1311, 13, 0.06116735874585919
+Cannot use JSX unless the '--jsx' flag is provided., 17004, 1, 1032, 244, 513, 0.01138431390845892
+Cannot find name 'url'. Did you mean 'URL'?, 2552, 1, 994, 858, 137, 0.040031726776466194
+Declaration or statement expected., 1128, 1, 564, 508, 149, 0.023701768301217747
+Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig., 2593, 1, 513, 262, 743, 0.01222414034432884
+A 'return' statement can only be used within a function body., 1108, 1, 388, 382, 277, 0.017822983250128308
+Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig., 2592, 1, 381, 242, 307, 0.011290999860028928
+Property 'createClient' does not exist on type 'typeof import("http")'., 2339, 1, 359, 275, 193, 0.012830681659123782
+Expression expected., 1109, 1, 348, 307, 1125, 0.014323706434003639
+Type annotations can only be used in TypeScript files., 8010, 1, 254, 120, 2141, 0.005598842905799468
+Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'., 2584, 1, 170, 111, 539, 0.005178929687864508
+Identifier expected., 1003, 1, 165, 143, 59, 0.006671954462744366
+JSX element 'img' has no corresponding closing tag., 17008, 1, 149, 78, 3563, 0.003639247888769654
+Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1378, 1, 121, 117, 16091, 0.005458871833154482
+Left side of comma operator is unused and has no side effects., 2695, 1, 118, 79, 1713, 0.00368590491298465
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?, 1381, 1, 107, 50, 6055, 0.0023328512107497782
+'await' expressions are only allowed at the top level of a file when that file is a module, but this file has no imports or exports. Consider adding an empty 'export {}' to make this file a module., 1375, 1, 104, 101, 16091, 0.004712359445714552
+Unexpected token. Did you mean `{'>'}` or `&gt;`?, 1382, 1, 100, 42, 515, 0.001959595017029814
+The 'declare' modifier can only be used in TypeScript files., 8009, 1, 57, 26, 2141, 0.0012130826295898847
+'interface' declarations can only be used in TypeScript files., 8006, 1, 57, 46, 2141, 0.002146223113889796
+Cannot redeclare block-scoped variable 'col'., 2451, 1, 53, 23, 17897, 0.001073111556944898
+Block-scoped variable 'through' used before its declaration., 2448, 1, 52, 41, 8237, 0.0019129379928148182
+This expression is not callable., 2349, 1, 50, 41, 10013, 0.0019129379928148182
+Module declaration names may only use ' or " quoted strings., 1443, 1, 43, 16, 14997, 0.0007465123874399291
+Value of type 'typeof Socket' is not callable. Did you mean to include 'new'?, 2348, 1, 42, 42, 421, 0.001959595017029814
+'catch' or 'finally' expected., 1472, 1, 41, 41, 1667, 0.0019129379928148182
+Unterminated template literal., 1160, 1, 41, 41, 7151, 0.0019129379928148182
+Unexpected keyword or identifier., 1434, 1, 37, 23, 5527, 0.001073111556944898
+Argument of type 'number' is not assignable to parameter of type 'string'., 2345, 1, 29, 29, 1907, 0.0013530537022348715
+No value exists in scope for the shorthand property 'params'. Either declare one or provide an initializer., 18004, 1, 26, 18, 2611, 0.0008398264358699202
+Cannot find module './storedFilesList.json'. Consider using '--resolveJsonModule' to import module with '.json' extension., 2732, 1, 26, 25, 8037, 0.0011664256053748891
+Experimental support for decorators is a feature that is subject to change in a future release. Set the 'experimentalDecorators' option in your 'tsconfig' or 'jsconfig' to remove this warning., 1219, 1, 26, 24, 12225, 0.0011197685811598936
+Duplicate identifier 'process'., 2300, 1, 23, 15, 83, 0.0006998553632249335
+Expected 1 arguments, but got 2., 2554, 1, 23, 23, 535, 0.001073111556944898
+No overload matches this call., 2769, 1, 23, 22, 2525, 0.0010264545327299025
+'implements' clauses can only be used in TypeScript files., 8005, 1, 23, 21, 11617, 0.000979797508514907
+Property 'safeStringify' does not exist on type 'JSON'. Did you mean 'stringify'?, 2551, 1, 21, 18, 1407, 0.0008398264358699202
+Type 'Generator<any, void, unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher., 2802, 1, 20, 20, 9775, 0.0009331404842999113
+Type '(Anonymous function)' is not assignable to type 'typeof game_state'., 2322, 1, 19, 18, 25, 0.0008398264358699202
+Argument expression expected., 1135, 1, 19, 17, 1859, 0.0007931694116549247
+Expected corresponding JSX closing tag for 'base_url'., 17002, 1, 18, 11, 20341, 0.0005132272663649513
+Invalid character., 1127, 1, 16, 8, 13611, 0.00037325619371996453
+Parameter modifiers can only be used in TypeScript files., 8012, 1, 15, 13, 13755, 0.0006065413147949423
+'worker' is possibly 'undefined'., 18048, 1, 14, 11, 663, 0.0005132272663649513
+Type '{ _id: string; name: string; __v: number; skill: number; }' cannot be used as an index type., 2538, 1, 14, 12, 23363, 0.0005598842905799468
+Tuple type '[]' of length '0' has no element at index '0'., 2493, 1, 14, 7, 24779, 0.000326599169504969
+Object is possibly 'undefined'., 2532, 1, 14, 9, 27943, 0.0004199132179349601
+The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2363, 1, 13, 12, 7151, 0.0005598842905799468
+Operator cannot be applied to types 1 and 2, 2365, 1, 12, 12, 4457, 0.0005598842905799468
+JSX expressions must have one parent element., 2657, 1, 11, 11, 5897, 0.0005132272663649513
+'string' only refers to a type, but is being used as a value here., 2693, 1, 10, 9, 207, 0.0004199132179349601
+A module cannot have multiple default exports., 2528, 1, 10, 5, 10475, 0.00023328512107497783
+Cannot find namespace 'mongoose'., 2503, 1, 10, 7, 12779, 0.000326599169504969
+Property assignment expected., 1136, 1, 10, 8, 13243, 0.00037325619371996453
+The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2362, 1, 9, 9, 1179, 0.0004199132179349601
+Declaration expected., 1146, 1, 9, 9, 2637, 0.0004199132179349601
+'import ... =' can only be used in TypeScript files., 8002, 1, 9, 9, 7357, 0.0004199132179349601
+Type aliases can only be used in TypeScript files., 8008, 1, 9, 6, 15427, 0.0002799421452899734
+Unexpected token. A constructor, method, accessor, or property was expected., 1068, 1, 9, 9, 15655, 0.0004199132179349601
+Unknown keyword or identifier, 1435, 1, 8, 8, 3393, 0.00037325619371996453
+'*/' expected., 1010, 1, 7, 7, 16853, 0.000326599169504969
+File 'node.d.ts' not found., 6053, 1, 6, 5, 3629, 0.00023328512107497783
+Duplicate function implementation., 2393, 1, 6, 3, 25515, 0.0001399710726449867
+This comparison appears to be unintentional because the types 'Buffer' and 'string' have no overlap., 2367, 1, 5, 5, 10633, 0.00023328512107497783
+Type '{ test: RegExp; loaders: string[]; }' is not an array type., 2461, 1, 5, 4, 15197, 0.00018662809685998226
+Type assertion expressions can only be used in TypeScript files., 8016, 1, 5, 4, 22227, 0.00018662809685998226
+Module '"fs"' has no default export., 1192, 1, 5, 4, 22819, 0.00018662809685998226
+Type parameter declarations can only be used in TypeScript files., 8004, 1, 5, 5, 26463, 0.00023328512107497783
+Only a void function can be called with the 'new' keyword., 2350, 1, 4, 4, 1831, 0.00018662809685998226
+This expression is not constructable., 2351, 1, 4, 4, 6813, 0.00018662809685998226
+Trailing comma not allowed., 1009, 1, 4, 4, 8609, 0.00018662809685998226
+Unterminated string literal., 1002, 1, 4, 4, 10251, 0.00018662809685998226
+Constructors for derived classes must contain a 'super' call., 2377, 1, 4, 4, 12941, 0.00018662809685998226
+'Mode' refers to a value, but is being used as a type here. Did you mean 'typeof Mode'?, 2749, 1, 4, 4, 21401, 0.00018662809685998226
+Digit expected., 1124, 1, 4, 2, 40027, 0.00009331404842999113
+An identifier or keyword cannot immediately follow a numeric literal., 1351, 1, 4, 1, 42501, 0.000046657024214995566
+An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type., 2356, 1, 3, 3, 7151, 0.0001399710726449867
+Variable declaration expected., 1134, 1, 3, 3, 12989, 0.0001399710726449867
+Expression or comma expected., 1137, 1, 3, 3, 14475, 0.0001399710726449867
+'ps.stdout' is possibly 'null'., 18047, 1, 3, 2, 14617, 0.00009331404842999113
+'await' expressions are only allowed within async functions and at the top levels of modules., 1308, 1, 3, 3, 25051, 0.0001399710726449867
+Invalid module name in augmentation, module 'node-json2html' cannot be found., 2664, 1, 3, 3, 34183, 0.0001399710726449867
+Module '"stream"' can only be default-imported using the 'esModuleInterop' flag, 1259, 1, 3, 3, 35181, 0.0001399710726449867
+Non-null assertions can only be used in TypeScript files., 8013, 1, 3, 2, 39603, 0.00009331404842999113
+Type 'string' is not comparable to type 'Buffer'., 2678, 1, 2, 2, 1069, 0.00009331404842999113
+JSDoc '@param' tag has name 'required', but there is no parameter with that name., 8024, 1, 2, 1, 5471, 0.000046657024214995566
+Type '(path: any) => any' is missing the following properties from type 'Require': resolve, cache, extensions, main, 2739, 1, 2, 2, 6545, 0.00009331404842999113
+An object literal cannot have multiple properties with the same name., 1117, 1, 2, 2, 7235, 0.00009331404842999113
+Duplicate identifier 'require'. Compiler reserves name 'require' in top level scope of a module., 2441, 1, 2, 2, 7697, 0.00009331404842999113
+Parameter declaration expected., 1138, 1, 2, 1, 7961, 0.000046657024214995566
+A 'yield' expression is only allowed in a generator body., 1163, 1, 2, 2, 10253, 0.00009331404842999113
+The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type 'string'., 2407, 1, 2, 2, 11403, 0.00009331404842999113
+Unterminated regular expression literal., 1161, 1, 2, 2, 14997, 0.00009331404842999113
+Could not resolve the path '<pathToKnexDefinetelyTypedFile>' with the extensions: '.ts', '.tsx', '.d.ts', '.js', '.jsx', '.cts', '.d.cts', '.cjs', '.mts', '.d.mts', '.mjs'., 6231, 1, 2, 1, 15393, 0.000046657024214995566
+A spread argument must either have a tuple type or be passed to a rest parameter., 2556, 1, 2, 2, 19521, 0.00009331404842999113
+Type expected., 1110, 1, 2, 2, 23795, 0.00009331404842999113
+Property 'status' is missing in type '{ headers: { 'Content-Type': string; }; body: any; }' but required in type '{ status: number; body: string; }'., 2741, 1, 2, 2, 24831, 0.00009331404842999113
+Cannot find name 'nowWriting'. Did you mean the instance member 'this.nowWriting'?, 2663, 1, 2, 1, 26465, 0.000046657024214995566
+Static property 'name' conflicts with built-in property 'Function.name' of constructor function 'Task'., 2699, 1, 2, 1, 26957, 0.000046657024214995566
+Cannot assign to 'i' because it is a constant., 2588, 1, 2, 2, 27649, 0.00009331404842999113
+Type '() => void' is not a constructor function type., 2507, 1, 2, 2, 30259, 0.00009331404842999113
+Merge conflict marker encountered., 1185, 1, 2, 2, 30979, 0.00009331404842999113
+A function whose declared type is neither 'void' nor 'any' must return a value., 2355, 1, 2, 2, 32385, 0.00009331404842999113
+Type 'Promise<void>' is missing the following properties from type 'string[]': length, pop, push, concat, and 29 more., 2740, 1, 2, 2, 32667, 0.00009331404842999113
+JSX spread child must be an array type., 2609, 1, 2, 2, 36647, 0.00009331404842999113
+Cannot redeclare exported variable 'renderViewProducer'., 2323, 1, 2, 1, 39869, 0.000046657024214995566
+Cannot assign to 'completer' because it is a read-only property., 2540, 1, 1, 1, 437, 0.000046657024214995566
+Line terminator not permitted before arrow., 1200, 1, 1, 1, 5579, 0.000046657024214995566
+Identifier expected. 'default' is a reserved word that cannot be used here., 1359, 1, 1, 1, 6005, 0.000046657024214995566
+The 'with' statement is not supported. All symbols in a 'with' block will have type 'any'., 2410, 1, 1, 1, 6121, 0.000046657024214995566
+Cannot assign to 'request' because it is an import., 2632, 1, 1, 1, 7245, 0.000046657024214995566
+'function' is not allowed as a variable declaration name., 1389, 1, 1, 1, 7309, 0.000046657024214995566
+The '&' operator is not allowed for boolean types. Consider using '&&' instead., 2447, 1, 1, 1, 10633, 0.000046657024214995566
+Property 'on' in type 'myEvent' is not assignable to the same property in base type 'EventEmitter'., 2416, 1, 1, 1, 16113, 0.000046657024214995566
+The operand of a 'delete' operator must be a property reference., 2703, 1, 1, 1, 16513, 0.000046657024214995566
+Function implementation is missing or not immediately following the declaration., 2391, 1, 1, 1, 22983, 0.000046657024214995566
+A parameter initializer is only allowed in a function or constructor implementation., 2371, 1, 1, 1, 22983, 0.000046657024214995566
+'super' must be called before accessing 'this' in the constructor of a derived class., 17009, 1, 1, 1, 26465, 0.000046657024214995566
+A 'get' accessor must return a value., 2378, 1, 1, 1, 26551, 0.000046657024214995566
+'for await' loops are only allowed at the top level of a file when that file is a module, but this file has no imports or exports. Consider adding an empty 'export {}' to make this file a module., 1431, 1, 1, 1, 29049, 0.000046657024214995566
+Top-level 'for await' loops are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1432, 1, 1, 1, 29049, 0.000046657024214995566
+The left-hand side of an assignment expression must be a variable or a property access., 2364, 1, 1, 1, 31777, 0.000046657024214995566
+Type arguments can only be used in TypeScript files., 8011, 1, 1, 1, 32631, 0.000046657024214995566
+Decorators are not valid here., 1206, 1, 1, 1, 33467, 0.000046657024214995566
+Cannot find name 'await'. Did you mean to write this in an async function?, 2311, 1, 1, 1, 34025, 0.000046657024214995566
+A type predicate is only allowed in return type position for functions and methods., 1228, 1, 1, 1, 35391, 0.000046657024214995566
+'{' or ';' expected., 1144, 1, 1, 1, 35541, 0.000046657024214995566
+'const' declarations must be initialized., 1155, 1, 1, 1, 35601, 0.000046657024214995566
+The operand of an increment or decrement operator must be a variable or a property access., 2357, 1, 1, 1, 36845, 0.000046657024214995566
+Hexadecimal digit expected., 1125, 1, 1, 1, 37145, 0.000046657024214995566
+Class 'Controller' used before its declaration., 2449, 1, 1, 1, 37731, 0.000046657024214995566
+'super' can only be referenced in members of derived classes or object literal expressions., 2660, 1, 1, 1, 39213, 0.000046657024214995566
+Type 'boolean' is not an array type or a string type., 2495, 1, 1, 1, 41813, 0.000046657024214995566
 
-Total errors: 21773
-Snippets without errors: 9938/20578(0.48294294878025074)
-Fixed: 16406/20578(0.7972592088638352)
-Snippets no lines: 5203/20578(0.2528428418699582)
-Code lines: 201708
-Snippets timed out: 0/20578(0)
-Snippets failed: 0/20578(0)
-Snippets lineFailed: 0/20578(0)
+Total errors: 23633
+Snippets without errors: 9953/21433(0.46437736201185087)
+Fixed: 17138/21433(0.7996080809965941)
+Snippets no lines: 5057/21433(0.2359445714552326)
+Code lines: 219934
+Snippets timed out: 0/21433(0)
+Snippets failed: 0/21433(0)
+Snippets lineFailed: 0/21433(0)
 --------
 TS FIX ANALYSIS
 
 ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
-Cannot find name, 2304, 1, 161795, 15910, 5, 0.7731557974535912
-Unexpected keyword or identifier., 1434, 1, 60130, 4034, 13, 0.19603460005831472
-Character expected, 1005, 1, 52062, 6818, 13, 0.331324715715813
-Expression expected., 1109, 1, 12673, 3667, 11, 0.17820001943823502
-Left side of comma operator is unused and has no side effects., 2695, 1, 7397, 2251, 19, 0.10938866750899018
-Invalid character., 1127, 1, 5805, 773, 99, 0.03756438915346486
-Declaration or statement expected., 1128, 1, 5567, 2629, 11, 0.12775779959179706
-Cannot use JSX unless the '--jsx' flag is provided., 17004, 1, 5379, 827, 43, 0.040188550879580134
-Property 'replace' does not exist on type 'JSON'., 2339, 1, 4627, 2669, 9, 0.1297016230926232
-Identifier expected., 1003, 1, 4033, 2109, 53, 0.10248809408105744
-Unknown keyword or identifier, 1435, 1, 2785, 1458, 99, 0.07085236660511225
-Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig., 2593, 1, 2369, 1297, 307, 0.0630284770142871
-Module declaration names may only use ' or " quoted strings., 1443, 1, 2097, 973, 53, 0.04728350665759549
-Cannot redeclare block-scoped variable 'title'., 2451, 1, 1831, 497, 161, 0.024152006997764604
-Unterminated string literal., 1002, 1, 1436, 969, 733, 0.04708912430751288
-Type annotations can only be used in TypeScript files., 8010, 1, 1348, 603, 229, 0.029303139274953833
-Block-scoped variable 'chain' used before its declaration., 2448, 1, 1337, 718, 89, 0.03489163183982894
-Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig., 2592, 1, 1336, 605, 23, 0.02940033044999514
-A type predicate is only allowed in return type position for functions and methods., 1228, 1, 1313, 829, 107, 0.04028574205462144
-Duplicate identifier 'assert'., 2300, 1, 1210, 407, 767, 0.019778404120905823
-The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2362, 1, 1100, 736, 99, 0.0357663524152007
-Unexpected token. Did you mean `{'}'}` or `&rbrace;`?, 1381, 1, 811, 253, 335, 0.01229468364272524
-The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2363, 1, 776, 508, 95, 0.024686558460491788
-No value exists in scope for the shorthand property 'proxy_set_header'. Either declare one or provide an initializer., 18004, 1, 771, 289, 129, 0.014044124793468752
-Type assertion expressions can only be used in TypeScript files., 8016, 1, 746, 543, 119, 0.026387404023714648
-Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'., 2584, 1, 687, 413, 521, 0.02006997764602974
-'string' only refers to a type, but is being used as a value here., 2693, 1, 662, 414, 243, 0.020118573233550395
-Cannot find name 'getSomeData'. Did you mean 'getMoreData'?, 2552, 1, 619, 454, 39, 0.02206239673437652
-An identifier or keyword cannot immediately follow a numeric literal., 1351, 1, 601, 184, 157, 0.008941588103800175
-JSX element 'form' has no corresponding closing tag., 17008, 1, 580, 289, 43, 0.014044124793468752
-Unexpected token. Did you mean `{'>'}` or `&gt;`?, 1382, 1, 531, 191, 295, 0.009281757216444747
-Import declaration conflicts with local declaration of 'title'., 2440, 1, 526, 526, 161, 0.025561279035863544
-This expression is not callable., 2349, 1, 520, 368, 63, 0.01788317620760035
-Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1378, 1, 484, 340, 6831, 0.016522499757022063
-Argument expression expected., 1135, 1, 473, 319, 785, 0.015501992419088347
-Type '(Anonymous function)' is not assignable to type 'typeof game_state'., 2322, 1, 438, 352, 25, 0.0171056468072699
-Declaration expected., 1146, 1, 434, 245, 107, 0.011905918942560016
-Operator cannot be applied to types 1 and 2, 2365, 1, 421, 301, 449, 0.01462727184371659
-Expected 0 arguments, but got 1., 2554, 1, 359, 304, 489, 0.01477305860627855
-Module '"assert"' has no exported member 'name'., 2305, 1, 310, 285, 219, 0.01384974244338614
-Non-null assertions can only be used in TypeScript files., 8013, 1, 283, 160, 619, 0.0077752940033045
-Argument of type 'Buffer' is not assignable to parameter of type 'number'., 2345, 1, 248, 218, 175, 0.010593838079502382
-Unterminated regular expression literal., 1161, 1, 233, 171, 107, 0.008309845466031683
-JSX expressions must have one parent element., 2657, 1, 208, 173, 1533, 0.008407036641072991
-A 'return' statement can only be used within a function body., 1108, 1, 203, 175, 165, 0.008504227816114297
-The 'public' modifier can only be used in TypeScript files., 8009, 1, 191, 66, 715, 0.003207308776363106
-Type expected., 1110, 1, 177, 157, 1901, 0.00762950724074254
-'module' declarations can only be used in TypeScript files., 8006, 1, 168, 142, 99, 0.006900573427932744
-Array element destructuring pattern expected., 1181, 1, 166, 115, 5655, 0.005588492564875109
-Property assignment expected., 1136, 1, 162, 113, 1887, 0.005491301389833803
-Variable declaration expected., 1134, 1, 148, 107, 129, 0.005199727864709885
-Object is possibly 'undefined'., 2532, 1, 144, 56, 821, 0.002721352901156575
-Expected corresponding JSX closing tag for 'input'., 17002, 1, 133, 73, 43, 0.003547477889007678
-Experimental support for decorators is a feature that is subject to change in a future release. Set the 'experimentalDecorators' option in your 'tsconfig' or 'jsconfig' to remove this warning., 1219, 1, 128, 64, 12061, 0.0031101176013218
-No overload matches this call., 2769, 1, 125, 110, 11, 0.005345514627271844
-Cannot find namespace 'def'., 2503, 1, 124, 107, 785, 0.005199727864709885
-'import ... =' can only be used in TypeScript files., 8002, 1, 115, 81, 785, 0.003936242589172903
-Cannot assign to 'name' because it is an import., 2632, 1, 110, 80, 251, 0.00388764700165225
-Type 'ObjectConstructor' cannot be used as an index type., 2538, 1, 99, 56, 121, 0.002721352901156575
-Type aliases can only be used in TypeScript files., 8008, 1, 99, 57, 11057, 0.002769948488677228
-Cannot assign to 'inptext' because it is a constant., 2588, 1, 94, 58, 179, 0.0028185440761978814
-Parameter modifiers can only be used in TypeScript files., 8012, 1, 92, 65, 229, 0.003158713188842453
-Cannot find module './somefile.json'. Consider using '--resolveJsonModule' to import module with '.json' extension., 2732, 1, 91, 78, 441, 0.0037904558266109436
-The operand of an increment or decrement operator must be a variable or a property access., 2357, 1, 91, 54, 3149, 0.002624161726115269
-The left-hand side of an assignment expression must be a variable or a property access., 2364, 1, 77, 46, 557, 0.002235397025950044
-'with' statements are not allowed in strict mode., 1101, 1, 76, 53, 19969, 0.0025755661385946154
-Identifier expected. 'with' is a reserved word that cannot be used here., 1359, 1, 75, 61, 2301, 0.0029643308387598405
-An element access expression should take an argument., 1011, 1, 69, 45, 659, 0.002186801438429391
-Cannot use namespace 'NodeJS' as a value., 2708, 1, 68, 39, 1923, 0.0018952279133054718
-An expression of type 'void' cannot be tested for truthiness., 1345, 1, 65, 52, 691, 0.0025269705510739624
-Value of type 'Uint8ArrayConstructor' is not callable. Did you mean to include 'new'?, 2348, 1, 65, 50, 1941, 0.0024297793760326564
-Type 'null' is not an array type., 2461, 1, 65, 47, 2033, 0.002283992613470697
-An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type., 2356, 1, 64, 55, 1923, 0.002672757313635922
-Type 'Set<string>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher., 2802, 1, 63, 49, 12559, 0.002381183788512003
-This comparison appears to be unintentional because the types 'boolean' and 'number' have no overlap., 2367, 1, 60, 46, 279, 0.002235397025950044
-Unterminated template literal., 1160, 1, 56, 56, 5113, 0.002721352901156575
-'i' is possibly 'undefined'., 18048, 1, 49, 29, 691, 0.0014092720380989407
-'#!' can only be used at the start of a file., 18026, 1, 48, 48, 619, 0.00233258820099135
-'__dirname' refers to a value, but is being used as a type here. Did you mean 'typeof __dirname'?, 2749, 1, 48, 36, 2301, 0.0017494411507435125
-'(Missing)' is an unused renaming of '"title"'. Did you intend to use it as a type annotation?, 2842, 1, 41, 7, 17363, 0.00034016911264457187
-Digit expected., 1124, 1, 40, 16, 3337, 0.00077752940033045
-'implements' clauses can only be used in TypeScript files., 8005, 1, 40, 32, 11385, 0.0015550588006609
-Unexpected token. A constructor, method, accessor, or property was expected., 1068, 1, 36, 25, 10973, 0.0012148896880163282
-'null' is not allowed as a variable declaration name., 1389, 1, 35, 33, 403, 0.001603654388181553
-A spread argument must either have a tuple type or be passed to a rest parameter., 2556, 1, 35, 28, 1339, 0.0013606764505782875
-The operand of a 'delete' operator must be a property reference., 2703, 1, 35, 33, 1809, 0.001603654388181553
-Only a void function can be called with the 'new' keyword., 2350, 1, 34, 32, 891, 0.0015550588006609
-Class 'App' used before its declaration., 2449, 1, 33, 21, 1337, 0.0010205073379337157
-Augmentations for the global scope should have 'declare' modifier unless they appear in already ambient context., 2670, 1, 32, 31, 99, 0.0015064632131402468
-Parameter declaration expected., 1138, 1, 31, 20, 2787, 0.0009719117504130625
-Augmentations for the global scope can only be directly nested in external modules or ambient module declarations., 2669, 1, 30, 29, 99, 0.0014092720380989407
-A module cannot have multiple default exports., 2528, 1, 30, 13, 10309, 0.0006317426377684906
-A parameter initializer is only allowed in a function or constructor implementation., 2371, 1, 28, 16, 5315, 0.00077752940033045
-Individual declarations in merged declaration 'doSomething' must be all exported or all local., 2395, 1, 28, 12, 17027, 0.0005831470502478375
-Module '"fs"' has no default export., 1192, 1, 27, 18, 20137, 0.0008747205753717563
-This expression is not constructable., 2351, 1, 25, 22, 5643, 0.0010691029254543687
-Duplicate function implementation., 2393, 1, 25, 12, 17645, 0.0005831470502478375
-Cannot redeclare exported variable 'id'., 2323, 1, 25, 11, 25097, 0.0005345514627271843
-The value 'undefined' cannot be used here., 18050, 1, 24, 19, 1925, 0.0009233161628924094
-The body of an 'if' statement cannot be the empty statement., 1313, 1, 23, 18, 5149, 0.0008747205753717563
-Expression or comma expected., 1137, 1, 22, 21, 89, 0.0010205073379337157
-'{' or ';' expected., 1144, 1, 22, 22, 3953, 0.0010691029254543687
-Unable to resolve signature of class decorator when called as an expression., 1238, 1, 22, 22, 18787, 0.0010691029254543687
-'super' can only be referenced in members of derived classes or object literal expressions., 2660, 1, 19, 8, 691, 0.000388764700165225
-Type 'Buffer' is missing the following properties from type 'BufferConstructor': from, of, isBuffer, isEncoding, and 5 more., 2740, 1, 18, 17, 573, 0.0008261249878511031
-The '&' operator is not allowed for boolean types. Consider using '&&' instead., 2447, 1, 18, 8, 2359, 0.000388764700165225
-Type '(err: any, res: any) => void' has no properties in common with type 'RunOptions'., 2559, 1, 17, 15, 1115, 0.0007289338128097969
-String literal expected., 1141, 1, 17, 15, 3491, 0.0007289338128097969
-An object literal cannot have multiple properties with the same name., 1117, 1, 17, 15, 3757, 0.0007289338128097969
-An unary expression with the '-' operator is not allowed in the left-hand side of an exponentiation expression. Consider enclosing the expression in parentheses., 17006, 1, 17, 14, 12629, 0.0006803382252891437
-A 'this' parameter must be the first parameter., 2680, 1, 17, 15, 15491, 0.0007289338128097969
-'*/' expected., 1010, 1, 16, 16, 1627, 0.00077752940033045
-Type parameter declarations can only be used in TypeScript files., 8004, 1, 16, 14, 2695, 0.0006803382252891437
-Variable declaration not allowed at this location., 1440, 1, 16, 12, 25553, 0.0005831470502478375
-'super' must be followed by an argument list or member access., 1034, 1, 15, 4, 691, 0.0001943823500826125
-Property 'prototype' is missing in type 'Blob' but required in type 'typeof Blob'., 2741, 1, 15, 14, 4139, 0.0006803382252891437
-'catch' or 'finally' expected., 1472, 1, 15, 15, 12999, 0.0007289338128097969
-An arrow function cannot have a 'this' parameter., 2730, 1, 14, 12, 15491, 0.0005831470502478375
-Module '"path"' can only be default-imported using the 'esModuleInterop' flag, 1259, 1, 14, 12, 20137, 0.0005831470502478375
-Type 'UrlWithParsedQuery' is missing the following properties from type 'typeof URL': prototype, createObjectURL, revokeObjectURL, 2739, 1, 13, 13, 135, 0.0006317426377684906
-The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type '"/bin/ls *.jpg"'., 2407, 1, 13, 11, 1387, 0.0005345514627271843
-'super' is not allowed as a parameter name., 1390, 1, 12, 12, 691, 0.0005831470502478375
-Index signature in type 'String' only permits reading., 2542, 1, 12, 8, 11109, 0.000388764700165225
-Type 'boolean' is not an array type or a string type., 2495, 1, 11, 10, 451, 0.00048595587520653126
-Cannot assign to 'doIt' because it is a function., 2630, 1, 10, 9, 189, 0.00043736028768587813
-Cannot find name 'await'. Did you mean to write this in an async function?, 2311, 1, 10, 9, 16227, 0.00043736028768587813
-Super calls are not permitted outside constructors or in nested functions inside constructors., 2337, 1, 10, 10, 19139, 0.00048595587520653126
-Property 'onDisconnect' does not exist on type 'Socket'. Did you mean 'disconnect'?, 2551, 1, 9, 5, 693, 0.00024297793760326563
-Declaration or statement expected. This '=' follows a block of statements, so if you intended to write a destructuring assignment, you might need to wrap the the whole assignment in parentheses., 2809, 1, 9, 8, 1647, 0.000388764700165225
-'{' or JSX element expected., 1145, 1, 9, 6, 18211, 0.00029157352512391874
-The 'import.meta' meta-property is only allowed when the '--module' option is 'es2020', 'es2022', 'esnext', 'system', 'node16', or 'nodenext'., 1343, 1, 9, 5, 25085, 0.00024297793760326563
-Cannot invoke an object which is possibly 'undefined'., 2722, 1, 8, 6, 8353, 0.00029157352512391874
-Hexadecimal digit expected., 1125, 1, 8, 3, 13833, 0.00014578676256195937
-Tuple type '[any, any, any]' of length '3' has no element at index '3'., 2493, 1, 8, 8, 21395, 0.000388764700165225
-Property or signature expected., 1131, 1, 8, 1, 24975, 0.000048595587520653125
-Type 'string' is not comparable to type 'Buffer'., 2678, 1, 7, 2, 1065, 0.00009719117504130625
-Property destructuring pattern expected., 1180, 1, 7, 6, 7437, 0.00029157352512391874
-Unable to resolve signature of parameter decorator when called as an expression., 1239, 1, 7, 5, 17331, 0.00024297793760326563
-An import path cannot end with a '.ts' extension. Consider importing 'https://deno.land/std@v0.36.0/http/server' instead., 2691, 1, 7, 5, 36821, 0.00024297793760326563
-Duplicate identifier 'exports'. Compiler reserves name 'exports' in top level scope of a module., 2441, 1, 6, 6, 427, 0.00029157352512391874
-'const' declarations can only be declared inside a block., 1156, 1, 6, 4, 3157, 0.0001943823500826125
-'export =' can only be used in TypeScript files., 8003, 1, 6, 6, 3205, 0.00029157352512391874
-The left-hand side of a 'for...in' statement must be of type 'string' or 'any'., 2405, 1, 6, 6, 3445, 0.00029157352512391874
-Trailing comma not allowed., 1009, 1, 6, 6, 3965, 0.00029157352512391874
-JSDoc '@param' tag has name 'token', but there is no parameter with that name., 8024, 1, 6, 4, 5073, 0.0001943823500826125
-This condition will always return 'true' since JavaScript compares objects by reference, not value., 2839, 1, 6, 3, 5659, 0.00014578676256195937
-A computed property name must be of type 'string', 'number', 'symbol', or 'any'., 2464, 1, 6, 5, 8521, 0.00024297793760326563
-Cannot find name 'factory'. Did you mean the instance member 'this.factory'?, 2663, 1, 6, 1, 12061, 0.000048595587520653125
-Invalid module name in augmentation, module 'restify' cannot be found., 2664, 1, 6, 5, 21771, 0.00024297793760326563
-'await' expressions are only allowed at the top level of a file when that file is a module, but this file has no imports or exports. Consider adding an empty 'export {}' to make this file a module., 1375, 1, 6, 3, 28401, 0.00014578676256195937
-Merged declaration 'FileMiddleware' cannot include a default export declaration. Consider adding a separate 'export default FileMiddleware' declaration instead., 2652, 1, 6, 2, 38369, 0.00009719117504130625
-Type alias name cannot be '%tempFile%'., 2457, 1, 5, 5, 6163, 0.00024297793760326563
-Namespace name cannot be 'for'., 2819, 1, 5, 5, 6489, 0.00024297793760326563
-File '../.ts-definitions/express.d.ts' not found., 6053, 1, 5, 4, 7301, 0.0001943823500826125
-'ps.stdout' is possibly 'null'., 18047, 1, 5, 3, 14215, 0.00014578676256195937
-Spread types may only be created from object types., 2698, 1, 5, 4, 22329, 0.0001943823500826125
-Numeric separators are not allowed here., 6188, 1, 5, 5, 25977, 0.00024297793760326563
-Variable 'result' is used before being assigned., 2454, 1, 4, 4, 4049, 0.0001943823500826125
-A function whose declared type is neither 'void' nor 'any' must return a value., 2355, 1, 4, 4, 5073, 0.0001943823500826125
-JSX element type 'this' does not have any construct or call signatures., 2604, 1, 4, 3, 10569, 0.00014578676256195937
-Conversion of type 'void' to type '"sale_amount"' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first., 2352, 1, 4, 3, 11209, 0.00014578676256195937
-'MyObservable' is referenced directly or indirectly in its own base expression., 2506, 1, 4, 4, 12647, 0.0001943823500826125
-Type arguments can only be used in TypeScript files., 8011, 1, 4, 4, 18019, 0.0001943823500826125
-Statement expected., 1129, 1, 4, 4, 25077, 0.0001943823500826125
-Object is possibly 'null'., 2531, 1, 4, 1, 26067, 0.000048595587520653125
-Ambient modules cannot be nested in other modules or namespaces., 2435, 1, 4, 4, 32787, 0.0001943823500826125
-Private identifiers are not allowed outside class bodies., 18016, 1, 3, 2, 77, 0.00009719117504130625
-Function implementation is missing or not immediately following the declaration., 2391, 1, 3, 3, 1661, 0.00014578676256195937
-Namespace 'path' has no exported member 'dirname'., 2694, 1, 3, 3, 2301, 0.00014578676256195937
-Jump target cannot cross function boundary., 1107, 1, 3, 2, 8175, 0.00009719117504130625
-JSX spread child must be an array type., 2609, 1, 3, 3, 8899, 0.00014578676256195937
-'case' or 'default' expected., 1130, 1, 3, 2, 24643, 0.00009719117504130625
-'const' declarations must be initialized., 1155, 1, 3, 2, 26103, 0.00009719117504130625
-Unable to resolve signature of property decorator when called as an expression., 1240, 1, 3, 2, 28565, 0.00009719117504130625
-A 'this' type is available only in a non-static member of a class or interface., 2526, 1, 3, 3, 30021, 0.00014578676256195937
-Cannot invoke an object which is possibly 'null'., 2721, 1, 3, 2, 32253, 0.00009719117504130625
-Cannot assign to 'completer' because it is a read-only property., 2540, 1, 2, 2, 429, 0.00009719117504130625
-Meta-property 'new.target' is only allowed in the body of a function declaration, function expression, or constructor., 17013, 1, 2, 2, 539, 0.00009719117504130625
-The '+' operator cannot be applied to type 'symbol'., 2469, 1, 2, 1, 1389, 0.000048595587520653125
-The 'with' statement is not supported. All symbols in a 'with' block will have type 'any'., 2410, 1, 2, 2, 6117, 0.00009719117504130625
-Circular definition of import alias 'os'., 2303, 1, 2, 2, 6167, 0.00009719117504130625
-Could not resolve the path '<pathToKnexDefinetelyTypedFile>' with the extensions: '.ts', '.tsx', '.d.ts', '.js', '.jsx', '.cts', '.d.cts', '.cjs', '.mts', '.d.mts', '.mjs'., 6231, 1, 2, 1, 14927, 0.000048595587520653125
-Expected at least 1 arguments, but got 0., 2555, 1, 2, 2, 15085, 0.00009719117504130625
-Function type, which lacks return-type annotation, implicitly has an 'any' return type., 7014, 1, 2, 1, 18183, 0.000048595587520653125
-Cannot use namespace 'b' as a type., 2709, 1, 2, 2, 21021, 0.00009719117504130625
-Static property 'name' conflicts with built-in property 'Function.name' of constructor function 'Task'., 2699, 1, 2, 1, 25835, 0.000048595587520653125
-Type '() => void' is not a constructor function type., 2507, 1, 2, 2, 28957, 0.00009719117504130625
-Merge conflict marker encountered., 1185, 1, 2, 2, 29631, 0.00009719117504130625
-Interface name cannot be 'for'., 2427, 1, 2, 2, 31051, 0.00009719117504130625
-Unable to resolve signature of method decorator when called as an expression., 1241, 1, 2, 2, 31091, 0.00009719117504130625
-Type parameter declaration expected., 1139, 1, 2, 2, 32167, 0.00009719117504130625
-The left-hand side of a 'for...in' statement must be a variable or a property access., 2406, 1, 2, 2, 32765, 0.00009719117504130625
-All declarations of 'database' must have identical modifiers., 2687, 1, 2, 1, 33925, 0.000048595587520653125
-'static' modifier cannot appear on a module or namespace element., 1044, 1, 2, 2, 34309, 0.00009719117504130625
-This condition will always return 'false'., 2845, 1, 2, 1, 37011, 0.000048595587520653125
-Binary digit expected., 1177, 1, 2, 1, 40797, 0.000048595587520653125
-Expected '=' for property initializer., 1442, 1, 1, 1, 1661, 0.000048595587520653125
-'path' is referenced directly or indirectly in its own type annotation., 2502, 1, 1, 1, 2301, 0.000048595587520653125
-Cannot assign to 'undefined' because it is not a variable., 2539, 1, 1, 1, 6925, 0.000048595587520653125
-Cannot assign to 'DcObserver' because it is a class., 2629, 1, 1, 1, 12061, 0.000048595587520653125
-A 'yield' expression is only allowed in a generator body., 1163, 1, 1, 1, 12791, 0.000048595587520653125
-Property 'on' in type 'myEvent' is not assignable to the same property in base type 'EventEmitter'., 2416, 1, 1, 1, 15617, 0.000048595587520653125
-The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter., 2358, 1, 1, 1, 17545, 0.000048595587520653125
-'get' is not a valid meta-property for keyword 'new'. Did you mean 'target'?, 17012, 1, 1, 1, 18523, 0.000048595587520653125
-Type alias 'A' circularly references itself., 2456, 1, 1, 1, 19867, 0.000048595587520653125
-Type '"UTF8"' is not assignable to type 'BufferEncoding'. Did you mean '"utf8"'?, 2820, 1, 1, 1, 21013, 0.000048595587520653125
-'let' declarations can only be declared inside a block., 1157, 1, 1, 1, 21493, 0.000048595587520653125
-Implicit conversion of a 'symbol' to a 'string' will fail at runtime. Consider wrapping this expression in 'String(...)'., 2731, 1, 1, 1, 21765, 0.000048595587520653125
-'"util"' has no exported member named 'promisisfy'. Did you mean 'promisify'?, 2724, 1, 1, 1, 24055, 0.000048595587520653125
-'EventEmitter' is a type and cannot be imported in JavaScript files. Use 'import("...").EventEmitter' in a JSDoc type annotation., 18042, 1, 1, 1, 25285, 0.000048595587520653125
-Variable declaration list cannot be empty., 1123, 1, 1, 1, 25813, 0.000048595587520653125
-Type 'org.example.trading.Trader[]' is not a valid async function return type in ES5/ES3 because it does not refer to a Promise-compatible constructor value., 1055, 1, 1, 1, 26773, 0.000048595587520653125
-Top-level 'for await' loops are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1432, 1, 1, 1, 27803, 0.000048595587520653125
-Property 'getDummy' does not exist on type 'MyCustomClass'. Did you mean to access the static member 'MyCustomClass.getDummy' instead?, 2576, 1, 1, 1, 30903, 0.000048595587520653125
-'await' expressions are only allowed within async functions and at the top levels of modules., 1308, 1, 1, 1, 31359, 0.000048595587520653125
-Types cannot appear in export declarations in JavaScript files., 18043, 1, 1, 1, 32669, 0.000048595587520653125
-Constructor implementation is missing., 2390, 1, 1, 1, 34737, 0.000048595587520653125
-The left-hand side of a 'for...of' statement must be a variable or a property access., 2487, 1, 1, 1, 37173, 0.000048595587520653125
-Type argument list cannot be empty., 1099, 1, 1, 1, 38155, 0.000048595587520653125
-The variable declaration of a 'for...in' statement cannot have an initializer., 1189, 1, 1, 1, 38205, 0.000048595587520653125
-Type satisfaction expressions can only be used in TypeScript files., 8037, 1, 1, 1, 38815, 0.000048595587520653125
-Module 'module' is hidden by a local declaration with the same name., 2437, 1, 1, 1, 38909, 0.000048595587520653125
-Export declaration conflicts with exported declaration of 'name1'., 2484, 1, 1, 1, 40099, 0.000048595587520653125
-Object literal may only specify known properties, and 'c' does not exist in type '{ a: any; b: any; }'., 2353, 1, 1, 1, 40569, 0.000048595587520653125
-Type 'unknown' does not satisfy the constraint '(...args: any[]) => any'., 2344, 1, 1, 1, 40627, 0.000048595587520653125
-An interface can only extend an object type or intersection of object types with statically known members., 2312, 1, 1, 1, 40627, 0.000048595587520653125
+Cannot find name, 2304, 1, 168311, 16640, 5, 0.7763728829375263
+Unexpected keyword or identifier., 1434, 1, 61897, 4044, 11, 0.18868100592544207
+Character expected, 1005, 1, 54347, 7034, 11, 0.3281855083282788
+Expression expected., 1109, 1, 13692, 3799, 13, 0.17725003499276817
+Left side of comma operator is unused and has no side effects., 2695, 1, 7848, 2311, 19, 0.10782438296085475
+Declaration or statement expected., 1128, 1, 6019, 2807, 13, 0.13096626697149255
+Cannot use JSX unless the '--jsx' flag is provided., 17004, 1, 5990, 872, 117, 0.04068492511547613
+Invalid character., 1127, 1, 5695, 783, 101, 0.03653244996034153
+Property 'replace' does not exist on type 'JSON'., 2339, 1, 5016, 2859, 9, 0.13339243223067232
+Identifier expected., 1003, 1, 4212, 2200, 51, 0.10264545327299025
+Unknown keyword or identifier, 1435, 1, 2872, 1488, 101, 0.0694256520319134
+Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig., 2593, 1, 2457, 1341, 329, 0.06256706947230906
+Module declaration names may only use ' or " quoted strings., 1443, 1, 2179, 1010, 51, 0.04712359445714552
+Cannot redeclare block-scoped variable 'title'., 2451, 1, 1901, 515, 165, 0.024028367470722716
+Unterminated string literal., 1002, 1, 1493, 1003, 747, 0.04679699528764055
+Block-scoped variable 'chain' used before its declaration., 2448, 1, 1485, 770, 91, 0.03592590864554659
+Type annotations can only be used in TypeScript files., 8010, 1, 1433, 642, 243, 0.029953809546027155
+Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig., 2592, 1, 1416, 620, 23, 0.02892735501329725
+A type predicate is only allowed in return type position for functions and methods., 1228, 1, 1345, 850, 113, 0.039658470582746234
+Duplicate identifier 'process'., 2300, 1, 1267, 431, 83, 0.02010917743666309
+The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2362, 1, 1155, 760, 101, 0.03545933840339663
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?, 1381, 1, 882, 276, 969, 0.012877338683338777
+The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2363, 1, 855, 531, 11, 0.024774879858162645
+No value exists in scope for the shorthand property 'proxy_set_header'. Either declare one or provide an initializer., 18004, 1, 797, 306, 131, 0.014277049409788644
+Type assertion expressions can only be used in TypeScript files., 8016, 1, 783, 554, 121, 0.025847991415107543
+Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'., 2584, 1, 746, 454, 521, 0.021182288993607988
+'string' only refers to a type, but is being used as a value here., 2693, 1, 734, 439, 207, 0.020482433630383053
+Cannot find name 'getSomeData'. Did you mean 'getMoreData'?, 2552, 1, 667, 484, 37, 0.022581999720057856
+JSX element 'br' has no corresponding closing tag., 17008, 1, 596, 293, 117, 0.013670508094993702
+An identifier or keyword cannot immediately follow a numeric literal., 1351, 1, 593, 188, 161, 0.008771520552419167
+Unexpected token. Did you mean `{'>'}` or `&gt;`?, 1382, 1, 568, 203, 315, 0.0094713759156441
+Import declaration conflicts with local declaration of 'title'., 2440, 1, 550, 550, 165, 0.025661363318247563
+This expression is not callable., 2349, 1, 544, 389, 63, 0.018149582419633277
+Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1378, 1, 504, 355, 7703, 0.016563243596323426
+Type '(Anonymous function)' is not assignable to type 'typeof game_state'., 2322, 1, 455, 368, 25, 0.01716978491111837
+Argument expression expected., 1135, 1, 449, 329, 799, 0.015350160966733542
+Declaration expected., 1146, 1, 445, 256, 113, 0.011944198199038865
+Operator cannot be applied to types 1 and 2, 2365, 1, 434, 316, 457, 0.0147436196519386
+Expected 0 arguments, but got 1., 2554, 1, 387, 326, 503, 0.015210189894088556
+Module '"assert"' has no exported member 'call'., 2305, 1, 314, 289, 87, 0.013483879998133719
+Non-null assertions can only be used in TypeScript files., 8013, 1, 287, 160, 627, 0.0074651238743992905
+Argument of type 'PlatformPath' is not assignable to parameter of type 'PathLike'., 2345, 1, 272, 236, 69, 0.011011057714738953
+Unterminated regular expression literal., 1161, 1, 242, 171, 113, 0.007978351140764242
+JSX expressions must have one parent element., 2657, 1, 225, 188, 1547, 0.008771520552419167
+A 'return' statement can only be used within a function body., 1108, 1, 209, 181, 401, 0.008444921382914198
+The 'public' modifier can only be used in TypeScript files., 8009, 1, 208, 69, 725, 0.003219334670834694
+Type expected., 1110, 1, 189, 169, 1063, 0.00788503709233425
+Property assignment expected., 1136, 1, 185, 127, 1897, 0.005925442075304437
+'module' declarations can only be used in TypeScript files., 8006, 1, 178, 152, 101, 0.007091867680679326
+Array element destructuring pattern expected., 1181, 1, 173, 118, 4087, 0.005505528857369477
+Expected corresponding JSX closing tag for 'input'., 17002, 1, 150, 81, 3597, 0.003779218961414641
+Object is possibly 'undefined'., 2532, 1, 149, 61, 837, 0.00284607847711473
+Variable declaration expected., 1134, 1, 148, 106, 131, 0.00494564456678953
+Experimental support for decorators is a feature that is subject to change in a future release. Set the 'experimentalDecorators' option in your 'tsconfig' or 'jsconfig' to remove this warning., 1219, 1, 131, 69, 12225, 0.003219334670834694
+Cannot find namespace 'def'., 2503, 1, 126, 108, 799, 0.005038958615219522
+Cannot assign to 'inptext' because it is a constant., 2588, 1, 125, 62, 183, 0.002892735501329725
+No overload matches this call., 2769, 1, 124, 112, 13, 0.005225586712079504
+'import ... =' can only be used in TypeScript files., 8002, 1, 121, 82, 799, 0.0038258759856296363
+Cannot assign to 'name' because it is an import., 2632, 1, 116, 78, 265, 0.003639247888769654
+Type aliases can only be used in TypeScript files., 8008, 1, 102, 61, 11265, 0.00284607847711473
+Type 'ObjectConstructor' cannot be used as an index type., 2538, 1, 96, 55, 123, 0.002566136331824756
+Cannot find module './somefile.json'. Consider using '--resolveJsonModule' to import module with '.json' extension., 2732, 1, 96, 82, 449, 0.0038258759856296363
+The operand of an increment or decrement operator must be a variable or a property access., 2357, 1, 94, 57, 3203, 0.0026594503802547472
+Parameter modifiers can only be used in TypeScript files., 8012, 1, 92, 66, 243, 0.0030793635981897073
+The left-hand side of an assignment expression must be a variable or a property access., 2364, 1, 87, 48, 567, 0.002239537162319787
+An element access expression should take an argument., 1011, 1, 83, 49, 669, 0.002286194186534783
+Identifier expected. 'in' is a reserved word that cannot be used here., 1359, 1, 80, 66, 1933, 0.0030793635981897073
+Cannot use namespace 'v8' as a value., 2708, 1, 77, 40, 1677, 0.0018662809685998226
+'with' statements are not allowed in strict mode., 1101, 1, 76, 53, 15641, 0.002472822283394765
+An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type., 2356, 1, 75, 63, 2677, 0.002939392525544721
+An expression of type 'void' cannot be tested for truthiness., 1345, 1, 70, 56, 701, 0.002612793356039752
+This comparison appears to be unintentional because the types 'boolean' and 'number' have no overlap., 2367, 1, 68, 53, 299, 0.002472822283394765
+Value of type 'Uint8ArrayConstructor' is not callable. Did you mean to include 'new'?, 2348, 1, 68, 51, 1949, 0.002379508234964774
+'i' is possibly 'undefined'., 18048, 1, 67, 33, 701, 0.0015396817990948536
+Type 'null' is not an array type., 2461, 1, 63, 46, 2049, 0.002146223113889796
+Type 'Generator<any, void, unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher., 2802, 1, 63, 52, 9775, 0.0024261652591797693
+Unterminated template literal., 1160, 1, 60, 60, 5129, 0.002799421452899734
+'#!' can only be used at the start of a file., 18026, 1, 53, 53, 627, 0.002472822283394765
+'__dirname' refers to a value, but is being used as a type here. Did you mean 'typeof __dirname'?, 2749, 1, 53, 41, 2315, 0.0019129379928148182
+Unexpected token. A constructor, method, accessor, or property was expected., 1068, 1, 42, 28, 11173, 0.001306396678019876
+'(Missing)' is an unused renaming of '"title"'. Did you intend to use it as a type annotation?, 2842, 1, 41, 7, 17961, 0.000326599169504969
+Digit expected., 1124, 1, 40, 16, 3393, 0.0007465123874399291
+The operand of a 'delete' operator must be a property reference., 2703, 1, 39, 33, 1813, 0.0015396817990948536
+'implements' clauses can only be used in TypeScript files., 8005, 1, 39, 31, 11617, 0.0014463677506648626
+Only a void function can be called with the 'new' keyword., 2350, 1, 38, 35, 903, 0.001632995847524845
+The value 'undefined' cannot be used here., 18050, 1, 38, 26, 1161, 0.0012130826295898847
+A spread argument must either have a tuple type or be passed to a rest parameter., 2556, 1, 38, 30, 1343, 0.001399710726449867
+Parameter declaration expected., 1138, 1, 37, 23, 2815, 0.001073111556944898
+'null' is not allowed as a variable declaration name., 1389, 1, 36, 34, 409, 0.0015863388233098494
+Class 'App' used before its declaration., 2449, 1, 34, 22, 1341, 0.0010264545327299025
+Augmentations for the global scope should have 'declare' modifier unless they appear in already ambient context., 2670, 1, 33, 32, 101, 0.0014930247748798581
+Individual declarations in merged declaration 'PATH' must be all exported or all local., 2395, 1, 32, 14, 14699, 0.000653198339009938
+Duplicate function implementation., 2393, 1, 32, 15, 18263, 0.0006998553632249335
+Augmentations for the global scope can only be directly nested in external modules or ambient module declarations., 2669, 1, 31, 30, 101, 0.001399710726449867
+Module '"fs"' has no default export., 1192, 1, 31, 19, 20909, 0.0008864834600849158
+This expression is not constructable., 2351, 1, 30, 27, 2081, 0.0012597396538048804
+A module cannot have multiple default exports., 2528, 1, 30, 13, 10475, 0.0006065413147949423
+'super' can only be referenced in members of derived classes or object literal expressions., 2660, 1, 29, 11, 701, 0.0005132272663649513
+A parameter initializer is only allowed in a function or constructor implementation., 2371, 1, 29, 17, 5339, 0.0007931694116549247
+Cannot redeclare exported variable 'plugins'., 2323, 1, 27, 12, 24301, 0.0005598842905799468
+'super' must be followed by an argument list or member access., 1034, 1, 24, 6, 701, 0.0002799421452899734
+Expression or comma expected., 1137, 1, 23, 23, 91, 0.001073111556944898
+'{' or ';' expected., 1144, 1, 23, 23, 4007, 0.001073111556944898
+Unable to resolve signature of class decorator when called as an expression., 1238, 1, 23, 23, 17647, 0.001073111556944898
+The body of an 'if' statement cannot be the empty statement., 1313, 1, 21, 16, 5167, 0.0007465123874399291
+Type parameter declarations can only be used in TypeScript files., 8004, 1, 20, 18, 2717, 0.0008398264358699202
+'catch' or 'finally' expected., 1472, 1, 20, 20, 13319, 0.0009331404842999113
+Type 'Buffer' is missing the following properties from type 'BufferConstructor': from, of, isBuffer, isEncoding, and 5 more., 2740, 1, 19, 18, 585, 0.0008398264358699202
+The '&' operator is not allowed for boolean types. Consider using '&&' instead., 2447, 1, 19, 9, 2365, 0.0004199132179349601
+A 'this' parameter must be the first parameter., 2680, 1, 19, 17, 15995, 0.0007931694116549247
+Type '(err: any, res: any) => void' has no properties in common with type 'RunOptions'., 2559, 1, 18, 16, 1113, 0.0007465123874399291
+String literal expected., 1141, 1, 18, 16, 3555, 0.0007465123874399291
+An object literal cannot have multiple properties with the same name., 1117, 1, 18, 16, 3805, 0.0007465123874399291
+Type 'UrlWithParsedQuery' is missing the following properties from type 'typeof URL': prototype, createObjectURL, revokeObjectURL, 2739, 1, 17, 17, 137, 0.0007931694116549247
+An unary expression with the '-' operator is not allowed in the left-hand side of an exponentiation expression. Consider enclosing the expression in parentheses., 17006, 1, 17, 14, 12923, 0.000653198339009938
+Type 'boolean' is not an array type or a string type., 2495, 1, 16, 15, 459, 0.0006998553632249335
+Variable declaration not allowed at this location., 1440, 1, 16, 12, 26623, 0.0005598842905799468
+'*/' expected., 1010, 1, 15, 15, 9335, 0.0006998553632249335
+An arrow function cannot have a 'this' parameter., 2730, 1, 15, 13, 15995, 0.0006065413147949423
+Module '"path"' can only be default-imported using the 'esModuleInterop' flag, 1259, 1, 15, 13, 20909, 0.0006065413147949423
+'super' is not allowed as a parameter name., 1390, 1, 14, 14, 701, 0.000653198339009938
+The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type '"/bin/ls *.jpg"'., 2407, 1, 12, 10, 1395, 0.00046657024214995566
+Property 'prototype' is missing in type 'Blob' but required in type 'typeof Blob'., 2741, 1, 12, 12, 4191, 0.0005598842905799468
+Index signature in type 'String' only permits reading., 2542, 1, 12, 8, 11333, 0.00037325619371996453
+Super calls are not permitted outside constructors or in nested functions inside constructors., 2337, 1, 12, 12, 19855, 0.0005598842905799468
+Cannot invoke an object which is possibly 'undefined'., 2722, 1, 10, 8, 2757, 0.00037325619371996453
+JSDoc '@param' tag has name 'token', but there is no parameter with that name., 8024, 1, 10, 5, 5101, 0.00023328512107497783
+Cannot find name 'await'. Did you mean to write this in an async function?, 2311, 1, 10, 9, 16767, 0.0004199132179349601
+Cannot assign to 'doIt' because it is a function., 2630, 1, 9, 8, 193, 0.00037325619371996453
+Declaration or statement expected. This '=' follows a block of statements, so if you intended to write a destructuring assignment, you might need to wrap the the whole assignment in parentheses., 2809, 1, 9, 8, 1663, 0.00037325619371996453
+Tuple type '[CommonJS]' of length '1' has no element at index '3'., 2493, 1, 9, 9, 14997, 0.0004199132179349601
+'{' or JSX element expected., 1145, 1, 9, 6, 18875, 0.0002799421452899734
+The 'import.meta' meta-property is only allowed when the '--module' option is 'es2020', 'es2022', 'esnext', 'system', 'node16', or 'nodenext'., 1343, 1, 9, 5, 26117, 0.00023328512107497783
+Property destructuring pattern expected., 1180, 1, 8, 7, 7497, 0.000326599169504969
+Hexadecimal digit expected., 1125, 1, 8, 3, 14195, 0.0001399710726449867
+Property or signature expected., 1131, 1, 8, 1, 26019, 0.000046657024214995566
+Type 'string' is not comparable to type 'Buffer'., 2678, 1, 7, 2, 1069, 0.00009331404842999113
+The left-hand side of a 'for...in' statement must be of type 'string' or 'any'., 2405, 1, 7, 7, 3505, 0.000326599169504969
+Trailing comma not allowed., 1009, 1, 7, 7, 4681, 0.000326599169504969
+This condition will always return 'true' since JavaScript compares objects by reference, not value., 2839, 1, 7, 3, 5663, 0.0001399710726449867
+A computed property name must be of type 'string', 'number', 'symbol', or 'any'., 2464, 1, 7, 6, 8615, 0.0002799421452899734
+An import path cannot end with a '.ts' extension. Consider importing 'https://deno.land/std@v0.36.0/http/server' instead., 2691, 1, 7, 5, 38393, 0.00023328512107497783
+Duplicate identifier 'exports'. Compiler reserves name 'exports' in top level scope of a module., 2441, 1, 6, 6, 435, 0.0002799421452899734
+'const' declarations can only be declared inside a block., 1156, 1, 6, 4, 3207, 0.00018662809685998226
+'export =' can only be used in TypeScript files., 8003, 1, 6, 6, 3255, 0.0002799421452899734
+File 'node.d.ts' not found., 6053, 1, 6, 5, 3629, 0.00023328512107497783
+Namespace name cannot be 'for'., 2819, 1, 6, 6, 6511, 0.0002799421452899734
+Cannot find name 'factory'. Did you mean the instance member 'this.factory'?, 2663, 1, 6, 1, 12323, 0.000046657024214995566
+Unable to resolve signature of parameter decorator when called as an expression., 1239, 1, 6, 4, 17933, 0.00018662809685998226
+Invalid module name in augmentation, module 'restify' cannot be found., 2664, 1, 6, 5, 22631, 0.00023328512107497783
+Spread types may only be created from object types., 2698, 1, 6, 5, 23207, 0.00023328512107497783
+'await' expressions are only allowed at the top level of a file when that file is a module, but this file has no imports or exports. Consider adding an empty 'export {}' to make this file a module., 1375, 1, 6, 3, 29685, 0.0001399710726449867
+Merged declaration 'FileMiddleware' cannot include a default export declaration. Consider adding a separate 'export default FileMiddleware' declaration instead., 2652, 1, 6, 2, 40009, 0.00009331404842999113
+Property 'directory' does not exist on type 'typeof errno & typeof priority & SignalConstants & typeof constants & typeof constants'. Did you mean 'O_DIRECTORY'?, 2551, 1, 5, 5, 1379, 0.00023328512107497783
+A function whose declared type is neither 'void' nor 'any' must return a value., 2355, 1, 5, 5, 5101, 0.00023328512107497783
+Type alias name cannot be '%tempFile%'., 2457, 1, 5, 5, 6171, 0.00023328512107497783
+Conversion of type 'void' to type '"sale_amount"' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first., 2352, 1, 5, 4, 11435, 0.00018662809685998226
+'ps.stdout' is possibly 'null'., 18047, 1, 5, 3, 14617, 0.0001399710726449867
+Numeric separators are not allowed here., 6188, 1, 5, 5, 27109, 0.00023328512107497783
+Function implementation is missing or not immediately following the declaration., 2391, 1, 4, 4, 1679, 0.00018662809685998226
+Namespace 'path' has no exported member 'dirname'., 2694, 1, 4, 4, 2315, 0.00018662809685998226
+Variable 'result' is used before being assigned., 2454, 1, 4, 4, 4103, 0.00018662809685998226
+Cannot invoke an object which is possibly 'null'., 2721, 1, 4, 3, 6901, 0.0001399710726449867
+'MyObservable' is referenced directly or indirectly in its own base expression., 2506, 1, 4, 4, 12941, 0.00018662809685998226
+Type arguments can only be used in TypeScript files., 8011, 1, 4, 4, 18669, 0.00018662809685998226
+'case' or 'default' expected., 1130, 1, 4, 3, 25675, 0.0001399710726449867
+Statement expected., 1129, 1, 4, 4, 26107, 0.00018662809685998226
+Object is possibly 'null'., 2531, 1, 4, 1, 27207, 0.000046657024214995566
+Ambient modules cannot be nested in other modules or namespaces., 2435, 1, 4, 4, 34271, 0.00018662809685998226
+Private identifiers are not allowed outside class bodies., 18016, 1, 3, 2, 75, 0.00009331404842999113
+The 'with' statement is not supported. All symbols in a 'with' block will have type 'any'., 2410, 1, 3, 3, 3157, 0.0001399710726449867
+Jump target cannot cross function boundary., 1107, 1, 3, 2, 8265, 0.00009331404842999113
+JSX spread child must be an array type., 2609, 1, 3, 3, 8981, 0.0001399710726449867
+'const' declarations must be initialized., 1155, 1, 3, 2, 27249, 0.00009331404842999113
+Unable to resolve signature of property decorator when called as an expression., 1240, 1, 3, 2, 29859, 0.00009331404842999113
+A 'this' type is available only in a non-static member of a class or interface., 2526, 1, 3, 3, 31409, 0.0001399710726449867
+JSX element type 'groups.length' does not have any construct or call signatures., 2604, 1, 3, 2, 31925, 0.00009331404842999113
+The '+' operator cannot be applied to type 'symbol'., 2469, 1, 2, 1, 1397, 0.000046657024214995566
+Circular definition of import alias 'os'., 2303, 1, 2, 2, 6175, 0.00009331404842999113
+Cannot assign to 'DcObserver' because it is a class., 2629, 1, 2, 2, 12323, 0.00009331404842999113
+A 'yield' expression is only allowed in a generator body., 1163, 1, 2, 2, 13091, 0.00009331404842999113
+Could not resolve the path '<pathToKnexDefinetelyTypedFile>' with the extensions: '.ts', '.tsx', '.d.ts', '.js', '.jsx', '.cts', '.d.cts', '.cjs', '.mts', '.d.mts', '.mjs'., 6231, 1, 2, 1, 15393, 0.000046657024214995566
+Expected at least 1 arguments, but got 0., 2555, 1, 2, 2, 15551, 0.00009331404842999113
+Function type, which lacks return-type annotation, implicitly has an 'any' return type., 7014, 1, 2, 1, 18847, 0.000046657024214995566
+Cannot use namespace 'b' as a type., 2709, 1, 2, 2, 21851, 0.00009331404842999113
+Static property 'name' conflicts with built-in property 'Function.name' of constructor function 'Task'., 2699, 1, 2, 1, 26957, 0.000046657024214995566
+Subsequent property declarations must have the same type.  Property 'AES' must be of type '() => void', but here has type 'any'., 2717, 1, 2, 1, 27045, 0.000046657024214995566
+Type '() => void' is not a constructor function type., 2507, 1, 2, 2, 30259, 0.00009331404842999113
+Merge conflict marker encountered., 1185, 1, 2, 2, 30979, 0.00009331404842999113
+Interface name cannot be 'for'., 2427, 1, 2, 2, 32475, 0.00009331404842999113
+Type parameter declaration expected., 1139, 1, 2, 2, 33635, 0.00009331404842999113
+The left-hand side of a 'for...in' statement must be a variable or a property access., 2406, 1, 2, 2, 34249, 0.00009331404842999113
+All declarations of 'database' must have identical modifiers., 2687, 1, 2, 1, 35465, 0.000046657024214995566
+'static' modifier cannot appear on a module or namespace element., 1044, 1, 2, 2, 35863, 0.00009331404842999113
+This condition will always return 'false'., 2845, 1, 2, 1, 38583, 0.000046657024214995566
+Binary digit expected., 1177, 1, 2, 1, 42501, 0.000046657024214995566
+Cannot assign to 'completer' because it is a read-only property., 2540, 1, 1, 1, 437, 0.000046657024214995566
+Expected '=' for property initializer., 1442, 1, 1, 1, 1679, 0.000046657024214995566
+'path' is referenced directly or indirectly in its own type annotation., 2502, 1, 1, 1, 2315, 0.000046657024214995566
+Property 'on' in type 'myEvent' is not assignable to the same property in base type 'EventEmitter'., 2416, 1, 1, 1, 16113, 0.000046657024214995566
+The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter., 2358, 1, 1, 1, 18161, 0.000046657024214995566
+Meta-property 'new.target' is only allowed in the body of a function declaration, function expression, or constructor., 17013, 1, 1, 1, 19195, 0.000046657024214995566
+'get' is not a valid meta-property for keyword 'new'. Did you mean 'target'?, 17012, 1, 1, 1, 19195, 0.000046657024214995566
+Type alias 'A' circularly references itself., 2456, 1, 1, 1, 20625, 0.000046657024214995566
+Type '"UTF8"' is not assignable to type 'BufferEncoding'. Did you mean '"utf8"'?, 2820, 1, 1, 1, 21843, 0.000046657024214995566
+'let' declarations can only be declared inside a block., 1157, 1, 1, 1, 22341, 0.000046657024214995566
+Implicit conversion of a 'symbol' to a 'string' will fail at runtime. Consider wrapping this expression in 'String(...)'., 2731, 1, 1, 1, 22623, 0.000046657024214995566
+'super' can only be referenced in a derived class., 2335, 1, 1, 1, 22713, 0.000046657024214995566
+'"util"' has no exported member named 'promisisfy'. Did you mean 'promisify'?, 2724, 1, 1, 1, 25077, 0.000046657024214995566
+'EventEmitter' is a type and cannot be imported in JavaScript files. Use 'import("...").EventEmitter' in a JSDoc type annotation., 18042, 1, 1, 1, 26331, 0.000046657024214995566
+Variable declaration list cannot be empty., 1123, 1, 1, 1, 26935, 0.000046657024214995566
+Type 'org.example.trading.Trader[]' is not a valid async function return type in ES5/ES3 because it does not refer to a Promise-compatible constructor value., 1055, 1, 1, 1, 27919, 0.000046657024214995566
+A destructuring declaration must have an initializer., 1182, 1, 1, 1, 28739, 0.000046657024214995566
+Top-level 'for await' loops are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1432, 1, 1, 1, 29049, 0.000046657024214995566
+Property 'getDummy' does not exist on type 'MyCustomClass'. Did you mean to access the static member 'MyCustomClass.getDummy' instead?, 2576, 1, 1, 1, 32327, 0.000046657024214995566
+Unable to resolve signature of method decorator when called as an expression., 1241, 1, 1, 1, 32517, 0.000046657024214995566
+'await' expressions are only allowed within async functions and at the top levels of modules., 1308, 1, 1, 1, 32799, 0.000046657024214995566
+Types cannot appear in export declarations in JavaScript files., 18043, 1, 1, 1, 34155, 0.000046657024214995566
+Constructor implementation is missing., 2390, 1, 1, 1, 36275, 0.000046657024214995566
+The left-hand side of a 'for...of' statement must be a variable or a property access., 2487, 1, 1, 1, 38747, 0.000046657024214995566
+Type argument list cannot be empty., 1099, 1, 1, 1, 39787, 0.000046657024214995566
+The variable declaration of a 'for...in' statement cannot have an initializer., 1189, 1, 1, 1, 39839, 0.000046657024214995566
+Type satisfaction expressions can only be used in TypeScript files., 8037, 1, 1, 1, 40463, 0.000046657024214995566
+Module 'module' is hidden by a local declaration with the same name., 2437, 1, 1, 1, 40555, 0.000046657024214995566
+Export declaration conflicts with exported declaration of 'name1'., 2484, 1, 1, 1, 41759, 0.000046657024214995566
+Object literal may only specify known properties, and 'c' does not exist in type '{ a: any; b: any; }'., 2353, 1, 1, 1, 42253, 0.000046657024214995566
+Type 'unknown' does not satisfy the constraint '(...args: any[]) => any'., 2344, 1, 1, 1, 42313, 0.000046657024214995566
+An interface can only extend an object type or intersection of object types with statically known members., 2312, 1, 1, 1, 42313, 0.000046657024214995566
+Parameter 'key' cannot reference itself., 2372, 1, 1, 1, 42559, 0.000046657024214995566
 
-Total errors: 354368
-Snippets without errors: 1632/20578(0.0793079988337059)
-Fixed: 9266/20578(0.4502867139663719)
-Snippets no lines: 8/20578(0.000388764700165225)
-Code lines: 300920
-Snippets timed out: 0/20578(0)
-Snippets failed: 0/20578(0)
-Snippets lineFailed: 0/20578(0)
+Total errors: 369750
+Snippets without errors: 1588/21433(0.07409135445341296)
+Fixed: 9743/21433(0.4545793869267018)
+Snippets no lines: 5/21433(0.00023328512107497783)
+Code lines: 325317
+Snippets timed out: 0/21433(0)
+Snippets failed: 0/21433(0)
+Snippets lineFailed: 0/21433(0)
 --------
 ALL FIXES ANALYSIS
 
 ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
-Cannot find name, 2304, 1, 12321, 7661, 5, 0.37229079599572357
-Character expected, 1005, 1, 1544, 1274, 11, 0.06191077850131208
-Property 'pathname' does not exist on type 'typeof URL'., 2339, 1, 1159, 957, 135, 0.04650597725726504
-Cannot use JSX unless the '--jsx' flag is provided., 17004, 1, 860, 226, 501, 0.010982602779667606
-Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig., 2593, 1, 474, 237, 801, 0.01151715424239479
-Declaration or statement expected., 1128, 1, 468, 425, 145, 0.02065312469627758
-Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig., 2592, 1, 350, 229, 287, 0.011128389542229566
-A 'return' statement can only be used within a function body., 1108, 1, 342, 339, 257, 0.01647390416950141
-Expression expected., 1109, 1, 327, 285, 977, 0.01384974244338614
-Cannot find name 'dnode'. Did you mean 'DNode'?, 2552, 1, 272, 225, 151, 0.010934007192146954
-Type annotations can only be used in TypeScript files., 8010, 1, 254, 132, 977, 0.006414617552726212
-Block-scoped variable 'str' used before its declaration., 2448, 1, 194, 172, 1203, 0.008358441053552337
-Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'., 2584, 1, 168, 113, 521, 0.005491301389833803
-Identifier expected., 1003, 1, 159, 140, 59, 0.006803382252891437
-Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1378, 1, 156, 151, 15593, 0.007337933715618622
-JSX element 'scope' has no corresponding closing tag., 17008, 1, 142, 72, 1285, 0.003498882301487025
-Left side of comma operator is unused and has no side effects., 2695, 1, 125, 84, 1175, 0.004082029351734863
-Unexpected token. Did you mean `{'>'}` or `&gt;`?, 1382, 1, 95, 42, 503, 0.0020410146758674313
-Unexpected token. Did you mean `{'}'}` or `&rbrace;`?, 1381, 1, 90, 43, 6063, 0.0020896102633880843
-Cannot redeclare block-scoped variable 'lectal_api_server'., 2451, 1, 61, 25, 12031, 0.0012148896880163282
-'interface' declarations can only be used in TypeScript files., 8006, 1, 60, 46, 2119, 0.002235397025950044
-This expression is not callable., 2349, 1, 59, 50, 1199, 0.0024297793760326564
-The 'declare' modifier can only be used in TypeScript files., 8009, 1, 56, 25, 2119, 0.0012148896880163282
-Argument of type 'string' is not assignable to parameter of type 'EventEmitter'., 2345, 1, 52, 52, 239, 0.0025269705510739624
-Unexpected keyword or identifier., 1434, 1, 46, 24, 1285, 0.001166294100495675
-Expected 1 arguments, but got 2., 2554, 1, 40, 39, 517, 0.0018952279133054718
-'catch' or 'finally' expected., 1472, 1, 35, 34, 1651, 0.0016522499757022063
-Unterminated template literal., 1160, 1, 35, 35, 7111, 0.0017008455632228593
-No overload matches this call., 2769, 1, 34, 33, 2505, 0.001603654388181553
-Module declaration names may only use ' or " quoted strings., 1443, 1, 30, 11, 31677, 0.0005345514627271843
-Argument expression expected., 1135, 1, 28, 26, 1855, 0.0012634852755369812
-'implements' clauses can only be used in TypeScript files., 8005, 1, 27, 23, 11385, 0.001117698512975022
-Cannot find module './storedFilesList.json'. Consider using '--resolveJsonModule' to import module with '.json' extension., 2732, 1, 26, 25, 7959, 0.0012148896880163282
-Experimental support for decorators is a feature that is subject to change in a future release. Set the 'experimentalDecorators' option in your 'tsconfig' or 'jsconfig' to remove this warning., 1219, 1, 25, 22, 12645, 0.0010691029254543687
-'await' expressions are only allowed at the top level of a file when that file is a module, but this file has no imports or exports. Consider adding an empty 'export {}' to make this file a module., 1375, 1, 24, 22, 15593, 0.0010691029254543687
-No value exists in scope for the shorthand property 'params'. Either declare one or provide an initializer., 18004, 1, 23, 18, 2595, 0.0008747205753717563
-Duplicate identifier 'process'., 2300, 1, 23, 12, 7685, 0.0005831470502478375
-Type 'IterableIterator<any>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher., 2802, 1, 22, 19, 16847, 0.0009233161628924094
-Type '(Anonymous function)' is not assignable to type 'typeof game_state'., 2322, 1, 21, 19, 25, 0.0009233161628924094
-An expression of type 'void' cannot be tested for truthiness., 1345, 1, 21, 19, 3135, 0.0009233161628924094
-Type 'DateConstructor' cannot be used as an index type., 2538, 1, 19, 18, 8565, 0.0008747205753717563
-Invalid character., 1127, 1, 18, 9, 10207, 0.00043736028768587813
-Parameter modifiers can only be used in TypeScript files., 8012, 1, 17, 14, 13419, 0.0006803382252891437
-Object is possibly 'undefined'., 2532, 1, 17, 12, 19557, 0.0005831470502478375
-'worker' is possibly 'undefined'., 18048, 1, 16, 13, 653, 0.0006317426377684906
-Expected corresponding JSX closing tag for 'base_url'., 17002, 1, 16, 11, 19603, 0.0005345514627271843
-The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2362, 1, 15, 15, 1177, 0.0007289338128097969
-The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2363, 1, 15, 15, 1445, 0.0007289338128097969
-Tuple type '[]' of length '0' has no element at index '0'., 2493, 1, 15, 8, 22831, 0.000388764700165225
-Duplicate function implementation., 2393, 1, 15, 7, 24493, 0.00034016911264457187
-Operator cannot be applied to types 1 and 2, 2365, 1, 12, 12, 4405, 0.0005831470502478375
-Type '{ test: RegExp; loaders: string[]; }' is not an array type., 2461, 1, 12, 9, 14747, 0.00043736028768587813
-Property assignment expected., 1136, 1, 11, 9, 12937, 0.00043736028768587813
-A module cannot have multiple default exports., 2528, 1, 10, 5, 10309, 0.00024297793760326563
-Cannot find namespace 'mongoose'., 2503, 1, 10, 7, 12479, 0.00034016911264457187
-Unexpected token. A constructor, method, accessor, or property was expected., 1068, 1, 10, 10, 15177, 0.00048595587520653126
-Declaration expected., 1146, 1, 9, 9, 2619, 0.00043736028768587813
-Unknown keyword or identifier, 1435, 1, 9, 9, 3337, 0.00043736028768587813
-JSX expressions must have one parent element., 2657, 1, 9, 9, 5901, 0.00043736028768587813
-'*/' expected., 1010, 1, 9, 9, 6189, 0.00043736028768587813
-'import ... =' can only be used in TypeScript files., 8002, 1, 9, 9, 7301, 0.00043736028768587813
-Value of type 'ProxyConstructor' is not callable. Did you mean to include 'new'?, 2348, 1, 9, 8, 11395, 0.000388764700165225
-Type aliases can only be used in TypeScript files., 8008, 1, 9, 6, 14959, 0.00029157352512391874
-'string' only refers to a type, but is being used as a value here., 2693, 1, 8, 7, 3283, 0.00034016911264457187
-Variable declaration expected., 1134, 1, 8, 8, 6189, 0.000388764700165225
-This expression is not constructable., 2351, 1, 8, 7, 6783, 0.00034016911264457187
-Module '"assert"' has no exported member 'name'., 2305, 1, 7, 7, 583, 0.00034016911264457187
-Only a void function can be called with the 'new' keyword., 2350, 1, 7, 7, 1827, 0.00034016911264457187
-Type assertion expressions can only be used in TypeScript files., 8016, 1, 6, 5, 21377, 0.00024297793760326563
-This comparison appears to be unintentional because the types '() => void' and 'number' have no overlap., 2367, 1, 5, 5, 1293, 0.00024297793760326563
-Property '_times' does not exist on type 'Console'. Did you mean 'time'?, 2551, 1, 5, 5, 2517, 0.00024297793760326563
-'function' is not allowed as a variable declaration name., 1389, 1, 5, 5, 2679, 0.00024297793760326563
-Trailing comma not allowed., 1009, 1, 5, 5, 3965, 0.00024297793760326563
-File '../.ts-definitions/express.d.ts' not found., 6053, 1, 5, 4, 7301, 0.0001943823500826125
-Unterminated string literal., 1002, 1, 5, 5, 8411, 0.00024297793760326563
-Module '"fs"' has no default export., 1192, 1, 5, 4, 21957, 0.0001943823500826125
-Type 'void' is not an array type or a string type., 2495, 1, 5, 5, 22051, 0.00024297793760326563
-Type parameter declarations can only be used in TypeScript files., 8004, 1, 5, 5, 25403, 0.00024297793760326563
-'__dirname' refers to a value, but is being used as a type here. Did you mean 'typeof __dirname'?, 2749, 1, 4, 4, 2301, 0.0001943823500826125
-Property 'status' is missing in type '{ headers: { 'Content-Type': string; }; body: any; }' but required in type '{ status: number; body: string; }'., 2741, 1, 4, 3, 23819, 0.00014578676256195937
-Digit expected., 1124, 1, 4, 2, 38387, 0.00009719117504130625
-An identifier or keyword cannot immediately follow a numeric literal., 1351, 1, 4, 1, 40797, 0.000048595587520653125
-Duplicate identifier 'require'. Compiler reserves name 'require' in top level scope of a module., 2441, 1, 3, 3, 7623, 0.00014578676256195937
-'MyObservable' is referenced directly or indirectly in its own base expression., 2506, 1, 3, 3, 12647, 0.00014578676256195937
-'ps.stdout' is possibly 'null'., 18047, 1, 3, 2, 14215, 0.00009719117504130625
-'await' expressions are only allowed within async functions and at the top levels of modules., 1308, 1, 3, 3, 27909, 0.00014578676256195937
-Invalid module name in augmentation, module 'node-json2html' cannot be found., 2664, 1, 3, 3, 32701, 0.00014578676256195937
-Module '"stream"' can only be default-imported using the 'esModuleInterop' flag, 1259, 1, 3, 3, 33655, 0.00014578676256195937
-Non-null assertions can only be used in TypeScript files., 8013, 1, 3, 2, 37983, 0.00009719117504130625
-Type 'string' is not comparable to type 'Buffer'., 2678, 1, 2, 2, 1065, 0.00009719117504130625
-An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type., 2356, 1, 2, 2, 7111, 0.00009719117504130625
-An object literal cannot have multiple properties with the same name., 1117, 1, 2, 2, 7187, 0.00009719117504130625
-Parameter declaration expected., 1138, 1, 2, 1, 7887, 0.000048595587520653125
-The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type 'string'., 2407, 1, 2, 2, 11181, 0.00009719117504130625
-Could not resolve the path '<pathToKnexDefinetelyTypedFile>' with the extensions: '.ts', '.tsx', '.d.ts', '.js', '.jsx', '.cts', '.d.cts', '.cjs', '.mts', '.d.mts', '.mjs'., 6231, 1, 2, 1, 14927, 0.000048595587520653125
-A spread argument must either have a tuple type or be passed to a rest parameter., 2556, 1, 2, 2, 18843, 0.00009719117504130625
-'public' modifier cannot appear on a module or namespace element., 1044, 1, 2, 2, 24435, 0.00009719117504130625
-Static property 'name' conflicts with built-in property 'Function.name' of constructor function 'Task'., 2699, 1, 2, 1, 25835, 0.000048595587520653125
-Type '() => void' is not a constructor function type., 2507, 1, 2, 2, 28957, 0.00009719117504130625
-Merge conflict marker encountered., 1185, 1, 2, 2, 29631, 0.00009719117504130625
-A function whose declared type is neither 'void' nor 'any' must return a value., 2355, 1, 2, 2, 30961, 0.00009719117504130625
-Type 'Promise<void>' is missing the following properties from type 'string[]': length, pop, push, concat, and 29 more., 2740, 1, 2, 2, 31237, 0.00009719117504130625
-Ambient modules cannot be nested in other modules or namespaces., 2435, 1, 2, 2, 32787, 0.00009719117504130625
-JSX spread child must be an array type., 2609, 1, 2, 2, 35109, 0.00009719117504130625
-Cannot redeclare exported variable 'renderViewProducer'., 2323, 1, 2, 1, 38233, 0.000048595587520653125
-Cannot assign to 'completer' because it is a read-only property., 2540, 1, 1, 1, 429, 0.000048595587520653125
-Variable 'result' is used before being assigned., 2454, 1, 1, 1, 4049, 0.000048595587520653125
-Line terminator not permitted before arrow., 1200, 1, 1, 1, 5565, 0.000048595587520653125
-The 'with' statement is not supported. All symbols in a 'with' block will have type 'any'., 2410, 1, 1, 1, 6117, 0.000048595587520653125
-Cannot assign to 'request' because it is an import., 2632, 1, 1, 1, 7197, 0.000048595587520653125
-The '&' operator is not allowed for boolean types. Consider using '&&' instead., 2447, 1, 1, 1, 10459, 0.000048595587520653125
-Property 'on' in type 'myEvent' is not assignable to the same property in base type 'EventEmitter'., 2416, 1, 1, 1, 15617, 0.000048595587520653125
-The operand of a 'delete' operator must be a property reference., 2703, 1, 1, 1, 15987, 0.000048595587520653125
-Top-level 'for await' loops are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1432, 1, 1, 1, 27803, 0.000048595587520653125
-Unable to resolve signature of class decorator when called as an expression., 1238, 1, 1, 1, 29095, 0.000048595587520653125
-Type expected., 1110, 1, 1, 1, 30229, 0.000048595587520653125
-The left-hand side of an assignment expression must be a variable or a property access., 2364, 1, 1, 1, 30365, 0.000048595587520653125
-Type arguments can only be used in TypeScript files., 8011, 1, 1, 1, 31203, 0.000048595587520653125
-Array element destructuring pattern expected., 1181, 1, 1, 1, 31833, 0.000048595587520653125
-Decorators are not valid here., 1206, 1, 1, 1, 32017, 0.000048595587520653125
-Cannot assign to 'terms' because it is a constant., 2588, 1, 1, 1, 33521, 0.000048595587520653125
-A type predicate is only allowed in return type position for functions and methods., 1228, 1, 1, 1, 33851, 0.000048595587520653125
-'{' or ';' expected., 1144, 1, 1, 1, 33999, 0.000048595587520653125
-'const' declarations must be initialized., 1155, 1, 1, 1, 34063, 0.000048595587520653125
-Unterminated regular expression literal., 1161, 1, 1, 1, 34321, 0.000048595587520653125
-The operand of an increment or decrement operator must be a variable or a property access., 2357, 1, 1, 1, 35307, 0.000048595587520653125
-Hexadecimal digit expected., 1125, 1, 1, 1, 35601, 0.000048595587520653125
-Expression or comma expected., 1137, 1, 1, 1, 35701, 0.000048595587520653125
-Class 'Controller' used before its declaration., 2449, 1, 1, 1, 36165, 0.000048595587520653125
-Type '(...args: any[]) => any' is missing the following properties from type 'Require': resolve, cache, extensions, main, 2739, 1, 1, 1, 36483, 0.000048595587520653125
-An import declaration can only be used at the top level of a module., 1473, 1, 1, 1, 37309, 0.000048595587520653125
-'super' can only be referenced in members of derived classes or object literal expressions., 2660, 1, 1, 1, 37621, 0.000048595587520653125
+Cannot find name, 2304, 1, 13302, 8248, 5, 0.38482713572528343
+Character expected, 1005, 1, 1681, 1373, 13, 0.06406009424718892
+Property 'pathname' does not exist on type 'typeof URL'., 2339, 1, 1268, 1045, 137, 0.04875659030467037
+Cannot use JSX unless the '--jsx' flag is provided., 17004, 1, 1004, 245, 513, 0.011430970932673914
+Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig., 2593, 1, 516, 260, 743, 0.012130826295898848
+Declaration or statement expected., 1128, 1, 514, 466, 149, 0.021742173284187934
+Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig., 2592, 1, 392, 250, 307, 0.011664256053748892
+A 'return' statement can only be used within a function body., 1108, 1, 371, 366, 277, 0.01707647086268838
+Expression expected., 1109, 1, 356, 313, 983, 0.014603648579293613
+Cannot find name 'dnode'. Did you mean 'DNode'?, 2552, 1, 289, 240, 155, 0.011197685811598936
+Type annotations can only be used in TypeScript files., 8010, 1, 281, 141, 983, 0.006578640414314375
+Block-scoped variable 'str' used before its declaration., 2448, 1, 209, 186, 1205, 0.008678206503989176
+Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'., 2584, 1, 176, 117, 539, 0.005458871833154482
+Identifier expected., 1003, 1, 167, 147, 59, 0.006858582559604348
+Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1378, 1, 159, 154, 16091, 0.007185181729109318
+JSX element 'scope' has no corresponding closing tag., 17008, 1, 153, 78, 1287, 0.003639247888769654
+Left side of comma operator is unused and has no side effects., 2695, 1, 141, 90, 1713, 0.004199132179349601
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?, 1381, 1, 103, 49, 6055, 0.002286194186534783
+Unexpected token. Did you mean `{'>'}` or `&gt;`?, 1382, 1, 98, 42, 515, 0.001959595017029814
+This expression is not callable., 2349, 1, 68, 58, 1201, 0.002706107404469743
+The 'declare' modifier can only be used in TypeScript files., 8009, 1, 63, 27, 2141, 0.0012597396538048804
+Cannot redeclare block-scoped variable 'lectal_api_server'., 2451, 1, 61, 25, 12297, 0.0011664256053748891
+'interface' declarations can only be used in TypeScript files., 8006, 1, 58, 47, 2141, 0.002192880138104792
+Argument of type 'PlatformPath' is not assignable to parameter of type 'PathLike'., 2345, 1, 55, 55, 69, 0.002566136331824756
+Unexpected keyword or identifier., 1434, 1, 47, 25, 1287, 0.0011664256053748891
+Expected 1 arguments, but got 2., 2554, 1, 46, 45, 535, 0.0020995660896748003
+'catch' or 'finally' expected., 1472, 1, 41, 40, 1667, 0.0018662809685998226
+Unterminated template literal., 1160, 1, 41, 41, 7151, 0.0019129379928148182
+No overload matches this call., 2769, 1, 37, 36, 2525, 0.0016796528717398405
+Module declaration names may only use ' or " quoted strings., 1443, 1, 36, 14, 14997, 0.000653198339009938
+Argument expression expected., 1135, 1, 28, 26, 1859, 0.0012130826295898847
+No value exists in scope for the shorthand property 'params'. Either declare one or provide an initializer., 18004, 1, 28, 20, 2611, 0.0009331404842999113
+Cannot find module './storedFilesList.json'. Consider using '--resolveJsonModule' to import module with '.json' extension., 2732, 1, 27, 26, 8037, 0.0012130826295898847
+Experimental support for decorators is a feature that is subject to change in a future release. Set the 'experimentalDecorators' option in your 'tsconfig' or 'jsconfig' to remove this warning., 1219, 1, 27, 24, 12225, 0.0011197685811598936
+Duplicate identifier 'process'., 2300, 1, 26, 15, 83, 0.0006998553632249335
+'implements' clauses can only be used in TypeScript files., 8005, 1, 26, 22, 11617, 0.0010264545327299025
+Type '(Anonymous function)' is not assignable to type 'typeof game_state'., 2322, 1, 24, 22, 25, 0.0010264545327299025
+An expression of type 'void' cannot be tested for truthiness., 1345, 1, 24, 22, 2837, 0.0010264545327299025
+'await' expressions are only allowed at the top level of a file when that file is a module, but this file has no imports or exports. Consider adding an empty 'export {}' to make this file a module., 1375, 1, 24, 22, 16091, 0.0010264545327299025
+Type 'DateConstructor' cannot be used as an index type., 2538, 1, 22, 19, 8661, 0.0008864834600849158
+Type 'Generator<any, void, unknown>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher., 2802, 1, 20, 20, 9775, 0.0009331404842999113
+Expected corresponding JSX closing tag for 'base_url'., 17002, 1, 19, 12, 20341, 0.0005598842905799468
+Duplicate function implementation., 2393, 1, 19, 9, 25515, 0.0004199132179349601
+Parameter modifiers can only be used in TypeScript files., 8012, 1, 18, 15, 13755, 0.0006998553632249335
+Object is possibly 'undefined'., 2532, 1, 17, 12, 20295, 0.0005598842905799468
+Tuple type '[]' of length '0' has no element at index '0'., 2493, 1, 17, 9, 23751, 0.0004199132179349601
+'worker' is possibly 'undefined'., 18048, 1, 16, 13, 663, 0.0006065413147949423
+The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2363, 1, 16, 16, 1455, 0.0007465123874399291
+Invalid character., 1127, 1, 16, 8, 13611, 0.00037325619371996453
+The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2362, 1, 14, 14, 1179, 0.000653198339009938
+Operator cannot be applied to types 1 and 2, 2365, 1, 13, 13, 4457, 0.0006065413147949423
+'string' only refers to a type, but is being used as a value here., 2693, 1, 12, 10, 207, 0.00046657024214995566
+JSX expressions must have one parent element., 2657, 1, 11, 11, 5897, 0.0005132272663649513
+Property assignment expected., 1136, 1, 11, 9, 13243, 0.0004199132179349601
+Type '{ test: RegExp; loaders: string[]; }' is not an array type., 2461, 1, 11, 8, 15197, 0.00037325619371996453
+This expression is not constructable., 2351, 1, 10, 9, 6813, 0.0004199132179349601
+A module cannot have multiple default exports., 2528, 1, 10, 5, 10475, 0.00023328512107497783
+Cannot find namespace 'mongoose'., 2503, 1, 10, 7, 12779, 0.000326599169504969
+Declaration expected., 1146, 1, 9, 9, 2637, 0.0004199132179349601
+'import ... =' can only be used in TypeScript files., 8002, 1, 9, 9, 7357, 0.0004199132179349601
+Value of type 'ProxyConstructor' is not callable. Did you mean to include 'new'?, 2348, 1, 9, 8, 11627, 0.00037325619371996453
+Type aliases can only be used in TypeScript files., 8008, 1, 9, 6, 15427, 0.0002799421452899734
+Unexpected token. A constructor, method, accessor, or property was expected., 1068, 1, 9, 9, 15655, 0.0004199132179349601
+This comparison appears to be unintentional because the types '() => void' and 'number' have no overlap., 2367, 1, 8, 8, 1295, 0.00037325619371996453
+Unknown keyword or identifier, 1435, 1, 8, 8, 3393, 0.00037325619371996453
+Type 'void' is not an array type or a string type., 2495, 1, 8, 8, 22911, 0.00037325619371996453
+Only a void function can be called with the 'new' keyword., 2350, 1, 7, 7, 1831, 0.000326599169504969
+Variable declaration expected., 1134, 1, 7, 7, 12989, 0.000326599169504969
+'*/' expected., 1010, 1, 7, 7, 16853, 0.000326599169504969
+Module '"assert"' has no exported member 'name'., 2305, 1, 6, 6, 595, 0.0002799421452899734
+File 'node.d.ts' not found., 6053, 1, 6, 5, 3629, 0.00023328512107497783
+Type assertion expressions can only be used in TypeScript files., 8016, 1, 6, 5, 22227, 0.00023328512107497783
+Module '"fs"' has no default export., 1192, 1, 6, 5, 22819, 0.00023328512107497783
+Type parameter declarations can only be used in TypeScript files., 8004, 1, 6, 6, 26463, 0.0002799421452899734
+'__dirname' refers to a value, but is being used as a type here. Did you mean 'typeof __dirname'?, 2749, 1, 5, 5, 2315, 0.00023328512107497783
+'function' is not allowed as a variable declaration name., 1389, 1, 5, 5, 2701, 0.00023328512107497783
+Unterminated string literal., 1002, 1, 5, 5, 8501, 0.00023328512107497783
+Property 'votes' does not exist on type 'typeof post'. Did you mean 'vote'?, 2551, 1, 4, 4, 3421, 0.00018662809685998226
+Trailing comma not allowed., 1009, 1, 4, 4, 8609, 0.00018662809685998226
+Digit expected., 1124, 1, 4, 2, 40027, 0.00009331404842999113
+An identifier or keyword cannot immediately follow a numeric literal., 1351, 1, 4, 1, 42501, 0.000046657024214995566
+Type '(id: any) => any' is missing the following properties from type 'Require': resolve, cache, extensions, main, 2739, 1, 3, 3, 4607, 0.0001399710726449867
+JSDoc '@param' tag has name 'required', but there is no parameter with that name., 8024, 1, 3, 1, 5471, 0.000046657024214995566
+An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type., 2356, 1, 3, 3, 7151, 0.0001399710726449867
+'MyObservable' is referenced directly or indirectly in its own base expression., 2506, 1, 3, 3, 12941, 0.0001399710726449867
+'ps.stdout' is possibly 'null'., 18047, 1, 3, 2, 14617, 0.00009331404842999113
+'await' expressions are only allowed within async functions and at the top levels of modules., 1308, 1, 3, 3, 29169, 0.0001399710726449867
+Invalid module name in augmentation, module 'node-json2html' cannot be found., 2664, 1, 3, 3, 34183, 0.0001399710726449867
+Module '"stream"' can only be default-imported using the 'esModuleInterop' flag, 1259, 1, 3, 3, 35181, 0.0001399710726449867
+Non-null assertions can only be used in TypeScript files., 8013, 1, 3, 2, 39603, 0.00009331404842999113
+Type 'string' is not comparable to type 'Buffer'., 2678, 1, 2, 2, 1069, 0.00009331404842999113
+An object literal cannot have multiple properties with the same name., 1117, 1, 2, 2, 7235, 0.00009331404842999113
+Cannot assign to 'request' because it is an import., 2632, 1, 2, 2, 7245, 0.00009331404842999113
+Duplicate identifier 'require'. Compiler reserves name 'require' in top level scope of a module., 2441, 1, 2, 2, 7697, 0.00009331404842999113
+Parameter declaration expected., 1138, 1, 2, 1, 7961, 0.000046657024214995566
+The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type 'string'., 2407, 1, 2, 2, 11403, 0.00009331404842999113
+Unterminated regular expression literal., 1161, 1, 2, 2, 14997, 0.00009331404842999113
+Could not resolve the path '<pathToKnexDefinetelyTypedFile>' with the extensions: '.ts', '.tsx', '.d.ts', '.js', '.jsx', '.cts', '.d.cts', '.cjs', '.mts', '.d.mts', '.mjs'., 6231, 1, 2, 1, 15393, 0.000046657024214995566
+A spread argument must either have a tuple type or be passed to a rest parameter., 2556, 1, 2, 2, 19521, 0.00009331404842999113
+Property 'status' is missing in type '{ headers: { 'Content-Type': string; }; body: any; }' but required in type '{ status: number; body: string; }'., 2741, 1, 2, 2, 24831, 0.00009331404842999113
+'public' modifier cannot appear on a module or namespace element., 1044, 1, 2, 2, 25457, 0.00009331404842999113
+Static property 'name' conflicts with built-in property 'Function.name' of constructor function 'Task'., 2699, 1, 2, 1, 26957, 0.000046657024214995566
+Type '() => void' is not a constructor function type., 2507, 1, 2, 2, 30259, 0.00009331404842999113
+Merge conflict marker encountered., 1185, 1, 2, 2, 30979, 0.00009331404842999113
+A function whose declared type is neither 'void' nor 'any' must return a value., 2355, 1, 2, 2, 32385, 0.00009331404842999113
+Type 'Promise<void>' is missing the following properties from type 'string[]': length, pop, push, concat, and 29 more., 2740, 1, 2, 2, 32667, 0.00009331404842999113
+Ambient modules cannot be nested in other modules or namespaces., 2435, 1, 2, 2, 34271, 0.00009331404842999113
+JSX spread child must be an array type., 2609, 1, 2, 2, 36647, 0.00009331404842999113
+Expression or comma expected., 1137, 1, 2, 2, 37245, 0.00009331404842999113
+Cannot redeclare exported variable 'renderViewProducer'., 2323, 1, 2, 1, 39869, 0.000046657024214995566
+Cannot assign to 'completer' because it is a read-only property., 2540, 1, 1, 1, 437, 0.000046657024214995566
+Variable 'result' is used before being assigned., 2454, 1, 1, 1, 4103, 0.000046657024214995566
+Line terminator not permitted before arrow., 1200, 1, 1, 1, 5579, 0.000046657024214995566
+Identifier expected. 'default' is a reserved word that cannot be used here., 1359, 1, 1, 1, 6005, 0.000046657024214995566
+The 'with' statement is not supported. All symbols in a 'with' block will have type 'any'., 2410, 1, 1, 1, 6121, 0.000046657024214995566
+A 'yield' expression is only allowed in a generator body., 1163, 1, 1, 1, 10253, 0.000046657024214995566
+The '&' operator is not allowed for boolean types. Consider using '&&' instead., 2447, 1, 1, 1, 10633, 0.000046657024214995566
+Property 'on' in type 'myEvent' is not assignable to the same property in base type 'EventEmitter'., 2416, 1, 1, 1, 16113, 0.000046657024214995566
+The operand of a 'delete' operator must be a property reference., 2703, 1, 1, 1, 16513, 0.000046657024214995566
+Top-level 'for await' loops are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1432, 1, 1, 1, 29049, 0.000046657024214995566
+Unable to resolve signature of class decorator when called as an expression., 1238, 1, 1, 1, 30409, 0.000046657024214995566
+Cannot invoke an object which is possibly 'undefined'., 2722, 1, 1, 1, 31177, 0.000046657024214995566
+Type expected., 1110, 1, 1, 1, 31641, 0.000046657024214995566
+The left-hand side of an assignment expression must be a variable or a property access., 2364, 1, 1, 1, 31777, 0.000046657024214995566
+Type arguments can only be used in TypeScript files., 8011, 1, 1, 1, 32631, 0.000046657024214995566
+Array element destructuring pattern expected., 1181, 1, 1, 1, 33275, 0.000046657024214995566
+Decorators are not valid here., 1206, 1, 1, 1, 33467, 0.000046657024214995566
+Cannot assign to 'terms' because it is a constant., 2588, 1, 1, 1, 35041, 0.000046657024214995566
+A type predicate is only allowed in return type position for functions and methods., 1228, 1, 1, 1, 35391, 0.000046657024214995566
+'{' or ';' expected., 1144, 1, 1, 1, 35541, 0.000046657024214995566
+'const' declarations must be initialized., 1155, 1, 1, 1, 35601, 0.000046657024214995566
+The operand of an increment or decrement operator must be a variable or a property access., 2357, 1, 1, 1, 36845, 0.000046657024214995566
+Hexadecimal digit expected., 1125, 1, 1, 1, 37145, 0.000046657024214995566
+Class 'Controller' used before its declaration., 2449, 1, 1, 1, 37731, 0.000046657024214995566
+An import declaration can only be used at the top level of a module., 1473, 1, 1, 1, 38891, 0.000046657024214995566
+'super' can only be referenced in members of derived classes or object literal expressions., 2660, 1, 1, 1, 39213, 0.000046657024214995566
 
-Total errors: 20724
-Snippets without errors: 10151/20578(0.49329380892214986)
-Fixed: 16234/20578(0.7889007678102828)
-Snippets no lines: 3357/20578(0.16313538730683255)
-Code lines: 223261
-Snippets timed out: 0/20578(0)
-Snippets failed: 0/20578(0)
-Snippets lineFailed: 0/20578(0)
+Total errors: 22493
+Snippets without errors: 10198/21433(0.4758083329445248)
+Fixed: 16965/21433(0.7915364158073998)
+Snippets no lines: 3201/21433(0.1493491345122008)
+Code lines: 242865
+Snippets timed out: 0/21433(0)
+Snippets failed: 0/21433(0)
+Snippets lineFailed: 0/21433(0)
