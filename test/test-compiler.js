@@ -69,7 +69,6 @@ describe("Compiler", function () {
             var result = await compiler.compile(snippet)
             assert.strictEqual(result.length, 0)
         });
-        
     });
 
     this.afterAll(()=>{

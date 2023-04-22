@@ -33,15 +33,16 @@ class Compiler{
             var forked = this.forked;
             function errorHandler(msg){
                 //remove otherwise we add again each time
-                forked.removeListener("message", errorHandler)
+                forked.removeListener("message", errorHandler);
                 clearTimeout(timer);
                 //if string undefined
-                if(typeof msg === "string") reject(msg)
+                if(typeof msg === "string") reject(msg);
                 resolve(msg);
             }
 
-            this.forked.addListener("message", errorHandler)
-            this.forked.send(code);
+            this.forked.addListener("message", errorHandler);
+            var message = {command: "getErrors", arguments: [code]}
+            this.forked.send(message);
         });
     }
 

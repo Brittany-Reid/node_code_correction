@@ -1,54 +1,76 @@
 const Compiler = require("./ts/compiler/compiler");
 const Snippet = require("./snippet");
-const TSFixer = require("./ts/ts-fixer")
+const TSFixer = require("./ts/ts-fixer");
+const CustomFixer = require("./custom-fixer");
+const LanguageService = require("./ts/language-service");
 
 
 class Fixer{
     /**
-     * 
      * @param {Compiler} compiler 
      */
     constructor(compiler){
         this.compiler = compiler;
         this.TSFixer = new TSFixer();
+        this.languageService = new LanguageService();
+        this.customFixer = new CustomFixer(this.languageService);
 
         //options
         this.tsFixes = true;
+        this.customFixes = true;
         this.deletions = true;
+
+        this.originalSnippet = undefined;
     }
 
     async fix(snippet){
         //step 1, get errors
         snippet = await this.evaluate(snippet);
 
-        //store for error case
-        var originalSnippet = Snippet.clone(snippet);
-
-        // console.log(snippet)
-
-        //step 2a, if not fixable, return
-        //no errors or didnt compile: it wont have error lines
-        if(snippet.compileFail || snippet.errors.length <= 0 ) return snippet; 
-
-        // console.log(snippet.code + "\n---\n");
-
-        //if ts-fixes
+        //apply TS fixes if enabled
         if(this.tsFixes){
             snippet = await this.doTSFixes(snippet);
         }
 
-        // console.log(snippet.code + "\n---\n");
+        //do deletions if enabled
+        if(this.deletions){
+            snippet = await this.deletionLoop(snippet);
+        }
 
-        //stop here if we don't do deletions
-        if(!this.deletions) return snippet;
+        if(this.customFixes){
+            snippet = await this.doCustomFixes(snippet);
+        }
 
-        // console.log("DELETIONS")
+        return snippet;
+    }
 
+    async evaluate(snippet){
+        try{
+            snippet.errors = await this.compiler.compile(snippet.code);
+        }catch(e){
+            //snippet.errors = ["Compile Failure"]
+            snippet.compileFail = true;
+        }
+        return snippet;
+    }
 
+    async doTSFixes(snippet){
+        if(snippet.compileFail || snippet.lineFail) return snippet;
+        var fixed = this.TSFixer.fix(snippet.code);
+        if(fixed !== snippet.code && fixed !== undefined){
+            snippet.code = fixed;
+            snippet.tsFixed = true;
+            snippet = await this.evaluate(snippet);
+        }
+        return snippet;
+    }
+
+    async deletionLoop(snippet){
+        //store for error case
+        this.originalSnippet = Snippet.clone(snippet);
         //step 2a, if not fixable, return
         //no errors or didnt compile: it wont have error lines
         if(snippet.compileFail || snippet.errors.length <= 0 ) return snippet; 
-
 
         //step 2b, if it has errors try to fix
         var prevSnippet;
@@ -57,24 +79,22 @@ class Fixer{
         //start at the first error
         var i = 0;
         var loops = 0;
-
-    //    console.log("START")
-
         while(!stop){
-      //      console.log("LOOP:" + loops)
             loops++;
-
             prevSnippet = Snippet.clone(snippet);
+
             //get error
             var error = prevSnippet.errors[i];
 
-            //if already commented out, skip
+            //check for inconsistent line numbers
             if(error.line-1 >= snippet.code.split("\n").length){
-                //return original snippet
-                originalSnippet.lineFail = true;
-                originalSnippet.fixed = false;
-                return originalSnippet
+                //return original snippet and record error
+                this.originalSnippet.lineFail = true;
+                this.originalSnippet.fixed = false;
+                return this.originalSnippet
             }
+
+            //if already commented out, skip
             if(this.isCommented(snippet.code, error.line)){
                 i++;
                 if(i >= snippet.errors.length) stop = true;
@@ -84,12 +104,10 @@ class Fixer{
 
             //try delete
             snippet = this.deleteForError(snippet,error)
-            //console.log("deleting line "+ error.line)
             snippet = await this.evaluate(snippet);
 
             //if the change made things worse
             if(snippet.compileFail || snippet.errors > prevSnippet.errors){
-                //console.log("discard")
                 //reset snippet
                 snippet = prevSnippet;
                 //try next error
@@ -107,44 +125,16 @@ class Fixer{
 
             //if the change fixed all errors
             if(snippet.errors.length == 0) stop = true;
-        } 
-
-  //      console.log("---\nFINAL:")
-
-//        console.log(snippet + "\n")
-
-        //console.log(snippet.code + "\n---\n");
+        }
 
         return snippet;
     }
 
-    async evaluate(snippet){
-        try{
-            snippet.errors = await this.compiler.compile(snippet.code);
-        }catch(e){
-            //snippet.errors = ["Compile Failure"]
-            snippet.compileFail = true;
-        }
+    async doCustomFixes(snippet){
+        //ignore fail cases
+        if(snippet.compileFail || snippet.lineFail) return snippet;
+        var fixed = this.customFixer.fix(snippet);
         return snippet;
-    }
-
-    /**
-     * Attempt to fix the code.
-     */
-    async tryFix(snippet){
-        return await this.lineDeletion(snippet);
-    }
-
-    /**
-     * Tries to delete the next line.
-     */
-    async lineDeletion(snippet){
-        var errors = snippet.errors;
-        for(var e of errors){
-            snippet = this.tryDelete(snippet, e);
-            console.log(snippet.code)
-            break;
-        }
     }
 
     deleteForError(snippet, error){
@@ -179,15 +169,6 @@ class Fixer{
      * Check if has code and update snippet state.
      */
     static hasCode(snippet){
-        //keep in case i readd eslint
-        // if(parse) this.parse(snippet)
-        // var code = this.linter.linter.getSourceCode();
-        // if(!code) return snippet;
-        // var ast = code.ast;
-        // if(!ast.tokens || ast.tokens.length === 0){
-        //     snippet.hasCode = false;
-        // }
-        // return snippet;
         snippet.hasCode = false;
         var lines = snippet.code.split("\n")
         var count = 0;
@@ -202,20 +183,6 @@ class Fixer{
             }
         }
         snippet.nondeletedLines = count;
-        return snippet;
-    }
-
-    async doTSFixes(snippet){
-        if(snippet.compileFail || snippet.lineFail) return snippet;
-        var fixed = this.TSFixer.fix(snippet.code);
-        if(fixed !== snippet.code && fixed !== undefined){
-            // console.log(snippet.code)
-            // console.log("---")
-            // console.log(fixed)
-            snippet.code = fixed;
-            snippet.tsFixed = true;
-            snippet = await this.evaluate(snippet);
-        }
         return snippet;
     }
 }

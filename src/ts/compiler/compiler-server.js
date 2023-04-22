@@ -21,9 +21,28 @@ class CompilerServer{
             return e.message;
         }
     }
+
+    // /**
+    //  * Get sourcefile for a string.
+    //  * Returns false if string was not last compile.
+    //  * @param {string} code String code to lint.
+    //  */
+    // static getSourceFile(code){
+    //     return compiler.getSourceFile(code);
+    // }
 }
 
 process.on('message', (msg) => {
-    var errors = CompilerServer.compile(msg);
-    process.send(errors);
+    var command = msg["command"];
+    var arguments = msg["arguments"];
+
+    if(command == "getErrors"){
+        var errors = CompilerServer.compile(...arguments);
+        process.send(errors);
+    }
+    //is circular, so this won't work
+    // if(command == "getSourceFile"){
+    //     var sourceFile = CompilerServer.getSourceFile(...arguments);
+    //     process.send(sourceFile);
+    // }
 });

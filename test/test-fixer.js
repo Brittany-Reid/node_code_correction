@@ -18,6 +18,7 @@ describe("Fixer", function () {
         this.beforeAll(()=>{
             fixer.deletions = true;
             fixer.tsFixes = false;
+            fixer.customFixes = false;
         })
 
         it("Should fix a snippet", async function () {
@@ -81,10 +82,11 @@ describe("Fixer", function () {
             assert.strictEqual(fixed.code.split("\n")[32-1], "//       <Chart />");
         });
     });
-    describe("All fixes", function () {
+    describe("Deletion and TS", function () {
         this.beforeAll(()=>{
             fixer.deletions = true;
             fixer.tsFixes = true;
+            fixer.customFixes = false;
         })
 
         it("Should fix a snippet", async function () {
@@ -93,6 +95,26 @@ describe("Fixer", function () {
             var fixed = await fixer.fix(snippet);
             assert.strictEqual(fixed.errors.length, 0)
             assert.strictEqual(fixed.code, `// console.log(a);\n// console.log(b);`)
+        });
+    });
+    describe("Custom only", function () {
+        this.beforeAll(()=>{
+            fixer.deletions = false;
+            fixer.tsFixes = false;
+            fixer.customFixes = true;
+        })
+
+        it("Should fix a snippet", async function () {
+            var code = `console.log(a);\nconsole.log(b);`
+            var snippet = new Snippet(code);
+            var fixed = await fixer.fix(snippet);
+            assert.strictEqual(fixed.errors.length, 0)
+            assert.strictEqual(fixed.code, 
+`var a = "Your Value Here";
+console.log(a);
+var b = "Your Value Here";
+console.log(b);`
+            )
         });
     });
 

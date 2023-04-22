@@ -79,6 +79,7 @@ class TypeScriptCompiler{
      * @return Array of error messages. Can throw an error from the ts functions.
      */
     compile(code){
+        this.codeString = code;
         //create the source file
         this.sourceFile = ts.createSourceFile(FILENAME, code, {});
         //create the program
@@ -92,6 +93,18 @@ class TypeScriptCompiler{
         var diagnostics = ts.getPreEmitDiagnostics(program, this.sourceFile);
         var errors = this.getErrors(diagnostics);
         return errors;
+    }
+
+    /**
+     * Get sourcefile for a string.
+     * Returns false if string was not last compile.
+     * @param {string} code String code to lint.
+     */
+    getSourceFile(code){
+        if(this.codeString !== code){
+            return false;
+        }
+        return this.sourceFile;
     }
 
     /**

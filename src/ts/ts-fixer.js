@@ -39,6 +39,7 @@ class TSFixer{
 
     /**
      * Create the LanguageServiceHost.
+     * Possibly we replace the compiler with this.
      * @returns {ts.LanguageServiceHost}
      */
     createLanguageServiceHost(){
@@ -97,6 +98,10 @@ class TSFixer{
           };
     }
 
+    /**
+     * Fix a String of code.
+     * @param {String} code 
+     */
     fix(code){
         codeString = code;
         if(!this.documentRegistry) this.documentRegistry = ts.createDocumentRegistry();
