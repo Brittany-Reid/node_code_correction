@@ -27,6 +27,10 @@ class Fixer{
         //step 1, get errors
         snippet = await this.evaluate(snippet);
 
+        if(this.customFixes){
+            snippet = await this.doCustomFixes(snippet);
+        }
+
         //apply TS fixes if enabled
         if(this.tsFixes){
             snippet = await this.doTSFixes(snippet);
@@ -35,10 +39,6 @@ class Fixer{
         //do deletions if enabled
         if(this.deletions){
             snippet = await this.deletionLoop(snippet);
-        }
-
-        if(this.customFixes){
-            snippet = await this.doCustomFixes(snippet);
         }
 
         return snippet;
