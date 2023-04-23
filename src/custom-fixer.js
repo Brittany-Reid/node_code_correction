@@ -15,7 +15,7 @@ class CustomFixer{
         this.probablyNeedSemi = undefined;
         //error codes with a fix
         this.errorCodes = {
-            "cannot find name": [2304]
+            "cannot find name": [2304, 2552]
         }
     }
 
@@ -87,9 +87,13 @@ class CustomFixer{
         var code = snippet.code;
         var error = snippet.errors[error_index];
         var errorCode = error.code;
+        // console.log(error.code)
+        // console.log(error.message)
 
         //try fixes
         if(this.errorCodes["cannot find name"].includes(errorCode)) code = CustomFixes.fixCannotFindName(code, error, this);
+
+        if(!code) return snippet;
         snippet.code = code;
         return snippet;
     }
