@@ -1,0 +1,410 @@
+DATASET INFORMATION:
+TOTAL SNIPPETS: 384
+--------
+ERROR ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
+Cannot find name, 2304, 1, 1009, 239, 1, 0.6223958333333334
+Character expected, 1005, 1, 211, 68, 1, 0.17708333333333334
+Unexpected keyword or identifier., 1434, 1, 155, 30, 12, 0.078125
+Invalid character., 1127, 1, 101, 14, 18, 0.036458333333333336
+Left side of comma operator is unused and has no side effects., 2695, 1, 82, 14, 1, 0.036458333333333336
+Cannot use JSX unless the '--jsx' flag is provided., 17004, 1, 71, 30, 24, 0.078125
+Property 'props' does not exist on type 'App'., 2339, 1, 68, 4, 40, 0.010416666666666666
+Expression expected., 1109, 1, 61, 36, 22, 0.09375
+Declaration or statement expected., 1128, 1, 60, 23, 1, 0.059895833333333336
+Cannot find name 'buffer'. Did you mean 'Buffer'?, 2552, 1, 29, 22, 6, 0.057291666666666664
+Identifier expected., 1003, 1, 29, 15, 12, 0.0390625
+Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1378, 1, 19, 10, 81, 0.026041666666666668
+'number' only refers to a type, but is being used as a value here., 2693, 1, 18, 6, 32, 0.015625
+Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'., 2584, 1, 15, 12, 34, 0.03125
+'await' expressions are only allowed at the top level of a file when that file is a module, but this file has no imports or exports. Consider adding an empty 'export {}' to make this file a module., 1375, 1, 15, 7, 81, 0.018229166666666668
+Declaration expected., 1146, 1, 11, 7, 22, 0.018229166666666668
+This expression is not callable., 2349, 1, 8, 5, 18, 0.013020833333333334
+Duplicate identifier 'SVGO_LITE'., 2300, 1, 8, 2, 123, 0.005208333333333333
+Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig., 2593, 1, 7, 5, 57, 0.013020833333333334
+An identifier or keyword cannot immediately follow a numeric literal., 1351, 1, 6, 2, 51, 0.005208333333333333
+Unknown keyword or identifier, 1435, 1, 6, 5, 101, 0.013020833333333334
+JSX element 'project-directory' has no corresponding closing tag., 17008, 1, 6, 4, 106, 0.010416666666666666
+Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig., 2592, 1, 5, 3, 131, 0.0078125
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?, 1381, 1, 5, 2, 169, 0.005208333333333333
+JSX expressions must have one parent element., 2657, 1, 4, 4, 44, 0.010416666666666666
+Property assignment expected., 1136, 1, 3, 3, 1, 0.0078125
+Type annotations can only be used in TypeScript files., 8010, 1, 3, 3, 56, 0.0078125
+Argument expression expected., 1135, 1, 3, 2, 96, 0.005208333333333333
+'interface' declarations can only be used in TypeScript files., 8006, 1, 3, 2, 140, 0.005208333333333333
+Block-scoped variable 'Test' used before its declaration., 2448, 1, 3, 3, 151, 0.0078125
+Identifier expected. 'this' is a reserved word that cannot be used here., 1359, 1, 3, 1, 351, 0.0026041666666666665
+Unterminated template literal., 1160, 1, 2, 2, 12, 0.005208333333333333
+Unterminated regular expression literal., 1161, 1, 2, 2, 22, 0.005208333333333333
+No value exists in scope for the shorthand property 'awaitEach'. Either declare one or provide an initializer., 18004, 1, 2, 2, 37, 0.005208333333333333
+Experimental support for decorators is a feature that is subject to change in a future release. Set the 'experimentalDecorators' option in your 'tsconfig' or 'jsconfig' to remove this warning., 1219, 1, 2, 2, 48, 0.005208333333333333
+The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2363, 1, 2, 2, 244, 0.005208333333333333
+Cannot redeclare block-scoped variable 'intersections'., 2451, 1, 2, 1, 331, 0.0026041666666666665
+Object is possibly 'undefined'., 2532, 1, 2, 1, 354, 0.0026041666666666665
+Cannot find namespace 'CanvasCamera'., 2503, 1, 1, 1, 56, 0.0026041666666666665
+The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2362, 1, 1, 1, 101, 0.0026041666666666665
+The value 'null' cannot be used here., 18050, 1, 1, 1, 101, 0.0026041666666666665
+'import ... =' can only be used in TypeScript files., 8002, 1, 1, 1, 107, 0.0026041666666666665
+Type 'ArrayBuffer' is not assignable to type 'Blob | BinaryLike'., 2322, 1, 1, 1, 121, 0.0026041666666666665
+Type assertion expressions can only be used in TypeScript files., 8016, 1, 1, 1, 125, 0.0026041666666666665
+Expected 1-2 arguments, but got 0., 2554, 1, 1, 1, 128, 0.0026041666666666665
+Non-null assertions can only be used in TypeScript files., 8013, 1, 1, 1, 208, 0.0026041666666666665
+Operator cannot be applied to types 1 and 2, 2365, 1, 1, 1, 244, 0.0026041666666666665
+An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type., 2356, 1, 1, 1, 244, 0.0026041666666666665
+A type predicate is only allowed in return type position for functions and methods., 1228, 1, 1, 1, 268, 0.0026041666666666665
+The operand of an increment or decrement operator must be a variable or a property access., 2357, 1, 1, 1, 268, 0.0026041666666666665
+A 'return' statement can only be used within a function body., 1108, 1, 1, 1, 283, 0.0026041666666666665
+Unexpected token. Did you mean `{'>'}` or `&gt;`?, 1382, 1, 1, 1, 287, 0.0026041666666666665
+No overload matches this call., 2769, 1, 1, 1, 295, 0.0026041666666666665
+Type aliases can only be used in TypeScript files., 8008, 1, 1, 1, 313, 0.0026041666666666665
+Variable declaration expected., 1134, 1, 1, 1, 323, 0.0026041666666666665
+
+Total errors: 2058
+Snippets without errors: 99/384(0.2578125)
+Fixed: 0/384(0)
+Snippets no lines: 1/384(0.0026041666666666665)
+Code lines: 3552
+Snippets timed out: 0/384(0)
+Snippets failed: 0/384(0)
+Snippets lineFailed: 0/384(0)
+--------
+DELETION ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
+Cannot find name, 2304, 1, 112, 76, 4, 0.19791666666666666
+Character expected, 1005, 1, 19, 14, 36, 0.036458333333333336
+Cannot use JSX unless the '--jsx' flag is provided., 17004, 1, 14, 7, 25, 0.018229166666666668
+Expression expected., 1109, 1, 12, 9, 12, 0.0234375
+Cannot find name 'buffer'. Did you mean 'Buffer'?, 2552, 1, 5, 5, 6, 0.013020833333333334
+A 'return' statement can only be used within a function body., 1108, 1, 3, 3, 41, 0.0078125
+'interface' declarations can only be used in TypeScript files., 8006, 1, 3, 2, 140, 0.005208333333333333
+Type annotations can only be used in TypeScript files., 8010, 1, 2, 2, 56, 0.005208333333333333
+Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig., 2593, 1, 2, 2, 57, 0.005208333333333333
+Identifier expected., 1003, 1, 2, 2, 64, 0.005208333333333333
+Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'., 2584, 1, 2, 2, 67, 0.005208333333333333
+Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1378, 1, 2, 1, 88, 0.0026041666666666665
+JSX element 'project-directory' has no corresponding closing tag., 17008, 1, 2, 2, 106, 0.005208333333333333
+Declaration or statement expected., 1128, 1, 2, 2, 196, 0.005208333333333333
+Property 'modeJs' does not exist on type '{}'., 2339, 1, 2, 1, 295, 0.0026041666666666665
+JSX expressions must have one parent element., 2657, 1, 1, 1, 44, 0.0026041666666666665
+Declaration expected., 1146, 1, 1, 1, 46, 0.0026041666666666665
+Cannot find namespace 'CanvasCamera'., 2503, 1, 1, 1, 56, 0.0026041666666666665
+This expression is not callable., 2349, 1, 1, 1, 125, 0.0026041666666666665
+Unterminated template literal., 1160, 1, 1, 1, 125, 0.0026041666666666665
+Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig., 2592, 1, 1, 1, 179, 0.0026041666666666665
+No overload matches this call., 2769, 1, 1, 1, 295, 0.0026041666666666665
+Type aliases can only be used in TypeScript files., 8008, 1, 1, 1, 313, 0.0026041666666666665
+Variable declaration expected., 1134, 1, 1, 1, 323, 0.0026041666666666665
+Left side of comma operator is unused and has no side effects., 2695, 1, 1, 1, 354, 0.0026041666666666665
+
+Total errors: 194
+Snippets without errors: 274/384(0.7135416666666666)
+Fixed: 239/384(0.6223958333333334)
+Snippets no lines: 118/384(0.3072916666666667)
+Code lines: 2830
+Snippets timed out: 0/384(0)
+Snippets failed: 0/384(0)
+Snippets lineFailed: 0/384(0)
+--------
+TS FIX ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
+Cannot find name, 2304, 1, 823, 206, 4, 0.5364583333333334
+Character expected, 1005, 1, 230, 70, 1, 0.18229166666666666
+Unexpected keyword or identifier., 1434, 1, 151, 29, 18, 0.07552083333333333
+Property 'start' does not exist on type 'Number'., 2339, 1, 104, 29, 12, 0.07552083333333333
+Invalid character., 1127, 1, 101, 14, 18, 0.036458333333333336
+Left side of comma operator is unused and has no side effects., 2695, 1, 82, 14, 17, 0.036458333333333336
+Cannot use JSX unless the '--jsx' flag is provided., 17004, 1, 72, 31, 24, 0.08072916666666667
+Expression expected., 1109, 1, 63, 38, 18, 0.09895833333333333
+Declaration or statement expected., 1128, 1, 61, 24, 1, 0.0625
+Identifier expected., 1003, 1, 31, 16, 1, 0.041666666666666664
+Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1378, 1, 19, 10, 81, 0.026041666666666668
+'number' only refers to a type, but is being used as a value here., 2693, 1, 18, 6, 32, 0.015625
+Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'., 2584, 1, 15, 12, 34, 0.03125
+Block-scoped variable 'issues' used before its declaration., 2448, 1, 14, 13, 18, 0.033854166666666664
+The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2362, 1, 13, 5, 12, 0.013020833333333334
+This expression is not callable., 2349, 1, 12, 7, 12, 0.018229166666666668
+Duplicate identifier 'SVGO_LITE'., 2300, 1, 12, 4, 123, 0.010416666666666666
+Declaration expected., 1146, 1, 11, 7, 22, 0.018229166666666668
+Cannot redeclare block-scoped variable '(Missing)'., 2451, 1, 8, 3, 1, 0.0078125
+The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2363, 1, 7, 6, 51, 0.015625
+Type annotations can only be used in TypeScript files., 8010, 1, 6, 5, 18, 0.013020833333333334
+Argument expression expected., 1135, 1, 6, 5, 31, 0.013020833333333334
+Module '"assert"' has no exported member 'name'., 2305, 1, 6, 6, 33, 0.015625
+An identifier or keyword cannot immediately follow a numeric literal., 1351, 1, 6, 2, 51, 0.005208333333333333
+Unknown keyword or identifier, 1435, 1, 6, 4, 101, 0.010416666666666666
+JSX element 'project-directory' has no corresponding closing tag., 17008, 1, 6, 4, 106, 0.010416666666666666
+Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig., 2593, 1, 5, 3, 57, 0.0078125
+Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig., 2592, 1, 5, 3, 131, 0.0078125
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?, 1381, 1, 5, 2, 169, 0.005208333333333333
+Cannot find name 'Issues'. Did you mean 'issues'?, 2552, 1, 4, 3, 18, 0.0078125
+JSX expressions must have one parent element., 2657, 1, 4, 4, 44, 0.010416666666666666
+'interface' declarations can only be used in TypeScript files., 8006, 1, 4, 3, 140, 0.0078125
+Property assignment expected., 1136, 1, 3, 3, 1, 0.0078125
+Unterminated regular expression literal., 1161, 1, 3, 3, 12, 0.0078125
+Variable declaration expected., 1134, 1, 3, 3, 31, 0.0078125
+Expected 0-2 arguments, but got 3., 2554, 1, 3, 2, 75, 0.005208333333333333
+Identifier expected. 'this' is a reserved word that cannot be used here., 1359, 1, 3, 1, 351, 0.0026041666666666665
+Unterminated template literal., 1160, 1, 2, 2, 12, 0.005208333333333333
+Type expected., 1110, 1, 2, 2, 18, 0.005208333333333333
+No value exists in scope for the shorthand property 'awaitEach'. Either declare one or provide an initializer., 18004, 1, 2, 2, 37, 0.005208333333333333
+Experimental support for decorators is a feature that is subject to change in a future release. Set the 'experimentalDecorators' option in your 'tsconfig' or 'jsconfig' to remove this warning., 1219, 1, 2, 2, 48, 0.005208333333333333
+Operator cannot be applied to types 1 and 2, 2365, 1, 2, 2, 107, 0.005208333333333333
+Import declaration conflicts with local declaration of 'text'., 2440, 1, 2, 2, 166, 0.005208333333333333
+Object is possibly 'undefined'., 2532, 1, 2, 1, 354, 0.0026041666666666665
+'#' refers to a value, but is being used as a type here. Did you mean 'typeof #'?, 2749, 1, 1, 1, 18, 0.0026041666666666665
+Cannot find namespace 'CanvasCamera'., 2503, 1, 1, 1, 56, 0.0026041666666666665
+The value 'null' cannot be used here., 18050, 1, 1, 1, 101, 0.0026041666666666665
+'import ... =' can only be used in TypeScript files., 8002, 1, 1, 1, 107, 0.0026041666666666665
+Type 'ArrayBuffer' is not assignable to type 'Blob | BinaryLike'., 2322, 1, 1, 1, 121, 0.0026041666666666665
+Type assertion expressions can only be used in TypeScript files., 8016, 1, 1, 1, 125, 0.0026041666666666665
+Value of type 'typeof AppComponent' is not callable. Did you mean to include 'new'?, 2348, 1, 1, 1, 192, 0.0026041666666666665
+Non-null assertions can only be used in TypeScript files., 8013, 1, 1, 1, 208, 0.0026041666666666665
+Cannot assign to 'version' because it is an import., 2632, 1, 1, 1, 218, 0.0026041666666666665
+'await' expressions are only allowed at the top level of a file when that file is a module, but this file has no imports or exports. Consider adding an empty 'export {}' to make this file a module., 1375, 1, 1, 1, 226, 0.0026041666666666665
+An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type., 2356, 1, 1, 1, 244, 0.0026041666666666665
+A type predicate is only allowed in return type position for functions and methods., 1228, 1, 1, 1, 268, 0.0026041666666666665
+The operand of an increment or decrement operator must be a variable or a property access., 2357, 1, 1, 1, 268, 0.0026041666666666665
+A 'return' statement can only be used within a function body., 1108, 1, 1, 1, 283, 0.0026041666666666665
+Unexpected token. Did you mean `{'>'}` or `&gt;`?, 1382, 1, 1, 1, 287, 0.0026041666666666665
+Cannot assign to 'value' because it is a constant., 2588, 1, 1, 1, 289, 0.0026041666666666665
+No overload matches this call., 2769, 1, 1, 1, 295, 0.0026041666666666665
+Type aliases can only be used in TypeScript files., 8008, 1, 1, 1, 313, 0.0026041666666666665
+Type 'void' is not an array type., 2461, 1, 1, 1, 376, 0.0026041666666666665
+This comparison appears to be unintentional because the types 'typeof URL' and 'string' have no overlap., 2367, 1, 1, 1, 378, 0.0026041666666666665
+
+Total errors: 1959
+Snippets without errors: 112/384(0.2916666666666667)
+Fixed: 111/384(0.2890625)
+Snippets no lines: 1/384(0.0026041666666666665)
+Code lines: 3760
+Snippets timed out: 0/384(0)
+Snippets failed: 0/384(0)
+Snippets lineFailed: 0/384(0)
+--------
+CUSTOM FIX ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
+Cannot find name, 2304, 1, 519, 89, 7, 0.23177083333333334
+Property 'on' does not exist on type 'string'., 2339, 1, 225, 114, 4, 0.296875
+Character expected, 1005, 1, 210, 69, 1, 0.1796875
+Unexpected keyword or identifier., 1434, 1, 152, 29, 18, 0.07552083333333333
+Invalid character., 1127, 1, 101, 14, 18, 0.036458333333333336
+Left side of comma operator is unused and has no side effects., 2695, 1, 82, 14, 1, 0.036458333333333336
+Expression expected., 1109, 1, 73, 35, 22, 0.09114583333333333
+Cannot use JSX unless the '--jsx' flag is provided., 17004, 1, 70, 29, 24, 0.07552083333333333
+This expression is not callable., 2349, 1, 69, 54, 7, 0.140625
+Declaration or statement expected., 1128, 1, 60, 23, 1, 0.059895833333333336
+Identifier expected., 1003, 1, 25, 13, 22, 0.033854166666666664
+The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2362, 1, 24, 21, 12, 0.0546875
+Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1378, 1, 19, 10, 81, 0.026041666666666668
+'number' only refers to a type, but is being used as a value here., 2693, 1, 18, 6, 32, 0.015625
+Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'., 2584, 1, 15, 12, 34, 0.03125
+'await' expressions are only allowed at the top level of a file when that file is a module, but this file has no imports or exports. Consider adding an empty 'export {}' to make this file a module., 1375, 1, 15, 7, 81, 0.018229166666666668
+This expression is not constructable., 2351, 1, 14, 14, 18, 0.036458333333333336
+Cannot find name 'reports'. Did you mean 'exports'?, 2552, 1, 12, 9, 51, 0.0234375
+The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2363, 1, 10, 7, 45, 0.018229166666666668
+Declaration expected., 1146, 1, 9, 6, 22, 0.015625
+Duplicate identifier 'SVGO_LITE'., 2300, 1, 8, 2, 123, 0.005208333333333333
+Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig., 2593, 1, 7, 5, 57, 0.013020833333333334
+An identifier or keyword cannot immediately follow a numeric literal., 1351, 1, 6, 2, 51, 0.005208333333333333
+Unknown keyword or identifier, 1435, 1, 6, 5, 101, 0.013020833333333334
+JSX element 'project-directory' has no corresponding closing tag., 17008, 1, 6, 4, 106, 0.010416666666666666
+Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig., 2592, 1, 5, 3, 131, 0.0078125
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?, 1381, 1, 5, 2, 169, 0.005208333333333333
+JSX expressions must have one parent element., 2657, 1, 4, 4, 44, 0.010416666666666666
+An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type., 2356, 1, 4, 4, 124, 0.010416666666666666
+Property assignment expected., 1136, 1, 3, 3, 1, 0.0078125
+Unterminated regular expression literal., 1161, 1, 3, 3, 12, 0.0078125
+Type annotations can only be used in TypeScript files., 8010, 1, 3, 3, 56, 0.0078125
+Argument expression expected., 1135, 1, 3, 2, 96, 0.005208333333333333
+'interface' declarations can only be used in TypeScript files., 8006, 1, 3, 2, 140, 0.005208333333333333
+Block-scoped variable 'Test' used before its declaration., 2448, 1, 3, 3, 151, 0.0078125
+Identifier expected. 'this' is a reserved word that cannot be used here., 1359, 1, 3, 1, 351, 0.0026041666666666665
+Unterminated template literal., 1160, 1, 2, 2, 12, 0.005208333333333333
+No value exists in scope for the shorthand property 'awaitEach'. Either declare one or provide an initializer., 18004, 1, 2, 2, 37, 0.005208333333333333
+Experimental support for decorators is a feature that is subject to change in a future release. Set the 'experimentalDecorators' option in your 'tsconfig' or 'jsconfig' to remove this warning., 1219, 1, 2, 2, 48, 0.005208333333333333
+'CanvasCamera' refers to a value, but is being used as a type here. Did you mean 'typeof CanvasCamera'?, 2749, 1, 2, 2, 56, 0.005208333333333333
+Type 'ArrayBuffer' is not assignable to type 'Blob | BinaryLike'., 2322, 1, 2, 2, 121, 0.005208333333333333
+Expected 1-2 arguments, but got 0., 2554, 1, 2, 2, 128, 0.005208333333333333
+Operator cannot be applied to types 1 and 2, 2365, 1, 2, 2, 244, 0.005208333333333333
+Cannot redeclare block-scoped variable 'intersections'., 2451, 1, 2, 1, 331, 0.0026041666666666665
+Object is possibly 'undefined'., 2532, 1, 2, 1, 354, 0.0026041666666666665
+Type 'string' is not a constructor function type., 2507, 1, 1, 1, 41, 0.0026041666666666665
+Spread types may only be created from object types., 2698, 1, 1, 1, 96, 0.0026041666666666665
+The value 'null' cannot be used here., 18050, 1, 1, 1, 101, 0.0026041666666666665
+'import ... =' can only be used in TypeScript files., 8002, 1, 1, 1, 107, 0.0026041666666666665
+Type assertion expressions can only be used in TypeScript files., 8016, 1, 1, 1, 125, 0.0026041666666666665
+Property destructuring pattern expected., 1180, 1, 1, 1, 139, 0.0026041666666666665
+Non-null assertions can only be used in TypeScript files., 8013, 1, 1, 1, 208, 0.0026041666666666665
+A type predicate is only allowed in return type position for functions and methods., 1228, 1, 1, 1, 268, 0.0026041666666666665
+The operand of an increment or decrement operator must be a variable or a property access., 2357, 1, 1, 1, 268, 0.0026041666666666665
+A 'return' statement can only be used within a function body., 1108, 1, 1, 1, 283, 0.0026041666666666665
+Unexpected token. Did you mean `{'>'}` or `&gt;`?, 1382, 1, 1, 1, 287, 0.0026041666666666665
+Type 'string' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher., 2802, 1, 1, 1, 289, 0.0026041666666666665
+No overload matches this call., 2769, 1, 1, 1, 295, 0.0026041666666666665
+Type aliases can only be used in TypeScript files., 8008, 1, 1, 1, 313, 0.0026041666666666665
+Variable declaration expected., 1134, 1, 1, 1, 323, 0.0026041666666666665
+
+Total errors: 1827
+Snippets without errors: 113/384(0.2942708333333333)
+Fixed: 74/384(0.19270833333333334)
+Snippets no lines: 1/384(0.0026041666666666665)
+Code lines: 3938
+Snippets timed out: 0/384(0)
+Snippets failed: 0/384(0)
+Snippets lineFailed: 0/384(0)
+--------
+TS DELETE ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
+Cannot find name, 2304, 1, 87, 66, 4, 0.171875
+Character expected, 1005, 1, 17, 14, 36, 0.036458333333333336
+Cannot use JSX unless the '--jsx' flag is provided., 17004, 1, 14, 7, 25, 0.018229166666666668
+Expression expected., 1109, 1, 12, 9, 12, 0.0234375
+Property 'nthCallDuring' does not exist on type 'void'., 2339, 1, 5, 4, 173, 0.010416666666666666
+Block-scoped variable 'keyv' used before its declaration., 2448, 1, 3, 3, 26, 0.0078125
+A 'return' statement can only be used within a function body., 1108, 1, 3, 3, 41, 0.0078125
+Type annotations can only be used in TypeScript files., 8010, 1, 3, 3, 56, 0.0078125
+Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1378, 1, 3, 2, 88, 0.005208333333333333
+'interface' declarations can only be used in TypeScript files., 8006, 1, 3, 2, 140, 0.005208333333333333
+Declaration or statement expected., 1128, 1, 3, 3, 196, 0.0078125
+Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig., 2593, 1, 2, 2, 57, 0.005208333333333333
+Identifier expected., 1003, 1, 2, 2, 64, 0.005208333333333333
+Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'., 2584, 1, 2, 2, 67, 0.005208333333333333
+JSX element 'project-directory' has no corresponding closing tag., 17008, 1, 2, 2, 106, 0.005208333333333333
+This expression is not callable., 2349, 1, 2, 2, 125, 0.005208333333333333
+JSX expressions must have one parent element., 2657, 1, 1, 1, 44, 0.0026041666666666665
+Declaration expected., 1146, 1, 1, 1, 46, 0.0026041666666666665
+Cannot find namespace 'CanvasCamera'., 2503, 1, 1, 1, 56, 0.0026041666666666665
+Unterminated template literal., 1160, 1, 1, 1, 125, 0.0026041666666666665
+Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig., 2592, 1, 1, 1, 179, 0.0026041666666666665
+No overload matches this call., 2769, 1, 1, 1, 295, 0.0026041666666666665
+Type aliases can only be used in TypeScript files., 8008, 1, 1, 1, 313, 0.0026041666666666665
+Variable declaration expected., 1134, 1, 1, 1, 323, 0.0026041666666666665
+Left side of comma operator is unused and has no side effects., 2695, 1, 1, 1, 354, 0.0026041666666666665
+
+Total errors: 172
+Snippets without errors: 279/384(0.7265625)
+Fixed: 242/384(0.6302083333333334)
+Snippets no lines: 77/384(0.20052083333333334)
+Code lines: 3050
+Snippets timed out: 0/384(0)
+Snippets failed: 0/384(0)
+Snippets lineFailed: 0/384(0)
+--------
+CUSTOM FIX TS ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
+Cannot find name, 2304, 1, 441, 82, 7, 0.21354166666666666
+Property 'on' does not exist on type 'string'., 2339, 1, 232, 118, 4, 0.3072916666666667
+Character expected, 1005, 1, 218, 71, 1, 0.18489583333333334
+Unexpected keyword or identifier., 1434, 1, 152, 29, 18, 0.07552083333333333
+Invalid character., 1127, 1, 101, 14, 18, 0.036458333333333336
+Left side of comma operator is unused and has no side effects., 2695, 1, 83, 15, 1, 0.0390625
+Expression expected., 1109, 1, 74, 36, 22, 0.09375
+Cannot use JSX unless the '--jsx' flag is provided., 17004, 1, 71, 30, 24, 0.078125
+This expression is not callable., 2349, 1, 69, 54, 7, 0.140625
+Declaration or statement expected., 1128, 1, 60, 23, 1, 0.059895833333333336
+The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2362, 1, 34, 22, 12, 0.057291666666666664
+Identifier expected., 1003, 1, 25, 13, 22, 0.033854166666666664
+Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1378, 1, 19, 10, 81, 0.026041666666666668
+'number' only refers to a type, but is being used as a value here., 2693, 1, 18, 6, 32, 0.015625
+The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2363, 1, 16, 12, 45, 0.03125
+Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'., 2584, 1, 15, 12, 34, 0.03125
+This expression is not constructable., 2351, 1, 14, 14, 18, 0.036458333333333336
+Declaration expected., 1146, 1, 9, 6, 22, 0.015625
+Duplicate identifier 'SVGO_LITE'., 2300, 1, 8, 2, 123, 0.005208333333333333
+An identifier or keyword cannot immediately follow a numeric literal., 1351, 1, 6, 2, 51, 0.005208333333333333
+Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig., 2593, 1, 6, 4, 57, 0.010416666666666666
+Unknown keyword or identifier, 1435, 1, 6, 5, 101, 0.013020833333333334
+Block-scoped variable 'variable' used before its declaration., 2448, 1, 6, 6, 103, 0.015625
+JSX element 'project-directory' has no corresponding closing tag., 17008, 1, 6, 4, 106, 0.010416666666666666
+Module '"assert"' has no exported member 'name'., 2305, 1, 5, 5, 33, 0.013020833333333334
+An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type., 2356, 1, 5, 5, 51, 0.013020833333333334
+Argument expression expected., 1135, 1, 5, 4, 96, 0.010416666666666666
+Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig., 2592, 1, 5, 3, 131, 0.0078125
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?, 1381, 1, 5, 2, 169, 0.005208333333333333
+JSX expressions must have one parent element., 2657, 1, 4, 4, 44, 0.010416666666666666
+Cannot find name 'FormattedMessage'. Did you mean 'formatMessage'?, 2552, 1, 4, 3, 48, 0.0078125
+Property assignment expected., 1136, 1, 3, 3, 1, 0.0078125
+Unterminated regular expression literal., 1161, 1, 3, 3, 12, 0.0078125
+Type annotations can only be used in TypeScript files., 8010, 1, 3, 3, 56, 0.0078125
+'interface' declarations can only be used in TypeScript files., 8006, 1, 3, 2, 140, 0.005208333333333333
+Identifier expected. 'this' is a reserved word that cannot be used here., 1359, 1, 3, 1, 351, 0.0026041666666666665
+Unterminated template literal., 1160, 1, 2, 2, 12, 0.005208333333333333
+No value exists in scope for the shorthand property 'awaitEach'. Either declare one or provide an initializer., 18004, 1, 2, 2, 37, 0.005208333333333333
+Experimental support for decorators is a feature that is subject to change in a future release. Set the 'experimentalDecorators' option in your 'tsconfig' or 'jsconfig' to remove this warning., 1219, 1, 2, 2, 48, 0.005208333333333333
+'CanvasCamera' refers to a value, but is being used as a type here. Did you mean 'typeof CanvasCamera'?, 2749, 1, 2, 2, 56, 0.005208333333333333
+Type 'ArrayBuffer' is not assignable to type 'Blob | BinaryLike'., 2322, 1, 2, 2, 121, 0.005208333333333333
+Expected 1-2 arguments, but got 0., 2554, 1, 2, 2, 128, 0.005208333333333333
+Variable declaration expected., 1134, 1, 2, 2, 142, 0.005208333333333333
+Operator cannot be applied to types 1 and 2, 2365, 1, 2, 2, 244, 0.005208333333333333
+Cannot redeclare block-scoped variable 'intersections'., 2451, 1, 2, 1, 331, 0.0026041666666666665
+Object is possibly 'undefined'., 2532, 1, 2, 1, 354, 0.0026041666666666665
+Type 'string' is not a constructor function type., 2507, 1, 1, 1, 41, 0.0026041666666666665
+Spread types may only be created from object types., 2698, 1, 1, 1, 96, 0.0026041666666666665
+The value 'null' cannot be used here., 18050, 1, 1, 1, 101, 0.0026041666666666665
+'import ... =' can only be used in TypeScript files., 8002, 1, 1, 1, 107, 0.0026041666666666665
+Type assertion expressions can only be used in TypeScript files., 8016, 1, 1, 1, 125, 0.0026041666666666665
+Property destructuring pattern expected., 1180, 1, 1, 1, 139, 0.0026041666666666665
+Non-null assertions can only be used in TypeScript files., 8013, 1, 1, 1, 208, 0.0026041666666666665
+Cannot assign to 'version' because it is an import., 2632, 1, 1, 1, 218, 0.0026041666666666665
+'await' expressions are only allowed at the top level of a file when that file is a module, but this file has no imports or exports. Consider adding an empty 'export {}' to make this file a module., 1375, 1, 1, 1, 226, 0.0026041666666666665
+A type predicate is only allowed in return type position for functions and methods., 1228, 1, 1, 1, 268, 0.0026041666666666665
+The operand of an increment or decrement operator must be a variable or a property access., 2357, 1, 1, 1, 268, 0.0026041666666666665
+A 'return' statement can only be used within a function body., 1108, 1, 1, 1, 283, 0.0026041666666666665
+Unexpected token. Did you mean `{'>'}` or `&gt;`?, 1382, 1, 1, 1, 287, 0.0026041666666666665
+Type 'string' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher., 2802, 1, 1, 1, 289, 0.0026041666666666665
+Cannot assign to 'value' because it is a constant., 2588, 1, 1, 1, 289, 0.0026041666666666665
+No overload matches this call., 2769, 1, 1, 1, 295, 0.0026041666666666665
+Type aliases can only be used in TypeScript files., 8008, 1, 1, 1, 313, 0.0026041666666666665
+
+Total errors: 1774
+Snippets without errors: 113/384(0.2942708333333333)
+Fixed: 105/384(0.2734375)
+Snippets no lines: 1/384(0.0026041666666666665)
+Code lines: 4011
+Snippets timed out: 0/384(0)
+Snippets failed: 0/384(0)
+Snippets lineFailed: 0/384(0)
+--------
+ALL FIXES ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
+Property 'on' does not exist on type 'string'., 2339, 1, 55, 45, 4, 0.1171875
+Cannot find name, 2304, 1, 19, 16, 30, 0.041666666666666664
+Character expected, 1005, 1, 18, 15, 36, 0.0390625
+Cannot use JSX unless the '--jsx' flag is provided., 17004, 1, 14, 7, 25, 0.018229166666666668
+This expression is not callable., 2349, 1, 14, 14, 111, 0.036458333333333336
+Expression expected., 1109, 1, 12, 9, 12, 0.0234375
+This expression is not constructable., 2351, 1, 7, 7, 26, 0.018229166666666668
+A 'return' statement can only be used within a function body., 1108, 1, 3, 3, 41, 0.0078125
+Type annotations can only be used in TypeScript files., 8010, 1, 3, 3, 56, 0.0078125
+Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1378, 1, 3, 2, 88, 0.005208333333333333
+'interface' declarations can only be used in TypeScript files., 8006, 1, 3, 2, 140, 0.005208333333333333
+Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig., 2593, 1, 2, 2, 57, 0.005208333333333333
+Identifier expected., 1003, 1, 2, 2, 64, 0.005208333333333333
+Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'., 2584, 1, 2, 2, 67, 0.005208333333333333
+JSX element 'project-directory' has no corresponding closing tag., 17008, 1, 2, 2, 106, 0.005208333333333333
+Declaration or statement expected., 1128, 1, 2, 2, 196, 0.005208333333333333
+JSX expressions must have one parent element., 2657, 1, 1, 1, 44, 0.0026041666666666665
+Declaration expected., 1146, 1, 1, 1, 46, 0.0026041666666666665
+'CanvasCamera' refers to a value, but is being used as a type here. Did you mean 'typeof CanvasCamera'?, 2749, 1, 1, 1, 56, 0.0026041666666666665
+Unterminated template literal., 1160, 1, 1, 1, 125, 0.0026041666666666665
+Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig., 2592, 1, 1, 1, 179, 0.0026041666666666665
+No overload matches this call., 2769, 1, 1, 1, 295, 0.0026041666666666665
+Type aliases can only be used in TypeScript files., 8008, 1, 1, 1, 313, 0.0026041666666666665
+Variable declaration expected., 1134, 1, 1, 1, 323, 0.0026041666666666665
+Left side of comma operator is unused and has no side effects., 2695, 1, 1, 1, 354, 0.0026041666666666665
+
+Total errors: 170
+Snippets without errors: 277/384(0.7213541666666666)
+Fixed: 236/384(0.6145833333333334)
+Snippets no lines: 12/384(0.03125)
+Code lines: 3318
+Snippets timed out: 0/384(0)
+Snippets failed: 0/384(0)
+Snippets lineFailed: 0/384(0)

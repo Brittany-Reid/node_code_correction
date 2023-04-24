@@ -4,3 +4,4 @@ data/dataset.csv
 data/soCodeBlockVersions.json
 logs/
 .DS_Store
+out.txt

@@ -19,6 +19,8 @@ const BASE = getBaseDirectory();
 const LOG_DIR = path.join(BASE, "logs");
 const INFO_LOG_DIR = path.join(LOG_DIR, "sample");
 const DATA_PATH = path.join(BASE, "data/dataset.csv");
+const SAMPLE_PATH = path.join(BASE, "data/NPMsample384.json");
+const EXAMPLE_PATH = path.join(BASE, "data/examples/384sampleExamples.json");
 
 // create logger
 const logger = winston.createLogger();
@@ -41,37 +43,47 @@ logger.add(
 );
 
 var idToSnippet = new Map();
-var packages = []
-var snippets = []
+var packages = [];
+var snippets = [];
+
+var temp = [];
+
+var examples = {}
 
 async function loadData(recordLimit){
-    var id = 0;
+    var i = 0;
     var sid = 0;
     const onData = (data, pipeline) => {
-        if(typeof recordLimit === "number" && id > recordLimit){
+
+        if(typeof recordLimit === "number" && i > recordLimit){
             pipeline.destroy();
             return;
         }
 
-        data.snippets = JSON.parse(data.snippets);
+        var snippetArray = JSON.parse(data.snippets)
 
-        var name = data["name"];
-        packages.push(name);
-
-        var pSnippets = data.snippets;
-        var i = 0;
-        var snippetIds = [];
-        for(var s of pSnippets){
-        var snippetObject = new Snippet(s, sid, i, data);
-            snippets.push(snippetObject);
-            idToSnippet.set(sid, snippetObject);
-            sid++;
-            i++;
-        }
-        id++;
+        temp.push(...snippetArray)
+        if(i % 1000 == 0) console.log(temp.length)
+        i++;
     };
 
-    await readCSVStream(DATA_PATH, onData);
+
+    //create a fixed sample
+    if (!fs.existsSync(SAMPLE_PATH)){
+        await readCSVStream(DATA_PATH, onData);
+        temp = _.sampleSize(temp, 384)
+        fs.writeFileSync(SAMPLE_PATH,  JSON.stringify(temp), {encoding:"utf-8"})
+    }
+    else{
+        temp = JSON.parse(fs.readFileSync(SAMPLE_PATH, {encoding:"utf-8"}))
+    }
+    var sid = 0;
+    for(var t of temp){
+        var snippetObject = new Snippet(t, sid);
+        snippets.push(snippetObject);
+        idToSnippet.set(sid, snippetObject);
+        sid++;
+    }
 
 }
 
@@ -80,12 +92,8 @@ describe("Dataset Info (takes time to load)", function () {
         logger.info("DATASET INFORMATION:")
         this.timeout(0);
         await loadData();
-        snippets = _.sampleSize(snippets, 384)//do a sample
     });
 
-    it("Should tell us how many packages", function (){
-        logger.info("TOTAL PACKAGES: " + packages.length);
-    })
     it("Should tell us how many snippets", function (){
         logger.info("TOTAL SNIPPETS: " + snippets.length);
     })
@@ -93,7 +101,7 @@ describe("Dataset Info (takes time to load)", function () {
         logger.info("--------");
         logger.info("ERROR ANALYSIS\n");
         var compiler = new Compiler();
-        await getErrorsFor(snippets, compiler.compile.bind(compiler), logger, (s) => {return s.code}, BASE + "/errorExamplesSample.json")
+        examples["Error Analysis"] = await getErrorsFor(snippets, compiler.compile.bind(compiler), logger, (s) => {return s.code})
         compiler.close();
     }).timeout(0);
     it("Should tell us line deletion stats", async function(){
@@ -101,9 +109,10 @@ describe("Dataset Info (takes time to load)", function () {
         logger.info("DELETION ANALYSIS\n");
         var compiler = new Compiler();
         var fixer = new Fixer(compiler);
+        fixer.customFixes = false;
         fixer.tsFixes = false;
         fixer.deletions = true;
-        await getErrorsFor(snippets, fixer.fix.bind(fixer), logger, s => s, BASE + "/postDeleteSample.json")
+        examples["After Deletion"] = await getErrorsFor(snippets, fixer.fix.bind(fixer), logger, s => s)
         compiler.close()
     }).timeout(0);
     it("Should tell us TS fix stats", async function(){
@@ -111,9 +120,43 @@ describe("Dataset Info (takes time to load)", function () {
         logger.info("TS FIX ANALYSIS\n");
         var compiler = new Compiler();
         var fixer = new Fixer(compiler);
+        fixer.customFixes = false;
         fixer.tsFixes = true;
         fixer.deletions = false;
-        await getErrorsFor(snippets, fixer.fix.bind(fixer), logger, s => s, BASE + "/postTSFixSample.json")
+        examples["After TS Fixes"] = await getErrorsFor(snippets, fixer.fix.bind(fixer), logger, s => s)
+        compiler.close()
+    }).timeout(0);
+    it("Should tell us custom fix stats", async function(){
+        logger.info("--------");
+        logger.info("CUSTOM FIX ANALYSIS\n");
+        var compiler = new Compiler();
+        var fixer = new Fixer(compiler);
+        fixer.customFixes = true;
+        fixer.tsFixes = false;
+        fixer.deletions = false;
+        examples["After Custom Fixes"] = await getErrorsFor(snippets, fixer.fix.bind(fixer), logger, s => s)
+        compiler.close()
+    }).timeout(0);
+    it("Should tell us TSFix+Deletion stats", async function(){
+        logger.info("--------");
+        logger.info("TS DELETE ANALYSIS\n");
+        var compiler = new Compiler();
+        var fixer = new Fixer(compiler);
+        fixer.customFixes = false;
+        fixer.tsFixes = true;
+        fixer.deletions = true;
+        examples["After TS+Delete"] = await getErrorsFor(snippets, fixer.fix.bind(fixer), logger, s => s)
+        compiler.close()
+    }).timeout(0);
+    it("Should tell us Custom+TSFix stats", async function(){
+        logger.info("--------");
+        logger.info("CUSTOM FIX TS ANALYSIS\n");
+        var compiler = new Compiler();
+        var fixer = new Fixer(compiler);
+        fixer.customFixes = true;
+        fixer.tsFixes = true;
+        fixer.deletions = false;
+        examples["After Custom+TS"] = await getErrorsFor(snippets, fixer.fix.bind(fixer), logger, s => s)
         compiler.close()
     }).timeout(0);
     it("Should tell us all fix stats", async function(){
@@ -121,9 +164,14 @@ describe("Dataset Info (takes time to load)", function () {
         logger.info("ALL FIXES ANALYSIS\n");
         var compiler = new Compiler();
         var fixer = new Fixer(compiler);
+        fixer.customFixes = true;
         fixer.tsFixes = true;
         fixer.deletions = true;
-        await getErrorsFor(snippets, fixer.fix.bind(fixer), logger, s => s, BASE + "/postAllSample.json")
+        examples["After All Fixes"] = await getErrorsFor(snippets, fixer.fix.bind(fixer), logger, s => s)
         compiler.close()
     }).timeout(0);
+
+    this.afterAll(()=>{
+        fs.writeFileSync(EXAMPLE_PATH, JSON.stringify(examples, undefined, 1), {encoding:"utf-8"})
+    })
 });
