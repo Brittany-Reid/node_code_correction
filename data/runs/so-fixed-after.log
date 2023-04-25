@@ -1,0 +1,93 @@
+DATASET INFORMATION:
+TOTAL SNIPPETS: 1101
+--------
+ERROR ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
+
+Total errors: 0
+Snippets without errors: 1099/1099(1)
+Fixed: 0/1099(0)
+Snippets no lines: 2/1099(0.0018198362147406734)
+Code lines: 15507
+Snippets timed out: 0/1101(0)
+Snippets failed: 2/1101(0.0018165304268846503)
+Snippets lineFailed: 0/1101(0)
+--------
+DELETION ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
+
+Total errors: 0
+Snippets without errors: 1099/1101(0.9981834695731153)
+Fixed: 0/1101(0)
+Snippets no lines: 2/1101(0.0018165304268846503)
+Code lines: 15507
+Snippets timed out: 0/1101(0)
+Snippets failed: 0/1101(0)
+Snippets lineFailed: 0/1101(0)
+--------
+TS FIX ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
+
+Total errors: 0
+Snippets without errors: 1099/1101(0.9981834695731153)
+Fixed: 0/1101(0)
+Snippets no lines: 2/1101(0.0018165304268846503)
+Code lines: 15507
+Snippets timed out: 0/1101(0)
+Snippets failed: 0/1101(0)
+Snippets lineFailed: 0/1101(0)
+--------
+CUSTOM FIX ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
+
+Total errors: 0
+Snippets without errors: 1099/1101(0.9981834695731153)
+Fixed: 0/1101(0)
+Snippets no lines: 2/1101(0.0018165304268846503)
+Code lines: 15507
+Snippets timed out: 0/1101(0)
+Snippets failed: 0/1101(0)
+Snippets lineFailed: 0/1101(0)
+--------
+TS DELETE ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
+
+Total errors: 0
+Snippets without errors: 1099/1101(0.9981834695731153)
+Fixed: 0/1101(0)
+Snippets no lines: 2/1101(0.0018165304268846503)
+Code lines: 15507
+Snippets timed out: 0/1101(0)
+Snippets failed: 0/1101(0)
+Snippets lineFailed: 0/1101(0)
+--------
+CUSTOM FIX TS ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
+
+Total errors: 0
+Snippets without errors: 1099/1101(0.9981834695731153)
+Fixed: 0/1101(0)
+Snippets no lines: 2/1101(0.0018165304268846503)
+Code lines: 15507
+Snippets timed out: 0/1101(0)
+Snippets failed: 0/1101(0)
+Snippets lineFailed: 0/1101(0)
+--------
+ALL FIXES ANALYSIS
+
+ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
+
+Total errors: 0
+Snippets without errors: 1099/1101(0.9981834695731153)
+Fixed: 0/1101(0)
+Snippets no lines: 2/1101(0.0018165304268846503)
+Code lines: 15507
+Snippets timed out: 0/1101(0)
+Snippets failed: 0/1101(0)
+Snippets lineFailed: 0/1101(0)

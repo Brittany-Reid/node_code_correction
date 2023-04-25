@@ -85,6 +85,7 @@ class ErrorCounter{
         //lines of code, for pre-deletion this is just the baseline 'not commented out with //' lines.
         var nondeletedLines = 0;
         console.log("For: " + snippets.length)
+        var postSnippets = [];
         for(var s of snippets){
             //clone to not carry changes between techniques
             s = Snippet.clone(s);
@@ -151,17 +152,19 @@ class ErrorCounter{
                 }
             }
 
+            if(s.errors){
+                for(var n in s.errors){
+                    s.errors[n] = s.errors[n].code;
+                }
+            }
+
             //write to code snippet file
             if(file){
-                if(s.errors){
-                    for(var n in s.errors){
-                        s.errors[n] = s.errors[n].code;
-                    }
-                }
                 fs.appendFileSync(file, JSON.stringify(s, undefined, 2), {encoding:"utf-8"})
                 //fs.writeFileSync(output, "[", {encoding:"utf-8"})
             }
 
+            postSnippets.push(s)
             i++;
         }
         logger.info("ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT")
@@ -188,6 +191,8 @@ class ErrorCounter{
         console.log(timedOuts)
         console.log(debugErrored)
         if(file) fs.appendFileSync(file, "]", {encoding:"utf-8"})
+
+        return postSnippets;
     }
 }
 
