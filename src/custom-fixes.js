@@ -1,9 +1,12 @@
 const ts = require("typescript");
 const CustomFixer = require("./custom-fixer")
 
-const BUILT_INS = require('repl')._builtinLibs
+const BUILT_INS = new Set(require('repl')._builtinLibs);
+//if expects expression, or unexpected keyword or identifier, the issue isn't JUST this
+const POSSIBLE_NO_EXPRESSION = new Set([1109, 1434])
+
 const PLACEHOLDER_STRING = "\"Your Value Here\"";
-const STRING_PROPERTIES = Object.getOwnPropertyNames(String.prototype);
+const STRING_PROPERTIES = new Set(Object.getOwnPropertyNames(String.prototype));
 
 /**
  * Custom fixes as static functions.
@@ -16,11 +19,15 @@ class CustomFixes{
      * @param {*} error The error object needs to include the sourceFile.
      * @param {CustomFixer} customFixer The error object needs to include the sourceFile.
      */
-    static fixCannotFindName(code, error, customFixer){
+    static fixCannotFindName(code, error, customFixer, lineMap){
+
+        //check if fixable?
+        var errorsOnLine = this.getErrorsOnLine(error, lineMap);
+        if(errorsOnLine && errorsOnLine.some( a => POSSIBLE_NO_EXPRESSION.has(a) )) return;
+
         /**@type {ts.SourceFile} */
         var file = error.file;
         var probablyNeedSemi = customFixer.probablyNeedSemi;
-        var checker = customFixer.languageService.program.getTypeChecker();
         //get node
         var errorPos = error.start;
         var node = ts.getTokenAtPosition(file, errorPos);
@@ -42,7 +49,7 @@ class CustomFixes{
             if(error.code == 2552){
                 //leave if it wouldn't make sense as a string, as we have an alternative
                 var accessName = parent.name.getText();
-                if(!STRING_PROPERTIES.includes(accessName)) return false;
+                if(!STRING_PROPERTIES.has(accessName)) return false;
             }
         }
         //create placeholder string declaration
@@ -56,14 +63,13 @@ class CustomFixes{
     static fixUnknownAPI(code, error, customFixer){
         var file = error.file;
         var probablyNeedSemi = customFixer.probablyNeedSemi;
-        var checker = customFixer.languageService.program.getTypeChecker();
 
         var errorPos = error.start;
         var node = ts.getTokenAtPosition(file, errorPos);
         var name = ts.getTextOfNode(node);
 
         //exit if no builtin
-        if(!BUILT_INS.includes(name)) return false;
+        if(!BUILT_INS.has(name)) return false;
 
         var importDeclaration = this.makeImportDeclaration(name, probablyNeedSemi);
         code = this.insertAtTop(code, importDeclaration, file);
@@ -87,6 +93,12 @@ class CustomFixes{
         var declaration = "const " + name + " = require(\""+ name + "\")" + (probablyNeedSemi ? ";" : "");
         return declaration;
     }
+    
+    static getErrorsOnLine(error, lineMap){
+        var line = error.line;
+        var errorList = lineMap[line];
+        return errorList;
+    }
 
     static getStatement(node){
         return ts.findAncestor(node, ts.isStatement);
@@ -101,8 +113,6 @@ class CustomFixes{
         var before = code.substring(0, statementStart);
         var after = code.substring(statementStart);
         if(after.startsWith("\n")){
-            before += "\n";
-            after = after.substring(1)
             statementStart += 1; //handle weird \n case?
         }
 

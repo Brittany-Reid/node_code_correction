@@ -40,6 +40,7 @@ class Snippet {
         newSnippet.hasCode = snippet.hasCode;
         newSnippet.fixed = snippet.fixed;
         newSnippet.compileFail = snippet.compileFail;
+        newSnippet.lineMap = snippet.lineMap;
         return newSnippet;
     }
 

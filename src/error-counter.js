@@ -87,6 +87,7 @@ class ErrorCounter{
         console.log("For: " + snippets.length)
         var postSnippets = [];
         for(var s of snippets){
+            // console.log(s.code)
             //clone to not carry changes between techniques
             s = Snippet.clone(s);
             // if(i < 1149){
@@ -150,6 +151,9 @@ class ErrorCounter{
                     totalErrors++;
                     errorCounter.add(e, s.id);
                 }
+            }
+            else{
+                console.log(s)
             }
 
             if(s.errors){

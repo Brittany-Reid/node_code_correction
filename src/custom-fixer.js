@@ -15,7 +15,7 @@ class CustomFixer{
         this.probablyNeedSemi = undefined;
         //error codes with a fix
         this.errorCodes = {
-            "cannot find name": [2304, 2552]
+            "cannot find name": new Set([2304, 2552])
         }
     }
 
@@ -27,6 +27,8 @@ class CustomFixer{
         if(snippet.errors !== undefined && snippet.errors.length < 1) return snippet;
         else if(snippet.errors === undefined || snippet.errors[0].file === undefined) snippet = this.evaluate(snippet);
         this.probablyNeedSemi = ts.probablyUsesSemicolons(this.languageService.sourceFile);
+        //get error line map
+        snippet = this.makeErrorLineMap(snippet);
         snippet = this.fixLoop(snippet);
         return snippet;
     }
@@ -34,6 +36,26 @@ class CustomFixer{
     evaluate(snippet){
         var errors = this.languageService.getErrors(snippet.code);
         snippet.errors = errors;
+        snippet = this.makeErrorLineMap(snippet);
+        return snippet;
+    }
+
+    /**
+     * Associate line numbers with errors.
+     */
+    makeErrorLineMap(snippet){
+        snippet.lineMap = {};
+        if(!snippet.errors) return snippet;
+        var lineMap = snippet.lineMap;
+        for(var e of snippet.errors){
+            var line = e.line;
+            var code = e.code;
+            if(lineMap[line]) lineMap[line].push(code);
+            else{
+                lineMap[line] = [code]
+            }
+        }
+        snippet.lineMap = lineMap;
         return snippet;
     }
 
@@ -91,7 +113,7 @@ class CustomFixer{
         // console.log(error.message)
 
         //try fixes
-        if(this.errorCodes["cannot find name"].includes(errorCode)) code = CustomFixes.fixCannotFindName(code, error, this);
+        if(this.errorCodes["cannot find name"].has(errorCode)) code = CustomFixes.fixCannotFindName(code, error, this, snippet.lineMap);
 
         if(!code) return snippet;
         snippet.code = code;

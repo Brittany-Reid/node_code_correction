@@ -5,6 +5,7 @@ const Snippet = require("../src/snippet");
 const CustomFixer = require("../src/custom-fixer");
 const LanguageService = require("../src/ts/language-service");
 const CustomFixes = require("../src/custom-fixes");
+const _ = require("lodash");
 
 var languageService;
 var fixer;
@@ -14,6 +15,15 @@ describe("CustomFixer", function () {
         languageService = new LanguageService();
         fixer = new CustomFixer(languageService);
     })
+
+    describe("Functions", function () {
+        it("makeErrorLineMap for undefined", async function () {
+            var code = `;`;
+            var snippet = new Snippet(code);
+            snippet = fixer.makeErrorLineMap(snippet);
+            assert(_.isEmpty(snippet.lineMap));
+        });
+    });
 
     describe("Error Fixes", function () {
 
@@ -88,6 +98,13 @@ json.substring(0, 1)`)
             assert.strictEqual(fixed.errors.length, 1);
             assert.strictEqual(fixed.code, `json.parse("{}");`)
         });
+        it("Ignore 'cannot find name (suggestion)' where not code", async function () {
+            var code = `Abbey <-> 4C4F56\n`;
+            var snippet = new Snippet(code);
+            var fixed = await fixer.fix(snippet);
+            assert.strictEqual(fixed.errors.length, 5);
+            assert.strictEqual(fixed.code, `Abbey <-> 4C4F56\n`)
+        });
     });
 
     describe("Insert Cases", function () {
@@ -128,18 +145,19 @@ json.substring(0, 1)`)
 
         //preferably we could detect this isn't node.js but we shouldn't insert mid line
         //for some reason this case detects as statement start not on its own line
-        it("Don't insert midline", async function () {
-            var code = 
-`sudo install`
-            var snippet = new Snippet(code);
-            var fixed = await fixer.fix(snippet);
-            assert.strictEqual(fixed.errors.length, 1);
-//there will be an indent from the space between but this doesn't effect functionality
-            assert.strictEqual(fixed.code, 
-`var sudo = ` + CustomFixes.PLACEHOLDER_STRING + `
- var install = ` + CustomFixes.PLACEHOLDER_STRING + `
-sudo install`);
-        });
+        //this case no longer represents midline insert as we fixed the incorrect error
+//         it("Don't insert midline", async function () {
+//             var code = 
+// `sudo install`
+//             var snippet = new Snippet(code);
+//             var fixed = await fixer.fix(snippet);
+//             assert.strictEqual(fixed.errors.length, 1);
+// //there will be an indent from the space between but this doesn't effect functionality
+//             assert.strictEqual(fixed.code, 
+// `var sudo = ` + CustomFixes.PLACEHOLDER_STRING + `
+//  var install = ` + CustomFixes.PLACEHOLDER_STRING + `
+// sudo install`);
+//         });
 
         it("Handle left-side", async function () {
             var code = 

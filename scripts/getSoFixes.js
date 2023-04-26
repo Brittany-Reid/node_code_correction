@@ -146,8 +146,9 @@ async function getErrors(){
             var errors = compiled[c].errors;
             if(errors) v["Errors"] = errors.length;
             else{
-                v["Errors"] = 0
+                v["Errors"] = undefined;
             }
+            v["HasCode"] = compiled[c].hasCode;
             c++;
         }
     }
@@ -161,6 +162,7 @@ function filterByErrors(){
         if(first["Errors"] === 0){
             return false;
         }
+        if(first["Errors"] === undefined) return false; //ignore any compile fails
         //where the new case introduces new errors? //i think this may be interesting
         // if (s["Versions"][0].errors < s["Versions"][1].errors)
         return true;
