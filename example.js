@@ -4,6 +4,7 @@ const Evaluator = require("./src/ncq/evaluator");
 const Snippet = require("./src/snippet");
 
 var snippets = [
+    "    function encrypt(str) {\n      var cipher = crypto.createCipheriv('aes-256-cbc', key, iv).setAutoPadding(false);\n      str = customPadding(str);\n       var crypt = cipher.update(str, 'utf8', 'base64');\n       crypt += cipher.final(\"base64\");\n       return crypt;\n    }\n    var t = encrypt(\"dude\");",
     `const {username, email} = await prompt.get(['username', 'email']);`,
     `const { prompt } = require('enquirer');
     const question = [
@@ -42,21 +43,25 @@ var snippets = [
 ];
 
 async function main(){
-    var i = 8;
-    var compiled = await NCC.getErrors(snippets);
-    console.log(compiled[i].errors)
+
+    //ncc errors
+    var i = 0;
+    // var compiled = await NCC.getErrors(snippets);
+    // console.log(compiled[i].errors)
     
 
-    // NCC.evaluator.fixer.deletions = false;
-    var fixed = await NCC.fix(snippets);
-    console.log(fixed[i])
-    console.log(fixed[i].errors)
+    //ncc fixes
+    // // NCC.evaluator.fixer.deletions = false;
+    // var fixed = await NCC.fix(snippets);
+    // console.log(fixed[i])
+    // console.log(fixed[i].errors)
 
+    //ncq
     // var e = new Evaluator();
     // var r = e.errors(snippets.map(s => {return new Snippet(s)}))
-    // console.log(r[1].errors)
+    // console.log(r[i].errors)
     // var r = e.fix(snippets.map(s => {return new Snippet(s)}))
-    // console.log(r[1].code)
+    // console.log(r[i].code)
 }
 
 main();
