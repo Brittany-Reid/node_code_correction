@@ -1,0 +1,45 @@
+{
+ "After All Fixes": [
+  {
+   "code": "const eh = {}",
+   "id": 0,
+   "order": 0,
+   "stars": 0,
+   "errors": [],
+   "hasCode": true,
+   "nondeletedLines": 1,
+   "fixed": false,
+   "tsFixed": false,
+   "compileFail": false,
+   "lineFail": false
+  },
+  {
+   "code": "// <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n// <link href=\"https://fonts.googleapis.com/css?family=Prompt|Sarabun:300,400\" rel=\"stylesheet\">\n// <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/0.css@0.1.0/dist/0.min.css\">",
+   "id": 1,
+   "order": 0,
+   "stars": 0,
+   "errors": [],
+   "hasCode": false,
+   "nondeletedLines": 0,
+   "fixed": true,
+   "tsFixed": false,
+   "compileFail": false,
+   "lineFail": false,
+   "lineMap": {
+    "1": [
+     17004,
+     17008
+    ],
+    "2": [
+     17004,
+     17008
+    ],
+    "3": [
+     17004,
+     17008,
+     1005
+    ]
+   }
+  }
+ ]
+}
