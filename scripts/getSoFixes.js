@@ -26,10 +26,10 @@ var source = fs.readFileSync(sourcePath, {encoding: "utf-8"});
 
 var entries = [];
 var snippets = [];
+var snippetMap = {}
 
 function getSnippets(){
     //map snippets by postid_RootPostBlockVersionId to versions
-    var snippetMap = {}
     for(var l of source.split("\n")){
         if (!l) continue;
         var e = JSON.parse(l)
@@ -159,10 +159,12 @@ function filterByErrors(){
     snippets = snippets.filter((s)=>{
         var versions = s["Versions"];
         var first = versions[0]
+        var second = versions[1]
         if(first["Errors"] === 0){
             return false;
         }
         if(first["Errors"] === undefined) return false; //ignore any compile fails
+        if(second["Errors"] === undefined) return false; //ignore any compile fails
         //where the new case introduces new errors? //i think this may be interesting
         // if (s["Versions"][0].errors < s["Versions"][1].errors)
         return true;
@@ -195,6 +197,7 @@ function fixedOnly(){
 
 async function main(){
     getSnippets();
+    console.log("Snippets: " + Object.keys(snippetMap).length)
     console.log("Snippet Pairs: " + snippets.length)
     filterClones()
     console.log("Snippets With Change: " + snippets.length)

@@ -271,14 +271,13 @@ Snippets lineFailed: 0/1099(0)
 CUSTOM FIX ANALYSIS
 
 ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
-Cannot find name, 2304, 1, 687, 175, 18, 0.1592356687898089
+Cannot find name, 2304, 1, 746, 228, 18, 0.20746132848043677
 Character expected, 1005, 1, 469, 242, 8, 0.22020018198362148
-Property 'sendBody' does not exist on type 'ServerResponse<IncomingMessage> & { req: IncomingMessage; }'., 2339, 1, 441, 322, 0, 0.2929936305732484
+Property 'sendBody' does not exist on type 'ServerResponse<IncomingMessage> & { req: IncomingMessage; }'., 2339, 1, 450, 330, 0, 0.3002729754322111
 Unexpected keyword or identifier., 1434, 1, 234, 41, 90, 0.0373066424021838
-This expression is not callable., 2349, 1, 159, 126, 32, 0.11464968152866242
 Declaration or statement expected., 1128, 1, 150, 89, 58, 0.08098271155595996
+Cannot find name 'toString'. Did you mean 'String'?, 2552, 1, 106, 85, 28, 0.07734303912647862
 Expression expected., 1109, 1, 94, 57, 60, 0.051865332120109194
-Cannot find name 'toString'. Did you mean 'String'?, 2552, 1, 81, 65, 28, 0.059144676979071886
 Left side of comma operator is unused and has no side effects., 2695, 1, 54, 28, 288, 0.025477707006369428
 Unterminated string literal., 1002, 1, 45, 38, 8, 0.034576888080072796
 'number' only refers to a type, but is being used as a value here., 2693, 1, 38, 7, 776, 0.006369426751592357
@@ -286,17 +285,18 @@ Identifier expected., 1003, 1, 32, 23, 190, 0.020928116469517744
 Expected 1 arguments, but got 2., 2554, 1, 30, 28, 8, 0.025477707006369428
 Property 'sendHeader' does not exist on type 'ServerResponse<IncomingMessage> & { req: IncomingMessage; }'. Did you mean 'setHeader'?, 2551, 1, 29, 24, 0, 0.02183803457688808
 Argument of type 'number' is not assignable to parameter of type 'string'., 2345, 1, 28, 26, 134, 0.023657870791628753
+This expression is not callable., 2349, 1, 22, 19, 146, 0.017288444040036398
 Type 'string[]' is not assignable to type 'string'., 2322, 1, 18, 17, 184, 0.015468607825295723
 Cannot use JSX unless the '--jsx' flag is provided., 17004, 1, 18, 7, 412, 0.006369426751592357
 This expression is not constructable., 2351, 1, 16, 16, 22, 0.014558689717925387
+The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2362, 1, 16, 15, 226, 0.01364877161055505
 The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2363, 1, 16, 10, 246, 0.009099181073703366
-The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2362, 1, 15, 14, 226, 0.012738853503184714
 Duplicate identifier 'require_cwd'., 2300, 1, 15, 8, 408, 0.007279344858962694
 Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1378, 1, 15, 11, 1150, 0.010009099181073703
+No overload matches this call., 2769, 1, 14, 14, 126, 0.012738853503184714
 A 'return' statement can only be used within a function body., 1108, 1, 14, 11, 972, 0.010009099181073703
 Unknown keyword or identifier, 1435, 1, 13, 12, 90, 0.01091901728844404
 Invalid character., 1127, 1, 13, 8, 90, 0.007279344858962694
-No overload matches this call., 2769, 1, 13, 13, 126, 0.011828935395814377
 Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig., 2592, 1, 13, 9, 508, 0.00818926296633303
 Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig., 2593, 1, 12, 10, 444, 0.009099181073703366
 Type annotations can only be used in TypeScript files., 8010, 1, 11, 2, 394, 0.0018198362147406734
@@ -364,11 +364,11 @@ Expected at least 1 arguments, but got 0., 2555, 1, 1, 1, 1962, 0.00090991810737
 'await' expressions are only allowed within async functions and at the top levels of modules., 1308, 1, 1, 1, 2110, 0.0009099181073703367
 Module declaration names may only use ' or " quoted strings., 1443, 1, 1, 1, 2162, 0.0009099181073703367
 
-Total errors: 2977
+Total errors: 2935
 Snippets without errors: 197/1099(0.17925386715195632)
-Fixed: 316/1099(0.2875341219290264)
+Fixed: 331/1099(0.30118289353958144)
 Snippets no lines: 0/1099(0)
-Code lines: 13908
+Code lines: 13836
 Snippets timed out: 0/1099(0)
 Snippets failed: 0/1099(0)
 Snippets lineFailed: 0/1099(0)
@@ -434,43 +434,44 @@ Snippets lineFailed: 0/1099(0)
 CUSTOM FIX TS ANALYSIS
 
 ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
-Cannot find name, 2304, 1, 603, 156, 18, 0.14194722474977253
+Cannot find name, 2304, 1, 571, 138, 18, 0.12556869881710647
+Property 'sendBody' does not exist on type 'ServerResponse<IncomingMessage> & { req: IncomingMessage; }'., 2339, 1, 496, 359, 0, 0.32666060054595086
 Character expected, 1005, 1, 470, 243, 8, 0.2211101000909918
-Property 'sendBody' does not exist on type 'ServerResponse<IncomingMessage> & { req: IncomingMessage; }'., 2339, 1, 463, 334, 0, 0.3039126478616925
 Unexpected keyword or identifier., 1434, 1, 234, 41, 90, 0.0373066424021838
-This expression is not callable., 2349, 1, 161, 128, 0, 0.1164695177434031
 Declaration or statement expected., 1128, 1, 151, 90, 58, 0.0818926296633303
 Type annotations can only be used in TypeScript files., 8010, 1, 98, 3, 394, 0.00272975432211101
 Expression expected., 1109, 1, 97, 60, 60, 0.0545950864422202
 Left side of comma operator is unused and has no side effects., 2695, 1, 54, 28, 288, 0.025477707006369428
 Unterminated string literal., 1002, 1, 45, 38, 8, 0.034576888080072796
 'number' only refers to a type, but is being used as a value here., 2693, 1, 38, 7, 776, 0.006369426751592357
+Expected 1 arguments, but got 2., 2554, 1, 33, 31, 8, 0.028207461328480437
 Identifier expected., 1003, 1, 33, 24, 190, 0.02183803457688808
-Expected 1 arguments, but got 2., 2554, 1, 32, 30, 8, 0.0272975432211101
-Argument of type 'number' is not assignable to parameter of type 'string'., 2345, 1, 30, 27, 0, 0.02456778889899909
-Duplicate identifier 'require_cwd'., 2300, 1, 21, 10, 408, 0.009099181073703366
+Argument of type 'number' is not assignable to parameter of type 'string'., 2345, 1, 32, 28, 0, 0.025477707006369428
+This expression is not callable., 2349, 1, 28, 25, 0, 0.022747952684258416
+Import declaration conflicts with local declaration of 'readFileSync'., 2440, 1, 24, 24, 230, 0.02183803457688808
+Duplicate identifier 'require_cwd'., 2300, 1, 22, 10, 408, 0.009099181073703366
 Type 'string[]' is not assignable to type 'string'., 2322, 1, 18, 17, 184, 0.015468607825295723
+The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2362, 1, 18, 16, 226, 0.014558689717925387
 The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2363, 1, 18, 10, 246, 0.009099181073703366
 Cannot use JSX unless the '--jsx' flag is provided., 17004, 1, 18, 7, 412, 0.006369426751592357
 This expression is not constructable., 2351, 1, 17, 17, 22, 0.015468607825295723
-The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2362, 1, 17, 15, 226, 0.01364877161055505
+No overload matches this call., 2769, 1, 17, 17, 126, 0.015468607825295723
 The '?' modifier can only be used in TypeScript files., 8009, 1, 16, 2, 1296, 0.0018198362147406734
 Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', or 'nodenext', and the 'target' option is set to 'es2017' or higher., 1378, 1, 15, 11, 1150, 0.010009099181073703
 A 'return' statement can only be used within a function body., 1108, 1, 14, 11, 972, 0.010009099181073703
 Invalid character., 1127, 1, 13, 8, 90, 0.007279344858962694
-No overload matches this call., 2769, 1, 13, 13, 126, 0.011828935395814377
 Block-scoped variable 'app' used before its declaration., 2448, 1, 13, 12, 142, 0.01091901728844404
 Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig., 2592, 1, 13, 9, 508, 0.00818926296633303
 Unknown keyword or identifier, 1435, 1, 12, 11, 90, 0.010009099181073703
 Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha` and then add 'jest' or 'mocha' to the types field in your tsconfig., 2593, 1, 12, 10, 444, 0.009099181073703366
 Cannot redeclare block-scoped variable 'inst'., 2451, 1, 12, 6, 930, 0.00545950864422202
-Operator cannot be applied to types 1 and 2, 2365, 1, 10, 6, 132, 0.00545950864422202
+Operator cannot be applied to types 1 and 2, 2365, 1, 11, 7, 132, 0.006369426751592357
 The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type 'string'., 2407, 1, 8, 7, 226, 0.006369426751592357
 An identifier or keyword cannot immediately follow a numeric literal., 1351, 1, 8, 3, 246, 0.00272975432211101
 Argument expression expected., 1135, 1, 8, 6, 412, 0.00545950864422202
 'nextKey' is possibly 'undefined'., 18048, 1, 8, 5, 466, 0.004549590536851683
+Module '"assert"' has no exported member 'toString'., 2305, 1, 7, 7, 28, 0.006369426751592357
 Index signature in type 'String' only permits reading., 2542, 1, 7, 6, 226, 0.00545950864422202
-Module '"assert"' has no exported member 'toString'., 2305, 1, 6, 6, 28, 0.00545950864422202
 No value exists in scope for the shorthand property 'response'. Either declare one or provide an initializer., 18004, 1, 6, 4, 84, 0.003639672429481347
 Unterminated template literal., 1160, 1, 6, 6, 102, 0.00545950864422202
 Unterminated regular expression literal., 1161, 1, 6, 6, 412, 0.00545950864422202
@@ -481,10 +482,10 @@ String literal expected., 1141, 1, 5, 4, 920, 0.003639672429481347
 Cannot find name 'document'. Do you need to change your target library? Try changing the 'lib' compiler option to include 'dom'., 2584, 1, 4, 4, 236, 0.003639672429481347
 'enum' declarations can only be used in TypeScript files., 8006, 1, 4, 2, 324, 0.0018198362147406734
 Only a void function can be called with the 'new' keyword., 2350, 1, 4, 4, 644, 0.003639672429481347
-Import declaration conflicts with local declaration of 'exec'., 2440, 1, 4, 4, 822, 0.003639672429481347
 Type '10000' is not an array type., 2461, 1, 4, 3, 1168, 0.00272975432211101
 Type '(request: any, response: any) => void' has no properties in common with type 'ServerOptions<typeof IncomingMessage, typeof ServerResponse>'., 2559, 1, 3, 3, 84, 0.00272975432211101
 Declaration expected., 1146, 1, 3, 3, 190, 0.00272975432211101
+Cannot find name 'doSomeOtherWorkOnArgs'. Did you mean 'doSomeWorkOnArgs'?, 2552, 1, 3, 2, 316, 0.0018198362147406734
 An expression of type 'void' cannot be tested for truthiness., 1345, 1, 3, 3, 374, 0.00272975432211101
 A type predicate is only allowed in return type position for functions and methods., 1228, 1, 3, 3, 444, 0.00272975432211101
 Type 'IterableIterator<number>' can only be iterated through when using the '--downlevelIteration' flag or with a '--target' of 'es2015' or higher., 2802, 1, 3, 3, 916, 0.00272975432211101
@@ -518,17 +519,17 @@ Cannot invoke an object which is possibly 'undefined'., 2722, 1, 1, 1, 952, 0.00
 '*/' expected., 1010, 1, 1, 1, 1040, 0.0009099181073703367
 'import ... =' can only be used in TypeScript files., 8002, 1, 1, 1, 1068, 0.0009099181073703367
 Property 'set' in type 'WeakMapObj' is not assignable to the same property in base type 'Map<any, any>'., 2416, 1, 1, 1, 1430, 0.0009099181073703367
-Cannot find name 'orderModel'. Did you mean 'orderCode'?, 2552, 1, 1, 1, 1654, 0.0009099181073703367
+Value of type 'BufferConstructor' is not callable. Did you mean to include 'new'?, 2348, 1, 1, 1, 1594, 0.0009099181073703367
 JSX expressions must have one parent element., 2657, 1, 1, 1, 1696, 0.0009099181073703367
 Cannot assign to 'eval' because it is a function., 2630, 1, 1, 1, 1738, 0.0009099181073703367
 Expected at least 1 arguments, but got 0., 2555, 1, 1, 1, 1962, 0.0009099181073703367
 Module declaration names may only use ' or " quoted strings., 1443, 1, 1, 1, 2162, 0.0009099181073703367
 
-Total errors: 2932
-Snippets without errors: 231/1099(0.21019108280254778)
-Fixed: 448/1099(0.40764331210191085)
+Total errors: 2834
+Snippets without errors: 268/1099(0.24385805277525022)
+Fixed: 524/1099(0.4767970882620564)
 Snippets no lines: 0/1099(0)
-Code lines: 14165
+Code lines: 14346
 Snippets timed out: 0/1099(0)
 Snippets failed: 0/1099(0)
 Snippets lineFailed: 0/1099(0)
@@ -536,20 +537,20 @@ Snippets lineFailed: 0/1099(0)
 ALL FIXES ANALYSIS
 
 ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT
-Property 'pump' does not exist on type 'typeof import("util")'., 2339, 1, 168, 153, 12, 0.1392174704276615
-Character expected, 1005, 1, 112, 107, 20, 0.09736123748862602
+Property 'pump' does not exist on type 'typeof import("util")'., 2339, 1, 180, 164, 12, 0.1492265696087352
+Character expected, 1005, 1, 113, 108, 20, 0.09827115559599636
 Type annotations can only be used in TypeScript files., 8010, 1, 87, 1, 1296, 0.0009099181073703367
-Cannot find name, 2304, 1, 80, 61, 26, 0.055505004549590536
-This expression is not callable., 2349, 1, 31, 31, 64, 0.028207461328480437
+Cannot find name, 2304, 1, 68, 51, 26, 0.04640582347588717
 The '?' modifier can only be used in TypeScript files., 8009, 1, 14, 1, 1296, 0.0009099181073703367
 Expression expected., 1109, 1, 12, 12, 240, 0.01091901728844404
-Declaration or statement expected., 1128, 1, 8, 7, 374, 0.006369426751592357
+Declaration or statement expected., 1128, 1, 9, 8, 374, 0.007279344858962694
+No overload matches this call., 2769, 1, 8, 8, 156, 0.007279344858962694
+This expression is not callable., 2349, 1, 7, 7, 298, 0.006369426751592357
 Argument of type '{ bgColor1: StringConstructor; bgColor2: StringConstructor; bannerBgColor1: StringConstructor; bannerBgColor2: StringConstructor; ... 46 more ...; at: (index: number) => string; }' is not assignable to parameter of type 'string'., 2345, 1, 7, 7, 1296, 0.006369426751592357
 A 'return' statement can only be used within a function body., 1108, 1, 6, 6, 960, 0.00545950864422202
 Block-scoped variable 'models' used before its declaration., 2448, 1, 6, 5, 1688, 0.004549590536851683
 This expression is not constructable., 2351, 1, 5, 5, 122, 0.004549590536851683
 The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type 'string'., 2407, 1, 5, 5, 226, 0.004549590536851683
-No overload matches this call., 2769, 1, 5, 5, 410, 0.004549590536851683
 Cannot find name '$'. Do you need to install type definitions for jQuery? Try `npm i --save-dev @types/jquery` and then add 'jquery' to the types field in your tsconfig., 2592, 1, 5, 4, 596, 0.003639672429481347
 'app' is possibly 'undefined'., 18048, 1, 3, 3, 204, 0.00272975432211101
 Left side of comma operator is unused and has no side effects., 2695, 1, 3, 3, 486, 0.00272975432211101
@@ -583,11 +584,11 @@ Unknown keyword or identifier, 1435, 1, 1, 1, 1756, 0.0009099181073703367
 The operand of a 'delete' operator must be a property reference., 2703, 1, 1, 1, 2160, 0.0009099181073703367
 The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type., 2362, 1, 1, 1, 2178, 0.0009099181073703367
 
-Total errors: 593
-Snippets without errors: 715/1099(0.6505914467697907)
-Fixed: 942/1099(0.8571428571428571)
+Total errors: 574
+Snippets without errors: 727/1099(0.6615104640582348)
+Fixed: 950/1099(0.8644222020018199)
 Snippets no lines: 47/1099(0.042766151046405826)
-Code lines: 12750
+Code lines: 12995
 Snippets timed out: 0/1099(0)
 Snippets failed: 0/1099(0)
 Snippets lineFailed: 0/1099(0)

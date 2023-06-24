@@ -34,6 +34,10 @@ class CustomFixes{
         var name = ts.getTextOfNode(node);
 
         var parent = node.parent;
+        //is a method call? let TS handle
+        if(ts.isCallExpression(parent) && parent.expression == node){
+            return false; 
+        }
         //is an undeclared assignment
         if(ts.isAssignmentExpression(parent) && parent.left == node){
             var declaration = this.makeDeclaration(name, probablyNeedSemi);
