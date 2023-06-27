@@ -68,6 +68,7 @@ class LanguageService{
                         if (!fs.existsSync(fileName)) {
                             return undefined;
                         }
+                        //we should make loaded files visible for debugging
                         snapshot = ts.ScriptSnapshot.fromString(fs.readFileSync(fileName).toString());
                     snapshots[fileName] = snapshot
                 }

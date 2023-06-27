@@ -2,6 +2,7 @@ const ts = require("typescript");
 const NCC = require(".");
 const Evaluator = require("./src/ncq/evaluator");
 const Snippet = require("./src/snippet");
+const LanguageService = require("./src/ts/language-service");
 
 var snippets = [
     "    function encrypt(str) {\n      var cipher = crypto.createCipheriv('aes-256-cbc', key, iv).setAutoPadding(false);\n      str = customPadding(str);\n       var crypt = cipher.update(str, 'utf8', 'base64');\n       crypt += cipher.final(\"base64\");\n       return crypt;\n    }\n    var t = encrypt(\"dude\");",
@@ -39,21 +40,40 @@ var snippets = [
   `consle.log()`,
   `var words = s.split(",")`,
   `var s
-   var words = s.split(",")`
+   var words = s.split(",")`,
+  `Math.pow(1, a)`,
+  `Math.max(a);`,
+  `function sum(num = [1, 2, 3]){
+    return 1;
+  }
+  
+  sum(a)`,
+  `function sum(num = ["a", "b", "c"]){
+    return 1;
+  }
+  
+  sum(a)`,
+  `sum(a)`,
+  `process.removeListener("a", b)`,
+  `const { ChildProcess } = require("child_process");
+ChildProcess.on(a, "a")`
+  // `process.nextTick(a)`
 ];
 
 async function main(){
-
     //ncc errors
+
     var i = 0;
-    // var compiled = await NCC.getErrors(snippets);
-    // console.log(compiled[i].errors)
+
     
 
+    // var compiled = await NCC.getErrors(snippets);
+    // console.log(compiled[i].errors)
+
     //ncc fixes
-    // // NCC.evaluator.fixer.deletions = false;
-    // var fixed = await NCC.fix(snippets);
-    // console.log(fixed[i])
+    // NCC.evaluator.fixer.deletions = false;
+    var fixed = await NCC.fix(snippets);
+    console.log(fixed[0])
     // console.log(fixed[i].errors)
 
     //ncq

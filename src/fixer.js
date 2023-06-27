@@ -134,7 +134,7 @@ class Fixer{
         //ignore fail cases
         if(snippet.compileFail || snippet.lineFail) return snippet;
         var fixed = this.customFixer.fix(snippet);
-        return snippet;
+        return fixed;
     }
 
     deleteForError(snippet, error){

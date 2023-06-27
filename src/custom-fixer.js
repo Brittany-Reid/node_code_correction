@@ -117,12 +117,14 @@ class CustomFixer{
 
         if(!code) return snippet;
         snippet.code = code;
+
         return snippet;
     }
 
     improve(snippet, prevSnippet){
         snippet = this.evaluate(snippet);
-        if(snippet.errors.length < prevSnippet.errors.length) return true;
+        //does not make worse
+        if(snippet.errors.length <= prevSnippet.errors.length) return true;
         return false;
     }
 

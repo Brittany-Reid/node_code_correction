@@ -1,5 +1,7 @@
 /** 
  * @fileoverview Run experiments over a random sample of 384 snippets.
+ * A sample will be generated and saved at data/NPMsample384.json, so the same sample can be re-evaluated.
+ * To generate a new sample, delete the file.
  */
 
 require("mocha");
@@ -19,14 +21,14 @@ const BASE = getBaseDirectory();
 const LOG_DIR = path.join(BASE, "logs");
 const INFO_LOG_DIR = path.join(LOG_DIR, "sample");
 const DATA_PATH = path.join(BASE, "data/dataset.csv");
-const SAMPLE_PATH = path.join(BASE, "data/NPMsample384.json");
+const SAMPLE_PATH = path.join(BASE, "data/NPMsample384.json"); //to save sample
 const EXAMPLE_PATH = path.join(BASE, "data/examples/384sampleExamples.json");
 
 // create logger
 const logger = winston.createLogger();
 var filename = path.join(
     INFO_LOG_DIR,
-    "sample" + Date.now() + ".log",
+    "364-sample" + Date.now() + ".log",
 );
 // fs.writeFileSync(filename, "", {flag:"w"})
 logger.add(
