@@ -140,11 +140,15 @@ class CustomFixes{
             var hasDotDotDot = this.hasDotDotDot(index, parent, typeChecker);
             var containingType = typeChecker.getSymbolAtLocation(parent.expression);
             if(!containingType) return undefined;
+            if(!containingType.valueDeclaration) return undefined;
+            if(!containingType.valueDeclaration.parameters) return undefined;
             //console.log(typeChecker.typeToString(typeChecker.getTypeAtLocation(parent.expression)))
             // console.log(typeChecker.getTypeAtLocation(parent.expression))
             // console.log(containingType)
             // console.log(containingType.declarations[0])
-            var typeName = (containingType.valueDeclaration).parameters[index].name;
+            var param = (containingType.valueDeclaration).parameters[index];
+            if(!param) return undefined;
+            var typeName = param.name;
             type = typeChecker.getTypeAtLocation(typeName);
             if(hasDotDotDot && typeChecker.isArrayType(type)){
                 type = typeChecker.getTypeArguments(type)[0];
