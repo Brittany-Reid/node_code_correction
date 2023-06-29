@@ -56,7 +56,39 @@ var snippets = [
   `sum(a)`,
   `process.removeListener("a", b)`,
   `const { ChildProcess } = require("child_process");
-ChildProcess.on(a, "a")`
+ChildProcess.on(a, "a")`,
+`    let CheckUrl = function (url, done) {
+  dns.lookup(url, function(err, address) { 
+    if (err) return done(err);
+    done(null, true);
+  });
+} 
+
+app.post("/api/shorturl/new", async function(req, res) {
+});\``,
+`      const fse = require('fs-extra');
+let srcDir = \`path/to/file ;
+let destDir = \`pat/to/destination/diractory\`;
+fse.copySync(srcDir, destDir, function (err) {
+// to copy folder
+    if (err) {
+        console.error(err);
+    } else {
+        console.log("success!");
+    }
+});
+`,
+`    let p1 = getUserDatafromEnvironmentP(Dev_Environmnet, user, environmnet);
+let p2 = getUserDatafromEnvironmentP(PVS_Environmnet, user, environmnet);
+let p3 = getUserDatafromEnvironmentP(Prod_Environmnet, user, environmnet);
+let result = Promise.all([p1, p2, p3]).then(
+    function(a, b, c) {
+        // a, b and c will contain the three results
+        // undefined for "not used", false for "failed", true for "ok"
+        .. continue with processing here
+    })
+);
+// you can't do anything useful here because the above code is async`
   // `process.nextTick(a)`
 ];
 
@@ -72,7 +104,7 @@ async function main(){
 
     //ncc fixes
     // NCC.evaluator.fixer.deletions = false;
-    var fixed = await NCC.fix(snippets);
+    var fixed = await NCC.fix([snippets[snippets.length-1]]);
     console.log(fixed[0])
     // console.log(fixed[i].errors)
 

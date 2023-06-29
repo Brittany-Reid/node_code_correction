@@ -62,6 +62,9 @@ class CustomFixer{
     fixLoop(snippet){
         var originalSnippet = Snippet.clone(snippet);
         var prevSnippet = undefined;
+        var lastErrorMessage = undefined;
+
+        var names = []; //store what variable names have already been added
 
         //error index
         var i = 0;
@@ -69,7 +72,8 @@ class CustomFixer{
         var stop = false;
         while(!stop){
             // console.log("\n")
-            // console.log(i)
+            //if this variable has already been defined
+            if(snippet.errors[i] && names.includes(snippet.errors[i].message)) break;
             //save the previous version of the snippet
             prevSnippet = Snippet.clone(snippet);
 
@@ -77,17 +81,21 @@ class CustomFixer{
             if(snippet.compileFail || snippet.errors.length <= 0 ) return snippet; 
 
             //try to fix next error
+            lastErrorMessage = snippet.errors[i].message;
             snippet = this.tryFixError(snippet, i);
 
             //if a change was made?
             if(snippet.code !== prevSnippet.code){
                 //keep if improved
                 if(this.improve(snippet, prevSnippet)){
+                    if(this.errorCodes["cannot find name"].has(prevSnippet.errors[i].code)) names.push(lastErrorMessage) //store variable names we've added
                     //reset error index
                     i = 0;
                     snippet.fixed = true;
                     //if the change fixed all errors
                     if(snippet.errors.length == 0) stop = true;
+                    //if the same error persists, only for the cannotfindname case for now //i dont have a test case for this because i fixed the placement bug
+                    else if(lastErrorMessage == snippet.errors[i].message && this.errorCodes["cannot find name"].has(snippet.errors[i])) stop = true;
                     continue;
                 }
                 //else revert

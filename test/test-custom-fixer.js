@@ -257,5 +257,39 @@ json.substring(0, 1)`)
 a = "a";`);
         });
 
+        
+        it("Fix when space before newline", async function (){
+            //in some cases the error persists and we get infinite definitions
+            //in this case its placed incorrectly but we should still avoid the infinite error
+            var code = 
+`    let CheckUrl = function (url, done) {
+    dns.lookup(url, function(err, address) { 
+        if (err) return done(err);
+        done(null, true);
+    });
+    } 
+
+    app.post("/api/shorturl/new", async function(req, res) {
+    });\``
+            var result = 
+`const dns = require("dns");
+    let CheckUrl = function (url, done) {
+    dns.lookup(url, function(err, address) { 
+        if (err) return done(err);
+        done(null, true);
+    });
+    } 
+ 
+    var app = "Your Value Here";
+
+    app.post("/api/shorturl/new", async function(req, res) {
+    });\``
+            var snippet = new Snippet(code);
+            var fixed = await fixer.fix(snippet);
+            assert.strictEqual(fixed.errors.length, 2);
+            assert.strictEqual(fixed.code, result)
+
+        })
+
     });
 });

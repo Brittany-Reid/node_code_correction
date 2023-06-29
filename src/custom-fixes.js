@@ -217,8 +217,9 @@ class CustomFixes{
 
         var before = code.substring(0, statementStart);
         var after = code.substring(statementStart);
-        if(after.startsWith("\n")){
-            statementStart += 1; //handle weird \n case?
+        if(after.replace(" ", "").startsWith("\n")){
+            var toAdd = after.indexOf("\n");
+            statementStart += 1 + toAdd; //handle weird \n case?
         }
 
         statementStart = this.getNearestLineStart(statementStart, file.getLineStarts())
