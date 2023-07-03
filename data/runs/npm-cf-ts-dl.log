@@ -302,9 +302,6 @@ Function with bodies can only merge with classes that are ambient., 2814, 1, 1, 
 'Any' is an unused renaming of 'var'. Did you intend to use it as a type annotation?, 2842, 1, 1, 1, 659202, 4.625537313978235e-7
 Numeric separators are not allowed here., 6188, 1, 1, 1, 992007, 4.625537313978235e-7
 Private identifiers are not allowed in variable declarations., 18029, 1, 1, 1, 1827846, 4.625537313978235e-7
-, Parameter '{, , NaN, NaN, , NaN
-, results, , NaN, NaN, , NaN
-, errors, , NaN, NaN, , NaN
 
 Total errors: 899774
 Snippets without errors: 1620343/2161911(0.7494957007943436)
