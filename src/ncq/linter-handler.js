@@ -52,6 +52,7 @@ class LinterHandler {
             "no-const-assign": "error",
             "no-dupe-class-members": "error",
             "no-new-symbol": "error",
+            "no-undef": "error",
             /*
              * Warning level rules.
              * These don't provide any error info, so count as warnings.
