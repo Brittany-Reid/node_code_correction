@@ -32,64 +32,6 @@ var snippets = [
         const response = await prompts(questions, { onCancel });
       })();`,
   `assert(true)`,
-  `import sum from './sum';\n\nit('sums numbers', () => {\n  expect(sum(1, 2)).toEqual(3);\n  expect(sum(2, 2)).toEqual(4);\n});`,
-  `import sum from './sum';
-
-  expect(sum(1, 2)).toEqual(3)
-  `,
-  `consle.log()`,
-  `var words = s.split(",")`,
-  `var s
-   var words = s.split(",")`,
-  `Math.pow(1, a)`,
-  `Math.max(a);`,
-  `function sum(num = [1, 2, 3]){
-    return 1;
-  }
-  
-  sum(a)`,
-  `function sum(num = ["a", "b", "c"]){
-    return 1;
-  }
-  
-  sum(a)`,
-  `sum(a)`,
-  `process.removeListener("a", b)`,
-  `const { ChildProcess } = require("child_process");
-ChildProcess.on(a, "a")`,
-`    let CheckUrl = function (url, done) {
-  dns.lookup(url, function(err, address) { 
-    if (err) return done(err);
-    done(null, true);
-  });
-} 
-
-app.post("/api/shorturl/new", async function(req, res) {
-});\``,
-`      const fse = require('fs-extra');
-let srcDir = \`path/to/file ;
-let destDir = \`pat/to/destination/diractory\`;
-fse.copySync(srcDir, destDir, function (err) {
-// to copy folder
-    if (err) {
-        console.error(err);
-    } else {
-        console.log("success!");
-    }
-});
-`,
-`    let p1 = getUserDatafromEnvironmentP(Dev_Environmnet, user, environmnet);
-let p2 = getUserDatafromEnvironmentP(PVS_Environmnet, user, environmnet);
-let p3 = getUserDatafromEnvironmentP(Prod_Environmnet, user, environmnet);
-let result = Promise.all([p1, p2, p3]).then(
-    function(a, b, c) {
-        // a, b and c will contain the three results
-        // undefined for "not used", false for "failed", true for "ok"
-        .. continue with processing here
-    })
-);
-// you can't do anything useful here because the above code is async`
-  // `process.nextTick(a)`
 ];
 
 async function main(){
@@ -104,9 +46,10 @@ async function main(){
 
     //ncc fixes
     // NCC.evaluator.fixer.deletions = false;
-    var fixed = await NCC.fix([snippets[snippets.length-1]]);
-    console.log(fixed[0])
-    // console.log(fixed[i].errors)
+    // var fixed = await NCC.fix([snippets[snippets.length-1]]);
+    var fixed = await NCC.fix(snippets);
+    console.log(fixed[0].code)
+    console.log(fixed[i].errors)
 
     //ncq
     // var e = new Evaluator();

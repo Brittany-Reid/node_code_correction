@@ -191,6 +191,7 @@ RULE ANALYSIS
 
 ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT, FATAL
 indent,, 1, 2505872, 354255,, 0.16386197211633596, undefined
+no-undef,, 2, 1964258, 836195,, 0.38678511742620303, undefined
 semi,, 1, 1396804, 508542,, 0.23522799967251196, undefined
 Parsing error: Unexpected token,, 2, 575440, 575440,, 0.26617191919556354, true
 no-multi-spaces,, 1, 139097, 51946,, 0.02402781613119134, undefined
@@ -387,10 +388,10 @@ Parsing error: Export 'findSeconds' is not defined,, 2, 1, 1,, 4.625537313978235
 Parsing error: Export 'addMicroseconds' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
 Parsing error: Export 'asMicroseconds' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
 
-Total errors: 757983
-Total warnings or errors: 4828342
-Snippets without errors: 1404765/2161911(0.6497792924870636)
-Snippets without errors or warnings: 638788/2161911(0.2954737729721529)
+Total errors: 2722241
+Total warnings or errors: 6792600
+Snippets without errors: 569419/2161911(0.26338688317881725)
+Snippets without errors or warnings: 270763/2161911(0.12524243597446888)
 Fixed: 0/2161911(0)
 Snippets no lines: 9964/2161911(0.004608885379647913)
 Code lines: 17092494
@@ -398,6 +399,7 @@ Code lines: 17092494
 ESLINT FIX ANALYSIS
 
 ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT, FATAL
+no-undef,, 2, 1964255, 836195,, 0.38678511742620303, undefined
 Parsing error: Unexpected token,, 2, 575441, 575441,, 0.266172381749295, true
 Parsing error: Cannot use keyword 'await' outside an async function,, 2, 59221, 59221,, 0.027392894527110506, true
 Parsing error: Unexpected character,, 2, 58460, 58460,, 0.027040891137516763, true
@@ -587,17 +589,18 @@ Parsing error: Export 'findSeconds' is not defined,, 2, 1, 1,, 4.625537313978235
 Parsing error: Export 'addMicroseconds' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
 Parsing error: Export 'asMicroseconds' is not defined,, 2, 1, 1,, 4.625537313978235e-7, true
 
-Total errors: 757984
-Total warnings or errors: 771513
-Snippets without errors: 1404764/2161911(0.6497788299333321)
-Snippets without errors or warnings: 1395954/2161911(0.6457037315597173)
-Fixed: 432/2161911(0.00019982321196385975)
+Total errors: 2722239
+Total warnings or errors: 2735768
+Snippets without errors: 569418/2161911(0.2633864206250859)
+Snippets without errors or warnings: 566664/2161911(0.26211254764881625)
+Fixed: 110584/2161911(0.05115104183289691)
 Snippets no lines: 9964/2161911(0.004608885379647913)
 Code lines: 17092491
 --------
 DELETION ANALYSIS
 
 ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT, FATAL
+no-undef,, 2, 2626180, 1053421,, 0.4872638142828266, undefined
 indent,, 1, 1132524, 171359,, 0.07926274485859963, undefined
 semi,, 1, 479480, 177900,, 0.0822883088156728, undefined
 Parsing error: Unexpected token,, 2, 123694, 123694,, 0.05721512125152238, true
@@ -636,17 +639,18 @@ Parsing error: Unterminated comment,, 2, 1, 1,, 4.625537313978235e-7, true
 Parsing error: 'with' in strict mode,, 2, 1, 1,, 4.625537313978235e-7, true
 Parsing error: Maximum call stack size exceeded,, 2, 1, 1,, 4.625537313978235e-7, true
 
-Total errors: 130568
-Total warnings or errors: 1814398
-Snippets without errors: 2033507/2161911(0.9406062506735938)
-Snippets without errors or warnings: 1767836/2161911(0.8177191382994027)
-Fixed: 755729/2161911(0.34956526887554573)
+Total errors: 2756748
+Total warnings or errors: 4440578
+Snippets without errors: 982832/2161911(0.4546126089371857)
+Snippets without errors or warnings: 900075/2161911(0.416333049787896)
+Fixed: 865881/2161911(0.40051648749647883)
 Snippets no lines: 309756/2161911(0.14327879362286422)
 Code lines: 13631499
 --------
 ALL FIXES ANALYSIS
 
 ERROR, CODE, CATEGORY, NUM OCCURANCES, NUM AFFECTED SNIPPETS, FIRST ID, PERCENT, FATAL
+no-undef,, 2, 2626174, 1053420,, 0.48726335172909524, undefined
 Parsing error: Unexpected token,, 2, 123695, 123695,, 0.05721558380525378, true
 eqeqeq,, 1, 16804, 10744,, 0.004969677290138216, undefined
 no-const-assign,, 2, 4081, 3065,, 0.001417727186734329, undefined
@@ -677,10 +681,10 @@ Parsing error: Unterminated comment,, 2, 1, 1,, 4.625537313978235e-7, true
 Parsing error: 'with' in strict mode,, 2, 1, 1,, 4.625537313978235e-7, true
 Parsing error: Maximum call stack size exceeded,, 2, 1, 1,, 4.625537313978235e-7, true
 
-Total errors: 130569
-Total warnings or errors: 147386
-Snippets without errors: 2033506/2161911(0.9406057881198625)
-Snippets without errors or warnings: 2022788/2161911(0.9356481372267406)
-Fixed: 755729/2161911(0.34956526887554573)
+Total errors: 2756743
+Total warnings or errors: 2773560
+Snippets without errors: 982832/2161911(0.4546126089371857)
+Snippets without errors or warnings: 979660/2161911(0.4531453885011918)
+Fixed: 865881/2161911(0.40051648749647883)
 Snippets no lines: 309756/2161911(0.14327879362286422)
 Code lines: 13631447
