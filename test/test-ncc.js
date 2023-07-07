@@ -62,7 +62,10 @@ describe("NCC", function () {
 
             var fixed = await NCC.fix(snippets);
             assert.strictEqual(fixed[0].errors.length, 0)
-            assert.strictEqual(fixed[0].code, "// console.log(a)")
-        })
+            assert.strictEqual(fixed[0].code, 
+`var a = "Your Value Here";
+console.log(a)`
+            )
+        }).timeout(20000);
     });
 })

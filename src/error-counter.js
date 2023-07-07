@@ -87,14 +87,14 @@ class ErrorCounter{
         console.log("For: " + snippets.length)
         var postSnippets = [];
         for(var s of snippets){
-            // console.log(s.code)
             //clone to not carry changes between techniques
             s = Snippet.clone(s);
             // if(i < 1149){
-            // if(i < 458865){
+            // if(i < 12440){
             //     i++
             //     continue;
             // }
+            // console.log(s.code)
             if(i !== 0 && file){
                 fs.appendFileSync(file, ",\n", {encoding:"utf-8"})
             }
